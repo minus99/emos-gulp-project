@@ -1,0 +1,13 @@
+.input-search {
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    border-bottom: 0 !important;
+    padding-bottom: 15px;
+    ::placeholder{
+        color: $gray;
+        opacity: 0.3;
+    }
+    input {
+        font-size: 36px;
+    }
+}

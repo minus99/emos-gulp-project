@@ -1,0 +1,129 @@
+//Slider Widget
+.widget-lg{
+    &-auto{
+            li{
+                width: auto !important;
+            }
+        }
+    &-1{
+        li{
+            width: 100% !important;
+        }
+    }
+    &-1_25{
+        li{
+            width: calc(100% / 1.25) !important;
+        }
+    }
+    &-1_5{
+        li{
+            width: calc(100% / 1.5) !important;
+        }
+    }
+    &-1_75{
+        li{
+            width: calc(100% / 1.75) !important;
+        }
+    }
+    &-2{
+        li{
+            width: calc(100% / 2) !important;
+        }
+    }
+    &-2_5{
+        li{
+            width: calc(100% / 2.5) !important;
+        }
+    }
+    &-3{
+        li{
+            width: calc(100% / 3) !important;
+        }
+    }
+    &-3_5{
+        li{
+            width: calc(100% / 3.5) !important;
+        }
+    }
+    &-4{
+        li{
+            width: calc(100% / 4) !important;
+        }
+    }
+    &-4_5{
+        li{
+            width: calc(100% / 4.5) !important;
+        }
+        
+    }
+    &-5{
+        li{
+            width: calc(100% / 5) !important;
+        }
+    }
+    &-6{
+        li{
+            width: calc(100% / 6) !important;
+        }
+    }
+    &-6_5{
+        li{
+            width: calc(100% / 6.5) !important;
+        }
+    }
+    &-7{
+        li{
+            width: calc(100% / 7) !important;
+        }
+    }
+    &-7_5{
+        li{
+            width: calc(100% / 7.5) !important;
+        }
+    }
+}
+
+.ob-fit{
+    &-cover{
+        object-fit: cover;
+    }
+    &-contain{
+        object-fit: contain;
+    }
+    &-fill{
+        object-fit: fill;
+    }
+}
+.w-lg {
+    &-25 {
+        width: 25%;
+    }
+    &-75 {
+        width: 75%;
+    }
+}
+//Line Height
+.lh-lg {
+    &-1 {
+        line-height: 1;
+    }
+}
+//Line Height
+
+//Dotted
+.dotted-items-desktop {
+    >* {
+        &:last-child::after {
+            display: none;
+        }
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            background: currentColor;
+            border-radius: 50%;
+            margin: 2px 8px;
+        }
+    }
+}

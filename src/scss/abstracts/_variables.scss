@@ -1,0 +1,66 @@
+// Directories - Local
+$dir-base: '../../';
+$dir-frontend: $dir-base + 'frontend/';
+$dir-fonts: $dir-frontend + 'fonts/';
+$dir-images: $dir-frontend + 'images/';
+$dir-uploads: $dir-base + 'uploads/';
+
+// Font
+$font-face1: VelaSans;
+$font-face2: null;
+$font-face3: icomoon;
+$font-icon: null;
+$font0: arial, sans-serif;
+$font1: $font-face1, $font0;
+$font2: $font-face2, $font0;
+
+// Colors
+$primary: #d72027;
+$blue: #2027d7;
+$gray: #635c5b;
+$light: #f6f3f2;
+$dark: #1a1818;
+$white: #ffffff;
+$black: #000;
+$green: #58933c;
+$coral: #df4826;
+$accent: #375dbe;
+$grey2: #958e8d;
+$grey3: #cac6c6;
+$grey4: #e4e1e0;
+$gold: #ad7828;
+$info: #ecf8e5;
+$warning: #ffe1e1;
+
+// Spacing
+$space0: 0;
+$space1: 5px;
+$space2: 10px;
+$space3: 15px;
+$space4: 20px;
+$space5: 25px;
+$space6: 30px;
+$space7: 40px;
+$space8: 50px;
+$space9: 60px;
+$space90: 90px;
+$space100: 100px;
+
+$space-s-e: 40px; // "start + end" total padding
+
+// Breakpoints
+$breakpoint-md: 667px;
+$breakpoint-lg: 1025px;
+
+// Containers
+$container-lg: 100%;
+
+//MISC
+$bg-loading: url(#{$dir-images + 'loading.gif'}) center center/32px no-repeat
+  rgba(
+    $color: #ccc,
+    $alpha: 0.5,
+  );
+$site-header-height: 48px;
+$site-header-height-mini: 28px;
+$site-header-height-lg: 150px;

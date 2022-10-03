@@ -1,0 +1,204 @@
+// .ems-modal-lg
+.ems-modal-lg {
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: $zindex-modal;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: $white;
+    opacity: 0;
+    transition: all .12s cubic-bezier(0.950, 0.050, 0.795, 0.035);
+}
+
+// .ems-modal-lg.ems-modal-lg-drop
+.ems-modal-lg-drop {
+    top: 100%;
+    right: 0;
+}
+
+// .ems-modal.ems-modal-start
+.ems-modal-lg-start {
+    transform: translateX(-75%);
+}
+
+// .ems-modal.ems-modal-end
+.ems-modal-lg-end {
+    transform: translateX(75%);
+    right: 0;
+    left: auto;
+}
+
+// .ems-modal.ems-modal-top
+.ems-modal-lg-top {
+    transform: translateY(-75%);
+}
+
+// .ems-modal.ems-modal-bottom
+.ems-modal-lg-bottom {
+    transform: translateY(75%);
+}
+
+// .ems-modal-lg-showm
+.ems-modal-lg-shown {
+    .ems-modal-body {
+        overflow: visible !important;
+    }
+    
+    .ems-modal-body,
+    .ems-modal-footer {
+        animation: none;
+    }
+}
+
+// EMS Modal Compact
+.ems-modal-lg-compact {
+    flex-direction: column;
+    background: $white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: $zindex-modal;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    max-width: 540px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(75%);
+    transition: all .12s cubic-bezier(0.950, 0.050, 0.795, 0.035);
+
+    .modal-header {
+        border-bottom: none;
+    }
+    
+    .modal-body {
+        overflow: auto;
+    }
+}
+
+.ems-modal-lg-tooltip {
+    $s: 10px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        border-style: solid;
+        border-color: transparent;
+    }
+
+    &.arrow {
+        &-t {
+            &::before {
+                right: 15px;
+                top: -$s;
+                border-width: 0 $s $s $s;
+                border-bottom-color: $white;
+            }
+        }
+
+        &-s {
+            &::before {
+                left: -$s;
+                top: 50%;
+                transform: translateY(-50%);
+                border-width: $s $s $s 0;
+                border-right-color: $white;
+            }
+        }
+
+        &-b {
+            &::before {
+                left: 45px;
+                bottom: -$s;
+                border-width: $s $s 0 $s;
+                border-top-color: $white;
+            }
+        }
+
+        &-e {
+            &::before {
+                right: -$s;
+                top: 50%;
+                transform: translateY(-50%);
+                border-width: $s 0 $s $s;
+                border-left-color: $white;
+            }
+        }
+    }
+}
+
+//Privacy Policy
+.ems-privacy {
+    width: 760px !important;
+    left: calc(50% - 380px);
+    height: 630px;
+    top: calc(50% - 315px);
+
+   
+    &-animate & {
+        @extend %ems-modal-lg-ready;
+        @extend %ems-modal-lg-animate;
+        bottom: 0;
+
+        &-overlay {
+            @extend %ems-modal-lg-animate-overlay;
+        }
+    }
+}
+
+//Filter Modal
+.ems-prd-filter {
+    width: 540px !important;
+    // display: block !important;
+    // transform: translateX(0) !important;
+    // opacity: 1 !important;
+    &-ready & {
+        @extend  %ems-modal-lg-ready;
+    }
+    &-animate & {
+        @extend %ems-modal-lg-animate-x;
+        @extend %ems-modal-lg-animate;
+        &-overlay {
+            @extend %ems-modal-lg-animate-overlay;
+        }
+    }
+    &-animate {
+        @extend %ems-modal-lg-animate-body;
+    }
+}
+
+
+// .ems-xx-ready .ems-modal-lg
+%ems-modal-lg-ready {
+    display: flex;
+}
+
+// .ems-xx-animate .ems-modal-lg
+%ems-modal-lg-animate {
+    opacity: 1;
+    transition: all .3s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+    pointer-events: auto;
+}
+
+// .ems-xx-animate .ems-xx-overlay
+%ems-modal-lg-animate-overlay {
+    display: block;
+}
+
+
+// .ems-xx-animate
+%ems-modal-lg-animate-body {
+    overflow: hidden;
+}
+
+// .ems-xx-animate .ems-modal-start | .ems-xx-animate .ems-modal-end
+%ems-modal-lg-animate-x {
+    transform: translateX(0);
+}
+
+// .ems-xx-animate .ems-modal-top | .ems-xx-animate .ems-modal-bottom
+%ems-modal-lg-animate-y {
+    transform: translateY(0);
+}

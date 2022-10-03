@@ -1,0 +1,47 @@
+/*
+ * Toastify js 1.7.0
+ * https://github.com/apvarun/toastify-js
+ * @license MIT licensed
+ *
+ * Copyright (C) 2018 Varun A P
+ */
+.toastify {
+    position: fixed;
+    z-index: $zindex-tooltip;
+    display: flex;
+    background: $primary;
+    width: 85%;
+    max-width: 330px;
+    padding: 20px;
+    color: $white;
+
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.toastify.on {
+    opacity: 1;
+}
+
+.toast-close {
+    margin-left: auto;
+    align-self: flex-start;
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.toastify-right {
+    right: 20px;
+}
+
+.toastify-left {
+    left: 20px;
+}
+
+.toastify-top {
+    top: -150px;
+}
+
+.toastify-bottom {
+    bottom: -150px;
+}

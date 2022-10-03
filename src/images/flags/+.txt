@@ -1,0 +1,1 @@
+https://github.com/KingDarBoja/NgxCountryFlagIcons/tree/master/libs/icons-data/out-flag-icon-css

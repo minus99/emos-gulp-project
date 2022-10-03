@@ -1,0 +1,50 @@
+.site-header {
+  transition: all 0.32s ease-in-out;
+  &-animate & {
+    position: sticky;
+    background: $white !important;
+    box-shadow: 0 0.125rem 0.25rem rgba(39, 33, 23, 0.08) !important;
+  }
+}
+//Menu
+.ems-menu {
+  //lvl1
+  .lvl-1 {
+    > li {
+      &.selected {
+        .lvl-2 {
+          display: block;
+        }
+      }
+    }
+  }
+  //lvl2
+  .lvl-2 {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+  //lvl3
+  .lvl-3 {
+    display: none;
+  }
+}
+
+//Search
+.ems-search {
+  overflow-x: hidden !important;
+  .search-blog {
+    border-top: 1px solid rgba(119, 113, 103, 0.2);
+    .blog-post {
+      &-subtitle,
+      &-title {
+        @include line-clamp(3);
+        height: 60px;
+      }
+      &-desc {
+        width: 80%;
+      }
+    }
+  }
+}

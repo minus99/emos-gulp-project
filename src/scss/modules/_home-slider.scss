@@ -1,0 +1,10 @@
+.home-slider {
+    .swiper-slide-overlay {
+        background: rgba(39, 33, 23, .2);
+    }
+    .main-slider-brand {
+        width: 60px;
+        bottom: 10px;
+        left: calc(50% - 30px);
+    }
+}

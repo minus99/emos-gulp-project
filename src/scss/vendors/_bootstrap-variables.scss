@@ -1,0 +1,333 @@
+// Configuration
+@import '../../../node_modules/bootstrap/scss/functions';
+
+// Color system :6
+$colors: ();
+$table-variants: ();
+
+$theme-colors: (
+  'primary': $primary,
+  'light': $light,
+  'dark': $dark,
+  'white': $white,
+  'black': $black,
+  'gray': $gray,
+);
+
+// Options :204
+$enable-rfs: false;
+
+// Gradient
+$gradient: linear-gradient(to bottom, transparent 40%, #000);
+
+// Spacing :233
+$spacers: (
+  0: $space0,
+  5: $space1,
+  10: $space2,
+  15: $space3,
+  20: $space4,
+  25: $space5,
+  30: $space6,
+  40: $space7,
+  50: $space8,
+  60: $space9,
+  90: $space90,
+  100: $space100,
+);
+
+// Body :262
+$body-bg: $light;
+$body-color: $black;
+
+// Links :271
+$link-color: inherit;
+$link-decoration: none;
+$link-hover-color: $link-color;
+$link-hover-decoration: underline;
+
+// Grid breakpoints :291
+$grid-breakpoints: (
+  xs: 0,
+  lg: $breakpoint-lg,
+);
+
+// Grid containers :316
+$container-max-widths: (
+  lg: $container-lg,
+);
+
+// Grid columns :328
+$grid-gutter-width: $space-s-e; // "@mixin make-col-ready" default: "value / 2"
+
+// Container padding :338
+$container-padding-x: $space-s-e * 0.5; // equality for column paddings ("@mixin make-col-ready" paddings)
+
+// Components :343
+$border-widths: (
+  0: 0,
+  1: 1px,
+  2: 2px,
+);
+
+$border-color: #ccc;
+
+$border-radius: 5px;
+$border-radius-sm: 2px;
+$border-radius-lg: 8px;
+$border-radius-pill: 200px;
+
+$caret-spacing: 10px;
+
+// aspect ratios calc(height / width * 100%)
+$aspect-ratios: (
+  '1x1': 100%,
+  '21x9': calc(9 / 21 * 100%),
+  '335x520': calc(520 / 335 * 100%),
+  '335x648': calc(648 / 335 * 100%),
+  '800x460': calc(460 / 800 * 100%),
+  'corporate': calc(520 / 375 * 100%),
+  'corporate-desktop': calc(520 / 970 * 100%),
+  'person': calc(140 / 100 * 100%),
+  'main-slider': calc(700 / 1340 * 100%),
+  'logo': calc(58 / 200 * 100%),
+  'brand': calc(45 / 120 * 100%),
+  'brand-mini': calc(30 / 24 * 100%),
+  'blog': calc(300 / 1320 * 100%),
+  '400x700': calc(395 / 700 * 100%),
+  '1320x520': calc(520 / 1320 * 100%),
+);
+
+// Typography :391
+$font-family-sans-serif: $font0;
+$font-family-monospace: Consolas, monospace;
+$font-family-base: $font1;
+
+$font-size-root: 16px; // 1rem browser default / **px/16 = **rem
+$font-size-base: 1rem; // 16px
+$font-size-sm: 0.75rem; // 12px
+$font-size-lg: 1rem; // 16px
+
+$line-height-base: 1.5;
+$line-height-sm: 1;
+$line-height-lg: 1.85;
+
+$h1-font-size: 1.75rem; // 28px
+$h2-font-size: 1.25rem; // 20px
+$h3-font-size: 1rem; // 16px
+$h4-font-size: 0.875rem; // 14px
+$h5-font-size: 0.75rem; // 12px
+$h6-font-size: 0.625rem; // 10px
+
+$font-sizes: (
+  12: 0.75rem,
+  14: 0.875rem,
+  16: 1rem,
+  18: 1.125rem,
+  20: 1.25rem,
+  24: 1.5rem,
+  28: 1.75rem,
+  32: 2rem,
+  36: 2.25rem,
+  40: 2.5rem,
+  48: 3rem,
+  50: 3.125rem,
+  56: 3.5rem,
+  70: 4.375rem,
+);
+
+$headings-margin-bottom: 0;
+$headings-font-weight: 700;
+$headings-line-height: $line-height-sm;
+
+$display-font-sizes: (
+  1: 4rem // 64px,,,
+);
+
+$lead-font-size: 1rem; // 16px
+$lead-font-weight: 600;
+
+$text-muted: #787878;
+
+$border-radius: 0;
+
+// Buttons + Forms :550
+$input-btn-font-family: $font1;
+$input-btn-line-height: 1.25;
+
+$input-btn-focus-box-shadow: none !important;
+
+// Buttons :576
+$btn-padding-y: 1rem; // 16px
+$btn-padding-x: 1.25rem; // 20px
+$btn-font-size: 0.875rem; // 14px
+
+$btn-padding-y-sm: 0.4375rem; // 7px
+$btn-padding-x-sm: 0.875rem; // 14px
+$btn-font-size-sm: $btn-font-size;
+
+$btn-padding-y-lg: 1rem;
+$btn-padding-x-lg: 100px;
+$btn-font-size-lg: 1rem;
+
+$btn-font-weight: 600;
+
+$btn-border-radius: $border-radius;
+$btn-border-radius-lg: $border-radius;
+$btn-border: 0;
+$btn-font-weight: 400;
+
+$btn-focus-box-shadow: none !important;
+$btn-disabled-opacity: 0.3;
+
+// Forms :616
+$input-bg: transparent;
+
+$input-padding-y: 0.9375rem; // 15px
+$input-padding-x: 0; // 0
+$input-font-size: 0.875rem; // 14px;
+
+$input-padding-y-sm: 0.625rem; // 10px
+$input-padding-x-sm: 0.625rem; // 10px
+$input-font-size-sm: $input-font-size;
+
+$input-padding-y-lg: 1.25rem; // 20px
+$input-padding-x-lg: 1.25rem; // 20px
+$input-font-size-lg: $input-font-size;
+
+$input-border-width: 0;
+$input-border-color: $gray;
+
+$input-border-radius: $border-radius;
+$input-border-radius-sm: $border-radius;
+$input-border-radius-lg: $border-radius;
+
+$input-focus-border-color: $gray;
+$input-focus-box-shadow: none;
+
+$form-floating-padding-x: 0;
+$form-floating-label-transform: scale(0.78) translateY(-0.5rem)
+  translateX(0.15rem);
+$form-floating-label-opacity: 1;
+$form-label-font-size: 1rem;
+
+$form-select-font-size: 1rem;
+$form-select-border-width: 0;
+$form-select-focus-border-color: $input-focus-border-color !default;
+$form-select-focus-box-shadow: none;
+
+//Checkbox
+$form-check-input-checked-border-color: $gray;
+$form-check-input-focus-border: $gray;
+$form-check-input-border-radius: 0;
+$form-check-input-focus-box-shadow: none;
+$form-check-input-indeterminate-bg-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.70303 6.39764L9.1879 0L10 0.801179L2.70303 8L0 5.33333L0.812103 4.53215L2.70303 6.39764Z' fill='white'/%3E%3C/svg%3E%0A") !default;
+$form-check-input-checked-border-color: $primary;
+$form-check-input-bg: tranparent;
+
+// Navs :846
+$nav-link-padding-y: 0.625rem; // 10px
+$nav-link-padding-x: 0.625rem; // 10px
+
+$nav-tabs-border-color: $border-color;
+$nav-tabs-border-width: 1px;
+$nav-tabs-border-radius: 0;
+$nav-tabs-link-hover-border-color: transparent transparent $primary transparent;
+$nav-tabs-link-active-color: $black;
+$nav-tabs-link-active-bg: transparent;
+$nav-tabs-link-active-border-color: transparent transparent $primary transparent;
+
+// Cards :994
+$card-spacer-y: 0;
+$card-spacer-x: 0;
+$card-title-spacer-y: 0;
+$card-border-width: 0;
+$card-border-radius: 0;
+$card-border-color: $border-color;
+$card-inner-border-radius: 0;
+$card-cap-padding-y: 0;
+$card-cap-padding-x: 0;
+$card-cap-bg: transparent;
+$card-bg: transparent;
+
+$card-img-overlay-padding: 0;
+
+// Modals
+$modal-content-inner-border-radius: 0;
+
+// Badges :1118
+$badge-font-size: 0.75rem;
+$badge-font-weight: 700;
+$badge-color: $white;
+$badge-padding-y: 4px;
+$badge-padding-x: 8px;
+$badge-border-radius: 2px;
+
+// Breadcrumbs :1246
+$breadcrumb-font-size: 0.75rem;
+$breadcrumb-padding-y: 10px;
+$breadcrumb-padding-x: 0;
+$breadcrumb-item-padding-x: 10px;
+$breadcrumb-margin-bottom: 0;
+$breadcrumb-divider: quote('/');
+$breadcrumb-divider-color: $gray;
+$breadcrumb-active-color: $gray;
+
+// Utilities API :bootstrap/scss/utilities - https://getbootstrap.com/docs/5.1/utilities/api/#override-utilities
+$utilities: (
+  'width': (
+    responsive: true,
+    property: width,
+    class: w,
+    values: (
+      25: 25%,
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      auto: auto,
+    ),
+  ),
+  'position': (
+    responsive: true,
+    property: position,
+    values: static relative absolute fixed sticky,
+  ),
+  'font-size': (
+    responsive: true,
+    property: font-size,
+    class: fs,
+    values: $font-sizes,
+  ),
+  'color': (
+    responsive: true,
+    property: color,
+    class: text,
+    values:
+      map-merge(
+        $theme-colors,
+        (
+          'white': $white,
+          'body': $body-color,
+          'muted': $text-muted,
+          'reset': inherit,
+        )
+      ),
+  ),
+  'background-color': (
+    responsive: true,
+    property: background-color,
+    class: bg,
+    values:
+      map-merge(
+        $theme-colors,
+        (
+          'body': $body-bg,
+          'white': $white,
+          'transparent': transparent,
+        )
+      ),
+  ),
+);
+
+@import '../../../node_modules/bootstrap/scss/variables';
+@import '../../../node_modules/bootstrap/scss/mixins';

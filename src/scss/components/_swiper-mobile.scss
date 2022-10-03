@@ -1,0 +1,24 @@
+.desktop-swiper {
+  .swiper-wrapper {
+    flex-direction: column;
+    li {
+      width: 100% !important;
+    }
+  }
+}
+
+.main-slider {
+  .swiper-button-prev, .swiper-button-next {
+    top: 60%;
+  }
+}
+
+//THEME
+.swiper-container-widget {
+  &.swiper-container-horizontal > .swiper-scrollbar {
+      width: 100% !important;
+      .swiper-scrollbar-drag {
+        width: 50px;
+      }
+  }
+}

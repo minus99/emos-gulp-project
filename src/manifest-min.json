@@ -1,0 +1,17 @@
+{
+  "short_name": "emos-v2-localhost",
+  "display": "standalone",
+  "name": "emos-v2-localhost",
+  "icons": [{
+    "src": "/frontend/images/favicon/apple-touch-icon-144x144.png",
+    "sizes": "128x128",
+    "type": "image/png"
+  }],
+  "scope": "/",
+  "start_url": "/?utm_source=pwahome",
+  "background_color": "#ffffff",
+  "theme_color": "#d93131",
+  "gcm_sender_id": "821478403717",
+  "gcm_user_visible_only": "true",
+  "permissions": ["https://*.patirti.com/"]
+}

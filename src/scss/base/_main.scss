@@ -1,0 +1,109 @@
+body {
+  background: $light;
+  margin: 0;
+  font-size: 1rem;
+  overflow-x: hidden;
+}
+
+.site {
+  &-header {
+    position: relative;
+    background: $light;
+    height: $site-header-height;
+    .header-wrapper {
+      height: 100%;
+    }
+    .header-logo-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      .header-logo {
+        width: 127.82px;
+      }
+    }
+    &-bg & {
+      background: white;
+    }
+  }
+
+  &-main {
+    min-height: 500px;
+  }
+}
+
+.ems {
+  &-menu {
+    .lvl-2 {
+      display: none;
+    }
+  }
+  // Scrollbar
+  &-scrollbar {
+    $scrollbar-width: 8px;
+    $scrollbar-height: 10px;
+
+    overflow: auto !important;
+
+    &::-webkit-scrollbar-track {
+      background: $light;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $black;
+    }
+
+    &-vertical {
+      max-height: 100vh;
+
+      &::-webkit-scrollbar {
+        width: $scrollbar-width;
+        height: $scrollbar-height;
+      }
+    }
+
+    &-horizontal {
+      max-width: 100vw;
+
+      &::-webkit-scrollbar {
+        height: $scrollbar-height;
+      }
+    }
+
+    &-hide {
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}
+
+//swiper
+.swiper-inner > .swiper-wrapper {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  .swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+  }
+}
+
+.img-overlay {
+  background-color: rgba(39, 33, 23, 0.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: $white;
+}
+//Home Gift Guide
+.gift-wrapper {
+  min-height: 400px;
+}
+.modal {
+  display: none;
+}

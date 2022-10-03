@@ -1,0 +1,24 @@
+.ems-tab {
+    &-bordered {
+        .ems-tab-header {
+            a {
+                color: $gray;
+                border-bottom: solid 1px rgba(119,113,103,.3);
+                margin-right: 0;
+                &.selected {
+                    color: $black;
+                    border-color: $primary;
+                }
+            }
+        }
+    }
+    &-header {
+        a {
+            color: $black;
+            margin-right: 15px;
+            &.selected {
+                color: $primary;
+            }
+        }
+    }
+}

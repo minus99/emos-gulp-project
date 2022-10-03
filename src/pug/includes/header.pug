@@ -1,0 +1,348 @@
+.container.px-lg-50.header-wrapper-mini-top.d-flex.justify-content-between.bg-white
+    .left-wrapper
+    .right-wrapper.d-flex.justify-content-end.align-items-center.gap-10
+        .item Korayspor
+        .item Sneakers
+        .item VipÇocuk
+.container.px-lg-50
+    .header-wrapper.d-flex.justify-content-lg-between.align-items-center
+        a(class="ems-menu-trigger d-lg-none mx-lg-5 me-15" aria-label="Menu" href="javascript:void(0);")
+            +icon('burger').fs-20 
+        // Menu
+        .ems-menu-overlay.ems-overlay(data-target="body" data-ready="ems-menu-ready" data-animate="ems-menu-animate" data-type="remove")
+        .ems-menu.col.ems-modal.d-lg-block.ems-scrollbar-mobile.ems-scrollbar-vertical.ems-modal-start
+            .ems-modal-header.d-lg-none.p-20
+                .ems-modal-close.d-flex.align-items-center.justify-content-between.pt-5.pb-20
+                    span Menu
+                    a(class="me-5 me-15" href="" aria-label="Close"  data-target="body" data-ready="ems-menu-ready" data-animate="ems-menu-animate" data-type="remove")
+                        +icon('close').fs-16
+            .ems-modal-body
+                .ems-modal-info.p-20.d-lg-none 
+                    h2 Hoş Geldiniz
+                    p.fs14 Satın aldıklarınızı, koleksiyonlarınızı vb. görmek için hesabınıza giriş yapın.
+                    a.btn.btn-primary.w-100.border-radius-0(href="#") Giriş Yap / Üye Ol
+                ul.lvl-1.list-unstyled.d-lg-flex.px-20.px-lg-0
+                    li.px-lg-10.sub-items.lvl-1-item.fs-18.fs-lg-16
+                        a.lvl-1-item-link(href="/product-list.html") Saat
+                        .lvl-2
+                            .menu-prd-wrapper.bg-white.py-20.py-lg-50.px-lg-0
+                                ul.menu-prd-cat.list-unstyled.rox-cols-1
+                                    li.col
+                                        a.position-relative.d-lg-flex.align-items-lg-center(href="#") 
+                                            span Yeni Gelenler
+                                    li.col
+                                        a.position-relative.d-lg-flex.align-items-lg-center(href="#") 
+                                            span Çok Satanlar
+                                    li.col
+                                        a.position-relative.d-lg-flex.align-items-lg-center(href="#") 
+                                            span Erkek Saat
+                                    li.col
+                                        a.position-relative.d-lg-flex.align-items-lg-center(href="#") 
+                                            span Kadın Saat
+                                ul.menu-prd-type.list-unstyled.mt-50.mt-lg-0.mb-lg-60
+                                    li.lvl-2-item.selected 
+                                        a.lvl-2-item-link.position-relative.d-lg-none.d-flex.justify-conten-between.py-20(href="") 
+                                            span Tarz
+                                        ul.lvl-3.list-unstyled.d-lg-flex.justify-content-lg-center 
+                                            li.px-lg-20.pb-20.pb-lg-0
+                                                a.d-flex.flex-lg-column.justify-content-lg-center.align-items-center(href="!#")
+                                                    +icon('classic-watch').fs-32.fs-lg-56
+                                                    span.fs-14.fs-lg-12.ms-15.ms-lg-0.mt-lg-10  Klasik Saat
+                                            li.px-lg-20.pb-20.pb-lg-0
+                                                a.d-flex.flex-lg-column.justify-content-lg-center.align-items-center(href="!#")
+                                                    +icon('sport-watch').fs-32.fs-lg-56
+                                                    span.fs-14.fs-lg-12.ms-15.ms-lg-0.mt-lg-10 Spor Saat
+                                            li.px-lg-20.pb-20.pb-lg-0
+                                                a.d-flex.flex-lg-column.justify-content-lg-center.align-items-center(href="!#")
+                                                    +icon('digital-watch').fs-32.fs-lg-56
+                                                    span.fs-14.fs-lg-12.ms-15.ms-lg-0.mt-lg-10  Dijital Saat
+                                            li.px-lg-20.pb-20.pb-lg-0
+                                                a.d-flex.flex-lg-column.justify-content-lg-center.align-items-center(href="!#")
+                                                    +icon('stylish-watch').fs-32.fs-lg-56
+                                                    span.fs-14.fs-lg-12.ms-15.ms-lg-0.mt-lg-10  Şık Saat 
+                                            li.px-lg-20.pb-20.pb-lg-0
+                                                a.d-flex.flex-lg-column.justify-content-lg-center.align-items-center(href="!#")
+                                                    +icon('smart-watch').fs-32.fs-lg-56
+                                                    span.fs-14.fs-lg-12.ms-15.ms-lg-0.mt-lg-10  Akıllı Saat
+                                .menu-prd-featured.d-lg-flex.justify-content-lg-around
+                                    ul.list-unstyled
+                                        li.lvl-2-item
+                                            a.lvl-2-item-link.position-relative.py-20.py-lg-0.d-flex(href="javascript:void(0);") 
+                                                span Mekanizma
+                                            ul.lvl-3.list-unstyled.text-gray.mt-lg-30.text-gray
+                                                li.pb-20.pb-lg-0.mb-10 
+                                                    a(href="") 
+                                                        span.fs-14 Quartz
+                                                li.pb-20.pb-lg-0.mb-10 
+                                                    a(href="") 
+                                                        span.fs-14 Mekanik
+                                                li.pb-20.pb-lg-0.mb-10 
+                                                    a(href="") 
+                                                        span.fs-14 Otomatik
+                                                li.pb-20.pb-lg-0.mb-10 
+                                                    a(href="") 
+                                                        span.fs-14 Solar
+                                                li.pb-20.pb-lg-0.mb-10 
+                                                    a(href="") 
+                                                        span.fs-14 GPS
+                                                li.pb-20.pb-lg-0.mb-10 
+                                                    a(href="") 
+                                                        span.fs-14 Radio Control
+                                    ul.list-unstyled
+                                        li.lvl-2-item
+                                            a.lvl-2-item-link.position-relative.py-20.py-lg-0.d-flex(href="#") Materyal
+                                            ul.lvl-3.list-unstyled.text-gray.mt-lg-30.text-gray
+                                                li.pb-20.pb-lg-0.mb-lg-10 
+                                                    a(href="") 
+                                                        span.fs-14 Süper Metal
+                                                li.pb-20.pb-lg-0.mb-lg-10 
+                                                    a(href="") 
+                                                        span.fs-14 Çelik
+                                                li.pb-20.pb-lg-0.mb-lg-10 
+                                                    a(href="") 
+                                                        span.fs-14 Titanyum
+                                                li.pb-20.pb-lg-0.mb-lg-10 
+                                                    a(href="") 
+                                                        span.fs-14 Deri
+                                                li.pb-20.pb-lg-0.mb-lg-10 
+                                                    a(href="") 
+                                                        span.fs-14 Siilikon
+                                                li.pb-20.pb-lg-0.mb-lg-10 
+                                                    a(href="") 
+                                                        span.fs-14 Seramik
+                                    ul.list-unstyled
+                                        li.lvl-2-item
+                                            a.lvl-2-item-link.position-relative.py-20.py-lg-0.d-flex(href="#") Stil
+                                            ul.lvl-3.list-unstyled.text-gray.mt-lg-30.text-gray
+                                                li.pb-20.pb-lg-0.mb-lg-10 
+                                                    a(href="") 
+                                                        span.fs-14 Dress
+                                                li.pb-20.pb-lg-0.mb-lg-10 
+                                                    a(href="") 
+                                                        span.fs-14 Diver
+                                                li.pb-20.pb-lg-0.mb-lg-10 
+                                                    a(href="") 
+                                                        span.fs-14 Cronograph
+                                                li.pb-20.pb-lg-0.mb-lg-10 
+                                                    a(href="") 
+                                                        span.fs-14 Pilot
+                                                li.pb-20.pb-lg-0.mb-lg-10 
+                                                    a(href="") 
+                                                        span.fs-14 Skeleton
+                                                li.pb-20.pb-lg-0.mb-lg-10 
+                                                    a(href="") 
+                                                        span.fs-14 Moon Phase
+                    li.px-lg-10.lvl-1-item.fs-18.fs-lg-16 
+                        a.lvl-1-item-link(href="/product-list.html") Gözlük
+                        .lvl-2.type-2
+                            .menu-prd-wrapper.bg-white.py-20.py-lg-50.px-lg-0
+                                ul.menu-prd-cat.list-unstyled.row-cols-1.row-cols-lg-3
+                                    li.col
+                                        a.position-relative.d-lg-flex.align-items-lg-center(href="#") 
+                                            span Yeni Gelenler
+                                    li.col
+                                        a.position-relative.d-lg-flex.align-items-lg-center(href="#") 
+                                            span Çok Satanlar
+                                    li.col
+                                        a.position-relative.d-lg-flex.align-items-lg-center(href="#") 
+                                            span Erkek Gözlük
+                                    li.col
+                                        a.position-relative.d-lg-flex.align-items-lg-center(href="#") 
+                                            span Kadın Gözlük
+                                    li.col
+                                        a.position-relative.d-lg-flex.align-items-lg-center(href="#") 
+                                            span Unisex Gözlük
+                                    li.col
+                                        a.position-relative.d-lg-flex.align-items-lg-center(href="#") 
+                                            span Çocuk Gözlük
+                                ul.menu-prd-type.list-unstyled.mt-50.mt-lg-0.mb-lg-60
+                                    li.lvl-2-item.selected 
+                                        a.lvl-2-item-link.position-relative.d-lg-none.d-flex.justify-conten-between.py-20(href="") 
+                                            span Tarz
+                                        ul.lvl-3.list-unstyled.d-lg-flex.justify-content-lg-center 
+                                            li.px-lg-20.pb-20.pb-lg-0
+                                                a.d-flex.flex-lg-column.justify-content-lg-center.align-items-center(href="!#")
+                                                    +icon('angular-glasses').fs-32.fs-lg-56
+                                                    span.fs-14.fs-lg-12.ms-15.ms-lg-0.mt-lg-10  Köşeli Gözlük
+                                            li.px-lg-20.pb-20.pb-lg-0
+                                                a.d-flex.flex-lg-column.justify-content-lg-center.align-items-center(href="!#")
+                                                    +icon('drop-glasses').fs-32.fs-lg-56
+                                                    span.fs-14.fs-lg-12.ms-15.ms-lg-0.mt-lg-10 Damla Gözlük
+                                            li.px-lg-20.pb-20.pb-lg-0
+                                                a.d-flex.flex-lg-column.justify-content-lg-center.align-items-center(href="!#")
+                                                    +icon('round-glasses').fs-32.fs-lg-56
+                                                    span.fs-14.fs-lg-12.ms-15.ms-lg-0.mt-lg-10  Yuvarlak Gözlük
+                                            li.px-lg-20.pb-20.pb-lg-0
+                                                a.d-flex.flex-lg-column.justify-content-lg-center.align-items-center(href="!#")
+                                                    +icon('geometric-glasses').fs-32.fs-lg-56
+                                                    span.fs-14.fs-lg-12.ms-15.ms-lg-0.mt-lg-10  Geometrik Gözlük 
+                                            li.px-lg-20.pb-20.pb-lg-0
+                                                a.d-flex.flex-lg-column.justify-content-lg-center.align-items-center(href="!#")
+                                                    +icon('slanting-glasses').fs-32.fs-lg-56
+                                                    span.fs-14.fs-lg-12.ms-15.ms-lg-0.mt-lg-10  Çekik Gözlük
+                    li.px-lg-10.lvl-1-item.fs-18.fs-lg-16 
+                        a.lvl-1-item-link(href="/product-list.html") Takı ve Aksesuar
+                        .lvl-2.type-2
+                            .menu-prd-wrapper.bg-white.py-20.py-lg-50.px-lg-0
+                                ul.menu-prd-cat.list-unstyled.row-cols-1
+                                    li.col
+                                        a.position-relative.d-lg-flex.align-items-lg-center(href="#") 
+                                            span Yeni Gelenler
+                                    li.col
+                                        a.position-relative.d-lg-flex.align-items-lg-center(href="#") 
+                                            span Çok Satanlar
+                                ul.menu-prd-type.list-unstyled.mt-50.mt-lg-0.mb-lg-60
+                                    li.lvl-2-item.selected 
+                                        a.lvl-2-item-link.position-relative.d-lg-none.d-flex.justify-conten-between.py-20(href="") 
+                                            span Tarz
+                                        ul.lvl-3.list-unstyled.d-lg-flex.justify-content-lg-center 
+                                            li.px-lg-20.pb-20.pb-lg-0
+                                                a.d-flex.flex-lg-column.justify-content-lg-center.align-items-center(href="!#")
+                                                    +icon('ring').fs-32.fs-lg-56
+                                                    span.fs-14.fs-lg-12.ms-15.ms-lg-0.mt-lg-10  Yüzük
+                                            li.px-lg-20.pb-20.pb-lg-0
+                                                a.d-flex.flex-lg-column.justify-content-lg-center.align-items-center(href="!#")
+                                                    +icon('necklace').fs-32.fs-lg-56
+                                                    span.fs-14.fs-lg-12.ms-15.ms-lg-0.mt-lg-10 Bileklik
+                                            li.px-lg-20.pb-20.pb-lg-0
+                                                a.d-flex.flex-lg-column.justify-content-lg-center.align-items-center(href="!#")
+                                                    +icon('earring').fs-32.fs-lg-56
+                                                    span.fs-14.fs-lg-12.ms-15.ms-lg-0.mt-lg-10  Küpe
+                                            li.px-lg-20.pb-20.pb-lg-0
+                                                a.d-flex.flex-lg-column.justify-content-lg-center.align-items-center(href="!#")
+                                                    +icon('bracelet').fs-32.fs-lg-56
+                                                    span.fs-14.fs-lg-12.ms-15.ms-lg-0.mt-lg-10  Kolye
+                                            li.px-lg-20.pb-20.pb-lg-0
+                                                a.d-flex.flex-lg-column.justify-content-lg-center.align-items-center(href="!#")
+                                                    +icon('strap').fs-32.fs-lg-56
+                                                    span.fs-14.fs-lg-12.ms-15.ms-lg-0.mt-lg-10  Kayış
+                    li.px-lg-10.lvl-1-item.fs-18.fs-lg-16 
+                        a.lvl-1-item-link(href="brand-list.html") Markalar
+                    //li.px-lg-10.lvl-1-item.fs-18.fs-lg-16 
+                        a.lvl-1-item-link(href="#") Hediyeler
+                ul.list-unstyled.mt-40.px-20.d-lg-none
+                    //li Zaman Kütüphanesi
+                    li İlham
+                ul.list-unstyled.mt-50.px-20.d-lg-none
+                    li Sipariş Takibi
+                    li Kurumsal
+                    li Destek
+                .menu-social.bg-light.mt-40.p-20.d-lg-none 
+                    span.fs-16 Bizi Takip Edin!
+                    ul.list-unstyled.d-flex.mt-30.mt-lg-20 
+                        li.me-30 
+                            a(href="https://www.facebook.com/", target="blank")
+                                +icon("facebook").fs-28.bg-white.rounded-circle
+                                span.ms-10.d-none.d-lg-inline-block Facebook 
+                        li.me-30
+                            a(href="https://twitter.com/", target="blank") 
+                                +icon("twitter").fs-28.bg-white.rounded-circle
+                                span.ms-10.d-none.d-lg-inline-block Twitter 
+                        li.me-30
+                            a(href="https://www.instagram.com/", target="blank") 
+                                +icon("instagram").fs-28.bg-white.rounded-circle
+                                span.ms-10.d-none.d-lg-inline-block Instagram 
+                        li
+                            a(href="https://www.youtube.com/", target="blank") 
+                                +icon("youtube").fs-28.bg-white.rounded-circle
+                                span.ms-10.d-none.d-lg-inline-block Youtube
+        .header-logo-wrapper
+            .header-logo.col-3
+                a(href="/")
+                    +img('ratio ratio-logo ratio-bg-remove', false, dirImages + 'korayspor.svg')
+        .header-right.d-flex.justify-content-end.col
+            //- ul.list-unstyled.d-none.d-lg-flex.align-items-center
+            //-     //li.px-10 
+            //-         a(href="#") Zaman Kütüphanesi
+            //-     li.px-10 
+            //-         a(href="#") İlham
+            a(class='ems-search-trigger px-10' aria-label='Search' href='javascript:void(0);' data-target='body' data-ready='ems-search-ready' data-animate='ems-search-animate' data-type='add')
+                +icon('search').fs-20
+            a(class='ems-search-close px-10 d-none' aria-label='Search' href='javascript:void(0);' data-target='body' data-ready='ems-search-ready' data-animate='ems-search-animate' data-type='remove')
+                +icon('close').fs-20
+            a(class="ems-user px-10" aria-label="User" href="javascript:void(0);")
+                +icon('user').fs-20   
+            //- a.user-avatar.flex-center.fs-14.rounded-circle.bg-gray.text-white(class="ems-user px-10" aria-label="User" href="javascript:void(0);")
+            //-     span DD 
+            a(class="ems-cart-trigger px-10 mini-cart-icon" aria-label="Cart" href="javascript:void(0);" data-target="body" data-ready="ems-cart-ready" data-animate="ems-cart-animate" data-type="toggle")
+                +icon('bag').fs-20
+        // Search
+        .ems-search-overlay.ems-overlay(data-target="body" data-ready="ems-search-ready" data-animate="ems-search-animate" data-type="remove")
+        .ems-search.ems-modal.ems-modal-lg.p-lg-50.p-20.ems-scrollbar.ems-scrollbar-vertical
+            .ems-field.input-search
+                a(aria-label='Search' href='javascript:void(0);' data-target='body' data-ready='ems-search-ready' data-animate='ems-search-animate' data-type='remove')
+                    +icon('arrow-2').stroke-icon.fs-16.d-lg-none
+                input.ms-20.ms-lg-15.border-0.form-control(type="text", name="search" placeholder="Konyalı Saat’te ara")
+                +icon('search').fs-20 
+            .ems-body.mt-40
+                .last-search
+                    h3.fs-20.fw-lg-400 Son Aramalarınız
+                    .last-search-list.ems-scrollbar-vertical.ems-scrollbar-hide
+                        ul.d-flex.list-unstyled.fs-14.mt-20
+                            li.me-15
+                                a(href="#")
+                                    span Rado
+                                    +icon("close-2").fs-20
+                            li.me-15
+                                a(href="#")
+                                    span Swatch
+                                    +icon("close-2").fs-20
+                            li.me-15
+                                a(href="#")
+                                    span Serdar Kuzuloğlu
+                                    +icon("close-2").fs-20
+                            li.me-15
+                                a(href="#")
+                                    span Erkek Saatleri
+                                    +icon("close-2").fs-20
+                .top-search.mt-40
+                    h3.fs-20.fw-lg-400 Popüler Aramalar
+                    .top-search-list.ems-scrollbar-vertical.ems-scrollbar-hide
+                        ul.d-flex.list-unstyled.fs-14.mt-20.dotted-items.dotted-black
+                            li
+                                a(href="#").text-decoration-underline
+                                    span Rado
+                            li
+                                a(href="#").text-decoration-underline
+                                    span Swatch
+                            li
+                                a(href="#").text-decoration-underline
+                                    span Serdar Kuzuloğlu
+                            li
+                                a(href="#").text-decoration-underline
+                                    span Erkek Saatleri            
+            .ems-search-results
+                .my-30
+                    h3.fs-20.fw-400 “Chronograph” için sonuçlar
+                    p.fs-14.text-gray.mt-10 24 sonuç listeleniyor
+                .search-product
+                    a(href="#!").d-flex.align-items-center.mb-20
+                        h2.section.title.fw-400.fs-20 Ürünler (24)
+                        .section-link.ms-lg-20
+                            span.fs-14 Tümünü Gör
+                            +icon('arrow').stroke-icon.ms-10
+                    +swiper('widgetAuto', false, true, false)(class="swiper-container-widget desktop-no-swipe widget-lg-7 widget-1_5 h-auto")
+                        -for(var j=0; j<7; j++)
+                            li.swiper-slide.me-5.me-lg-0
+                                +product-search()
+                .search-blog.mt-40.pt-40
+                    a(href="#!").d-lg-flex.align-items-lg-center
+                        h2.section.title.fw-400.fs-20 İlham (8)
+                        .section-link.ms-lg-20
+                            span.fs-14 Tümünü Gör
+                            +icon('arrow').stroke-icon.ms-10
+                    .mt-20.mt-lg-30.position-relative.g-2
+                        +swiper('widgetAuto', false, true, false)(class="swiper-container-widget desktop-no-swipe widget-lg-7 widget-1_5 h-auto")
+                            - for (var y = 0; y < 7; y++)
+                                li.swiper-slide.blog-post.pb-20.pb-lg-60.me-5
+                                    .blog-post-body.position-relative
+                                        +picture("ratio ratio-1x1", true, dirUploads + "blog/blog-mobile.jpg", dirUploads + "blog/blog-mobile.jpg", dirUploads + "blog/blog-mobile.jpg").img-fluid
+                                        .blog-post-desc.mt-10
+                                            a.blog-category.text-blue.fs-12.stretched-link-over(href="javascript:void(0);") Bakım 
+                                            h3.blog-post-title.fw-400.lh-1-25.position-relative Saatinizdeki Buğu ve Nemden Kurtulmanın Yolları
+                                            .blog-post-subtitle.text-gray.mt-10
+                                                p.lh-1-25.m-0 Geniş ürün yelpazesiyle, en eşsiz gözlük ve aksesuarlar şimdi Konyalı Saat’te.
+                                            .d-flex.mt-10.mt-lg-20.fs-12.text-gray.dotted-items 
+                                                span 11 Kasım 2021
+                                                span 6 dk
+                                            a.stretched-link(href="/blog-detail.html")

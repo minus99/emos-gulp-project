@@ -1,0 +1,19 @@
+.site-header {
+  height: $site-header-height-lg;
+  .header-wrapper {
+    height: calc($site-header-height-lg - $site-header-height-mini);
+  }
+  .header-logo-wrapper {
+    .header-logo {
+      width: 200px;
+    }
+  }
+  .header-wrapper-mini-top {
+    height: $site-header-height-mini;
+  }
+}
+.login {
+  &-right {
+    padding: 60px 72px 0 125px;
+  }
+}

@@ -1,0 +1,412 @@
+// Required Attributes Alert
+body img:not([alt]),
+body a:not([href]),
+body button:not([type]) {
+  border: 5vw solid #910000 !important;
+}
+
+// Typography - https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight#Common_weight_name_mapping
+//100   Thin (Hairline)
+//200	Extra Light (Ultra Light)
+//300	Light
+//400	Normal (Regular)
+//500	Medium
+//600	Semi Bold (Demi Bold)
+//700	Bold
+//800	Extra Bold (Ultra Bold)
+//900	Black (Heavy)
+//950	Extra Black (Ultra Black)
+//@include fontFace($family, $file, $fontWeight, $fontStyle, $fontDisplay)
+
+//FONT1
+@include fontFace(
+  $font-face1,
+  '#{$font-face1}/#{$font-face1}-Regular',
+  400,
+  normal,
+  swap
+);
+@include fontFace(
+  $font-face1,
+  '#{$font-face1}/#{$font-face1}-Medium',
+  500,
+  normal,
+  swap
+);
+@include fontFace(
+  $font-face1,
+  '#{$font-face1}/#{$font-face3}-Bold',
+  700,
+  normal,
+  swap
+);
+
+/*
+ * 1. Set `font-size` to support `rem` units
+ *    Not using `font` property because a leading hyphen (e.g. -apple-system) causes the font to break in IE11 and Edge
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ * 3. Style
+ */
+
+@include fontFace(
+  $font-face1,
+  '#{$font-face1}/#{$font-face1}-Regular',
+  400,
+  normal,
+  swap
+);
+
+@font-face {
+  font-family: 'icomoon';
+  src: url(/styles/fonts/icomoon/icomoon.eot);
+  src: url(/styles/fonts/icomoon/icomoon.eot?#iefix) format('embedded-opentype'),
+    url(/styles/fonts/icomoon/icomoon.woff) format('woff'),
+    url(/styles/fonts/icomoon/icomoon.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Crete+Round&subset=latin-ext');
+html {
+  /* 1 */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  background: $light;
+  color: #666;
+}
+
+// Text Selection
+::selection {
+  background: $primary;
+  color: $white;
+  text-shadow: 0 0px 30px $white;
+}
+body p:last-child {
+  margin: 0;
+}
+// Icons
+svg[class^='icon-'],
+%bg-icon,
+i[class^='bg-icon-'] {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  flex: none !important;
+  vertical-align: middle;
+  font-size: 32px;
+  background-repeat: no-repeat;
+}
+
+.stroke-icon {
+  stroke-width: 1 !important;
+}
+
+// repeatable icons, use for encode: https://yoksel.github.io/url-encoder/
+// usage for scss: @extend %bg-icon; @extend %bg-icon-minus;
+// usage for html: <i class="bg-icon-minus"></i>
+%bg-icon,
+i.bg-icon {
+  &-minus {
+    background-image: url("data:image/svg+xml,%0A%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000000' d='M11 15h10v1H11z'/%3E%3C/svg%3E%0A");
+  }
+  &-plus {
+    background-image: url("data:image/svg+xml,%0A%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000000' d='M16.5 10.5V15H21v1h-4.501l.001 4.5h-1l-.001-4.5H11v-1h4.5v-4.5h1z'/%3E%3C/svg%3E%0A");
+  }
+  &-arrow-r {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyOCAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgNy41SDI2TTI2IDcuNUMyMy42NjY3IDguMzMzMzMgMTkgOC4xIDE5IDAuNU0yNiA3LjVDMjMuNjY2NyA2LjgzMzMzIDE5IDcuMyAxOSAxNC41IiBzdHJva2U9IiMyNzIxMTciLz4KPC9zdmc+Cg==');
+  }
+}
+
+// Animations
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes message {
+  0% {
+    transform: scale(0.7);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes toTop {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toTop100 {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toEnd {
+  0% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes toEnd100 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+// Emos Framwork
+.ems {
+  // Overlay
+  &-overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: $zindex-modal-backdrop;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: $black, $alpha: 0.7);
+    animation: show 0.5s ease;
+  }
+
+  // Page Loading Overlay
+  &-loading-overlay {
+    //background: url($bg-loading);
+    z-index: $zindex-popover;
+
+    .ajx-loading & {
+      display: block;
+    }
+  }
+
+  &-tab-content {
+    > * {
+      display: none;
+
+      &.selected {
+        display: block;
+      }
+    }
+  }
+  // EMS Modal
+  &-modal {
+    display: none;
+    flex-direction: column;
+    z-index: $zindex-modal;
+  }
+
+  // Forms
+  &-field-feedback {
+    font-size: 12px;
+    color: $primary;
+    margin-top: 5px;
+
+    &:empty {
+      display: none !important;
+    }
+  }
+
+  // Seo Content
+  &-seo {
+    &.with-shadow {
+      .ems-seo-text {
+        &::after {
+          content: '';
+          background: linear-gradient(
+            180deg,
+            rgba(239, 233, 223, 0) 0%,
+            #efe9df 100%
+          );
+        }
+      }
+      .btn-more {
+        position: relative;
+        &::after {
+          content: '';
+          background-image: url("data:image/svg+xml,%3Csvg width='11' height='7' viewBox='0 0 11 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.5 0.5L5.5 5.5L0.5 0.5' stroke='%23272117'/%3E%3C/svg%3E%0A");
+        }
+      }
+    }
+    &-text {
+      position: relative;
+      max-height: 234px;
+      overflow: hidden;
+      transition: all 0.2s ease;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+      }
+    }
+
+    &.activeted {
+      .ems-seo-text {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// Read more
+.btn-more {
+  position: relative;
+  &::after {
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='7' viewBox='0 0 11 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.5 0.5L5.5 5.5L0.5 0.5' stroke='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 5px;
+    background-size: 10px 5px;
+    right: -18px;
+    position: absolute;
+    top: calc(50% - 10px / 2 + 2.5px);
+  }
+  .less {
+    display: none;
+  }
+
+  .activeted & {
+    .less {
+      display: inline;
+    }
+
+    .more {
+      display: none;
+    }
+    &::after {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+// Buttons
+.btn {
+  width: fit-content;
+  width: -moz-fit-content;
+  border: none;
+  // Reset
+  @at-root {
+    %button-reset {
+      padding: 0;
+      background: none;
+      border: none;
+      outline: none !important;
+    }
+  }
+
+  &-reset {
+    @extend %button-reset;
+  }
+
+  // Circle
+  &-circle {
+    @extend %button-reset;
+
+    svg {
+      font-size: 27px;
+      background: $white;
+      padding: 3px;
+      border-radius: 50%;
+    }
+  }
+
+  // WhatsApp
+  &-wp {
+    background: #4dcb5b;
+    border-color: #4dcb5b;
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  // Theme Colors
+  &-primary {
+    color: $white !important;
+  }
+  &.disabled {
+    background-color: $gray !important;
+    border-color: $gray !important;
+  }
+
+  &-save {
+    &.selected {
+      .icon-save {
+        --fill: #d72027;
+        --stroke: #d72027;
+      }
+    }
+  }
+}
+// hr
+hr {
+  background: $gray;
+  opacity: 0.3;
+}
+
+// Animations
+@keyframes toTop100 {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+//picture
+picture {
+  img {
+    width: 100%;
+  }
+}

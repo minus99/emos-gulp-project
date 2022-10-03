@@ -1,0 +1,27 @@
+.icon-proj-e{
+    width: 70px !important;
+    height: 11px !important;
+}
+.icon-minus99{
+    width: 25px !important;
+    height: 13px !important;
+}
+.newsletter-close {
+    right: 0;
+    top: calc(50% - 5px);
+    height: 16px;
+    width: 16px;
+}
+.site-footer {
+    .newsletter-drawer, .newsletter-close {
+        display: none;
+    }
+    .opened {
+        .newsletter-drawer {
+            display: block;
+        }
+        .newsletter-close {
+            display: flex;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.header-wrapper-mini-top {
+  display: none !important;
+}
+
+.header {
+  &-right {
+    margin-left: auto;
+  }
+}
+.ems {
+  &-scrollbar-mobile {
+    overflow: auto;
+
+    &::-webkit-scrollbar-track {
+      background: $light;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $black;
+    }
+  }
+}
+.login {
+  &-right {
+    padding: 30px 0 0;
+  }
+}

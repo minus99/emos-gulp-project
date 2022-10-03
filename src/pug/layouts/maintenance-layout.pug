@@ -1,0 +1,119 @@
+include ../abstracts/variables
+include ../abstracts/mixins
+
+<!DOCTYPE html>
+html(lang=lang, dir=dir)
+    // HEAD
+    head
+        block head
+            meta(charset="UTF-8")
+            meta(http-equiv="X-UA-Compatible", content="ie=edge")
+            meta(name="viewport" content="width=device-width, initial-scale=1")
+            
+            title=pageTitle
+            meta(name="description" content=pageDescription)
+
+            link(rel="apple-touch-icon" sizes="180x180" href=dirImages + "favicon/apple-touch-icon.png")
+            link(rel="icon" type="image/png" sizes="32x32" href=dirImages + "favicon/favicon.png")
+            link(rel="icon" type="image/png" sizes="16x16" href=dirImages + "favicon/favicon.png")
+            link(rel="manifest" href="manifest-min.json")
+            link(rel="mask-icon" href=dirImages + "favicon/safari-pinned-tab.svg" color="#ffc40d")
+            link(rel="shortcut icon" href=dirImages + "favicon/favicon.png")
+            
+            meta(name="theme-color" content="#E72665")
+
+            // dns-prefetch
+            link(rel="preconnect", href="https://connect.facebook.net")
+            link(rel="dns-prefetch", href="https://connect.facebook.net")
+
+            // preload
+            link(rel="preload", href=dirFonts + "Switzer/Switzer-Regular.woff2", as="font", type="font/woff2" crossorigin)
+            link(rel="preload", href=dirFonts + "Switzer/Switzer-Bold.woff2", as="font", type="font/woff2" crossorigin)
+
+            style.
+                .img-overlay {
+                    background-color: rgba(39,33,23,.4);
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    color: #fff;
+                }
+                .maintenance {
+                    position: relative;
+                }
+                .maintenance-desc {
+                    margin: 28px 23px;
+                }
+                .maintenance picture{
+                    position: relative;
+                    display: block;
+                }
+                .maintenance img {
+                    display: block;
+                    width: 100%;
+                    height: calc(100vh - 40px);
+                }
+                .container {
+                    box-sizing: border-box;
+                    max-width: calc(100% - 40px);
+                    width: 100%;
+                    padding-right: 20px;
+                    padding-left: 20px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+                .maintenance h2 {
+                    font-size: 50px;
+                    font-weight: 400;
+                    line-height: 1;
+                }
+                .maintenance p {
+                    font-size: 16px;
+                }                
+                @media (min-width: 1025px) {
+                    .container {
+                        padding-right: 50px;
+                        padding-left: 50px;
+                        margin-top: 45px;
+                        margin-bottom: 45px;
+                    }
+                    .maintenance-desc {
+                        width: 430px;
+                        margin: 161px 100px; 
+                    }
+                     .maintenance h2 {
+                         font-size: 70px;
+                     }
+                    .maintenance img {
+                        display: block;
+                        width: 100%;
+                        height: calc(100vh - 90px);
+                    }
+                }
+                @font-face{
+                     font-family:Switzer; src:url(/frontend/fonts/Switzer/Switzer-Regular.woff2) format("woff2"),url(/frontend/fonts/Switzer/Switzer-Regular.woff) format("woff");font-weight:400;font-style:normal;font-display:swap
+                }
+                body {
+                    font-family: Switzer;
+                    margin: 0;
+                } 
+                
+    // HEAD
+    // BODY
+    body(class="page-" + pageName + " " + pageClass)
+        .site-container
+            // CONTENT
+            main.site-main.d-flex.flex-column
+                block content
+                    h1(style="margin: 100px 0; text-align: center;") page content here
+            // CONTENT
+        
+            block loading-page
+                // LOADING PAGE
+                .ems-loading-overlay.ems-overlay
+                // LOADING PAGE
+    // BODY

@@ -1,0 +1,214 @@
+//- utilities
+    - dummy image: https://via.placeholder.com/335x522/ff0/f00
+    - loop: "- for (var x = 0; x < 12; x++)"
+    - random selected: li(class=Math.random() > .5 ? 'selected' : null)
+    - item selected: li(class=x == 3 ? 'selected' : null)
+    - trigger: button.trigger(type="button" data-target="body" data-ready="ems-xx-ready" data-animate="ems-xx-animate" data-type="toggle")
+        data-type:toggle, add, remove
+    - if pageName == 'page1' || pageName == 'page2'
+    - asd
+
+//- Svg Icon
+    +icon('heart')(class="knk")
+mixin icon(iconName)
+    svg(class="icon-" + iconName)&attributes(attributes)
+        use(xlink:href=dirImages + "icons.svg#" + iconName)
+
+//- Background Icon
+    +bg-icon('plus')(class="knk")
+mixin bg-icon(iconName)
+    i(class="bg-icon-" + iconName)&attributes(attributes)
+
+//- Image
+mixin picture(wrapperClass, lazy = false, small, small2x, large)
+    .prm-media(class=wrapperClass + (lazy ? " lazy" : ''))
+        picture
+            if lazy
+                source(class="lazy-picture" media="(max-width:5000px)" srcset=dirImages + "1x1.svg")
+            source(media="(max-width: 1024px)" srcset=small + " 1x, " + small2x + " 2x")
+            source(media="(min-width: 1025px)" srcset=large)
+            img(src=small, alt="alt text here")&attributes(attributes)
+
+mixin img(wrapperClass, lazy = false, small)
+    .prm-media(class=wrapperClass)
+        if lazy
+            img.lazy(src=dirImages + "1x1.svg", data-image-src=small, alt="alt text here")&attributes(attributes)
+        else
+            img(src=small, alt="alt text here")&attributes(attributes)
+
+//- Video
+mixin video(wrapperClass, src)
+    .prm-media(class=wrapperClass)
+        video(src=src, autoplay, playsinline, loop, muted)&attributes(attributes)
+
+//- Swiper
+mixin swiper(type = 'main', pagination = false, navigation = false, scrollbar = false, tracker = false)
+    div(data-swiper=type, class="swiper-container" + (pagination ? ' slider-pagination' : '') + (navigation ? ' slider-navigation' : ''))&attributes(attributes)
+        .swiper-inner
+            ul.swiper-wrapper
+                block
+        .swiper-pagination
+        - if(tracker)
+            .swiper-tracker 
+                +icon("minute-hand")
+        .swiper-button-next
+        .swiper-button-prev
+        - if(scrollbar)
+            .swiper-scrollbar
+
+//- breadcrumb - https://developers.google.com/search/docs/data-types/breadcrumb?hl=tr#microdata
+    breadcrumb(['Kadın', 'product-list.html'], ['Giyim', 'product-list.html'], ['Yeşil Kadın Triko', 'product-detail.html'])(class="knk")
+mixin breadcrumb(...items)
+    nav.ems-breadcrumb(aria-label="breadcrumb")&attributes(attributes)
+        ol.breadcrumb.flex-nowrap.text-nowrap.ems-scrollbar.ems-scrollbar-hide
+            li.breadcrumb-item
+                a(href="index.html") Ana Sayfa
+            each item, i in items
+                - last = (i == items.length - 1)
+                    if last 
+                        li.breadcrumb-item.active(aria-current="page")=item[0]
+                    else
+                        li.breadcrumb-item
+                            a(href=item[1])=item[0]
+
+
+mixin breadcrumbOld(...items)
+    // BREADCRUMB
+    .ems-breadcrumb&attributes(attributes)
+        .container-lg.px-0
+            ol.breadcrumb.flex-nowrap.text-nowrap.ems-scrollbar.ems-scrollbar-hide(itemscope, itemtype="https://schema.org/BreadcrumbList")
+                li.breadcrumb-item
+                    a(itemprop="item" href="index.html")
+                        span(itemprop="name") Ana Sayfa
+                    meta(itemprop="position" content="1")
+                each item, i in items
+                    - last = (i == items.length - 1)
+                        li.breadcrumb-item(class=last ? "active" : "", itemprop="itemListElement", itemscope, itemtype="https://schema.org/ListItem")
+                            if last
+                                span(itemprop="name")=item[0]
+                            else
+                                a(itemprop="item" href=item[1])
+                                    span(itemprop="name")=item[0]
+                            meta(itemprop="position" content=i+2)
+    // BREADCRUMB
+    
+//- Product
+
+//- Product 
+mixin product()
+    .card.card-prd.bg-white.tracker-container
+        .save-wrapper.position-absolute
+            a.btn-save.stretched-link-over.selected(href="javascript:void(0);" aria-label="Save")
+                +icon('save').stroke-icon
+        .card-media
+            +img('ratio ratio-1x1', true, dirUploads + '/product/rado.png')(class="card-img img-fluid")
+        .card-body.p-20.d-flex.flex-column.justify-content-end
+            p.card-title.mt-10 
+                span.fw-600 Rado 
+                span SXB433P Kol Saati
+            .card-price.mt-10.d-flex
+                .card-badge.d-flex.align-items-center.fs-12.text-white.bg-primary.p-5.me-10 -690 #{currency}
+                div
+                    .card-price-first.fs-12.text-gray.text-decoration-line-through 10.990 #{currencyText}
+                    .card-price-last.fs-14.fs-lg-16 10.300 #{currencyText}
+        .product-slider-brand.position-absolute
+            +img('ratio ratio-brand-mini ratio-bg-remove', true, dirUploads + 'brands/swiss-mini.png')
+        .tracker-content  
+            span Satın Al
+        a.stretched-link(href="product-detail.html")
+mixin product-mini()
+    .card.card-prd.bg-white.tracker-container
+        .card-media
+            +img('ratio ratio-1x1', true, dirUploads + '/product/rado.png')(class="card-img img-fluid")
+        .tracker-content 
+            span Satın Al
+        a.stretched-link(href="product-detail.html")
+
+mixin product-list-item()
+    .card.card-prd.bg-white.tracker-container
+        .save-wrapper.position-absolute
+            a.btn-save.stretched-link-over.selected(href="javascript:void(0);" aria-label="Save")
+                +icon('save').stroke-icon
+        .compare-wrapper.form-check.position-absolute.d-none
+            a.check-btn.check-btn-reverse.compare-check-button.fs-14.stretched-link-over.selected(href="javascript:void(0);" onclick="productCompare.clicked(this);" aria-label="Compare check")
+                span.me-30 Karşılaştır
+        .card-media
+            +img('ratio ratio-1x1', true, dirUploads + '/product/rado.png')(class="card-img img-fluid")
+        .card-body.p-20.d-flex.flex-column.justify-content-end
+            p.card-title.mt-10 
+                span.fw-600 Rado 
+                span SXB433P Kol Saati
+            .card-price.mt-10.d-flex
+                .card-badge.d-flex.align-items-center.fs-12.text-white.bg-primary.p-5.me-10 -690 #{currency}
+                div
+                    .card-price-first.fs-12.text-gray.text-decoration-line-through 10.990 #{currencyText}
+                    .card-price-last.fs-14.fs-lg-16 10.300 #{currencyText}
+        .product-slider-brand.position-absolute
+            +img('ratio ratio-brand-mini ratio-bg-remove', true, dirUploads + 'brands/swiss-mini.png')
+        .tracker-content  
+            span Satın Al
+        a.stretched-link(href="product-detail.html")
+mixin product-search()
+    .card.card-prd.bg-white.tracker-container
+        .save-wrapper.position-absolute
+            a.btn-save.stretched-link-over.selected(href="javascript:void(0);" aria-label="Save")
+                +icon('save').stroke-icon
+        .card-media
+            +img('ratio ratio-1x1', true, dirUploads + '/product/rado.png')(class="card-img img-fluid")
+        .card-body.p-20.d-flex.flex-column.justify-content-end
+            p.card-title.mt-10 
+                span.fw-600 Rado 
+                span SXB433P Kol Saati
+            .card-price.mt-10.d-flex
+                div
+                    .card-price-first.fs-12.text-gray.text-decoration-line-through 10.990 #{currencyText}
+                    .card-price-last.fs-14.fs-lg-16 10.300 #{currencyText}
+        .tracker-content  
+            span Satın Al
+        a.stretched-link(href="product-detail.html")
+
+//- Product Hrz
+mixin product-hrz()
+    .card.ems-prd-hrz.border-top.py-10
+        .row.g-0.align-items-center
+            .col-2.ps-20.col-lg-1
+                +img('ratio ratio-prd', true, 'https://via.placeholder.com/100x153/ff0000/fff')
+            .col.px-15
+                .card-title.h4 Kapşonlu Buz Mavisi Kadın Eşofman Takımı
+            a.stretched-link(href="product-detail.html")
+
+//- Product Hrz2
+mixin product-hrz2()
+    .card.ems-prd-hrz2.border-bottom.py-15
+        .row.g-0
+            .col-3
+                +img('ratio ratio-prd', true, 'https://via.placeholder.com/100x153/ff0000/fff')
+            .col.px-20
+                .card-title Kapşonlu Buz Mavisi Kadın Eşofman Takımı
+                .card-price.mt-10.d-flex.align-items-center.text-muted.h4
+                    .card-price-first.me-10.text-decoration-line-through #{currency}87,99
+                    .card-price-last #{currency}100,99
+                .card-badge-2.mt-10.border.border-2.border-secondary.rounded.p-5.d-inline-flex.align-items-center
+                    .fs-6 Sepette %25 indirim
+                    .ms-auto.ps-10.h3.text-secondary #{currency}78,99
+                .mt-10
+                    button.fs-5.lh-lg.btn-reset.text-decoration-underline.stretched-link-over(type="button", onclick="shopping.removeFromCart(this);") Kaldır
+            a.stretched-link(href="product-detail.html")
+
+//- Section Title
+mixin section-title(title, showAllLink = false)
+    .d-flex.align-items-center.justify-content-between
+        .h2.fs-lg-1= title
+        if showAllLink
+            a.link-primary.fw-bold(href=showAllLink) Tümünü Gör
+                +icon('arrow-r')
+
+//- Product Widget
+mixin prd-widget(title, showAllLink = false)
+    .products-widget&attributes(attributes)
+        .container-lg
+            +section-title(title, showAllLink)
+        .container-lg.px-0.px-lg-20.mt-20.mt-lg-30
+            +swiper('widgetAuto', false, true)(class="products-widget-slider")
+                li.swiper-slide
+                    +product()

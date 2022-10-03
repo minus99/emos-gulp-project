@@ -1,0 +1,92 @@
+$active: #2027D7;
+$gray:#777167;
+$step-size: 32px;
+$step-width: 100px;
+$step-line-gap: 6px;
+
+.progress-steps {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0 15px;
+    position: relative;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar,
+    ::-webkit-scrollbar-thumb,
+    ::-webkit-scrollbar-track {
+        display: none;
+    }
+
+    .step {
+        // display: none;
+        position: relative;
+        width: $step-width;
+        height: 50px;
+        flex: 0 0 auto;
+
+        // &.show {
+        //     display: block;
+        // }
+
+        &.last-step {
+
+            &::after {
+                display: none;
+            }
+
+            &~.step {
+                display: none;
+            }
+        }
+
+        &::before {
+            content: attr(data-step);
+            padding: 1rem;
+            border-radius: 50%;
+            color: #fff;
+            position: absolute;
+            width: $step-size;
+            height: $step-size;
+            background-color: $active;
+            left: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            background-color: $active;
+            opacity: .6;
+            width: calc($step-width - ($step-size + $step-line-gap * 2));
+            top: calc($step-size / 2);
+            left: calc($step-size + $step-line-gap)
+        }
+
+        &.active {
+            &::after {
+                background-color: $gray;
+            }
+
+            &~.step {
+                &::before {
+                    background-color: $gray;
+                }
+
+                &::after {
+                    background-color: $gray;
+                }
+            }
+        }
+    }
+}

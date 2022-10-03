@@ -1,0 +1,209 @@
+include ../abstracts/variables
+include ../abstracts/mixins
+
+doctype html
+html(lang=lang, dir=dir)
+    // HEAD
+    head
+        block head
+            meta(charset="UTF-8")
+            meta(http-equiv="X-UA-Compatible", content="ie=edge")
+            meta(name="viewport" content="width=device-width, initial-scale=1")
+            
+            title=pageTitle
+            meta(name="description" content=pageDescription)
+
+            link(rel="apple-touch-icon" sizes="180x180" href=dirImages + "favicon/apple-touch-icon.png")
+            link(rel="icon" type="image/png" sizes="32x32" href=dirImages + "favicon/favicon.png")
+            link(rel="icon" type="image/png" sizes="16x16" href=dirImages + "favicon/favicon.png")
+            link(rel="manifest" href="manifest-min.json")
+            link(rel="mask-icon" href=dirImages + "favicon/safari-pinned-tab.svg" color="#ffc40d")
+            link(rel="shortcut icon" href=dirImages + "favicon/favicon.png")
+            
+            meta(name="theme-color" content="#D72027")
+
+            // dns-prefetch
+            link(rel="preconnect", href="https://connect.facebook.net")
+            link(rel="dns-prefetch", href="https://connect.facebook.net")
+
+            // preload
+            link(rel="preload", href=dirFonts + "Switzer/Switzer-Regular.woff2", as="font", type="font/woff2" crossorigin)
+            link(rel="preload", href=dirFonts + "Switzer/Switzer-Bold.woff2", as="font", type="font/woff2" crossorigin)
+
+            //app shell
+                style
+                    include ../../../dist/frontend/css/app-shell.css
+            
+            // css
+            link(rel="stylesheet", href=dirFrontend + "css/app-shell.css")
+            link(rel="stylesheet", href=dirFrontend + "css/style.css")
+                       
+            // lang
+            script.
+                lang = '#{lang}';
+                frontend_dir = '#{dirFrontend}';
+
+            // serviceWorker
+            script.
+                if ('serviceWorker' in navigator) {
+                    navigator.serviceWorker.register('sw.js').then(function(reg) {
+                        if(reg.installing) {
+                            console.log('sw installing');
+                        } else if(reg.waiting) {
+                            console.log('sw installed');
+                        } else if(reg.active) {
+                            console.log('sw active');
+                        }
+                    }).catch(function(error) {
+                        // registration failed
+                        console.log('Registration failed with ' + error);
+                    });
+                }
+
+            // ieFix
+            script.
+                var loadCss = function () {
+                    var cssId = 'myCss';  // you could encode the css path itself to generate id..
+                    if (!document.getElementById(cssId)) {
+                        var head = document.getElementsByTagName('head')[0];
+                        var link = document.createElement('link');
+                        link.id = cssId;
+                        link.rel = 'stylesheet';
+                        link.type = 'text/css';
+                        link.href = 'frontend/css/ieFix.css';
+                        link.media = 'all';
+                        head.appendChild(link);
+                    }
+                },
+                    getIEVersion = function () {
+                        var sAgent = window.navigator.userAgent;
+                        var Idx = sAgent.indexOf("MSIE");
+
+                        if (Idx > 0)
+                            return false;
+                        else if (!!navigator.userAgent.match(/Trident\/7\./))
+                            return true;
+                        else
+                            return false;
+                    };
+                if (getIEVersion()){
+                    loadCss();
+                }
+    // HEAD
+    // BODY
+    body(class="page-" + pageName + " " + pageClass)
+        .site-container
+            block header
+                // HEADER
+                header.site-header.sticky-top
+                    include ../includes/header
+                // HEADER
+            
+            // CONTENT
+            main.site-main.d-flex.flex-column
+                block content
+                    h1(style="margin: 100px 0; text-align: center;") page content here
+            // CONTENT
+            block footer
+                if pageName != "pageNotfound" && pageName != "pageInternal"
+                    footer.site-footer
+                        include ../includes/footer
+            // MINI CART
+            .ems-cart-overlay.ems-overlay(data-target="body" data-ready="ems-cart-ready" data-animate="ems-cart-animate" data-type="remove")
+            .mini-cart-content-inner.ems-cart.ems-modal.ems-modal-end.ems-modal-lg.ems-modal-lg-end
+                // Class'ı mini-cart-content olmalı ve içeriği widget'tan gelmeli.
+                .modal-header.p-20.border-0.mx-10
+                    span.fs-18 Sepetim   
+                    a.cart-close.modal-close(onclick="targetElement.clicked(this);" href="javascript:void(0);" data-target="body" data-ready="ems-cart-ready" data-animate="ems-cart-animate" data-type="remove")
+                        +icon("close")
+                .mini-cart-body.modal-body.ems-scrollbar.ems-scrollbar-vertical.p-20.mx-10.mb-20
+                    .ems-message.ems-message-warning.my-60.pt-60
+                        .d-flex.flex-column.align-items-center 
+                            .rounded-circle.p-30.bg-light
+                                +icon('cart') 
+                            .mb-40.my-20 Henüz sepetinizde ürün bulunmuyor.
+                            a.btn.btn-primary(href="#") Alışverişe Başla
+                    ul.list-unstyled.ems-cart-grid.ems-grid-wrapper
+                        - for (var x = 0; x < 10; x++)
+                            li.prd.prd-hrz.ems-grid-row.mb-40.pb-40.border-bottom
+                                .row.position-relative.prd-inner.m-0.align-items-center.p-0
+                                    .col-3.ps-0
+                                        +img('ratio ratio-1x1', true, dirUploads + 'product/rado.png').mini-cart-prd-img.rounded-circle.border
+                                    .prd-body.col-6.px-0
+                                        .col1
+                                            .d-block.prd-title 
+                                                b Rado 
+                                                span SXB433P Kol Saati
+                                            span.d-block.mb-10.fs-14
+                                                span.text-gray Adet 
+                                                span 1 Ürün
+                                                
+                                        .col2.d-flex.justify-content-between.align-items-center
+                                            .d-flex.prd-price-holder.align-items-center
+                                                .prd-price-discount.bg-primary.text-white.py-10.px-5.me-10.fs-12 -690₺
+                                                .flex-grow-1.prd-price
+                                                    .prd-price-first.text-gray.fs-12 10.990 ₺
+                                                    .prd-price-last 10.300 ₺
+                                                
+                                    .col-3.d-flex.flex-column.justify-content-between.align-items-end(data-document-id="9a183491-cd38-4483-9179-381f86eda976")
+                                        a.position-relative.prd-remove-to-cart(onclick="shopping.removeFromCart(this);" href="javascript:void(0);")
+                                            +icon("remove")
+                                        .d-flex.justify-content-between.number-input.position-relative.mt-30 
+                                            button.btn.btn-link.bg-none.p-0.flex-center.fs-20.text-dark(type="button") -
+                                            input(type="number", value="1")
+                                            button.btn.btn-link.bg-none.p-0.flex-center.fs-20.text-dark(type="button") +
+                                        a.ems-prd-link.btn-full(href="/smart-7801-w-beyaz-firin")    
+                .modal-footer.p-20.bg-dark.text-white
+                    .floating-col.d-flex.align-items-center.justify-content-between.w-100
+                        .floating-total
+                            .floating-total-title.fs-12 Toplam
+                            .floating-total-price.ems-result.fs-18 3.334,00 ₺
+                        a.cart-footer-link.btn.btn-primary.d-flex.align-items-center.justify-content-end(href="/sepet") Alışverişi Tamamla 
+                                        
+
+                // FOOTER
+            // block ajx-popup
+                // BS MODAL PREVIEW
+                .ems-modal-container
+                    .modal-default-overlay.ems-overlay(data-target='.ems-modal-container' data-ready='modal-default-ready' data-animate='modal-default-animate' data-type='remove')
+                    .modal.modal-default
+                        .modal-dialog.modal-dialog-centered.modal-dialog-scrollable.modal-lg.modal-fullscreen-lg-down
+                            .modal-content
+                                .modal-header
+                                    .modal-title.h2
+                                    a.modal-close(onclick='targetElement.clicked(this);' href='javascript:void(0);' data-target='.ems-modal-container' data-ready='modal-default-ready' data-animate='modal-default-animate' data-type='remove')
+                                        +icon('close')
+                                .modal-body
+                // BS MODAL PREVIEW
+            
+            block cookie
+                // COOKIE INFORMATION
+                    .ems-cookie-bnr.fixed-bottom.bg-white.py-20.border-top.shadow-lg.collapse
+                        .container-lg
+                            .h4 Çerez Kullanımı
+                            p.fs-5.mt-5 Size en iyi deneyimi sunmak için web sitemizde çerez kullanıyoruz.
+                            button.ems-cookie-accept-btn.btn.btn-sm.btn-primary(type="button") Kabul Et
+                // COOKIE INFORMATION
+
+            block loading-page
+                // LOADING PAGE
+                .ems-loading-overlay.ems-overlay
+                // LOADING PAGE
+
+            block foot
+                #tracker-box
+                // FOOT
+                script#memberLogonTemplate(type="text/template")
+                    .ems-user-name {name} {surname}
+
+                script#memberLogonMobiTemplate(type="text/template")
+                    .ems-user-name {name} {surname}
+
+                script#memberMenuTemplate(type="text/template")
+                    .ems-user-name {name} {surname}
+                    a.ems-user-logout(href='/tr/LogOff') Çıkış Yap
+                    
+                script(src=dirFrontend + "js/620.js")
+                script(src=dirFrontend + "js/custom.js")
+                // FOOT
+    // BODY

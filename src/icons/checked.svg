@@ -1,0 +1,14 @@
+<svg width="32"
+     height="32"
+     viewBox="0 0 32 32"
+     fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+    <circle cx="16"
+            cy="16"
+            r="7"
+            fill="#18C641" />
+    <path fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M20.4948 13.9899L14.9999 19.4849L11.5049 15.9899L12.4948 15L14.9999 17.505L19.5049 13L20.4948 13.9899Z"
+          fill="white" />
+</svg>

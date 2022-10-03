@@ -1,0 +1,46 @@
+// font-face
+@mixin fontFace($family, $file, $fontWeight, $fontStyle, $fontDisplay) {
+    @font-face {
+        font-family: $family;
+        @if $family ==  $font-icon {
+            src: url(#{$dir-fonts + $file + '.woff'}) format('woff');
+        } @else {
+            src: url(#{$dir-fonts + $file + '.woff2'}) format('woff2'),
+                 url(#{$dir-fonts + $file + '.woff'}) format('woff');
+        }
+        font-weight: $fontWeight;
+        font-style: $fontStyle;
+        font-display: $fontDisplay;
+    }
+}
+
+// Overflow hidden by line count (...)
+@mixin line-clamp($lines) {
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+    overflow: hidden;
+}
+
+// Bootstrap aspect-ratio
+@mixin bs-aspect-ratio($width, $height) {
+    --bs-aspect-ratio: calc(#{$height} / #{$width} * 100%);
+}
+
+// Swiper Slide
+@mixin swiper-slide($width, $gap, $start-gap, $end-gap) {
+    width: $width !important;
+
+    &:first-child {
+        margin-left: $start-gap;
+    }
+
+    + .swiper-slide {
+        margin-left: $gap;
+    }
+    
+    &:last-child {
+        margin-right: $end-gap;
+    }
+}
+

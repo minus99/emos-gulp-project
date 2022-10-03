@@ -1,0 +1,149 @@
+// EMS Modal
+// .ems-modal
+.ems-modal {
+    //display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $zindex-modal;
+    width: 100%;
+    height: 100%;
+    //overflow: hidden;
+    background-color: $white;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .12s cubic-bezier(0.950, 0.050, 0.795, 0.035);
+    &-close {
+        border-bottom: 1px solid rgba(119, 113, 103, .2);
+        line-height: 1;
+        a {
+            z-index: 3;
+        }
+    }
+    &-body {
+        overflow: auto;
+        flex: 1;
+    }
+    &-header,
+    &-footer {
+        flex: none;
+    }
+    
+    @at-root {
+        %ems-modal-loading {
+            background: $bg-loading;
+            background-position: center center;
+    
+            > div {
+                filter: opacity(.5) blur(3px);
+                pointer-events: none;
+                user-select: none;
+            }
+        }
+
+    }
+
+    &-loading {
+        @extend %ems-modal-loading;
+    }
+    
+}
+
+
+// EMS Modal Compact
+.ems-modal-compact {
+    flex-direction: column;
+    background: $white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: $zindex-modal;
+    width: 100%;
+    height: 80%;
+    border-radius: 30px 30px 0 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(75%);
+    transition: all .12s cubic-bezier(0.950, 0.050, 0.795, 0.035);
+
+    .modal-header {
+        border-bottom: none;
+    }
+
+    .modal-body {
+        overflow: auto;
+    }
+}
+
+// .ems-modal.ems-modal-start
+.ems-modal-start {
+    transform: translateX(-75%);
+}
+
+// .ems-modal.ems-modal-end
+.ems-modal-end {
+    transform: translateX(75%);
+    right: 0;
+    left: auto;
+}
+
+// .ems-modal.ems-modal-top
+.ems-modal-top {
+    transform: translateY(-75%);
+}
+
+// .ems-modal.ems-modal-bottom
+.ems-modal-bottom {
+    transform: translateY(75%);
+}
+
+// .ems-xx-ready .ems-modal
+%ems-modal-ready {
+    display: flex;
+}
+
+// .ems-xx-animate
+%ems-modal-animate-body {
+    overflow: hidden;
+}
+
+// .ems-xx-animate .ems-modal
+%ems-modal-animate {
+    opacity: 1;
+    pointer-events: auto;
+    transition: all .3s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+}
+
+// .ems-xx-animate .ems-modal-start | .ems-xx-animate .ems-modal-end
+%ems-modal-animate-x {
+    transform: translateX(0);
+}
+
+// .ems-xx-animate .ems-modal-top | .ems-xx-animate .ems-modal-bottom
+%ems-modal-animate-y {
+    transform: translateY(0);
+}
+
+// .ems-xx-animate .ems-xx-overlay
+%ems-modal-animate-overlay {
+    display: block;
+}
+
+//Privacy Policy Modal
+.ems-privacy {
+    height: 80%;
+    border-radius: 20px 20px 0 0;
+    top: auto;
+    bottom: -100%;
+   
+    &-animate & {
+        @extend %ems-modal-ready;
+        @extend %ems-modal-animate;
+        bottom: 0;
+
+        &-overlay {
+            @extend %ems-modal-animate-overlay;
+        }
+    }
+}

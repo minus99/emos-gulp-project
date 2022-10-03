@@ -1,0 +1,16 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Koray Spor Home"
+    - var pageDescription = "Koray Spor Home"
+    - var pageName = "home"
+    - var pageClass = "home-page"
+
+block content
+    .container
+        h1 okay working
+    - 
+        myAtt = {
+            "src": "./images/loading.gif", "alt":"this is a photo"
+        };
+    img&attributes(myAtt)

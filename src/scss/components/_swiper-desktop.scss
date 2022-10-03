@@ -1,0 +1,105 @@
+// Common Styles
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 30px;
+}
+
+
+//Mobil Working
+.no-scroll {
+    .swiper-scrollbar {
+      display: none;
+    }
+}
+
+//horizontal content layout
+.d-swiper-layout-r {
+  > .swiper-inner {
+      > .swiper-wrapper {
+          flex-direction: row;
+      }
+  }
+}
+
+//vertical content layout
+.d-swiper-layout-v {
+  > .swiper-inner {
+      > .swiper-wrapper {
+          flex-direction: column;
+      }
+  }
+}
+
+
+//Navigation-2
+.slider-navigation-2 {
+	> .swiper-button-prev,
+	> .swiper-button-next {
+      background-color: transparent !important;
+		  display: block;
+	}
+	//pagination
+	&.slider-pagination {
+		> .swiper-pagination {
+			  display: none;
+		}
+	}
+}
+
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+  left: -($swiper-nav-width - 60px);
+}
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+  right: -($swiper-nav-width - 60px);
+}
+
+//THEME
+
+/* Home Slider */
+$mainDiameter: 230px;
+$mainRadius: calc($mainDiameter / 2);
+
+.main-slider {
+  .swiper {
+    &-pagination {
+      width: $mainDiameter;
+      height: $mainDiameter;
+      left: calc(50% - $mainRadius);
+      bottom: -$mainRadius !important;
+    }
+    &-tracker{
+      height: $mainDiameter;
+      bottom: -$mainRadius;
+      width: 30px;
+      left: calc(50% - 15px);
+    }
+  }
+}
+
+.main-slider .swiper-pagination-bullet:before {
+  width: 8.5px;
+  height: 8.5px;
+}
+.main-slider .swiper-pagination-bullet-active:before{
+  width: 16px;
+  height: 16px;
+  margin-top: -6px;
+  margin-left: -5px;
+}
+
+.desktop-no-swipe {
+  .swiper-inner>.swiper-wrapper {
+    transform: none !important;
+  }
+  .swiper-scrollbar {
+    display: none !important;
+  }
+  > .swiper-pagination,
+  > .swiper-button-prev,
+  > .swiper-button-next {
+    display: none !important;
+  }
+}

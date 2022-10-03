@@ -1,0 +1,10 @@
+.accordion.accordion-mobile {
+    .lv2 {
+        display: block;
+    }
+    &>li>a {
+        &:after {
+            display: none;
+        }
+    }
+}

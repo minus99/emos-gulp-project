@@ -1,0 +1,15 @@
+.tracker {
+    &-container {
+        * {
+            cursor: url("http://localhost:3000/frontend/images/cursor.svg"), auto;
+        }
+    }
+    &-content {
+        display: none;
+    }
+} 
+#tracker-box {
+    position: fixed;
+    pointer-events: none;
+    z-index: 10;
+}
