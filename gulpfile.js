@@ -161,5 +161,4 @@ const _default = series(
   watchFiles
 );
 
-export { clean, css, js };
-export default _default;
+export { _default as default, clean, css, js };
