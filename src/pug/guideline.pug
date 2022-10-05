@@ -1,0 +1,294 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Guide"
+    - var pageDescription = "Guide Description"
+    - var pageName = "guide"
+    - var pageClass = ""
+
+block content
+    .container.guideline
+        section.guideline__section-wrap.mb-50
+            h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Buttons
+            .guideline__btns-wrap
+                a.btn.btn-primary.btn-sm&attributes({"type":"button", "href":"javascript:void()"}) click me 
+                span.ms-20 .a.btn.btn-primary
+            .guideline__btns-wrap
+                a.btn.btn-secondary.btn-lg&attributes({"type":"button","href":"javascript:void()"}) click me 
+                span.ms-20 .a.btn.btn-secondary
+
+        section.guideline__section-wrap.mb-50
+            h2.guideline__h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Icon Set
+            .row.row-cols-2.row-cols-lg-4
+                div.p-10
+                    +icon("address-book")
+                    span.ms-20 address-book
+                div.p-10
+                    +icon("archive-full")
+                    span.ms-20 archive-full
+                div.p-10
+                    +icon("archive")
+                    span.ms-20 archive-full
+
+                div.p-10
+                    +icon("arrow-left-right")
+                    span.ms-20 arrow-left-right
+
+                div.p-10
+                    +icon("arrow-left")
+                    span.ms-20 arrow-left
+
+                div.p-10
+                    +icon("arrow-right")
+                    span.ms-20 arrow-right
+
+                div.p-10
+                    +icon("bag")
+                    span.ms-20 bag
+
+                div.p-10
+                    +icon("bell")
+                    span.ms-20 bell
+
+                div.p-10
+                    +icon("box")
+                    span.ms-20 box
+
+                div.p-10
+                    +icon("box-open")
+                    span.ms-20 box-open
+
+                div.p-10
+                    +icon("burger")
+                    span.ms-20 burger
+
+                div.p-10
+                    +icon("caret-down")
+                    span.ms-20 caret-down
+
+                div.p-10
+                    +icon("caret-left")
+                    span.ms-20 caret-left
+
+                div.p-10
+                    +icon("caret-right")
+                    span.ms-20 caret-right
+
+                div.p-10
+                    +icon("caret-up")
+                    span.ms-20 caret-up
+
+                div.p-10
+                    +icon("check")
+                    span.ms-20 check
+
+                div.p-10
+                    +icon("checked")
+                    span.ms-20 checked
+
+                div.p-10
+                    +icon("checked-big")
+                    span.ms-20 checke-big
+
+                div.p-10
+                    +icon("close")
+                    span.ms-20 close
+
+                div.p-10
+                    +icon("dot")
+                    span.ms-20 dot
+
+                div.p-10
+                    +icon("dri-fit")
+                    span.ms-20 dri-fit
+
+                div.p-10
+                    +icon("elite")
+                    span.ms-20 elite 
+
+                div.p-10
+                    +icon("envelope")
+                    span.ms-20 envelope
+
+                div.p-10
+                    +icon("eye-open")
+                    span.ms-20 eye-open
+
+                div.p-10
+                    +icon("eye-close")
+                    span.ms-20 eye-close
+
+                div.p-10
+                    +icon("filters")
+                    span.ms-20 filters
+
+                div.p-10
+                    +icon("goretex")
+                    span.ms-20 goretex
+
+                div.p-10
+                    +icon("headset")
+                    span.ms-20 headset
+
+                div.p-10
+                    +icon("home")
+                    span.ms-20 home 
+
+                div.p-10
+                    +icon("indirim")
+                    span.ms-20 indirim
+                
+                div.p-10
+                    +icon("info")
+                    span.ms-20 info
+
+                div.p-10
+                    +icon("kaztuyu")
+                    span.ms-20 kaztuyu
+                
+                div.p-10
+                    +icon("korayspor")
+                    span.ms-20 korayspor
+                
+                div.p-10
+                    +icon("map")
+                    span.ms-20 map
+
+                div.p-10
+                    +icon("minus")
+                    span.ms-20 minus
+
+                div.p-10
+                    +icon("not-checked")
+                    span.ms-20 not-checked
+
+                div.p-10
+                    +icon("not-checked-big")
+                    span.ms-20 not-checked-big
+
+                div.p-10
+                    +icon("notes")
+                    span.ms-20 notes
+
+                div.p-10
+                    +icon("one-in-line")
+                    span.ms-20 one-in-line
+
+                div.p-10
+                    +icon("pipe")
+                    span.ms-20 pipe
+
+                div.p-10
+                    +icon("play-rounded")
+                    span.ms-20 play-rounded
+
+                div.p-10
+                    +icon("play-small")
+                    span.ms-20 play-small
+
+                div.p-10
+                    +icon("plus")
+                    span.ms-20 plus
+
+                div.p-10
+                    +icon("plus")
+                    span.ms-20 plus
+
+                div.p-10
+                    +icon("primeknit")
+                    span.ms-20 primeknit 
+                
+                div.p-10
+                    +icon("return")
+                    span.ms-20 return
+
+                div.p-10
+                    +icon("search")
+                    span.ms-20 search 
+
+                div.p-10
+                    +icon("shopping-bag")
+                    span.ms-20 shopping-bag 
+
+                div.p-10
+                    +icon("size-3")
+                    span.ms-20 size-3 
+                
+                div.p-10
+                    +icon("size-5")
+                    span.ms-20 size-5 
+
+                div.p-10
+                    +icon("sound")
+                    span.ms-20 sound
+
+                div.p-10
+                    +icon("star")
+                    span.ms-20 star
+
+                div.p-10
+                    +icon("store")
+                    span.ms-20 store 
+
+                div.p-10
+                    +icon("trash")
+                    span.ms-20 trash
+
+                div.p-10
+                    +icon("truck")
+                    span.ms-20 truck
+
+                div.p-10
+                    +icon("turkey")
+                    span.ms-20 turkey
+
+                div.p-10
+                    +icon("two-in-line")
+                    span.ms-20 two-in-line
+
+                div.p-10
+                    +icon("upload")
+                    span.ms-20 upload
+
+                div.p-10
+                    +icon("user")
+                    span.ms-20 user 
+
+                div.p-10
+                    +icon("warning")
+                    span.ms-20 warning
+
+                div.p-10
+                    +icon("yaripro")
+                    span.ms-20 yaripro
+
+
+
+        section.guideline__section-wrap.mb-50
+            h2.guideline__h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Social Icon Set
+            .row.row-cols-2.row-cols-lg-4
+                div.p-10
+                    +icon("facebook")
+                    span.ms-20 facebook
+
+                div.p-10
+                    +icon("instagram")
+                    span.ms-20 instagram
+
+                div.p-10
+                    +icon("pinterest")
+                    span.ms-20 pinterest
+
+                div.p-10
+                    +icon("twitter")
+                    span.ms-20 twitter
+
+                div.p-10
+                    +icon("whatsapp")
+                    span.ms-20 whatsapp 
+                div.p-10
+                    +icon("youtube")
+                    span.ms-20 youtube
+
+        section.guideline__section-wrap.mb-50
+            h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Forms and Input

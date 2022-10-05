@@ -10,6 +10,7 @@ import svgSprite from 'gulp-svg-sprite';
 import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';
 import { deleteAsync as del } from 'del';
+import fs from 'node:fs';
 
 browserSync.create();
 const sass = gulpSass(sassLoader);
@@ -161,5 +162,4 @@ const _default = series(
   watchFiles
 );
 
-export { clean, css, js };
-export default _default;
+export { _default as default, clean, css, js };

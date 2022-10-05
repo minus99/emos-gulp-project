@@ -1,9 +1,9 @@
 .container.px-lg-50.header-wrapper-mini-top.d-flex.justify-content-between.bg-white
     .left-wrapper
-    .right-wrapper.d-flex.justify-content-end.align-items-center.gap-10
-        .item Korayspor
-        .item Sneakers
-        .item VipÇocuk
+    .right-wrapper.d-flex.justify-content-end.align-items-center
+        .right-wrapper__item.px-15.py-5 Korayspor
+        .right-wrapper__item.px-15.py-5 Sneakers
+        .right-wrapper__item.px-15.py-5 VipÇocuk
 .container.px-lg-50
     .header-wrapper.d-flex.justify-content-lg-between.align-items-center
         a(class="ems-menu-trigger d-lg-none mx-lg-5 me-15" aria-label="Menu" href="javascript:void(0);")
@@ -256,7 +256,7 @@
             //-         a(href="#") Zaman Kütüphanesi
             //-     li.px-10 
             //-         a(href="#") İlham
-            a(class='ems-search-trigger px-10' aria-label='Search' href='javascript:void(0);' data-target='body' data-ready='ems-search-ready' data-animate='ems-search-animate' data-type='add')
+            a(class='ems-search-trigger px-10 d-sm-none' aria-label='Search' href='javascript:void(0);' data-target='body' data-ready='ems-search-ready' data-animate='ems-search-animate' data-type='add')
                 +icon('search').fs-20
             a(class='ems-search-close px-10 d-none' aria-label='Search' href='javascript:void(0);' data-target='body' data-ready='ems-search-ready' data-animate='ems-search-animate' data-type='remove')
                 +icon('close').fs-20
