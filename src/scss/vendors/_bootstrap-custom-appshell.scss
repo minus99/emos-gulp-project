@@ -1,82 +1,80 @@
-@import "bootstrap-variables";
+@import 'bootstrap-variables';
 
 //
 // Layout & components
-@import "../../../node_modules/bootstrap/scss/root";
-@import "../../../node_modules/bootstrap/scss/reboot";
-@import "../../../node_modules/bootstrap/scss/type";
-@import "../../../node_modules/bootstrap/scss/containers";
-@import "../../../node_modules/bootstrap/scss/grid";
+@import '../../../node_modules/bootstrap/scss/root';
+@import '../../../node_modules/bootstrap/scss/reboot';
+@import '../../../node_modules/bootstrap/scss/type';
+@import '../../../node_modules/bootstrap/scss/containers';
+@import '../../../node_modules/bootstrap/scss/grid';
 //@import "../../../node_modules/bootstrap/scss/placeholders";
-@import "../../../node_modules/bootstrap/scss/utilities";
+@import '../../../node_modules/bootstrap/scss/utilities';
 
 // Helpers
-@import "../../../node_modules/bootstrap/scss/helpers";
-
-
+@import '../../../node_modules/bootstrap/scss/helpers';
 
 // Utilities
-@import "../../../node_modules/bootstrap/scss/utilities/api";
+@import '../../../node_modules/bootstrap/scss/utilities/api';
 
 // BOOTSTRAP-ADDITIONS
 // :bootstrap/scss/type
 .list-unstyled {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 0;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
 }
-a:hover{
+a:hover {
   text-decoration: none;
 }
 
 // :bootstrap/scss/breadcrumb
 .breadcrumb-item {
-    + .breadcrumb-item {
-        &::before {
-            float: none;
-        }
+  + .breadcrumb-item {
+    &::before {
+      float: none;
     }
-  
-    &:last-child {
-        padding-right: $breadcrumb-item-padding-x;
-    }
+  }
+
+  &:last-child {
+    padding-right: $breadcrumb-item-padding-x;
+  }
 }
 
 // :bootstrap/scss/helpers/ratio
 .ratio {
-    &::before {
-        background: $white;
-        //background: $bg-loading;
+  &::before {
+    background: $white;
+    //background: $bg-loading;
+  }
+
+  &-bg {
+    &-circle {
+      &::before {
+        border-radius: 50%;
+        transform: scale(0.98);
+      }
     }
-    
-    &-bg {
-        &-circle {
-            &::before {
-                border-radius: 50%;
-                transform: scale(.98);
-            }
-       }
-       
-       &-remove {
-            &::before {
-                background: none;
-            }
-       }
+
+    &-remove {
+      &::before {
+        background: none;
+      }
     }
+  }
 }
 
 // :bootstrap/scss/helpers/stretched-link
 .stretched-link-over {
-    position: relative;
-    z-index: $stretched-link-z-index + 1;
+  position: relative;
+  z-index: $stretched-link-z-index + 1;
 }
 
 // DESKTOP BOOTSTRAP-ADDITIONS
 @media (min-width: $breakpoint-lg) {
-    // Desktop :bootstrap/scss/helpers/ratio
-    @each $key, $ratio in $aspect-ratios {
-        .ratio-lg-#{$key} {
-            --#{$variable-prefix}aspect-ratio: #{$ratio};
-        }
+  // Desktop :bootstrap/scss/helpers/ratio
+  @each $key, $ratio in $aspect-ratios {
+    .ratio-lg-#{$key} {
+      --#{$variable-prefix}aspect-ratio: #{$ratio};
     }
+  }
 }

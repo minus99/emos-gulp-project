@@ -326,66 +326,6 @@ i.bg-icon {
   }
 }
 
-// Buttons
-.btn {
-  width: fit-content;
-  width: -moz-fit-content;
-  border: none;
-  // Reset
-  @at-root {
-    %button-reset {
-      padding: 0;
-      background: none;
-      border: none;
-      outline: none !important;
-    }
-  }
-
-  &-reset {
-    @extend %button-reset;
-  }
-
-  // Circle
-  &-circle {
-    @extend %button-reset;
-
-    svg {
-      font-size: 27px;
-      background: $white;
-      padding: 3px;
-      border-radius: 50%;
-    }
-  }
-
-  // WhatsApp
-  &-wp {
-    background: #4dcb5b;
-    border-color: #4dcb5b;
-    color: $white;
-
-    &:hover {
-      color: $white;
-    }
-  }
-
-  // Theme Colors
-  &-primary {
-    color: $white !important;
-  }
-  &.disabled {
-    background-color: $gray !important;
-    border-color: $gray !important;
-  }
-
-  &-save {
-    &.selected {
-      .icon-save {
-        --fill: #d72027;
-        --stroke: #d72027;
-      }
-    }
-  }
-}
 // hr
 hr {
   background: $gray;
