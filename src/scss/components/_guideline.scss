@@ -1,0 +1,48 @@
+.guideline {
+  &__color {
+    height: 100px;
+    .primaryspan {
+      background-color: $primary;
+    }
+    .coralspan {
+      background-color: $coral;
+    }
+    .accentspan {
+      background-color: $accent;
+    }
+    .blackspan {
+      background-color: $black;
+    }
+    .whitespan {
+      background-color: $white;
+    }
+    .lightspan {
+      background-color: $light;
+      border: 1px solid $primary;
+    }
+    .grayspan {
+      background-color: $gray;
+    }
+    .gray2span {
+      background-color: $gray2;
+    }
+    .gray3span {
+      background-color: $gray3;
+    }
+    .gray4span {
+      background-color: $gray4;
+    }
+    .greenspan {
+      background-color: $green;
+    }
+    .goldspan {
+      background-color: $gold;
+    }
+    .infospan {
+      background-color: $info;
+    }
+    .warningspan {
+      background-color: $warning;
+    }
+  }
+}
