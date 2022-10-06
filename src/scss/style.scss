@@ -1,0 +1,85 @@
+// Abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// Bootstrap
+@import 'vendors/bootstrap-custom';
+
+// Base
+//@import 'base/global';
+
+// Components
+@import 'components/swiper';
+@import 'components/tab';
+@import 'components/accordion';
+@import 'components/toastify';
+@import 'components/step-progress';
+
+// Layouts
+@import 'layouts/header';
+//@import 'layouts/product-detail';
+//@import 'layouts/product-list';
+
+//Modules
+@import 'modules/home-slider';
+/*@import 'modules/story';
+@import 'modules/double-circle';
+@import 'modules/product-widget';
+@import 'modules/login';
+@import 'modules/gift-guide';
+@import 'modules/inspiration';
+@import 'modules/stores';
+@import 'modules/compare';
+@import 'modules/circle-slider';*/
+
+
+// MOBILE (< $breakpoint-lg)
+@media (max-width: $breakpoint-lg - 1) {
+  
+  // Components
+  @import 'components/swiper-mobile';
+  @import 'components/modal-mobile';
+
+  // Layouts
+  @import 'layouts/header-mobile';
+  //@import 'layouts/product-list-mobile';
+
+  //Modules
+ /* @import 'modules/inspiration-mobile';
+  @import 'modules/circle-slider-mobile';*/
+
+}
+
+// MIDDLE (> $breakpoint-lg & < $breakpoint-lg)
+@media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg - 1) {
+  @import 'layouts/tablet-fixes';
+}
+
+// DESKTOP (> $breakpoint-lg)
+@media (min-width: $breakpoint-lg) {
+
+  // Components
+  @import 'components/swiper-desktop';
+  @import 'components/modal-desktop';
+  @import 'components/accordion-desktop';
+  @import 'components/step-progress-desktop';
+
+  // Layouts
+  @import 'layouts/header-desktop';
+ /* @import 'layouts/product-detail-desktop';
+  @import 'layouts/product-list-desktop';*/
+  
+  //Modules
+  @import 'modules/home-slider-desktop';
+  /*@import 'modules/story-desktop';
+  @import 'modules/double-circle-desktop';
+  @import 'modules/login-desktop';
+
+  @import 'modules/gift-guide-desktop';
+  @import 'modules/inspiration-desktop';
+  @import 'modules/accesories-desktop';
+  @import 'modules/compare-desktop';
+  @import 'modules/circle-slider-desktop';*/
+
+
+}
