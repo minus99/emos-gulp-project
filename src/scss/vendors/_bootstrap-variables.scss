@@ -83,7 +83,7 @@ $caret-spacing: 10px;
 $aspect-ratios: (
   '1x1': 100%,
   '21x9': calc(9 / 21 * 100%),
-  '335x520': calc(520 / 335 * 100%),
+  'prd': calc(360 / 450 * 100%),
   '335x648': calc(648 / 335 * 100%),
   '800x460': calc(460 / 800 * 100%),
   'corporate': calc(520 / 375 * 100%),
@@ -141,7 +141,7 @@ $headings-font-weight: 700;
 $headings-line-height: $line-height-sm;
 
 $display-font-sizes: (
-  1: 4rem // 64px,,,,,,,,,
+  1: 4rem // 64px,,,,,,,,,,,,
 );
 
 $lead-font-size: 1rem; // 16px
