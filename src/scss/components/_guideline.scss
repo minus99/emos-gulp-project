@@ -46,3 +46,9 @@
     }
   }
 }
+
+.fill-primary {
+  svg path {
+    fill: $primary !important;
+  }
+}

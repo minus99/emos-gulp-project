@@ -10,13 +10,23 @@ block content
     .container.guideline
         section.guideline.mb-50
             h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Buttons
-            .guideline__btns
-                a.btn.btn-primary.btn-sm(href="javascript:void(0)") click me 
-                span.ms-20 .a.btn.btn-primary
-            .guideline__btns
-                a.btn.btn-secondary.btn-lg&attributes({"type":"button","href":"javascript:void()"}) click me 
-                span.ms-20 .a.btn.btn-secondary
-        //end
+            .guideline__btns.pb-10
+                a.btn.btn-primary.btn-sm.rounded-pill(href="javascript:void(0)") click me 
+                span.ms-20 .btn.btn-primary.btn-sm.rounded-pill
+            .guideline__btns.pb-10
+                a.btn.btn-dark.btn-lg.rounded-pill&attributes({"type":"button","href":"javascript:void()"}) Kargo Takibi: 116440632413
+                span.ms-20 .btn.btn-dark.btn-lg.rounded-pill
+
+            .guideline__btns.pb-10
+                a.btn.btn-white.btn-sm.rounded-pill(href="javascript:void(0)")
+                    span.me-5  daha fazla
+                    +icon("caret-right").fs-12
+
+            guideline__btns.pb-10
+                a.btn.btn-white.btn.rounded-pill(href="javascript:void(0)")
+                    +icon("store")
+                    span.me-5  Mağaza Bul
+        // buttons end
 
         section.guideline.mb-50
             h2.guideline__h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Icon Set
@@ -262,6 +272,7 @@ block content
                 div.p-10
                     +icon("yaripro")
                     span.ms-20 yaripro
+        //Icons set End
         
 
         section.guideline.mb-50
@@ -289,9 +300,15 @@ block content
                 div.p-10
                     +icon("youtube")
                     span.ms-20 youtube
+        //Social Icon Set end
 
         section.guideline.mb-50
             h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Forms and Input
+            form.bg-white.p-20(action="")
+                input.px-20.py-10.bg-light(
+                    type="email"
+                    placeholder="E-posta Adresi*"
+                ) 
 
         section.guideline.mb-50
             h2.guideline__h2.border-bottom.mb-10.pb-10.border-green UI Colors
@@ -347,7 +364,14 @@ block content
                 .p-10.d-flex.align-items-center.guideline__color
                     span.w-25.h-100.me-15.d-inline-block.h-100.warningspan
                     span $warning
-        //end section
-        .row
+        //Colors end
+        section.row
             .col-6
-                +img('prm-media ratio ratio-prd', true, dirUploads + 'product-detail/image-5.png')
+                span ratio-prd 
+                code.ms-15 calc(360 / 450 * 100%)
+                +picture('ratio-bg-remove ratio ratio-prd', true, dirUploads + 'product-detail/prd-detail-2x.png', dirUploads + 'product-detail/prd-detail-x.png', dirUploads + 'product-detail/prd-detail-x.png')(class="w-100 img-fluid", alt="slide 1")
+                                
+        section.row
+            .siparis.d-flex.align-items-center
+                +icon("dot").fill-primary
+                span Sipariş Hazırlanıyor

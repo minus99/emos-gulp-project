@@ -82,20 +82,10 @@ $caret-spacing: 10px;
 // aspect ratios calc(height / width * 100%)
 $aspect-ratios: (
   '1x1': 100%,
-  '21x9': calc(9 / 21 * 100%),
   'prd': calc(360 / 450 * 100%),
   '335x648': calc(648 / 335 * 100%),
-  '800x460': calc(460 / 800 * 100%),
-  'corporate': calc(520 / 375 * 100%),
-  'corporate-desktop': calc(520 / 970 * 100%),
-  'person': calc(140 / 100 * 100%),
   'main-slider': calc(700 / 1340 * 100%),
   'logo': calc(58 / 200 * 100%),
-  'brand': calc(45 / 120 * 100%),
-  'brand-mini': calc(30 / 24 * 100%),
-  'blog': calc(300 / 1320 * 100%),
-  '400x700': calc(395 / 700 * 100%),
-  '1320x520': calc(520 / 1320 * 100%),
 );
 
 // Typography :391
@@ -141,7 +131,7 @@ $headings-font-weight: 700;
 $headings-line-height: $line-height-sm;
 
 $display-font-sizes: (
-  1: 4rem // 64px,,,,,,,,,,,,
+  1: 4rem // 64px,,,,,,,,,,,,,,,,,,,,,,,,
 );
 
 $lead-font-size: 1rem; // 16px
@@ -158,17 +148,17 @@ $input-btn-line-height: 1.25;
 $input-btn-focus-box-shadow: none !important;
 
 // Buttons :576
-$btn-padding-y: 1.1875rem; // 19px
-$btn-padding-x: 2.25rem; // 36px
-$btn-font-size: 0.8125; // 13px
+$btn-padding-y: 0.75rem; // 19px
+$btn-padding-x: 6.25rem; // 29px
+$btn-font-size: 0.8125rem; // 13px
 
 $btn-padding-y-sm: 0.75rem; // 12px
 $btn-padding-x-sm: 1.5rem; // 24px
 $btn-font-size-sm: $btn-font-size;
 
-$btn-padding-y-lg: 1rem;
-$btn-padding-x-lg: 100px;
-$btn-font-size-lg: 1rem;
+$btn-padding-y-lg: 1.1875rem; // 19px
+$btn-padding-x-lg: 2.375; //38px
+$btn-font-size-lg: $btn-font-size;
 
 $btn-font-weight: 600;
 
