@@ -32,15 +32,14 @@ block content
             h2.guideline__h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Icon Set
             .row.row-cols-2.row-cols-lg-4
                 div.p-10
-                    +icon("address-book")
-                    span.ms-20 address-book
+                    +icon("menu")
+                    span.ms-20 menu
+                div.p-10
+                    +icon("archive-fill")
+                    span.ms-20 archive-fill
                 div.p-10
                     +icon("archive-full")
-                    span.ms-20 archive-full
-                div.p-10
-                    +icon("archive")
-                    span.ms-20 archive-full
-
+                    span.ms-20 archive-full   
                 div.p-10
                     +icon("arrow-left-right")
                     span.ms-20 arrow-left-right
@@ -110,14 +109,6 @@ block content
                     span.ms-20 dot
 
                 div.p-10
-                    +icon("dri-fit")
-                    span.ms-20 dri-fit
-
-                div.p-10
-                    +icon("elite")
-                    span.ms-20 elite 
-
-                div.p-10
                     +icon("envelope")
                     span.ms-20 envelope
 
@@ -133,9 +124,7 @@ block content
                     +icon("filters")
                     span.ms-20 filters
 
-                div.p-10
-                    +icon("goretex")
-                    span.ms-20 goretex
+             
 
                 div.p-10
                     +icon("headset")
@@ -145,18 +134,12 @@ block content
                     +icon("home")
                     span.ms-20 home 
 
-                div.p-10
-                    +icon("indirim")
-                    span.ms-20 indirim
+             
                 
                 div.p-10
                     +icon("info")
                     span.ms-20 info
 
-                div.p-10
-                    +icon("kaztuyu")
-                    span.ms-20 kaztuyu
-                
                 div.p-10
                     +icon("korayspor")
                     span.ms-20 korayspor
@@ -220,15 +203,6 @@ block content
                 div.p-10
                     +icon("shopping-bag")
                     span.ms-20 shopping-bag 
-
-                div.p-10
-                    +icon("size-3")
-                    span.ms-20 size-3 
-                
-                div.p-10
-                    +icon("size-5")
-                    span.ms-20 size-5 
-
                 div.p-10
                     +icon("sound")
                     span.ms-20 sound
@@ -269,11 +243,35 @@ block content
                     +icon("warning")
                     span.ms-20 warning
 
+                
+        //Icons set End
+        section.guideline.mb-50
+            h2.guideline__h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Badge
+            .row.row-cols-2.row-cols-lg-4
                 div.p-10
                     +icon("yaripro")
                     span.ms-20 yaripro
-        //Icons set End
-        
+                div.p-10
+                    +icon("elite")
+                    span.ms-20 elite 
+                div.p-10
+                    +icon("size-3")
+                    span.ms-20 size-3 
+                div.p-10
+                    +icon("size-5")
+                    span.ms-20 size-5
+                div.p-10
+                    +icon("kaztuyu")
+                    span.ms-20 kaztuyu
+                div.p-10
+                    +icon("indirim")
+                    span.ms-20 indirim
+                div.p-10
+                    +icon("goretex")
+                    span.ms-20 goretex
+                div.p-10
+                    +icon("dri-fit")
+                    span.ms-20 dri-fit
 
         section.guideline.mb-50
             h2.guideline__h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Social Icon Set
@@ -320,6 +318,9 @@ block content
                 .p-10.d-flex.align-items-center.guideline__color
                     span.w-25.h-100.me-15.d-inline-block.h-100.coralspan
                     span $coral
+                .p-10.d-flex.align-items-center.guideline__color
+                    span.w-25.h-100.me-15.d-inline-block.h-100.accentspan
+                    span $accent
 
                 .p-10.d-flex.align-items-center.guideline__color
                     span.w-25.h-100.me-15.d-inline-block.h-100.blackspan
@@ -365,6 +366,35 @@ block content
                     span.w-25.h-100.me-15.d-inline-block.h-100.warningspan
                     span $warning
         //Colors end
+        section.guideline.mb-50
+            h2.guideline__h2.border-bottom.mb-10.pb-10.border-green  PRODUCT CARDS
+            .d-flex
+                .product-card 
+                    .ems-card-favorito 
+                        +icon("archive-fill")
+                    .ems-card-picture
+                        +picture('ratio ratio-prd ratio-lg-main-slider', dirUploads + 'product-detail/shoes.png', dirUploads + 'product-detail/shoes.png', dirUploads + 'product-detail/shoes2x.png')(class="w-100 img-fluid", alt="slide 1")
+                    .ems-card-logo
+                        span Adidas
+                    .ems-card-badge
+                        +icon("elite")
+                    .ems-card-footer
+                        h2.card-title Terrex Agravic Tr
+                        span.cheap-price 1200,00 TL 
+                        span.red-price 999,00 TL
+                .product-card 
+                    .ems-card-favorito 
+                        +icon("archive-fill")
+                    .ems-card-picture
+                        +picture('ratio ratio-prd ratio-lg-main-slider', dirUploads + 'product-detail/shoes.png', dirUploads + 'product-detail/shoes.png', dirUploads + 'product-detail/shoes2x.png')(class="w-100 img-fluid", alt="slide 1")
+                    .ems-card-logo
+                        span Adidas
+                    .ems-card-badge
+                        +icon("elite")
+                    .ems-card-footer
+                        h2.card-title Terrex Agravic Tr
+                        span.price 999,00 TL
+
         section.row
             .col-6
                 span ratio-prd 
@@ -375,3 +405,101 @@ block content
             .siparis.d-flex.align-items-center
                 +icon("dot").fill-primary
                 span Sipariş Hazırlanıyor
+
+        section.guideline.mb-50
+            h2.guideline__h2.border-bottom.mb-10.pb-10.border-green FONTS & COLORS
+            p Vela Sans GX
+            ul.font-list
+                li
+                    h3  Desc
+                    p   Small Input
+                    p   Small
+                    p   Small Highlight
+                    p   Body
+                    p   Body Highlight
+                    p   Large
+                    p   H1
+                    p   H2
+                    p   H3
+                    p   H4
+                li
+                    h3 Font
+                    p   Vela Sans GX Regular
+                    p   Vela Sans GX Regular
+                    p   Vela Sans GX Semibold
+                    p   Vela Sans GX Regular
+                    p   Vela Sans GX Semibold
+                    p   Vela Sans GX Regular
+                    p   Vela Sans GX Semibold
+                    p   Vela Sans GX Semibold
+                    p   Vela Sans GX Bold
+                    p   Vela Sans GX Bold
+                li
+                    h3  Size
+                    p   11
+                    p   13
+                    p   13
+                    p   16
+                    p   16
+                    p   20
+                    p   54
+                    p   40
+                    p   30
+                    p   24
+                li
+                    h3  Line Height
+                    p   140%
+                    p   140%
+                    p   140%
+                    p   140%
+                    p   140%
+                    p   140%
+                    p   120%
+                    p   120%
+                    p   110%
+                    p   110%
+        section.guideline.mb-50
+            h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Bank
+        section.guideline.mb-50
+            h2.guideline__h2.border-bottom.mb-10.pb-10.border-green 
+                .row
+                    .col-6 
+                        +img(src='uploads/front.svg')
+                        +img(src='uploads/backcard.svg')
+                    .col-6 
+                        div.p-10
+                            +icon("bonus")
+                            span.ms-20 bonus
+                        div.p-10
+                            +icon("garanti")
+                            span.ms-20 garanti
+                        div.p-10
+                            +icon("masterpass")
+                            span.ms-20 masterpass
+                        div.p-10
+                            +icon("akbank")
+                            span.ms-20 akbank
+                       
+               
+            
+
+
+
+
+
+
+
+
+
+                    
+                      
+                    
+
+
+
+
+
+
+
+
+
