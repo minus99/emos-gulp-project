@@ -11,21 +11,26 @@ block content
         section.guideline.mb-50
             h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Buttons
             .guideline__btns.pb-10
-                a.btn.btn-primary.btn-sm.rounded-pill(href="javascript:void(0)") click me 
+                a.btn.btn-primary.btn-sm.rounded-pill(href="javascript:void(0)") Daha fazla 
                 span.ms-20 .btn.btn-primary.btn-sm.rounded-pill
             .guideline__btns.pb-10
-                a.btn.btn-dark.btn-lg.rounded-pill&attributes({"type":"button","href":"javascript:void()"}) Kargo Takibi: 116440632413
-                span.ms-20 .btn.btn-dark.btn-lg.rounded-pill
+                .d-flex.align-items-center
+                    a.d-flex.align-items-center.btn.btn-white.btn-sm.rounded-pill&attributes({"type":"button","href":"javascript:void()"})
+                        +icon("box").custom-icon-w
+                        span.ms-10 Kargo Takibi: 116440632413
+                    span.ms-20 .btn.btn-white.btn-lg.rounded-pill
 
             .guideline__btns.pb-10
-                a.btn.btn-white.btn-sm.rounded-pill(href="javascript:void(0)")
-                    span.me-5  daha fazla
-                    +icon("caret-right").fs-12
+                a.btn.btn-white.btn.rounded-pill(href="javascript:void(0)")
+                    span.me-10  daha fazla
+                    +icon("caret-right").custom-icon-w.fs-13
 
             guideline__btns.pb-10
-                a.btn.btn-white.btn.rounded-pill(href="javascript:void(0)")
-                    +icon("store")
-                    span.me-5  Mağaza Bul
+                .d-flex.align-items-center
+                    a.d-flex.align-items-center.btn.btn-white.btn-sm.rounded-pill(href="javascript:void(0)")
+                        +icon("store-small").custom-icon-w
+                        span.ms-10  Mağaza Bul
+                    span.ms-15 +icon("store-small").custom-icon-w
         // buttons end
 
         section.guideline.mb-50
@@ -373,7 +378,7 @@ block content
                     .ems-card-favorito 
                         +icon("archive-fill")
                     .ems-card-picture
-                        +picture('ratio ratio-prd ratio-lg-main-slider', dirUploads + 'product-detail/shoes.png', dirUploads + 'product-detail/shoes.png', dirUploads + 'product-detail/shoes2x.png')(class="w-100 img-fluid", alt="slide 1")
+                        +picture('ratio ratio-prd', dirUploads + 'product-detail/prd-detail-2x.png', dirUploads + 'product-detail/prd-detail-x.png', dirUploads + 'product-detail/prd-detail-x.png')(class="w-100 img-fluid", alt="slide 1")
                     .ems-card-logo
                         span Adidas
                     .ems-card-badge
@@ -386,7 +391,7 @@ block content
                     .ems-card-favorito 
                         +icon("archive-fill")
                     .ems-card-picture
-                        +picture('ratio ratio-prd ratio-lg-main-slider', dirUploads + 'product-detail/shoes.png', dirUploads + 'product-detail/shoes.png', dirUploads + 'product-detail/shoes2x.png')(class="w-100 img-fluid", alt="slide 1")
+                        +picture('ratio ratio-prd', dirUploads + 'product-detail/prd-detail-2x.png', dirUploads + 'product-detail/prd-detail-x.png', dirUploads + 'product-detail/prd-detail-x.png')(class="w-100 img-fluid", alt="slide 1")
                     .ems-card-logo
                         span Adidas
                     .ems-card-badge

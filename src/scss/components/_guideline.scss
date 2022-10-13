@@ -53,7 +53,6 @@
   }
 }
 
-
 .font-list {
   display: flex;
   align-items: center;
@@ -74,14 +73,14 @@
   position: relative;
   box-sizing: border-box;
   width: 450px;
-  background: #F6F3F2;
+  background: #f6f3f2;
   margin-right: 20px;
-  .ems-card-favorito  {
+  .ems-card-favorito {
     position: absolute;
     top: 19px;
     right: 22px;
     z-index: 2;
-   
+
     .icon-archive-fill {
       font-size: 14px;
     }
@@ -92,14 +91,13 @@
     left: 0px;
     width: 52px;
     height: 23px;
-    background: #F6F3F2;
+    background: #f6f3f2;
     text-align: center;
     span {
       font-size: 11px;
       font-weight: 400;
-      color: #1A1818;
+      color: #1a1818;
       padding: 4px 8px;
-
     }
   }
   .ems-card-badge {
@@ -120,11 +118,11 @@
     .card-title {
       font-weight: 600;
       font-size: 13px;
-      color: #1A1818;
+      color: #1a1818;
       line-height: 18px;
     }
     .cheap-price {
-      color: #635C5B;
+      color: #635c5b;
       font-weight: 600;
       font-size: 13px;
       line-height: 18px;
@@ -135,10 +133,10 @@
       font-weight: 600;
       font-size: 13px;
       line-height: 18px;
-      color: #DF4826;
+      color: #df4826;
     }
     .price {
-      color: #1A1818;
+      color: #1a1818;
       font-weight: 600;
       font-size: 13px;
       line-height: 18px;
@@ -146,3 +144,7 @@
   }
 }
 
+.custom-icon-w {
+  max-width: 23px;
+  max-height: 23px;
+}
