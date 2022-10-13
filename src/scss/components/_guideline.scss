@@ -148,3 +148,17 @@
   max-width: 23px;
   max-height: 23px;
 }
+
+$gray-colors: (
+  'gray': $gray,
+  'gray-light-2': $gray2,
+  'gray-light-3': $gray3,
+  'gray-light-4': $gray4,
+);
+
+@each $gray, $color in $gray-colors {
+  .#{$gray} {
+    background-color: $color !important;
+    color: $dark !important;
+  }
+}
