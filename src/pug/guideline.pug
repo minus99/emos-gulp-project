@@ -11,8 +11,10 @@ block content
         section.guideline.mb-50
             h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Buttons
             .guideline__btns.pb-10
-                a.btn.btn-primary.btn-sm.rounded-pill(href="javascript:void(0)") Daha fazla 
-                span.ms-20 .btn.btn-primary.btn-sm.rounded-pill
+                .d-flex.align-items-center
+                    a.d-flex.align-items-center.btn.btn-primary.btn-sm.rounded-pill(href="javascript:void(0)") Daha fazla
+                    span.ms-20 a.d-flex.align-items-center.btn.btn-primary.btn-sm.rounded-pill
+
             .guideline__btns.pb-10
                 .d-flex.align-items-center
                     a.d-flex.align-items-center.btn.btn-white.btn-sm.rounded-pill&attributes({"type":"button","href":"javascript:void()"})
@@ -21,16 +23,33 @@ block content
                     span.ms-20 .btn.btn-white.btn-lg.rounded-pill
 
             .guideline__btns.pb-10
-                a.btn.btn-white.btn.rounded-pill(href="javascript:void(0)")
-                    span.me-10  daha fazla
-                    +icon("caret-right").custom-icon-w.fs-13
+                .d-flex.align-items-center
+                    a.d-flex.align-items-center.btn.btn-white.btn-sm.rounded-pill&attributes({"type":"button","href":"javascript:void()"})
+                        +icon("box").custom-icon-w
+                        span.ms-10 Sipariş Takibi
+                    span.ms-20 .btn.btn-white.btn-lg.rounded-pill
 
-            guideline__btns.pb-10
+            .guideline__btns.pb-10
+                .d-flex.align-items-center
+                    a.d-flex.align-items-center.btn.btn-white.btn.rounded-pill(href="javascript:void(0)")
+                        span.me-10  daha fazla
+                        +icon("caret-right").custom-icon-w.fs-13
+                    span.ms-15 a.d-flex.align-items-center.btn.btn-white.btn.rounded-pill
+
+            .guideline__btns.pb-10
                 .d-flex.align-items-center
                     a.d-flex.align-items-center.btn.btn-white.btn-sm.rounded-pill(href="javascript:void(0)")
-                        +icon("store-small").custom-icon-w
+                        +icon("store").custom-icon-w
                         span.ms-10  Mağaza Bul
                     span.ms-15 +icon("store-small").custom-icon-w
+            
+            .guideline__btns.pb-10
+                .d-flex.align-items-center
+                    a.d-flex.align-items-center.btn.btn-white.btn-sm.rounded-pill(href="javascript:void(0)")
+                        +icon("headset").custom-icon-w
+                        span.ms-10  Müşteri Hizmetleri
+                    span.ms-15 +icon("store-small").custom-icon-w
+            
         // buttons end
 
         section.guideline.mb-50

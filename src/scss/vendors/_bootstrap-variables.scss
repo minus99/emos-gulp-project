@@ -108,6 +108,7 @@ $h3-font-size: 1.875rem; // 30px
 $h4-font-size: 1.5rem; // 24px
 
 $font-sizes: (
+  7: 0.4375rem,
   11: 0.6875rem,
   13: 0.8125rem,
   16: 1rem,
@@ -128,7 +129,7 @@ $headings-font-weight: 700;
 $headings-line-height: $line-height-sm;
 
 $display-font-sizes: (
-  1: 4rem // 64px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  1: 4rem // 64px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 );
 
 $lead-font-size: 1rem; // 16px
