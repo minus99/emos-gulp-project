@@ -8,6 +8,19 @@ block prepend head
 
 block content
     .container.guideline
+        h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Navigation
+        .container.px-lg-50.header-wrapper-mini-top.d-flex.justify-content-between.bg-white.mb-50
+            .left-wrapper
+            .right-wrapper.d-flex.justify-content-end.align-items-center
+                .right-wrapper__item.px-15.py-5 Korayspor
+                .right-wrapper__item.px-15.py-5 Sneakers
+                .right-wrapper__item.px-15.py-5 VipÇocuk
+
+        .container.px-lg-50
+            .header-wrapper.d-flex.justify-content-lg-between.align-items-center
+                a(class="ems-menu-trigger d-lg-none mx-lg-5 me-15" aria-label="Menu" href="javascript:void(0);")
+                    +icon('burger').fs-20
+
         section.guideline.mb-50
             h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Buttons
             .guideline__btns.pb-10
@@ -17,12 +30,31 @@ block content
 
             .guideline__btns.pb-10
                 .d-flex.align-items-center
+                    a.d-flex.align-items-center.btn.btn-white.btn.rounded-pill.fw-bold(href="javascript:void(0)")
+                        span.me-10  daha fazla
+                        +icon("caret-right").custom-icon-w.fs-13
+                    span.ms-15 a.d-flex.align-items-center.btn.btn-white.btn.rounded-pill
+
+            .guideline__btns.pb-10
+                .d-flex.align-items-center
+                    a.d-flex.align-items-center.btn.btn-white.btn.rounded-pill.fw-bold(href="javascript:void(0)")
+                        +icon("arrow-left").custom-icon-w.fs-13
+                        span.ms-10  daha fazla
+                    span.ms-15 a.d-flex.align-items-center.btn.btn-white.btn.rounded-pill
+
+            .guideline__btns.pb-10
+                .d-flex.align-items-center
                     a.d-flex.align-items-center.btn.btn-dark.btn.rounded-pill.fw-bold(href="javascript:void(0)") Ödeme Yap
                     span.ms-20 a.d-flex.align-items-center.btn.btn-primary.btn-sm.rounded-pill
 
             .guideline__btns.pb-10
                 .d-flex.align-items-center
                     a.d-flex.align-items-center.btn.gray-light-3.btn.rounded-pill.fw-bold(href="javascript:void(0)") Ödeme Yap
+                    span.ms-20 a.d-flex.align-items-center.btn.btn-primary.btn-sm.rounded-pill
+
+            .guideline__btns.pb-10
+                .d-flex.align-items-center
+                    a.d-flex.align-items-center.btn.gray-light-3.btn.rounded-pill.fw-bold(href="javascript:void(0)") Koşu
                     span.ms-20 a.d-flex.align-items-center.btn.btn-primary.btn-sm.rounded-pill
 
             .guideline__btns.pb-10
@@ -38,13 +70,6 @@ block content
                         +icon("box").custom-icon-w
                         span.ms-10 Sipariş Takibi
                     span.ms-20 .btn.btn-white.btn-lg.rounded-pill
-
-            .guideline__btns.pb-10
-                .d-flex.align-items-center
-                    a.d-flex.align-items-center.btn.btn-white.btn.rounded-pill.fw-bold(href="javascript:void(0)")
-                        span.me-10  daha fazla
-                        +icon("caret-right").custom-icon-w.fs-13
-                    span.ms-15 a.d-flex.align-items-center.btn.btn-white.btn.rounded-pill
 
             .guideline__btns.pb-10
                 .d-flex.align-items-center
@@ -66,6 +91,18 @@ block content
                         +icon("whatsapp").custom-icon-w
                         span.ms-10 Canlı Destek 1
                     span.ms-15 +icon("store-small").custom-icon-w
+
+            .guideline__btns.pb-10
+                .d-flex.align-items-center
+                    a.d-flex.align-items-center.btn-sm.btn-white.btn.rounded-pill.fw-bold(href="javascript:void(0)")
+                        +icon("caret-left").custom-icon-w.fs-13
+                    span.ms-15 a.d-flex.align-items-center.btn.btn-white.btn.rounded-pill
+
+            .guideline__btns.pb-10
+                .d-flex.align-items-center
+                    a.d-flex.align-items-center.btn-sm.btn-white.btn.rounded-pill.fw-bold(href="javascript:void(0)")
+                        +icon("caret-right").custom-icon-w.fs-13
+                    span.ms-15 a.d-flex.align-items-center.btn.btn-white.btn.rounded-pill
             
         // buttons end
 
@@ -347,7 +384,12 @@ block content
                 input.px-20.py-10.bg-light(
                     type="email"
                     placeholder="E-posta Adresi*"
-                ) 
+                )
+            .search-wrap.mt-25.position-relative
+                .icon-element.position-relative.fs-13
+                    input(type="text" , placeholder="Ürün arama").gray-light-4.py-10.px-20.border-0
+                    +icon("search").fs-20
+
 
         section.guideline.mb-50
             h2.guideline__h2.border-bottom.mb-10.pb-10.border-green UI Colors

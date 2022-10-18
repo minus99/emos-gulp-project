@@ -10,8 +10,6 @@ import svgSprite from 'gulp-svg-sprite';
 import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';
 import { deleteAsync as del } from 'del';
-import fs from 'node:fs';
-import process from 'node:process';
 
 browserSync.create();
 const sass = gulpSass(sassLoader);
