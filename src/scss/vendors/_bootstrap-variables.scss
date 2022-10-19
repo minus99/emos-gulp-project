@@ -82,10 +82,14 @@ $caret-spacing: 10px;
 // aspect ratios calc(height / width * 100%)
 $aspect-ratios: (
   '1x1': 100%,
-  'prd': calc((360 / 450) * 100%),
-  '335x648': calc((648 / 335) * 100%),
+  'prd': calc(360 / 450 * 100%),
+  '335x648': calc(648 / 335 * 100%),
   'main-slider': calc(700 / 1340 * 100%),
   'logo': calc(58 / 200 * 100%),
+  'hero-banner': calc(740 / 1656 * 100%),
+  '740x768': calc(740 / 786 * 100%),
+  '480x375': calc(480 / 375 * 100%),
+  '680x520': calc(680 / 520 * 100%),
 );
 
 // Typography :391
@@ -102,19 +106,23 @@ $line-height-base: 1.5;
 $line-height-sm: 1;
 $line-height-lg: 1.85;
 
-$h1-font-size: 3.375rem; // 54px
-$h2-font-size: 2.5rem; // 40px
-$h3-font-size: 1.875rem; // 30px
-$h4-font-size: 1.5rem; // 24px
+$h1-font-size: 1.75rem; // 28px
+$h2-font-size: 1.25rem; // 20px
+$h3-font-size: 1rem; // 16px
+$h4-font-size: 0.875rem; // 14px
+$h5-font-size: 0.75rem; // 12px
+$h6-font-size: 0.625rem; // 10px
 
 $font-sizes: (
-  7: 0.4375rem,
-  11: 0.6875rem,
-  13: 0.8125rem,
+  8: 0.5rem,
+  12: 0.75rem,
+  14: 0.875rem,
   16: 1rem,
+  18: 1.125rem,
   20: 1.25rem,
   24: 1.5rem,
   28: 1.75rem,
+  30: 1.875rem,
   32: 2rem,
   36: 2.25rem,
   40: 2.5rem,
@@ -129,7 +137,7 @@ $headings-font-weight: 700;
 $headings-line-height: $line-height-sm;
 
 $display-font-sizes: (
-  1: 4rem // 64px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  1: 4rem // 64px,,,,,,,,,,,,,,,,,,,,,,,,
 );
 
 $lead-font-size: 1rem; // 16px
@@ -146,15 +154,15 @@ $input-btn-line-height: 1.25;
 $input-btn-focus-box-shadow: none !important;
 
 // Buttons :576
-$btn-padding-y: 1.1875rem; // 19px
-$btn-padding-x: 1.8125rem; // 29px
+$btn-padding-y: 0.75rem; // 19px
+$btn-padding-x: 6.25rem; // 29px
 $btn-font-size: 0.8125rem; // 13px
 
 $btn-padding-y-sm: 0.75rem; // 12px
 $btn-padding-x-sm: 1.5rem; // 24px
 $btn-font-size-sm: $btn-font-size;
 
-$btn-padding-y-lg: $btn-padding-y; // 19px same as normal
+$btn-padding-y-lg: 1.1875rem; // 19px
 $btn-padding-x-lg: 2.375; //38px
 $btn-font-size-lg: $btn-font-size;
 
