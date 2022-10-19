@@ -8,20 +8,53 @@ block prepend head
 
 block content
     .container.guideline
-        h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Navigation
-        .container.px-lg-50.header-wrapper-mini-top.d-flex.justify-content-between.bg-white.mb-50
-            .left-wrapper
-            .right-wrapper.d-flex.justify-content-end.align-items-center
-                .right-wrapper__item.px-15.py-5 Korayspor
-                .right-wrapper__item.px-15.py-5 Sneakers
-                .right-wrapper__item.px-15.py-5 VipÇocuk
+        .mb-20
+            h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Navigation
+            .h3 Nav top bar
+            p Ozel "header-wrapper-mini-top" calculate
+            .container.px-lg-50.header-wrapper-mini-top.d-flex.justify-content-between.bg-white
+                .left-wrapper.mb-20
+                .right-wrapper.d-flex.justify-content-end.align-items-center
+                    .right-wrapper__item.px-15.py-5 Korayspor
+                    .right-wrapper__item.px-15.py-5 Sneakers
+                    .right-wrapper__item.px-15.py-5 VipÇocuk
 
-        .container.px-lg-50
-            .header-wrapper.d-flex.justify-content-lg-between.align-items-center
-                a(class="ems-menu-trigger d-lg-none mx-lg-5 me-15" aria-label="Menu" href="javascript:void(0);")
-                    +icon('burger').fs-20
+        .site-header
+            h3.mb-15 Nav Main
+            .container.px-lg-50
+                .header-wrapper.d-flex.justify-content-lg-between.align-items-center
+                    a(class="ems-menu-trigger d-lg-none mx-lg-5 me-15" aria-label="Menu" href="javascript:void(0);")
+                        +icon('burger').fs-20 
+                    // Menu
+                    .ems-menu-overlay.ems-overlay(data-target="body" data-ready="ems-menu-ready" data-animate="ems-menu-animate" data-type="remove")
+                    
+                    //Burda Modal olacak, modal kestim
+                    .container.px-lg-50
+                        .header-wrapper.d-flex.justify-content-lg-between.align-items-center
+                            .header-left.d-flex.align-items-center.col
+                                .me-15
+                                    a(class="ems-menu-trigger d-sm-none mx-lg-5" aria-label="Menu" href="javascript:void(0);")
+                                        +icon('burger').fs-20
 
-        section.guideline.mb-50
+                                .header-logo-wrapper
+                                    .header-logo.col-3
+                                        a(href="/")
+                                            +img('ratio-logo ratio-bg-remove', false, dirImages + 'korayspor.svg')
+                            .header-right.d-flex.justify-content-end.col
+                                a(class='ems-search-trigger px-10' aria-label='Search' href='javascript:void(0);' data-target='body' data-ready='ems-search-ready' data-animate='ems-search-animate' data-type='add')
+                                    +icon('search').fs-20
+                                a(class='ems-search-close px-10 d-none' aria-label='Search' href='javascript:void(0);' data-target='body' data-ready='ems-search-ready' data-animate='ems-search-animate' data-type='remove')
+                                    +icon('close').fs-20
+                                a(class="ems-user px-10 d-sm-none" aria-label="User" href="javascript:void(0);")
+                                    +icon('user').fs-20   
+                                //- a.user-avatar.flex-center.fs-14.rounded-circle.bg-gray.text-white(class="ems-user px-10" aria-label="User" href="javascript:void(0);")
+                                //-     span DD 
+                                a(class="ems-cart-trigger px-10 mini-cart-icon" aria-label="Cart" href="javascript:void(0);" data-target="body" data-ready="ems-cart-ready" data-animate="ems-cart-animate" data-type="toggle")
+                                    +icon('bag').fs-20
+
+
+
+        section.guideline.mb-50.mt-50
             h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Buttons
             .guideline__btns.pb-10
                 .d-flex.align-items-center
