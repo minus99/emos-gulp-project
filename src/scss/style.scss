@@ -14,6 +14,7 @@
 @import 'components/accordion';
 @import 'components/toastify';
 @import 'components/step-progress';
+@import 'components/guideline';
 
 // Layouts
 @import 'layouts/header';
@@ -32,22 +33,20 @@
 @import 'modules/compare';
 @import 'modules/circle-slider';*/
 
-
 // MOBILE (< $breakpoint-lg)
 @media (max-width: $breakpoint-lg - 1) {
-  
   // Components
   @import 'components/swiper-mobile';
   @import 'components/modal-mobile';
+  @import 'components/guideline-mobile';
 
   // Layouts
   @import 'layouts/header-mobile';
   //@import 'layouts/product-list-mobile';
 
   //Modules
- /* @import 'modules/inspiration-mobile';
+  /* @import 'modules/inspiration-mobile';
   @import 'modules/circle-slider-mobile';*/
-
 }
 
 // MIDDLE (> $breakpoint-lg & < $breakpoint-lg)
@@ -57,7 +56,6 @@
 
 // DESKTOP (> $breakpoint-lg)
 @media (min-width: $breakpoint-lg) {
-
   // Components
   @import 'components/swiper-desktop';
   @import 'components/modal-desktop';
@@ -66,9 +64,9 @@
 
   // Layouts
   @import 'layouts/header-desktop';
- /* @import 'layouts/product-detail-desktop';
+  /* @import 'layouts/product-detail-desktop';
   @import 'layouts/product-list-desktop';*/
-  
+
   //Modules
   @import 'modules/home-slider-desktop';
   /*@import 'modules/story-desktop';
@@ -80,6 +78,4 @@
   @import 'modules/accesories-desktop';
   @import 'modules/compare-desktop';
   @import 'modules/circle-slider-desktop';*/
-
-
 }
