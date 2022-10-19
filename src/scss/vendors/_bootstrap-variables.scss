@@ -149,7 +149,7 @@ $border-radius: 0;
 
 // Buttons + Forms :550
 $input-btn-font-family: $font1;
-$input-btn-line-height: 1.25;
+$input-btn-line-height: 1;
 
 $input-btn-focus-box-shadow: none !important;
 
@@ -163,18 +163,18 @@ $btn-padding-x-sm: 1.5rem; // 24px
 $btn-font-size-sm: $btn-font-size;
 
 $btn-padding-y-lg: 1.1875rem; // 19px
-$btn-padding-x-lg: 2.375; //38px
+$btn-padding-x-lg: 2.375rem; //38px
 $btn-font-size-lg: $btn-font-size;
 
 $btn-font-weight: 600;
 
-$btn-border-radius: $border-radius;
-$btn-border-radius-lg: $border-radius;
+$btn-border-radius: 50px;
+$btn-border-radius-lg: 50px;
 $btn-border: 0;
-$btn-font-weight: 400;
+
 
 $btn-focus-box-shadow: none !important;
-$btn-disabled-opacity: 0.3;
+$btn-disabled-opacity: 0.6;
 
 // Forms :616
 $input-bg: transparent;

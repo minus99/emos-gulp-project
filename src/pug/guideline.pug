@@ -7,609 +7,555 @@ block prepend head
     - var pageClass = ""
 
 block content
-    .container.guideline
-        .mb-20
-            h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Navigation
-            .h3 Nav top bar
-            p Ozel "header-wrapper-mini-top" calculate
-            .container.px-lg-50.header-wrapper-mini-top.d-flex.justify-content-between.bg-white
-                .left-wrapper.mb-20
-                .right-wrapper.d-flex.justify-content-end.align-items-center
-                    .right-wrapper__item.px-15.py-5 Korayspor
-                    .right-wrapper__item.px-15.py-5 Sneakers
-                    .right-wrapper__item.px-15.py-5 VipÇocuk
+    .container
+        .header-logo-wrapper
+            .container
+                .header-logo
+                    a(href="/")
+                        +img('ratio-logo ratio-bg-remove', false, dirImages + 'korayspor.svg')
+        h2.border-bottom.mb-10.pb-10.border-green Buttons
+        section.mt-10
+            a.btn.btn-primary(href="javascript:void(0)") Daha fazla
+        section.mt-10
+            a.btn.btn-lg.btn-white.btn-icon-right(href="javascript:void(0)")
+                span  Daha Fazla
+                +icon("caret-right").fs-12
+        section.mt-10
+            a.btn.btn-lg.btn-white.btn-icon-left(href="javascript:void(0)")
+                +icon("arrow-left")
+                span  Daha Fazla
+        section.mt-10
+            a.btn.btn-white(href="javascript:void(0)") Daha fazla
+        section.mt-10
+            a.btn.btn-dark.btn-lg(href="javascript:void(0)") Ödeme Yap
+        section.mt-10
+            a.btn.btn-dark.btn-lg.disabled(href="javascript:void(0)") Ödeme Yap
+        section.mt-10
+            a.btn.btn-lg.btn-white.btn-icon-left(href="javascript:void(0)")
+                +icon("box")
+                span  Daha Fazla
+    
 
-        .site-header
-            h3.mb-15 Nav Main
-            .container.px-lg-50
-                .header-wrapper.d-flex.justify-content-lg-between.align-items-center
-                    a(class="ems-menu-trigger d-lg-none mx-lg-5 me-15" aria-label="Menu" href="javascript:void(0);")
-                        +icon('burger').fs-20 
-                    // Menu
-                    .ems-menu-overlay.ems-overlay(data-target="body" data-ready="ems-menu-ready" data-animate="ems-menu-animate" data-type="remove")
-                    
-                    //Burda Modal olacak, modal kestim
-                    .container.px-lg-50
-                        .header-wrapper.d-flex.justify-content-lg-between.align-items-center
-                            .header-left.d-flex.align-items-center.col
-                                .me-15
-                                    a(class="ems-menu-trigger d-sm-none mx-lg-5" aria-label="Menu" href="javascript:void(0);")
-                                        +icon('burger').fs-20
+        .guideline__btns.pb-10
+            .d-flex.align-items-center
+                a.d-flex.align-items-center.btn.btn-white.btn-sm.rounded-pill.fw-bold(href="javascript:void()")
+                    +icon("box").custom-icon-w
+                    span.ms-10 Kargo Takibi: 116440632413
+                span.ms-20 .btn.btn-white.btn-lg.rounded-pill
 
-                                .header-logo-wrapper
-                                    .header-logo.col-3
-                                        a(href="/")
-                                            +img('ratio-logo ratio-bg-remove', false, dirImages + 'korayspor.svg')
-                            .header-right.d-flex.justify-content-end.col
-                                a(class='ems-search-trigger px-10' aria-label='Search' href='javascript:void(0);' data-target='body' data-ready='ems-search-ready' data-animate='ems-search-animate' data-type='add')
-                                    +icon('search').fs-20
-                                a(class='ems-search-close px-10 d-none' aria-label='Search' href='javascript:void(0);' data-target='body' data-ready='ems-search-ready' data-animate='ems-search-animate' data-type='remove')
-                                    +icon('close').fs-20
-                                a(class="ems-user px-10 d-sm-none" aria-label="User" href="javascript:void(0);")
-                                    +icon('user').fs-20   
-                                //- a.user-avatar.flex-center.fs-14.rounded-circle.bg-gray.text-white(class="ems-user px-10" aria-label="User" href="javascript:void(0);")
-                                //-     span DD 
-                                a(class="ems-cart-trigger px-10 mini-cart-icon" aria-label="Cart" href="javascript:void(0);" data-target="body" data-ready="ems-cart-ready" data-animate="ems-cart-animate" data-type="toggle")
-                                    +icon('bag').fs-20
+        .guideline__btns.pb-10
+            .d-flex.align-items-center
+                a.d-flex.align-items-center.btn.btn-white.btn-sm.rounded-pill.fw-bold(href="javascript:void()")
+                    +icon("box").custom-icon-w
+                    span.ms-10 Sipariş Takibi
+                span.ms-20 .btn.btn-white.btn-lg.rounded-pill
 
+        .guideline__btns.pb-10
+            .d-flex.align-items-center
+                a.d-flex.align-items-center.btn.btn-white.btn-sm.rounded-pill.fw-bold(href="javascript:void(0)")
+                    +icon("store").custom-icon-w
+                    span.ms-10 Mağaza Bul
+                span.ms-15 +icon("store-small").custom-icon-w
+        
+        .guideline__btns.pb-10
+            .d-flex.align-items-center
+                a.d-flex.align-items-center.btn.btn-white.btn-sm.rounded-pill.fw-bold(href="javascript:void(0)")
+                    +icon("headset").custom-icon-w
+                    span.ms-10 Müşteri Hizmetleri
+                span.ms-15 +icon("store-small").custom-icon-w
 
+        .guideline__btns.pb-10
+            .d-flex.align-items-center
+                a.d-flex.align-items-center.btn.btn-white.btn-sm.rounded-pill.fw-bold(href="javascript:void(0)")
+                    +icon("whatsapp").custom-icon-w
+                    span.ms-10 Canlı Destek 1
+                span.ms-15 +icon("store-small").custom-icon-w
 
-        section.guideline.mb-50.mt-50
-            h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Buttons
-            .guideline__btns.pb-10
-                .d-flex.align-items-center
-                    a.d-flex.align-items-center.btn.btn-primary.btn-sm.rounded-pill.fw-bold(href="javascript:void(0)") Daha fazla
-                    span.ms-20 a.d-flex.align-items-center.btn.btn-primary.btn-sm.rounded-pill
+        .guideline__btns.pb-10
+            .d-flex.align-items-center
+                a.d-flex.align-items-center.btn-sm.btn-white.btn.rounded-pill.fw-bold(href="javascript:void(0)")
+                    +icon("caret-left").custom-icon-w.fs-13
+                span.ms-15 a.d-flex.align-items-center.btn.btn-white.btn.rounded-pill
 
-            .guideline__btns.pb-10
-                .d-flex.align-items-center
-                    a.d-flex.align-items-center.btn.btn-white.btn.rounded-pill.fw-bold(href="javascript:void(0)")
-                        span.me-10  daha fazla
-                        +icon("caret-right").custom-icon-w.fs-13
-                    span.ms-15 a.d-flex.align-items-center.btn.btn-white.btn.rounded-pill
-
-            .guideline__btns.pb-10
-                .d-flex.align-items-center
-                    a.d-flex.align-items-center.btn.btn-white.btn.rounded-pill.fw-bold(href="javascript:void(0)")
-                        +icon("arrow-left").custom-icon-w.fs-13
-                        span.ms-10  daha fazla
-                    span.ms-15 a.d-flex.align-items-center.btn.btn-white.btn.rounded-pill
-
-            .guideline__btns.pb-10
-                .d-flex.align-items-center
-                    a.d-flex.align-items-center.btn.btn-dark.btn.rounded-pill.fw-bold(href="javascript:void(0)") Ödeme Yap
-                    span.ms-20 a.d-flex.align-items-center.btn.btn-primary.btn-sm.rounded-pill
-
-            .guideline__btns.pb-10
-                .d-flex.align-items-center
-                    a.d-flex.align-items-center.btn.gray-light-3.btn.rounded-pill.fw-bold(href="javascript:void(0)") Ödeme Yap
-                    span.ms-20 a.d-flex.align-items-center.btn.btn-primary.btn-sm.rounded-pill
-
-            .guideline__btns.pb-10
-                .d-flex.align-items-center
-                    a.d-flex.align-items-center.btn.gray-light-3.btn.rounded-pill.fw-bold(href="javascript:void(0)") Koşu
-                    span.ms-20 a.d-flex.align-items-center.btn.btn-primary.btn-sm.rounded-pill
-
-            .guideline__btns.pb-10
-                .d-flex.align-items-center
-                    a.d-flex.align-items-center.btn.btn-white.btn-sm.rounded-pill.fw-bold(href="javascript:void()")
-                        +icon("box").custom-icon-w
-                        span.ms-10 Kargo Takibi: 116440632413
-                    span.ms-20 .btn.btn-white.btn-lg.rounded-pill
-
-            .guideline__btns.pb-10
-                .d-flex.align-items-center
-                    a.d-flex.align-items-center.btn.btn-white.btn-sm.rounded-pill.fw-bold(href="javascript:void()")
-                        +icon("box").custom-icon-w
-                        span.ms-10 Sipariş Takibi
-                    span.ms-20 .btn.btn-white.btn-lg.rounded-pill
-
-            .guideline__btns.pb-10
-                .d-flex.align-items-center
-                    a.d-flex.align-items-center.btn.btn-white.btn-sm.rounded-pill.fw-bold(href="javascript:void(0)")
-                        +icon("store").custom-icon-w
-                        span.ms-10 Mağaza Bul
-                    span.ms-15 +icon("store-small").custom-icon-w
+        .guideline__btns.pb-10
+            .d-flex.align-items-center
+                a.d-flex.align-items-center.btn-sm.btn-white.btn.rounded-pill.fw-bold(href="javascript:void(0)")
+                    +icon("caret-right").custom-icon-w.fs-13
+                span.ms-15 a.d-flex.align-items-center.btn.btn-white.btn.rounded-pill
             
-            .guideline__btns.pb-10
-                .d-flex.align-items-center
-                    a.d-flex.align-items-center.btn.btn-white.btn-sm.rounded-pill.fw-bold(href="javascript:void(0)")
-                        +icon("headset").custom-icon-w
-                        span.ms-10 Müşteri Hizmetleri
-                    span.ms-15 +icon("store-small").custom-icon-w
-
-            .guideline__btns.pb-10
-                .d-flex.align-items-center
-                    a.d-flex.align-items-center.btn.btn-white.btn-sm.rounded-pill.fw-bold(href="javascript:void(0)")
-                        +icon("whatsapp").custom-icon-w
-                        span.ms-10 Canlı Destek 1
-                    span.ms-15 +icon("store-small").custom-icon-w
-
-            .guideline__btns.pb-10
-                .d-flex.align-items-center
-                    a.d-flex.align-items-center.btn-sm.btn-white.btn.rounded-pill.fw-bold(href="javascript:void(0)")
-                        +icon("caret-left").custom-icon-w.fs-13
-                    span.ms-15 a.d-flex.align-items-center.btn.btn-white.btn.rounded-pill
-
-            .guideline__btns.pb-10
-                .d-flex.align-items-center
-                    a.d-flex.align-items-center.btn-sm.btn-white.btn.rounded-pill.fw-bold(href="javascript:void(0)")
-                        +icon("caret-right").custom-icon-w.fs-13
-                    span.ms-15 a.d-flex.align-items-center.btn.btn-white.btn.rounded-pill
-            
-        // buttons end
-
-        section.guideline.mb-50
-            h2.guideline__h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Icon Set
-            .row.row-cols-2.row-cols-lg-4
-                div.p-10
-                    +icon("menu")
-                    span.ms-20 menu
-                div.p-10
-                    +icon("archive-fill")
-                    span.ms-20 archive-fill
-                div.p-10
-                    +icon("archive-full")
-                    span.ms-20 archive-full   
-                div.p-10
-                    +icon("arrow-left-right")
-                    span.ms-20 arrow-left-right
-
-                div.p-10
-                    +icon("arrow-left")
-                    span.ms-20 arrow-left
-
-                div.p-10
-                    +icon("arrow-right")
-                    span.ms-20 arrow-right
-
-                div.p-10
-                    +icon("bag")
-                    span.ms-20 bag
-
-                div.p-10
-                    +icon("bell")
-                    span.ms-20 bell
-
-                div.p-10
-                    +icon("box")
-                    span.ms-20 box
-
-                div.p-10
-                    +icon("box-open")
-                    span.ms-20 box-open
-
-                div.p-10
-                    +icon("burger")
-                    span.ms-20 burger
-
-                div.p-10
-                    +icon("caret-down")
-                    span.ms-20 caret-down
-
-                div.p-10
-                    +icon("caret-left")
-                    span.ms-20 caret-left
-
-                div.p-10
-                    +icon("caret-right")
-                    span.ms-20 caret-right
-
-                div.p-10
-                    +icon("caret-up")
-                    span.ms-20 caret-up
-
-                div.p-10
-                    +icon("check")
-                    span.ms-20 check
-
-                div.p-10
-                    +icon("checked")
-                    span.ms-20 checked
-
-                div.p-10
-                    +icon("checked-big")
-                    span.ms-20 checked-big
-
-                div.p-10
-                    +icon("close")
-                    span.ms-20 close
-
-                div.p-10
-                    +icon("dot")
-                    span.ms-20 dot
-
-                div.p-10
-                    +icon("envelope")
-                    span.ms-20 envelope
-
-                div.p-10
-                    +icon("eye-open")
-                    span.ms-20 eye-open
-
-                div.p-10
-                    +icon("eye-close")
-                    span.ms-20 eye-close
-
-                div.p-10
-                    +icon("filters")
-                    span.ms-20 filters
-
-             
-
-                div.p-10
-                    +icon("headset")
-                    span.ms-20 headset
-
-                div.p-10
-                    +icon("home")
-                    span.ms-20 home 
-
-             
-                
-                div.p-10
-                    +icon("info")
-                    span.ms-20 info
-
-                div.p-10
-                    +icon("korayspor")
-                    span.ms-20 korayspor
-                
-                div.p-10
-                    +icon("map")
-                    span.ms-20 map
-
-                div.p-10
-                    +icon("minus")
-                    span.ms-20 minus
-
-                div.p-10
-                    +icon("not-checked")
-                    span.ms-20 not-checked
-
-                div.p-10
-                    +icon("not-checked-big")
-                    span.ms-20 not-checked-big
-
-                div.p-10
-                    +icon("notes")
-                    span.ms-20 notes
-
-                div.p-10
-                    +icon("one-in-line")
-                    span.ms-20 one-in-line
-
-                div.p-10
-                    +icon("pipe")
-                    span.ms-20 pipe
-
-                div.p-10
-                    +icon("play-rounded")
-                    span.ms-20 play-rounded
-
-                div.p-10
-                    +icon("play-small")
-                    span.ms-20 play-small
-
-                div.p-10
-                    +icon("plus")
-                    span.ms-20 plus
-
-                div.p-10
-                    +icon("plus")
-                    span.ms-20 plus
-
-                div.p-10
-                    +icon("primeknit")
-                    span.ms-20 primeknit 
-                
-                div.p-10
-                    +icon("return")
-                    span.ms-20 return
-
-                div.p-10
-                    +icon("search")
-                    span.ms-20 search 
-
-                div.p-10
-                    +icon("shopping-bag")
-                    span.ms-20 shopping-bag 
-                div.p-10
-                    +icon("sound")
-                    span.ms-20 sound
-
-                div.p-10
-                    +icon("star")
-                    span.ms-20 star
-
-                div.p-10
-                    +icon("store")
-                    span.ms-20 store 
-
-                div.p-10
-                    +icon("trash")
-                    span.ms-20 trash
-
-                div.p-10
-                    +icon("truck")
-                    span.ms-20 truck
-
-                div.p-10
-                    +icon("turkey")
-                    span.ms-20 turkey
-
-                div.p-10
-                    +icon("two-in-line")
-                    span.ms-20 two-in-line
-
-                div.p-10
-                    +icon("upload")
-                    span.ms-20 upload
-
-                div.p-10
-                    +icon("user")
-                    span.ms-20 user 
-
-                div.p-10
-                    +icon("warning")
-                    span.ms-20 warning
-
-                
-        //Icons set End
-        section.guideline.mb-50
-            h2.guideline__h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Badge
-            .row.row-cols-2.row-cols-lg-4
-                div.p-10
-                    +icon("yaripro")
-                    span.ms-20 yaripro
-                div.p-10
-                    +icon("elite")
-                    span.ms-20 elite 
-                div.p-10
-                    +icon("size-3")
-                    span.ms-20 size-3 
-                div.p-10
-                    +icon("size-5")
-                    span.ms-20 size-5
-                div.p-10
-                    +icon("kaztuyu")
-                    span.ms-20 kaztuyu
-                div.p-10
-                    +icon("indirim")
-                    span.ms-20 indirim
-                div.p-10
-                    +icon("goretex")
-                    span.ms-20 goretex
-                div.p-10
-                    +icon("dri-fit")
-                    span.ms-20 dri-fit
-
-        section.guideline.mb-50
-            h2.guideline__h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Social Icon Set
-            .row.row-cols-2.row-cols-lg-4
-                div.p-10
-                    +icon("facebook")
-                    span.ms-20 facebook
-
-                div.p-10
-                    +icon("instagram")
-                    span.ms-20 instagram
-
-                div.p-10
-                    +icon("pinterest")
-                    span.ms-20 pinterest
-
-                div.p-10
-                    +icon("twitter")
-                    span.ms-20 twitter
-
-                div.p-10
-                    +icon("whatsapp")
-                    span.ms-20 whatsapp 
-                div.p-10
-                    +icon("youtube")
-                    span.ms-20 youtube
-        //Social Icon Set end
-
-        section.guideline.mb-50
-            h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Forms and Input
-            form.bg-white.p-20(action="")
-                input.px-20.py-10.bg-light(
-                    type="email"
-                    placeholder="E-posta Adresi*"
-                )
-            .search-wrap.mt-25.position-relative
-                .icon-element.position-relative.fs-13
-                    input(type="text" , placeholder="Ürün arama").gray-light-4.py-10.px-20.border-0
-                    +icon("search").fs-20
-
-
-        section.guideline.mb-50
-            h2.guideline__h2.border-bottom.mb-10.pb-10.border-green UI Colors
-            .row.row-cols-2.row-cols-lg-4
-                .p-10.d-flex.align-items-center.guideline__color
-                    span.w-25.h-100.me-15.d-inline-block.h-100.primaryspan
-                    span $primary
-
-                .p-10.d-flex.align-items-center.guideline__color
-                    span.w-25.h-100.me-15.d-inline-block.h-100.coralspan
-                    span $coral
-                .p-10.d-flex.align-items-center.guideline__color
-                    span.w-25.h-100.me-15.d-inline-block.h-100.accentspan
-                    span $accent
-
-                .p-10.d-flex.align-items-center.guideline__color
-                    span.w-25.h-100.me-15.d-inline-block.h-100.blackspan
-                    span $black
-
-                .p-10.d-flex.align-items-center.guideline__color
-                    span.w-25.h-100.me-15.d-inline-block.h-100.whitespan
-                    span $white "same as Snow"
-
-                .p-10.d-flex.align-items-center.guideline__color
-                    span.w-25.h-100.me-15.d-inline-block.h-100.lightspan
-                    span $light "same as background"
-
-                .p-10.d-flex.align-items-center.guideline__color
-                    span.w-25.h-100.me-15.d-inline-block.h-100.grayspan
-                    span $gray
-                
-                .p-10.d-flex.align-items-center.guideline__color
-                    span.w-25.h-100.me-15.d-inline-block.h-100.gray2span
-                    span $gray2
-                
-                .p-10.d-flex.align-items-center.guideline__color
-                    span.w-25.h-100.me-15.d-inline-block.h-100.gray3span
-                    span $gray3
-                
-                .p-10.d-flex.align-items-center.guideline__color
-                    span.w-25.h-100.me-15.d-inline-block.h-100.gray4span
-                    span $gray4
-
-                .p-10.d-flex.align-items-center.guideline__color
-                    span.w-25.h-100.me-15.d-inline-block.h-100.greenspan
-                    span $green
-                
-                .p-10.d-flex.align-items-center.guideline__color
-                    span.w-25.h-100.me-15.d-inline-block.h-100.goldspan
-                    span $gold
-
-                .p-10.d-flex.align-items-center.guideline__color
-                    span.w-25.h-100.me-15.d-inline-block.h-100.infospan
-                    span $info
-
-                .p-10.d-flex.align-items-center.guideline__color
-                    span.w-25.h-100.me-15.d-inline-block.h-100.warningspan
-                    span $warning
-        //Colors end
-        section.guideline.mb-50
-            h2.guideline__h2.border-bottom.mb-10.pb-10.border-green  PRODUCT CARDS
-            .d-flex
-                .product-card 
-                    .ems-card-favorito 
+            // buttons end
+
+            section.guideline.mb-50
+                h2.guideline__h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Icon Set
+                .row.row-cols-2.row-cols-lg-4
+                    div.p-10
+                        +icon("menu")
+                        span.ms-20 menu
+                    div.p-10
                         +icon("archive-fill")
-                    .ems-card-picture
-                        +picture('ratio ratio-prd', dirUploads + 'product-detail/prd-detail-2x.png', dirUploads + 'product-detail/prd-detail-x.png', dirUploads + 'product-detail/prd-detail-x.png')(class="w-100 img-fluid", alt="slide 1")
-                    .ems-card-logo
-                        span Adidas
-                    .ems-card-badge
-                        +icon("elite")
-                    .ems-card-footer
-                        h2.card-title Terrex Agravic Tr
-                        span.cheap-price 1200,00 TL 
-                        span.red-price 999,00 TL
-                .product-card 
-                    .ems-card-favorito 
-                        +icon("archive-fill")
-                    .ems-card-picture
-                        +picture('ratio ratio-prd', dirUploads + 'product-detail/prd-detail-2x.png', dirUploads + 'product-detail/prd-detail-x.png', dirUploads + 'product-detail/prd-detail-x.png')(class="w-100 img-fluid", alt="slide 1")
-                    .ems-card-logo
-                        span Adidas
-                    .ems-card-badge
-                        +icon("elite")
-                    .ems-card-footer
-                        h2.card-title Terrex Agravic Tr
-                        span.price 999,00 TL
+                        span.ms-20 archive-fill
+                    div.p-10
+                        +icon("archive-full")
+                        span.ms-20 archive-full   
+                    div.p-10
+                        +icon("arrow-left-right")
+                        span.ms-20 arrow-left-right
 
-        section.row
-            .col-6
-                span ratio-prd 
-                code.ms-15 calc(360 / 450 * 100%)
-                +picture('ratio-bg-remove ratio ratio-prd', true, dirUploads + 'product-detail/prd-detail-2x.png', dirUploads + 'product-detail/prd-detail-x.png', dirUploads + 'product-detail/prd-detail-x.png')(class="w-100 img-fluid", alt="slide 1")
-                                
-        section.row
-            .siparis.d-flex.align-items-center
-                +icon("dot").fill-primary
-                span Sipariş Hazırlanıyor
+                    div.p-10
+                        +icon("arrow-left")
+                        span.ms-20 arrow-left
 
-        section.guideline.mb-50
-            h2.guideline__h2.border-bottom.mb-10.pb-10.border-green FONTS & COLORS
-            p Vela Sans GX
-            ul.font-list
-                li
-                    h3  Desc
-                    p   Small Input
-                    p   Small
-                    p   Small Highlight
-                    p   Body
-                    p   Body Highlight
-                    p   Large
-                    p   H1
-                    p   H2
-                    p   H3
-                    p   H4
-                li
-                    h3 Font
-                    p   Vela Sans GX Regular
-                    p   Vela Sans GX Regular
-                    p   Vela Sans GX Semibold
-                    p   Vela Sans GX Regular
-                    p   Vela Sans GX Semibold
-                    p   Vela Sans GX Regular
-                    p   Vela Sans GX Semibold
-                    p   Vela Sans GX Semibold
-                    p   Vela Sans GX Bold
-                    p   Vela Sans GX Bold
-                li
-                    h3  Size
-                    p   11
-                    p   13
-                    p   13
-                    p   16
-                    p   16
-                    p   20
-                    p   54
-                    p   40
-                    p   30
-                    p   24
-                li
-                    h3  Line Height
-                    p   140%
-                    p   140%
-                    p   140%
-                    p   140%
-                    p   140%
-                    p   140%
-                    p   120%
-                    p   120%
-                    p   110%
-                    p   110%
-        section.guideline.mb-50
-            h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Bank
-        section.guideline.mb-50
-            h2.guideline__h2.border-bottom.mb-10.pb-10.border-green 
-                .row
-                    .col-6 
-                        +img(src='uploads/front.svg')
-                        +img(src='uploads/backcard.svg')
-                    .col-6 
-                        div.p-10
-                            +icon("bonus")
-                            span.ms-20 bonus
-                        div.p-10
-                            +icon("garanti")
-                            span.ms-20 garanti
-                        div.p-10
-                            +icon("masterpass")
-                            span.ms-20 masterpass
-                        div.p-10
-                            +icon("akbank")
-                            span.ms-20 akbank
-                       
-               
-            
+                    div.p-10
+                        +icon("arrow-right")
+                        span.ms-20 arrow-right
 
+                    div.p-10
+                        +icon("bag")
+                        span.ms-20 bag
 
+                    div.p-10
+                        +icon("bell")
+                        span.ms-20 bell
 
+                    div.p-10
+                        +icon("box")
+                        span.ms-20 box
 
+                    div.p-10
+                        +icon("box-open")
+                        span.ms-20 box-open
 
+                    div.p-10
+                        +icon("burger")
+                        span.ms-20 burger
 
+                    div.p-10
+                        +icon("caret-down")
+                        span.ms-20 caret-down
 
+                    div.p-10
+                        +icon("caret-left")
+                        span.ms-20 caret-left
 
+                    div.p-10
+                        +icon("caret-right")
+                        span.ms-20 caret-right
+
+                    div.p-10
+                        +icon("caret-up")
+                        span.ms-20 caret-up
+
+                    div.p-10
+                        +icon("check")
+                        span.ms-20 check
+
+                    div.p-10
+                        +icon("checked")
+                        span.ms-20 checked
+
+                    div.p-10
+                        +icon("checked-big")
+                        span.ms-20 checked-big
+
+                    div.p-10
+                        +icon("close")
+                        span.ms-20 close
+
+                    div.p-10
+                        +icon("dot")
+                        span.ms-20 dot
+
+                    div.p-10
+                        +icon("envelope")
+                        span.ms-20 envelope
+
+                    div.p-10
+                        +icon("eye-open")
+                        span.ms-20 eye-open
+
+                    div.p-10
+                        +icon("eye-close")
+                        span.ms-20 eye-close
+
+                    div.p-10
+                        +icon("filters")
+                        span.ms-20 filters
+
+                
+
+                    div.p-10
+                        +icon("headset")
+                        span.ms-20 headset
+
+                    div.p-10
+                        +icon("home")
+                        span.ms-20 home 
+
+                
+                    
+                    div.p-10
+                        +icon("info")
+                        span.ms-20 info
+
+                    div.p-10
+                        +icon("korayspor")
+                        span.ms-20 korayspor
+                    
+                    div.p-10
+                        +icon("map")
+                        span.ms-20 map
+
+                    div.p-10
+                        +icon("minus")
+                        span.ms-20 minus
+
+                    div.p-10
+                        +icon("not-checked")
+                        span.ms-20 not-checked
+
+                    div.p-10
+                        +icon("not-checked-big")
+                        span.ms-20 not-checked-big
+
+                    div.p-10
+                        +icon("notes")
+                        span.ms-20 notes
+
+                    div.p-10
+                        +icon("one-in-line")
+                        span.ms-20 one-in-line
+
+                    div.p-10
+                        +icon("pipe")
+                        span.ms-20 pipe
+
+                    div.p-10
+                        +icon("play-rounded")
+                        span.ms-20 play-rounded
+
+                    div.p-10
+                        +icon("play-small")
+                        span.ms-20 play-small
+
+                    div.p-10
+                        +icon("plus")
+                        span.ms-20 plus
+
+                    div.p-10
+                        +icon("plus")
+                        span.ms-20 plus
+
+                    div.p-10
+                        +icon("primeknit")
+                        span.ms-20 primeknit 
+                    
+                    div.p-10
+                        +icon("return")
+                        span.ms-20 return
+
+                    div.p-10
+                        +icon("search")
+                        span.ms-20 search 
+
+                    div.p-10
+                        +icon("shopping-bag")
+                        span.ms-20 shopping-bag 
+                    div.p-10
+                        +icon("sound")
+                        span.ms-20 sound
+
+                    div.p-10
+                        +icon("star")
+                        span.ms-20 star
+
+                    div.p-10
+                        +icon("store")
+                        span.ms-20 store 
+
+                    div.p-10
+                        +icon("trash")
+                        span.ms-20 trash
+
+                    div.p-10
+                        +icon("truck")
+                        span.ms-20 truck
+
+                    div.p-10
+                        +icon("turkey")
+                        span.ms-20 turkey
+
+                    div.p-10
+                        +icon("two-in-line")
+                        span.ms-20 two-in-line
+
+                    div.p-10
+                        +icon("upload")
+                        span.ms-20 upload
+
+                    div.p-10
+                        +icon("user")
+                        span.ms-20 user 
+
+                    div.p-10
+                        +icon("warning")
+                        span.ms-20 warning
 
                     
-                      
+            //Icons set End
+            section.guideline.mb-50
+                h2.guideline__h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Badge
+                .row.row-cols-2.row-cols-lg-4
+                    div.p-10
+                        +icon("yaripro")
+                        span.ms-20 yaripro
+                    div.p-10
+                        +icon("elite")
+                        span.ms-20 elite 
+                    div.p-10
+                        +icon("size-3")
+                        span.ms-20 size-3 
+                    div.p-10
+                        +icon("size-5")
+                        span.ms-20 size-5
+                    div.p-10
+                        +icon("kaztuyu")
+                        span.ms-20 kaztuyu
+                    div.p-10
+                        +icon("indirim")
+                        span.ms-20 indirim
+                    div.p-10
+                        +icon("goretex")
+                        span.ms-20 goretex
+                    div.p-10
+                        +icon("dri-fit")
+                        span.ms-20 dri-fit
+
+            section.guideline.mb-50
+                h2.guideline__h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Social Icon Set
+                .row.row-cols-2.row-cols-lg-4
+                    div.p-10
+                        +icon("facebook")
+                        span.ms-20 facebook
+
+                    div.p-10
+                        +icon("instagram")
+                        span.ms-20 instagram
+
+                    div.p-10
+                        +icon("pinterest")
+                        span.ms-20 pinterest
+
+                    div.p-10
+                        +icon("twitter")
+                        span.ms-20 twitter
+
+                    div.p-10
+                        +icon("whatsapp")
+                        span.ms-20 whatsapp 
+                    div.p-10
+                        +icon("youtube")
+                        span.ms-20 youtube
+            //Social Icon Set end
+
+            section.guideline.mb-50
+                h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Forms and Input
+                form.bg-white.p-20(action="")
+                    input.px-20.py-10.bg-light(
+                        type="email"
+                        placeholder="E-posta Adresi*"
+                    )
+                .search-wrap.mt-25.position-relative
+                    .icon-element.position-relative.fs-13
+                        input(type="text" , placeholder="Ürün arama").gray-light-4.py-10.px-20.border-0
+                        +icon("search").fs-20
+
+
+            section.guideline.mb-50
+                h2.guideline__h2.border-bottom.mb-10.pb-10.border-green UI Colors
+                .row.row-cols-2.row-cols-lg-4
+                    .p-10.d-flex.align-items-center.guideline__color
+                        span.w-25.h-100.me-15.d-inline-block.h-100.primaryspan
+                        span $primary
+
+                    .p-10.d-flex.align-items-center.guideline__color
+                        span.w-25.h-100.me-15.d-inline-block.h-100.coralspan
+                        span $coral
+                    .p-10.d-flex.align-items-center.guideline__color
+                        span.w-25.h-100.me-15.d-inline-block.h-100.accentspan
+                        span $accent
+
+                    .p-10.d-flex.align-items-center.guideline__color
+                        span.w-25.h-100.me-15.d-inline-block.h-100.blackspan
+                        span $black
+
+                    .p-10.d-flex.align-items-center.guideline__color
+                        span.w-25.h-100.me-15.d-inline-block.h-100.whitespan
+                        span $white "same as Snow"
+
+                    .p-10.d-flex.align-items-center.guideline__color
+                        span.w-25.h-100.me-15.d-inline-block.h-100.lightspan
+                        span $light "same as background"
+
+                    .p-10.d-flex.align-items-center.guideline__color
+                        span.w-25.h-100.me-15.d-inline-block.h-100.grayspan
+                        span $gray
                     
+                    .p-10.d-flex.align-items-center.guideline__color
+                        span.w-25.h-100.me-15.d-inline-block.h-100.gray2span
+                        span $gray2
+                    
+                    .p-10.d-flex.align-items-center.guideline__color
+                        span.w-25.h-100.me-15.d-inline-block.h-100.gray3span
+                        span $gray3
+                    
+                    .p-10.d-flex.align-items-center.guideline__color
+                        span.w-25.h-100.me-15.d-inline-block.h-100.gray4span
+                        span $gray4
+
+                    .p-10.d-flex.align-items-center.guideline__color
+                        span.w-25.h-100.me-15.d-inline-block.h-100.greenspan
+                        span $green
+                    
+                    .p-10.d-flex.align-items-center.guideline__color
+                        span.w-25.h-100.me-15.d-inline-block.h-100.goldspan
+                        span $gold
+
+                    .p-10.d-flex.align-items-center.guideline__color
+                        span.w-25.h-100.me-15.d-inline-block.h-100.infospan
+                        span $info
+
+                    .p-10.d-flex.align-items-center.guideline__color
+                        span.w-25.h-100.me-15.d-inline-block.h-100.warningspan
+                        span $warning
+            //Colors end
+            section.guideline.mb-50
+                h2.guideline__h2.border-bottom.mb-10.pb-10.border-green  PRODUCT CARDS
+                .d-flex
+                    .product-card 
+                        .ems-card-favorito 
+                            +icon("archive-fill")
+                        .ems-card-picture
+                            +picture('ratio ratio-prd', dirUploads + 'product-detail/prd-detail-2x.png', dirUploads + 'product-detail/prd-detail-x.png', dirUploads + 'product-detail/prd-detail-x.png')(class="w-100 img-fluid", alt="slide 1")
+                        .ems-card-logo
+                            span Adidas
+                        .ems-card-badge
+                            +icon("elite")
+                        .ems-card-footer
+                            h2.card-title Terrex Agravic Tr
+                            span.cheap-price 1200,00 TL 
+                            span.red-price 999,00 TL
+                    .product-card 
+                        .ems-card-favorito 
+                            +icon("archive-fill")
+                        .ems-card-picture
+                            +picture('ratio ratio-prd', dirUploads + 'product-detail/prd-detail-2x.png', dirUploads + 'product-detail/prd-detail-x.png', dirUploads + 'product-detail/prd-detail-x.png')(class="w-100 img-fluid", alt="slide 1")
+                        .ems-card-logo
+                            span Adidas
+                        .ems-card-badge
+                            +icon("elite")
+                        .ems-card-footer
+                            h2.card-title Terrex Agravic Tr
+                            span.price 999,00 TL
+
+            section.row
+                .col-6
+                    span ratio-prd 
+                    code.ms-15 calc(360 / 450 * 100%)
+                    +picture('ratio-bg-remove ratio ratio-prd', true, dirUploads + 'product-detail/prd-detail-2x.png', dirUploads + 'product-detail/prd-detail-x.png', dirUploads + 'product-detail/prd-detail-x.png')(class="w-100 img-fluid", alt="slide 1")
+                                    
+            section.row
+                .siparis.d-flex.align-items-center
+                    +icon("dot").fill-primary
+                    span Sipariş Hazırlanıyor
+
+            section.guideline.mb-50
+                h2.guideline__h2.border-bottom.mb-10.pb-10.border-green FONTS & COLORS
+                p Vela Sans GX
+                ul.font-list
+                    li
+                        h3  Desc
+                        p   Small Input
+                        p   Small
+                        p   Small Highlight
+                        p   Body
+                        p   Body Highlight
+                        p   Large
+                        p   H1
+                        p   H2
+                        p   H3
+                        p   H4
+                    li
+                        h3 Font
+                        p   Vela Sans GX Regular
+                        p   Vela Sans GX Regular
+                        p   Vela Sans GX Semibold
+                        p   Vela Sans GX Regular
+                        p   Vela Sans GX Semibold
+                        p   Vela Sans GX Regular
+                        p   Vela Sans GX Semibold
+                        p   Vela Sans GX Semibold
+                        p   Vela Sans GX Bold
+                        p   Vela Sans GX Bold
+                    li
+                        h3  Size
+                        p   11
+                        p   13
+                        p   13
+                        p   16
+                        p   16
+                        p   20
+                        p   54
+                        p   40
+                        p   30
+                        p   24
+                    li
+                        h3  Line Height
+                        p   140%
+                        p   140%
+                        p   140%
+                        p   140%
+                        p   140%
+                        p   140%
+                        p   120%
+                        p   120%
+                        p   110%
+                        p   110%
+            section.guideline.mb-50
+                h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Bank
+            section.guideline.mb-50
+                h2.guideline__h2.border-bottom.mb-10.pb-10.border-green 
+                    .row
+                        .col-6 
+                            +img(src='uploads/front.svg')
+                            +img(src='uploads/backcard.svg')
+                        .col-6 
+                            div.p-10
+                                +icon("bonus")
+                                span.ms-20 bonus
+                            div.p-10
+                                +icon("garanti")
+                                span.ms-20 garanti
+                            div.p-10
+                                +icon("masterpass")
+                                span.ms-20 masterpass
+                            div.p-10
+                                +icon("akbank")
+                                span.ms-20 akbank
+                        
+                
+                
+
+
+
+
+
+
+
+
+
+                        
+                        
+                        
 
 
 

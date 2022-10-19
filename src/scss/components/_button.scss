@@ -17,17 +17,27 @@
     @extend %button-reset;
   }
 
-  // Circle
-  &-circle {
-    @extend %button-reset;
-
-    svg {
-      font-size: 27px;
-      background: $white;
-      padding: 3px;
-      border-radius: 50%;
+&-icon {
+    &-right,
+    &-left {
+        display: flex !important;
+        align-items: center;
+      svg {
+        font-size: 16px;
+      }
+    }
+    &-right {
+        svg {
+            margin-left: 10px;
+        }
+    }
+    &-left {
+        svg {
+            margin-right: 10px;
+        }
     }
   }
+
 
   // WhatsApp
   &-wp {
@@ -41,7 +51,7 @@
   }
 
   // Theme Colors
-  &-primary {
+  /*&-primary {
     background-color: $dark;
     color: $white !important;
   }
@@ -49,11 +59,12 @@
   &-secondary {
     background-color: $white;
     color: $dark !important;
-  }
+  }*/
 
   &.disabled {
-    background-color: $gray !important;
-    border-color: $gray !important;
+    background-color: $gray3 !important;
+    border-color: $gray3 !important;
+    color: $dark !important;
   }
 
   &-save {

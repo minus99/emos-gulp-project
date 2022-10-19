@@ -107,12 +107,6 @@
     }
 }
 
-.flex-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 //Line Height
 .lh {
     &-0-75{
@@ -124,7 +118,7 @@
 }
 //Line Height
 
-//Dotted
+/* Dotted
 .dotted-items {
     >* {
         &:last-child::after {
@@ -140,7 +134,7 @@
             margin: 2px 10px;
         }
     }
-}
+}*/
 
 .hidden {
     display: none;
@@ -155,16 +149,7 @@ $z-indexes: 1, 2, 3;
     }
 }
 
-// Colors
-.text {
-    &-blue {
-        color: $blue;
-    }
-    
-    &-orange {
-        color: $orange;
-    }
-}
+
 
 
 

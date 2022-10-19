@@ -1,64 +1,50 @@
-.ems-prd-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-}
 
-/* Hero Banners */
+/* Hero Banner
 .hero-banner {
-    position: relative;
-    width: 100%;
-    .ems-banner-title {
-
-        &::before {
-            content: '';
-            background: #DF4826;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 88.84px;
-            height: 1.48px;
-        }
+    &::before {
+        content: '';
+        background: #DF4826;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 88.84px;
+        height: 1.48px;
     }
-  
 }
-
-
+*/
 
 /* Campaign Banners */
 .camping-banner {
     position: relative;
+    max-width: 786px;
     width: 100%;
     .ems-banner-title {
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 24px;
+        left: 38px;
+        bottom: 32px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         background: #fff;
         width: 100%;
-        max-width: 327px;
-        height: 77px;
+        max-width: 480px;
+        height: 106px;
         padding: 14px 17px;
         border-radius: 2.96135px;
         box-sizing: border-box;
+       
         .banner-left {
             h1 {
-                margin-bottom: 4px;
-                font-size: 20px;
+                margin-bottom: 8px;
+                font-size: 30px;
             }
             p {
-                font-size: 14px;
+                font-size: 16px;
             }
         }
         .banner-right {
             margin-left: auto;
-        }   
+        } 
     }
 }
 
@@ -86,4 +72,3 @@
         }
     }
 }
-

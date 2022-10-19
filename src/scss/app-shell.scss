@@ -30,8 +30,7 @@
   //Layouts
   @import 'layouts/pages-mobile';
 
-  // Component
-  @import 'components/bannerguide';
+  
 }
 
 // DESKTOP (> $breakpoint-lg)
@@ -47,5 +46,5 @@
   //@import 'components/swiper-desktop';
   @import 'components/utilities-desktop';
   @import 'components/input-desktop';
-  @import 'components/bannerguide-desktop';
+
 }
