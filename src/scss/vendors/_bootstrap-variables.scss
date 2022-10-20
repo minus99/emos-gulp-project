@@ -106,12 +106,12 @@ $line-height-base: 1.5;
 $line-height-sm: 1;
 $line-height-lg: 1.85;
 
-$h1-font-size: 1.75rem; // 28px
-$h2-font-size: 1.25rem; // 20px
-$h3-font-size: 1rem; // 16px
-$h4-font-size: 0.875rem; // 14px
-$h5-font-size: 0.75rem; // 12px
-$h6-font-size: 0.625rem; // 10px
+$h1-font-size: 3.375rem; // 54px
+$h2-font-size: 2.5rem; // 40px
+$h3-font-size: 1.875rem; // 30px
+$h4-font-size: 1.5rem; // 24px
+// $h5-font-size: 0.75rem; // 12px
+// $h6-font-size: 0.625rem; // 10px
 
 $font-sizes: (
   8: 0.5rem,
@@ -137,7 +137,7 @@ $headings-font-weight: 700;
 $headings-line-height: $line-height-sm;
 
 $display-font-sizes: (
-  1: 4rem // 64px,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  1: 4rem // 64px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 );
 
 $lead-font-size: 1rem; // 16px
@@ -157,9 +157,6 @@ $input-btn-focus-box-shadow: none !important;
 $btn-padding-y: 0.75rem; // 12px
 $btn-padding-x: 1.875rem; // 30px
 $btn-font-size: 0.8125rem; // 13px
-
-
-
 
 //Sonra kullanilabilir
 // $btn-padding-y-sm: 0.75rem; // 12px
