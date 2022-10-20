@@ -145,7 +145,7 @@ $lead-font-weight: 600;
 
 $text-muted: #787878;
 
-$border-radius: 0;
+
 
 // Buttons + Forms :550
 $input-btn-font-family: $font1;
@@ -204,7 +204,8 @@ $input-border-radius-lg: $border-radius;
 $input-focus-border-color: $gray;
 $input-focus-box-shadow: none;
 
-$form-floating-padding-x: 0;
+$form-floating-padding-x: $input-padding-x ;
+$form-floating-padding-y: $input-padding-y ;
 $form-floating-label-transform: scale(0.78) translateY(-0.5rem)
   translateX(0.15rem);
 $form-floating-label-opacity: 1;
