@@ -121,42 +121,45 @@
 //     }
 // }
 
-// .ems-field {
-//     position: relative;
-// }
+.ems-field {
+     position: relative;
+ }
 
-// .ems-field.ems-field-msg-success,
-// .ems-field.ems-field-msg-error  {
-//     .form-label{
-//         top: -10px;
-//         bottom: 10px;
-//         font-size: 11px;
-//         opacity: 1;
-//     }
-// }
-// .ems-field.ems-field-msg-error  {
-//     input {
-//         border-bottom:  1px solid $primary;
+.ems-field.ems-field-msg-success,
+.ems-field.ems-field-msg-error  {
+    .form-label{
+        top: -10px;
+        bottom: 10px;
+        font-size: 11px;
+        opacity: 1;
+    }
+}
+.ems-field.ems-field-msg-error  {
+    input {
+        border-bottom:  1px solid $coral;
          
-//     }
-//     .ems-field-feedback {
-//         display: block !important;
-//         width: 100%;
-//         &::after {
-//             content: "";
-//             position: absolute;
-//             width: 20px;
-//             height: 20px;
-//             background-size: 20px 20px;
-//             top: -40px;
-//             right: 0;
-//             z-index: 1080;
-//             background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='6.75' fill='%23D72027'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 12.6327L14.3672 15L14.9997 14.3674L12.6325 12.0002L15 9.63259L14.3675 9.00003L12 11.3676L9.63253 9L9 9.63256L11.3675 12.0002L9.00031 14.3674L9.63283 15L12 12.6327Z' fill='white'/%3E%3C/svg%3E%0A");
-//             background-repeat: no-repeat;
-//         } 
-//     }
+    }
+    .show-pass-button  {
+        display: none;
+    }
+    .ems-field-feedback {
+        display: block !important;
+        width: 100%;
+        &::after {
+            content: "";
+            position: absolute;
+            background-size: 20px 20px;
+            width: 20px;
+            height: 20px;
+            top: 17px;
+            right: 12px;
+            z-index: 1080;
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='6.75' fill='%23D72027'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 12.6327L14.3672 15L14.9997 14.3674L12.6325 12.0002L15 9.63259L14.3675 9.00003L12 11.3676L9.63253 9L9 9.63256L11.3675 12.0002L9.00031 14.3674L9.63283 15L12 12.6327Z' fill='white'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+        } 
+    }
    
-// }
+}
 
 
 
@@ -306,15 +309,11 @@
 //   }
 
 
-.input {
-    
-    &-focus {
 
-    }
-    &-warning {
-
-    }
-    &-success {
-
+.ems-field{
+    .show-pass-button {
+        top: calc(50% - 15px);
     }
 }
+     
+

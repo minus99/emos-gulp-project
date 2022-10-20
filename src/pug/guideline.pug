@@ -365,13 +365,21 @@ block content
                         input#UserNameOrEmail.input-login.form-control(type='text' name='UserNameOrEmail' placeholder='E-Mail' value='')
                         label(for='UserNameOrEmail') E-Mail
                         .ems-field-feedback
-                
-                .search-wrap.mt-25.position-relative
-                    .icon-element.position-relative.fs-13
-                        input(type="text" , placeholder="Ürün arama").gray-light-4.py-10.px-20.border-0
-                        +icon("search").fs-20
+                    .ems-field.form-floating.mb-40
+                        input#UserNameOrEmail.input-login.form-control(type='password' name='Password' placeholder='Şifre' value='')
+                        label(for='Password') Şifre
+                        a.show-pass-button.position-absolute.me-10.end-0(href='javascript:void(0);' onclick='showHidePassword(this);')
+                            +icon("eye-close").fs-16
+                        .ems-field-feedback
 
-
+                    .ems-field.form-floating.mb-40.ems-field-msg-error
+                        input#UserNameOrEmail.input-login.form-control(type='password' name='Password' placeholder='Şifre' value='')
+                        label(for='UserNameOrEmail') Şifre
+                        a.show-pass-button.position-absolute.me-10.end-0(href='javascript:void(0);' onclick='showHidePassword(this);')
+                             +icon("eye-close").fs-16
+                        .ems-field-feedback Warning or an info
+        
+                      
             section.guideline.mb-50
                 h2.guideline__h2.border-bottom.mb-10.pb-10.border-green UI Colors
                 .row.row-cols-2.row-cols-lg-4
