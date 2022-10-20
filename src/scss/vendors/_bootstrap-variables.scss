@@ -72,7 +72,7 @@ $border-widths: (
 
 $border-color: #ccc;
 
-$border-radius: 5px;
+$border-radius: 4px;
 $border-radius-sm: 2px;
 $border-radius-lg: 8px;
 $border-radius-pill: 200px;
@@ -158,6 +158,9 @@ $btn-padding-y: 0.75rem; // 12px
 $btn-padding-x: 1.875rem; // 30px
 $btn-font-size: 0.8125rem; // 13px
 
+
+
+
 //Sonra kullanilabilir
 // $btn-padding-y-sm: 0.75rem; // 12px
 // $btn-padding-x-sm: 1.5rem; // 24px
@@ -177,11 +180,11 @@ $btn-focus-box-shadow: none !important;
 $btn-disabled-opacity: 0.6;
 
 // Forms :616
-$input-bg: transparent;
+$input-bg: $light;
 
-$input-padding-y: 0.9375rem; // 15px
-$input-padding-x: 0; // 0
-$input-font-size: 0.875rem; // 14px;
+$input-padding-y: 1.063rem; // 16px
+$input-padding-x: 1.25rem; // 20px
+$input-font-size: 1rem; // 16px;
 
 $input-padding-y-sm: 0.625rem; // 10px
 $input-padding-x-sm: 0.625rem; // 10px
