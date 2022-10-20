@@ -148,10 +148,11 @@
         &::after {
             content: "";
             position: absolute;
+            background-size: 20px 20px;
             width: 20px;
             height: 20px;
-            top: -40px;
-            right: 0;
+            top: 17px;
+            right: 12px;
             z-index: 1080;
             background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='6.75' fill='%23D72027'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 12.6327L14.3672 15L14.9997 14.3674L12.6325 12.0002L15 9.63259L14.3675 9.00003L12 11.3676L9.63253 9L9 9.63256L11.3675 12.0002L9.00031 14.3674L9.63283 15L12 12.6327Z' fill='white'/%3E%3C/svg%3E%0A");
             background-repeat: no-repeat;
