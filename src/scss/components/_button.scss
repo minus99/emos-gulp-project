@@ -17,27 +17,30 @@
     @extend %button-reset;
   }
 
-&-icon {
+  &-primary {
+    color: $white !important;
+  }
+
+  &-icon {
     &-right,
     &-left {
-        display: flex !important;
-        align-items: center;
+      display: flex !important;
+      align-items: center;
       svg {
         font-size: 16px;
       }
     }
     &-right {
-        svg {
-            margin-left: 10px;
-        }
+      svg {
+        margin-left: 10px;
+      }
     }
     &-left {
-        svg {
-            margin-right: 10px;
-        }
+      svg {
+        margin-right: 10px;
+      }
     }
   }
-
 
   // WhatsApp
   &-wp {
