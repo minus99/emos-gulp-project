@@ -95,27 +95,32 @@ mixin breadcrumbOld(...items)
 //- Product
 
 //- Product 
+
+
 mixin product()
-    .card.card-prd.bg-white.tracker-container
-        .save-wrapper.position-absolute
+    .card.card-prd
+        .card-new.position-absolute.fs-11.text-blue
+            span Yeni
+        .card-save.position-absolute
             a.btn-save.stretched-link-over.selected(href="javascript:void(0);" aria-label="Save")
-                +icon('save').stroke-icon
-        .card-media
-            +img('ratio ratio-1x1', true, dirUploads + '/product/rado.png')(class="card-img img-fluid")
-        .card-body.p-20.d-flex.flex-column.justify-content-end
-            p.card-title.mt-10 
-                span.fw-600 Rado 
-                span SXB433P Kol Saati
-            .card-price.mt-10.d-flex
-                .card-badge.d-flex.align-items-center.fs-12.text-white.bg-primary.p-5.me-10 -690 #{currency}
-                div
-                    .card-price-first.fs-12.text-gray.text-decoration-line-through 10.990 #{currencyText}
-                    .card-price-last.fs-14.fs-lg-16 10.300 #{currencyText}
-        .product-slider-brand.position-absolute
-            +img('ratio ratio-brand-mini ratio-bg-remove', true, dirUploads + 'brands/swiss-mini.png')
-        .tracker-content  
-            span Satın Al
+                +icon("archive-fill").fs-14
+        .card-media.position-relative
+            +picture('ratio ratio-prd', dirUploads + 'product-detail/shoes.png', dirUploads + 'product-detail/shoes.png', dirUploads + 'product-detail/shoes2x.png')(class="w-100 img-fluid", alt="slide 1")
+            .card-brand.position-absolute.fs-10.fs-lg-11
+                span Adidas
+            .card-badge.position-absolute.d-none.d-lg-flex
+                +icon("elite")
+                +icon("elite")
+        .card-body.p-5.p-lg-10.d-flex.flex-column.justify-content-end
+            p.card-title.mt-10.fs-12.fs-lg-13 Terrex Agravic Tr
+            span.text-gray2.fs-12.fs-lg-13 Erkek Çim Zemin Kramponu 
+            .card-price.mt-10.d-flex.flex-column.fs-12.fs-lg-13.fw-600
+                span -%50
+                .d-flex
+                    span.card-price-first.text-gray2.text-decoration-line-through 1200,00 #{currencyText}
+                    span.card-price-last.text-primary.ms-10 999,00 #{currencyText}
         a.stretched-link(href="product-detail.html")
+
 mixin product-mini()
     .card.card-prd.bg-white.tracker-container
         .card-media

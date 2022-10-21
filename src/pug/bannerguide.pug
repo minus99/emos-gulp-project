@@ -7,38 +7,11 @@ block prepend head
     - var pageClass = ""
 
 block content
-    .container.guideline
-        section.guideline.mb-50
-            h2.guideline__h2.border-bottom.mb-10.pb-10.border-green  PRODUCT CARDS
-            .d-flex
-                .product-card 
-                    .ems-card-favorito 
-                        +icon("archive-fill")
-                    .ems-card-picture
-                        +picture('ratio ratio-prd ', dirUploads + 'product-detail/shoes.png', dirUploads + 'product-detail/shoes.png', dirUploads + 'product-detail/shoes2x.png')(class="w-100 img-fluid", alt="slide 1")
-                    .ems-card-logo
-                        span Adidas
-                    .ems-card-badge
-                        +icon("elite")
-                    .ems-card-footer
-                        h2.card-title Terrex Agravic Tr
-                        span.cheap-price 1200,00 TL 
-                        span.red-price 999,00 TL
-                    a.stretched-link(href="javascript:void(0)")
-                .product-card 
-                    a.ems-prd-link(href="javascript:void(0)")
-                    .ems-card-favorito 
-                        +icon("archive-fill")
-                    .ems-card-picture
-                        +picture('ratio ratio-prd ', dirUploads + 'product-detail/shoes.png', dirUploads + 'product-detail/shoes.png', dirUploads + 'product-detail/shoes2x.png')(class="w-100 img-fluid", alt="slide 1")
-                    .ems-card-logo
-                        span Adidas
-                    .ems-card-badge
-                        +icon("elite")
-                    .ems-card-footer
-                        h2.card-title Terrex Agravic Tr
-                        span.price 999,00 TL
- 
+    .container
+        .row
+            .col-6 
+                +product()
+
         section.guideline.mb-50
             h2.guideline__h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Hero Banners
             .camping-banner

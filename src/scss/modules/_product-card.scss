@@ -1,0 +1,26 @@
+.card-prd {
+    .card {
+        &-save {
+            top: 19px;
+            right: 22px;
+        }
+        &-badge {
+            z-index: 1;
+            bottom: -55px;
+            right: 18px;
+            .icon-elite {
+              font-size: 110px;
+            }
+        }
+        &-brand {
+            bottom: 0;
+            left: 0;
+            padding: 8px;
+        }
+        &-new {
+            top: 19px;
+            left: 22px;
+            z-index: 1;
+        }
+    }
+}

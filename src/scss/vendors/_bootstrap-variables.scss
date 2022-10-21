@@ -38,7 +38,7 @@ $spacers: (
 
 // Body :262
 $body-bg: $light;
-$body-color: $black;
+$body-color: $dark;
 
 // Links :271
 $link-color: inherit;
@@ -115,6 +115,7 @@ $h4-font-size: 1.5rem; // 24px
 
 $font-sizes: (
   8: 0.5rem,
+  10: 0.625rem,
   11: 0.6875rem,
   12: 0.75rem,
   13: 0.8125rem,

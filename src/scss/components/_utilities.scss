@@ -149,6 +149,14 @@ $z-indexes: 1, 2, 3;
     }
 }
 
+.text {
+    &-gray2 {
+        color: $gray2;
+    }
+    &-blue {
+        color: $blue;
+    }
+}
 
 
 

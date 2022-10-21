@@ -14,7 +14,6 @@
 @import 'components/accordion';
 @import 'components/toastify';
 @import 'components/step-progress';
-@import 'components/guideline';
 
 // Layouts
 @import 'layouts/header';
@@ -23,7 +22,7 @@
 
 //Modules
 @import 'modules/home-slider';
-@import 'modules/bannerguide';
+@import 'modules/product-card';
 /*@import 'modules/story';
 @import 'modules/double-circle';
 @import 'modules/product-widget';
@@ -39,7 +38,6 @@
   // Components
   @import 'components/swiper-mobile';
   @import 'components/modal-mobile';
-  @import 'components/guideline-mobile';
 
   // Layouts
   @import 'layouts/header-mobile';
@@ -70,7 +68,6 @@
 
   //Modules
   @import 'modules/home-slider-desktop';
-  @import 'modules/bannerguide-desktop';
   /*@import 'modules/story-desktop';
   @import 'modules/double-circle-desktop';
   @import 'modules/login-desktop';
