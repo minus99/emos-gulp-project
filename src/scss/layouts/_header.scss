@@ -6,6 +6,22 @@
     box-shadow: 0 0.125rem 0.25rem rgba(39, 33, 23, 0.08) !important;
   }
 }
+.header-mini-top {
+    .right-wrapper {
+        li {
+           &.selected {
+                background: $light;
+           }
+        }
+    }
+}
+.header {
+    &-logo {
+        min-width: 130px;
+    }
+}
+//////////////////////////////////7777777777
+
 //Menu
 .ems-menu {
   //lvl1

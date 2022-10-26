@@ -1,5 +1,6 @@
 .site-header {
   height: $site-header-height-lg;
+  background: $light;
   .header-wrapper {
     height: calc($site-header-height-lg - $site-header-height-mini);
   }
@@ -16,4 +17,17 @@
   &-right {
     padding: 60px 72px 0 125px;
   }
+}
+
+.header-type {
+    &-2,
+    &-3 {
+        .site-header {
+            height: 84px;
+        }
+        .header-wrapper {
+            height: calc(84px - $site-header-height-mini);
+        }
+    
+    }
 }

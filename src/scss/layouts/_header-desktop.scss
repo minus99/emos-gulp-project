@@ -1,3 +1,84 @@
+.header-wrapper {
+    grid-template-areas: 'header-logo header-logo header-logo header-logo  header-icons header-icons'
+                        'main-menu main-menu main-menu main-menu header-info header-info';
+                        grid-template-columns: 1fr 1fr;
+    //grid-gap: 5px;
+    .ems-menu-trigger {
+        grid-area: menu-trigger;
+    }
+    .header {
+        &-logo {
+            grid-area: header-logo;
+            width: 200px;
+        }
+        &-icons {
+            grid-area: header-icons;
+        }
+        &-info {
+            grid-area: header-info;
+        }
+        &-search {
+            position: relative;
+            .ems-search-trigger {
+                position: absolute;
+                right: 10px;
+                top: calc(50% - 10px)
+            }
+        }
+    }
+    .ems-menu {
+        grid-area: main-menu;
+    }
+}
+
+//Header Type 2 - When page class has .header-type-2
+.header-type-2 {
+    .header-wrapper {
+        grid-template-areas: 'menu-trigger header-logo header-logo header-logo header-icons header-icons';
+        grid-template-columns: 40px 1fr;
+    }
+    .header-info,
+    .ems-menu {
+        display: none !important;
+    }
+    .ems-menu-trigger {
+        display: block !important;
+    }
+}
+//Header Type 3 - Sneaker / Vip Çocuk - When page class has .header-type-3
+.header-type-3 {
+    .header {
+        &-wrapper {
+            grid-template-areas: 'main-menu main-menu header-logo header-logo header-logo header-info header-icons';
+            grid-template-columns: 2fr 1fr 1fr 1fr auto;
+        }
+        &-search {
+            .ems-search-trigger {
+                position: relative !important;
+                top: auto;
+                right: auto;
+            }
+            .search-input {
+                display: none;
+            }
+        }
+    }
+    .premium-info {
+        display: none;
+    }
+    
+}
+
+.lvl-1 {
+    &-item {
+        &:nth-child(n+2)
+        {
+            margin-left: 20px;
+        }
+    }
+}
+
+
 //Search
 .ems-search {
   &-ready & {

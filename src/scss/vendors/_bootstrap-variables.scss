@@ -5,6 +5,8 @@
 $colors: ();
 $table-variants: ();
 
+$dropdown-min-width: 6rem;
+
 $theme-colors: (
   'primary': $primary,
   'light': $light,
@@ -85,7 +87,7 @@ $aspect-ratios: (
   'prd': calc(360 / 450 * 100%),
   '335x648': calc(648 / 335 * 100%),
   'main-slider': calc(700 / 1340 * 100%),
-  'logo': calc(58 / 200 * 100%),
+  'logo': calc(31 / 200 * 100%),
   'hero-banner': calc(740 / 1656 * 100%),
   '740x768': calc(740 / 786 * 100%),
   '480x375': calc(480 / 375 * 100%),
@@ -102,7 +104,7 @@ $font-size-base: 1rem; // 16px
 $font-size-sm: 0.75rem; // 12px
 $font-size-lg: 1rem; // 16px
 
-$line-height-base: 1.5;
+$line-height-base: 1;
 $line-height-sm: 1;
 $line-height-lg: 1.85;
 

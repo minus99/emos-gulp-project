@@ -46,7 +46,7 @@ $space9: 60px;
 $space90: 90px;
 $space100: 100px;
 
-$space-s-e: 40px; // "start + end" total padding
+$space-s-e: 32px; // "start + end" total padding
 
 // Breakpoints
 $breakpoint-md: 667px;
@@ -61,6 +61,7 @@ $bg-loading: url(#{$dir-images + 'loading.gif'}) center center/32px no-repeat
     $color: #ccc,
     $alpha: 0.5,
   );
-$site-header-height: 48px;
-$site-header-height-mini: 28px;
+$site-header-height: 54px;
+$site-header-height-mini: 23px;
+
 $site-header-height-lg: 150px;
