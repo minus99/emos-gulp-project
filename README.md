@@ -22,10 +22,18 @@
 Light ve dark temalar eklendi
 
 if pageClass === "dark-theme"
+
 // css
+
 link(rel="stylesheet", href=dirFrontend + "css/app-shell-dark-theme.css")
+
 link(rel="stylesheet", href=dirFrontend + "css/style-dark-theme.css")
+
 else 
+
 // css
+
 link(rel="stylesheet", href=dirFrontend + "css/app-shell.css")
+
 link(rel="stylesheet", href=dirFrontend + "css/style.css")
+
