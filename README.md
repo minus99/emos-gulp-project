@@ -20,6 +20,7 @@
 
 # Korayspor Themes
 Light ve dark temalar eklendi
+
 if pageClass === "dark-theme"
 // css
 link(rel="stylesheet", href=dirFrontend + "css/app-shell-dark-theme.css")
