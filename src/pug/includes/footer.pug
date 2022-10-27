@@ -1,27 +1,26 @@
 .container.px-lg-60.fs-12.fs-lg-14.mt-60
-    .row.row-cols-2.row-cols-lg-4.mb-40.mb-lg-60.g-20.g-lg-0
-        .col
-            +icon("lock") 
-            span.d-block.mt-10.mt-lg-30.fs-16.fs-lg-20 Güvenli Alışveriş
-            p.text-gray.mt-5.mt-lg-10 Kredi kartı alışverişlerinde 128 bit SSL Güvenlik sistemini kullanmaktayız
-        .col
-            +icon("creditcard") 
-            span.d-block.mt-10.mt-lg-30.fs-16.fs-lg-20 Ödeme Seçenekleri 
-            p.text-gray.mt-5.mt-lg-10 Dilerseniz sipariş verirken kart ile, dilerseniz kapıda nakit veya kredi kartı ile ödeyin.
-        .col
-            +icon("timer") 
-            span.d-block.mt-10.mt-lg-30.fs-16.fs-lg-20 Hızlı Teslimat 
-            p.text-gray.mt-5.mt-lg-10 Ortalama 1-4 iş günü içinde kargoda
-        .col
-            +icon("return") 
-            span.d-block.mt-10.mt-lg-30.fs-16.fs-lg-20 Ücretsiz İade / Değişim 
-            p.text-gray.mt-5.mt-lg-10 30 gün içerisinde ücretsiz iade ve değişim hakkı sunuyoruz
-    .row
+    ul.footer-benefit.list-unstyled.d-flex.justify-content-lg-around.mx-lg-100.py-10
+        li.d-flex.align-items-center.px-20.px-lg-40
+            +icon("cargo").fs-24.fs-lg-40.me-15.me-lg-30
+            div
+                span.d-block.mt-10.mt-lg-30.fs-20.fs-lg-30.fw-700 Kargoyu düşünmeyin
+                p.mt-5.mt-lg-10 199 TL ve üzerinde ücretsiz kargo
+        li.d-flex.align-items-center.px-20.px-lg-40
+            +icon("return").fs-24.fs-lg-40.me-15.me-lg-30
+            div
+                span.d-block.mt-10.mt-lg-30.fs-20.fs-lg-30.fw-700 Ücretsiz iade ve değişim
+                p.mt-5.mt-lg-10 Şimdi çok kolay
+        li.d-flex.align-items-center.px-20.px-lg-40
+            +icon("whatsapp").fs-24.fs-lg-40.me-15.me-lg-30
+            div
+                span.d-block.mt-10.mt-lg-30.fs-20.fs-lg-30.fw-700 Kafanızda soru işareti kalmasın
+                p.mt-5.mt-lg-10 WhatsApp’tan bize sorun
+    .row.mt-100
         .col-12.col-lg-4.footer-left-col
             .d-flex.flex-column.h-100 
                 form.fs-16.ems-form(action='/' method='POST' id="Newsletter", autocomplete="off")
-                    div.fs-20 Fırsatları Kaçırma
-                    p.text-gray.mt-10.mb-15 Konyalı Saat’te sana özel fırsatlar ve yeni ürünlerden haberdar olmak için e-postalara kaydol.
+                    div.fs-20 Fırsatlar Burada
+                    p.text-gray.mt-10.mb-15 Korayspor’da sana özel fırsatlar ve yeni ürünlerden haberdar olmak için kaydol.
                     .ems-field.form-floating.newsletter-input-box.position-relative
                         input.form-control.newsletter-input(type="text", id="email", name="email" placeholder="E-Posta Adresi")
                         label(for="email") E-Posta Adresi

@@ -1,5 +1,5 @@
 //ABSTRACTS
-@import 'abstracts/light-theme';
+@import 'abstracts/dark-theme';
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 
@@ -37,7 +37,6 @@
 @media (min-width: $breakpoint-lg) {
   //Base
   @import 'base/main-desktop';
-  @import 'base/global-desktop';
 
   // Layout
   @import 'layouts/footer-desktop';

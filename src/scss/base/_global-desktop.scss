@@ -1,0 +1,12 @@
+.banner-overlay {
+    width: 70%;
+    &.end {
+        text-align: right;
+        left: auto;
+        right: 38px;
+    }
+    &.center {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

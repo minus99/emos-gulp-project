@@ -1,5 +1,5 @@
 // Abstracts
-@import 'abstracts/light-theme';
+@import 'abstracts/dark-theme';
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 
@@ -45,7 +45,8 @@
   //@import 'layouts/product-list-mobile';
 
   //Modules
-  @import 'modules/square-mobile';
+  /* @import 'modules/inspiration-mobile';
+  @import 'modules/circle-slider-mobile';*/
 }
 
 // MIDDLE (> $breakpoint-lg & < $breakpoint-lg)

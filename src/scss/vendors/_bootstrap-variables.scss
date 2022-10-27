@@ -39,8 +39,8 @@ $spacers: (
 );
 
 // Body :262
-$body-bg: $light;
-$body-color: $dark;
+$body-bg: $body-bg-color;
+$body-color: $body-text-color;
 
 // Links :271
 $link-color: inherit;

@@ -85,8 +85,8 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   /* 3 */
-  background: $light;
-  color: $dark;
+  background: $body-bg-color;
+  color: $body-text-color;
 }
 
 // Text Selection
@@ -326,11 +326,6 @@ i.bg-icon {
   }
 }
 
-// hr
-hr {
-  background: $gray;
-  opacity: 0.3;
-}
 
 // Animations
 @keyframes toTop100 {
@@ -344,9 +339,26 @@ hr {
   }
 }
 
-//picture
-picture {
-  img {
-    width: 100%;
-  }
+// Banner Overlay
+$banner-arrow-size: 8px;
+.banner-overlay {
+    position: absolute;
+    background-color: $light;
+    color: $dark;
+    padding: 20px 120px 20px 20px;
+    left: 38px;
+    bottom: 32px;
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNyINCiAgICAgaGVpZ2h0PSIxMCINCiAgICAgdmlld0JveD0iMCAwIDcgMTAiDQogICAgIGZpbGw9Im5vbmUiDQogICAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQogICAgPHBhdGggZD0iTTAuNTg1ODI3IDguNTM1NTNMNS41MzU1NyAzLjU4NTc5TDYuOTQ5NzkgNUwyLjAwMDA0IDkuOTQ5NzVMMC41ODU4MjcgOC41MzU1M1oiDQogICAgICAgICAgZmlsbD0iIzFBMTgxOCIgLz4NCiAgICA8cGF0aCBkPSJNMC41ODU4MjcgMS40NjQ0N0wyLjAwMDA0IDAuMDUwMjUyNkw2Ljk0OTc5IDVMNS41MzU1NyA2LjQxNDIxTDAuNTg1ODI3IDEuNDY0NDdaIg0KICAgICAgICAgIGZpbGw9IiMxQTE4MTgiIC8+DQo8L3N2Zz4=");
+        background-repeat: no-repeat;
+        background-size: $banner-arrow-size $banner-arrow-size;
+        width: $banner-arrow-size;
+        height: $banner-arrow-size;
+        top: calc(50% - $banner-arrow-size/2);
+        right: 30px;
+    }
+ 
+   
 }
