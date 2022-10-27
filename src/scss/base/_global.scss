@@ -18,28 +18,12 @@ body button:not([type]) {
 //950	Extra Black (Ultra Black)
 //@include fontFace($family, $file, $fontWeight, $fontStyle, $fontDisplay)
 
-//FONT1
-@include fontFace(
-  $font-face1,
-  '#{$font-face1}/#{$font-face1}-Regular',
-  400,
-  normal,
-  swap
-);
-@include fontFace(
-  $font-face1,
-  '#{$font-face1}/#{$font-face1}-Medium',
-  500,
-  normal,
-  swap
-);
-@include fontFace(
-  $font-face1,
-  '#{$font-face1}/#{$font-face3}-Bold',
-  700,
-  normal,
-  swap
-);
+//FONT
+//FONT
+@include fontFace($font-face1, '#{$font-face1}/#{$font-face1}-Regular', 400, normal, swap);
+@include fontFace($font-face1, '#{$font-face1}/#{$font-face1}-Medium', 500, normal, swap);
+@include fontFace($font-face1, '#{$font-face1}/#{$font-face1}-SemiBold', 600, normal, swap);
+@include fontFace($font-face1, '#{$font-face1}/#{$font-face1}-Bold', 700, normal, swap);
 
 /*
  * 1. Set `font-size` to support `rem` units
@@ -67,13 +51,9 @@ body button:not([type]) {
   font-display: swap;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Cabin:400,700&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Bree+Serif&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Crete+Round&subset=latin-ext');
+
+
+
 html {
   /* 1 */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
