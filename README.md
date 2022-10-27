@@ -18,7 +18,7 @@
 - Kaynaklar
     - [Repo hakkında genel anlatım video kaydı 1:14:46](https://projeyazilim-my.sharepoint.com/:v:/g/personal/kerim_karsavran_proj-e_com/EWPzYzQG5g5IvwxGDeFo_1UB2jezW-9_fNkPFMFJ6rKOLg?e=Q0aEHK)
 
-# Korayspor Theme
+# Korayspor Themes
 Light ve dark temalar eklendi
 if pageClass === "dark-theme"
 // css
