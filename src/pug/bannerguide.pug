@@ -11,22 +11,16 @@ block content
         .row
             .col-6 
                 +product()
-        h2.my-40 Hero Banners
+        h2.my-40 Square Banners
     .container.px-0.px-lg-50
         .row.g-0.g-lg-5
             .col-12.col-lg-6
-                .square-banner.position-relative
-                    +picture('ratio ratio-480x375 ratio-lg-740x768', dirUploads + 'banner/banner2x.png', dirUploads + 'banner/banner2x.png', dirUploads + 'banner/banner.png')(class="card-img", alt="slide 1")
-                    .banner-overlay.end
-                        h3.fs-20.fs-lg-30 Y2K’dan İlham Aldı
-                        p.fs-14.fs-lg-16.mt-10 Koleksiyonu keşfet
-
+                +square-banner()
             .col-12.col-lg-6
-                .square-banner.position-relative
-                    +picture('ratio ratio-480x375 ratio-lg-740x768', dirUploads + 'banner/banner2x.png', dirUploads + 'banner/banner2x.png', dirUploads + 'banner/banner.png')(class="card-img", alt="slide 1")
-                    .banner-overlay.center
-                        h3.fs-20.fs-lg-30 Y2K’dan İlham Aldı
-                        p.fs-14.fs-lg-16.mt-10 Koleksiyonu keşfet
+                +square-banner()
+            .col-12.col-lg-6
+                +square-banner()
+
         section.guideline.mb-50
             h2.guideline__h2.guideline__h2.border-bottom.mb-10.pb-10.border-green Hero Banners
             .camping-banner

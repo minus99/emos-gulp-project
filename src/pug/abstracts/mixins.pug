@@ -121,6 +121,13 @@ mixin product()
                     span.card-price-last.text-primary.ms-10 999,00 #{currencyText}
         a.stretched-link(href="product-detail.html")
 
+mixin square-banner()
+    .square-banner.position-relative
+        +picture('ratio ratio-480x375 ratio-lg-740x768', dirUploads + 'banner/banner2x.png', dirUploads + 'banner/banner2x.png', dirUploads + 'banner/banner.png')(class="card-img", alt="slide 1")
+        .banner-overlay
+            h3.fs-20.fs-lg-30 Y2K’dan İlham Aldı
+            p.fs-14.fs-lg-16.mt-10 Koleksiyonu keşfet
+
 mixin product-mini()
     .card.card-prd.bg-white.tracker-container
         .card-media
