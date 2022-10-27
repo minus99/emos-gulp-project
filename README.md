@@ -17,3 +17,23 @@
         * [`.scss` dosyalarında bölme `(/)` işareti kullanılmışsa `1.33` öncesi sass paketini kurmak gerekiyor. (since 1.33.0)](https://sass-lang.com/documentation/breaking-changes/slash-div) Yeni versiyona geçirilmeyecek durumdaysa [package.json `sass` versiyonu `1.32.*` yap](https://github.com/twbs/bootstrap/issues/34051#issuecomment-845838276)
 - Kaynaklar
     - [Repo hakkında genel anlatım video kaydı 1:14:46](https://projeyazilim-my.sharepoint.com/:v:/g/personal/kerim_karsavran_proj-e_com/EWPzYzQG5g5IvwxGDeFo_1UB2jezW-9_fNkPFMFJ6rKOLg?e=Q0aEHK)
+
+# Korayspor Themes
+Light ve dark temalar eklendi
+
+if pageClass === "dark-theme"
+
+   // css
+
+   link(rel="stylesheet", href=dirFrontend + "css/app-shell-dark-theme.css")
+
+   link(rel="stylesheet", href=dirFrontend + "css/style-dark-theme.css")
+
+else 
+
+   // css
+
+   link(rel="stylesheet", href=dirFrontend + "css/app-shell.css")
+
+   link(rel="stylesheet", href=dirFrontend + "css/style.css")
+
