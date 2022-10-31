@@ -1,5 +1,5 @@
 .container.px-lg-60.fs-12.fs-lg-14.mt-60
-    ul.footer-benefit.list-unstyled.d-flex.justify-content-lg-around.mx-lg-100.py-10
+    ul.footer-benefit.list-unstyled.d-flex.justify-content-lg-around.py-10.py-lg-100
         li.d-flex.align-items-center.px-20.px-lg-40
             +icon("cargo").fs-24.fs-lg-40.me-15.me-lg-30
             div
@@ -15,125 +15,132 @@
             div
                 span.d-block.mt-10.mt-lg-30.fs-20.fs-lg-30.fw-700 Kafanızda soru işareti kalmasın
                 p.mt-5.mt-lg-10 WhatsApp’tan bize sorun
-    .row.mt-100
-        .col-12.col-lg-4.footer-left-col
-            .d-flex.flex-column.h-100 
-                form.fs-16.ems-form(action='/' method='POST' id="Newsletter", autocomplete="off")
-                    div.fs-20 Fırsatlar Burada
-                    p.text-gray.mt-10.mb-15 Korayspor’da sana özel fırsatlar ve yeni ürünlerden haberdar olmak için kaydol.
-                    .ems-field.form-floating.newsletter-input-box.position-relative
-                        input.form-control.newsletter-input(type="text", id="email", name="email" placeholder="E-Posta Adresi")
-                        label(for="email") E-Posta Adresi
-                        .ems-field-feedback.fs-12.d-none.position-absolute
-                        a.btn.btn-light.rounded-circle.bg-white.p-0.position-absolute.newsletter-close.justify-content-center.align-items-center(href="javascript:void(0);" onclick="newsletterfocus(this, false)")
-                            +icon("close").fs-16.p-5
-                    .newsletter-drawer
-                        .newsletter-privacy.row.py-15.px-20
-                            .col-1.p-0
-                                // Styler kaldırılacak !!!
-                                .sStylerMainWrp.sStylerWrp_checkbox
-                                    .cStyler.checked
-                                        i.icon-checkbox
-                                        i.icon-checkbox-active
-                                    input.privacy-policy(type="checkbox")
-                                // Styler kaldırılacak !!!
-                            .col-11.p-0.mb-5.fs-12
-                                p Gizliliği onaylıyorum. Kampanya, ürün ve yeniliklerden haberdar edilmek için tarafıma e-posta ve/veya SMS gönderilmesine açık rızamla izin veriyorum.
-                                p E-posta adresiniz, e-bülten üyesi olarak kampanya, ürün ve yeniliklerden haberdar edilebilmeniz için alınmaktadır. Kişisel verilerin işlenmesi ile ilgili detaylı bilgiye buradan ulaşabilirsiniz.
-                            button.btn.btn-white.p-15.w-100.mt-20(type="button") 
-                                span Kaydol
-                .order-track-info.mx-auto.ms-lg-0.my-50.mb-lg-0.mt-lg-auto
-                    .d-flex.flex-column.align-items-lg-start
-                        a(href="tel:0850 420 7228")
-                            +icon("phone").fs-18 
-                            span.ms-15.fs-14 0850 420 7228
-                        span.mb-30.mt-15.text-gray.fs-14 Haftanın 7 günü 09:00 - 18:00
-                        a.btn.bg-white.p-15.fw-normal(href="#") 
-                            +icon("order").fs-20
-                            span.ms-30.fs-14 Sipariş Takibi
-        .d-none.d-lg-block.col-2
+.container.py-60.px-lg-120
+    .row
         .col-12.col-lg-6
-            .d-flex.flex-column-reverse.flex-lg-column
-                div.mt-40.mt-lg-0 
+            .info-bulletin.mx-auto
+                div.fs-30.fw-700 Fırsatlar Burada
+                p.mt-10.mb-15 Korayspor’da sana özel fırsatlar ve yeni ürünlerden haberdar olmak için kaydol.
+        .col-12.col-lg-6.mt-50.mt-lg-0
+            form.fs-16.ems-form.form-bulletin.mx-auto.opened(action='/' method='POST' id="Newsletter", autocomplete="off")
+                .ems-field.form-floating.icon-input-box
+                    input.form-control.newsletter-input.input-icon(type="text", id="email", name="email" placeholder="E-Posta Adresi")
+                    label.input-icon-label(for="email") E-Posta Adresi
+                    .ems-field-feedback.fs-12.d-none.position-absolute
+                    //a.btn.btn-light.rounded-circle.bg-white.p-0.position-absolute.newsletter-close.justify-content-center.align-items-center(href="javascript:void(0);" onclick="newsletterfocus(this, false)")
+                        +icon("close").fs-16.p-5
+                .newsletter-drawer.mt-10
+                    .newsletter-privacy.d-flex.align-items-center
+                        div
+                            // Styler kaldırılacak !!!
+                            .sStylerMainWrp.sStylerWrp_checkbox
+                                .cStyler.checked
+                                    i.icon-checkbox
+                                    i.icon-checkbox-active
+                                input.privacy-policy(type="checkbox")
+                            // Styler kaldırılacak !!!
+                        .ms-10.fs-13
+                            p Yasal koşulları ve politikaları okudum.
+.container.px-0
+    .row.g-0
+        .col-12.col-lg-4
+            +img('ratio ratio-375x509', false, dirUploads + 'footer/footer-img.jpg') 
+        .col-12.col-lg-8
+            .px-lg-120
+                .footer-buttons.d-flex.flex-column.flex-lg-row.my-80.my-lg-120.gap-15
+                    a.btn.btn-lg.btn-white.btn-icon-left(href="javascript:void(0)")
+                        +icon("headset")
+                        span.ms-10 Müşteri Hizmetleri
+                    a.btn.btn-lg.btn-white.btn-icon-left(href="javascript:void(0)")
+                        +icon("box")
+                        span.ms-10 Sipariş Takibi
+                    a.btn.btn-lg.btn-white.btn-icon-left(href="javascript:void(0)")
+                        +icon("store")
+                        span.ms-10 Mağaza Bul
+                ul.list-unstyled.row.row-cols-1.row-cols-lg-4.accordion.accordion-mobile.footer-menu
+                    li.col.mb-10(rel="tab-2") 
+                        a.fs-16.fw-600.d-flex.justify-content-between.align-items-center(href="javascript:void(0);") 
+                            span Kurumsal
+                        ul.list-unstyled.text-gray2.mt-lg-30.lv2  
+                            li.mb-10 
+                                a(href="#") Hakkımızda 
+                            li.mb-10 
+                                a(href="#") İletişim 
+                            li.mb-10 
+                                a(href="#") Mağazalar 
+                            li.mb-10 
+                                a(href="#") Kurumsal Satış
+                            li.mb-10 
+                                a(href="#") İnsan Kaynakları
+                    li.col(rel="tab-2")  
+                        a.fs-16.fw-600.d-flex.justify-content-between.align-items-center(href="javascript:void(0);")
+                            span Destek
+                        ul.list-unstyled.text-gray2.mt-lg-30.lv2
+                            li.mb-10 
+                                a(href="#") Sıkça Sorulan Sorular 
+                            li.mb-10 
+                                a(href="#") İşlem Rehberi 
+                            li.mb-10 
+                                a(href="#") Ödeme
+                            li.mb-10 
+                                a(href="#") Teslimat 
+                            li.mb-10 
+                                a(href="#") İptal / İade Koşulları
+                    li.col.mb-10(rel="tab-2") 
+                        a.fs-16.fw-600.d-flex.justify-content-between.align-items-center(href="javascript:void(0);") 
+                            span Kurumsal
+                        ul.list-unstyled.text-gray2.mt-lg-30.lv2  
+                            li.mb-10 
+                                a(href="#") Hakkımızda 
+                            li.mb-10 
+                                a(href="#") İletişim 
+                            li.mb-10 
+                                a(href="#") Mağazalar 
+                            li.mb-10 
+                                a(href="#") Kurumsal Satış
+                            li.mb-10 
+                                a(href="#") İnsan Kaynakları
+                    li.col.mb-10(rel="tab-2") 
+                        a.fs-16.fw-600d-flex.justify-content-between.align-items-center(href="javascript:void(0);") 
+                            span Kurumsal
+                        ul.list-unstyled.text-gray2.mt-lg-30.lv2  
+                            li.mb-10 
+                                a(href="#") Hakkımızda 
+                            li.mb-10 
+                                a(href="#") İletişim 
+                            li.mb-10 
+                                a(href="#") Mağazalar 
+                            li.mb-10 
+                                a(href="#") Kurumsal Satış
+                            li.mb-10 
+                                a(href="#") İnsan Kaynakları
+                .footer-social-media.d-flex.flex-column.flex-lg-row.align-items-lg-center.mt-60.my-lg-60
                     span.fs-16 Sosyal Medya 
-                    ul.list-unstyled.d-flex.mt-30.mt-lg-20 
+                    ul.list-unstyled.d-flex.mt-20.mt-lg-0.ms-lg-20
                         li.me-30 
                             a(href="https://www.facebook.com/", target="blank")
-                                +icon("facebook").fs-28.bg-white.rounded-circle
-                                span.ms-10.d-none.d-lg-inline-block Facebook 
+                                +icon("facebook").fs-28.bg-white.rounded-circle.p-5
                         li.me-30
                             a(href="https://twitter.com/", target="blank") 
-                                +icon("twitter").fs-28.bg-white.rounded-circle
-                                span.ms-10.d-none.d-lg-inline-block Twitter 
+                                +icon("twitter").fs-28.bg-white.rounded-circle.p-5 
                         li.me-30
                             a(href="https://www.instagram.com/", target="blank") 
-                                +icon("instagram").fs-28.bg-white.rounded-circle
-                                span.ms-10.d-none.d-lg-inline-block Instagram 
+                                +icon("instagram").fs-28.bg-white.rounded-circle.p-5
                         li
                             a(href="https://www.youtube.com/", target="blank") 
-                                +icon("youtube").fs-28.bg-white.rounded-circle
-                                span.ms-10.d-none.d-lg-inline-block Youtube
-                .row.mt-lg-40
-                    .col.col-12.col-lg-4 
-                        ul.list-unstyled.fs-16
-                            li.mb-10.mb-lg-20 
-                                a(href="#") Saatler 
-                            li.mb-10.mb-lg-20 
-                                a(href="#") Markalar 
-                            li.mb-10.mb-lg-20 
-                                a(href="#") Gözlük 
-                            li.mb-10.mb-lg-20 
-                                a(href="#") Takı ve Aksesuarlar 
-                            li.mb-10.mb-lg-20 
-                                a(href="#") Hediyeler 
-                            li.mb-10.mb-lg-20 
-                                a(href="#") Zaman Kütüphanesi
-                            li.mb-10.mb-lg-20 
-                                a(href="#")
-                                    span İlham 
-                    .col.col-12.col-lg-8.mt-20.mt-lg-0 
-                        ul.list-unstyled.row.row-cols-1.row-cols-lg-2.accordion.accordion-mobile.footer-menu
-                            li.col.mb-10(rel="tab-2") 
-                                a.fs-16.d-flex.justify-content-between.align-items-center(href="javascript:void(0);") 
-                                    span Kurumsal
-                                ul.list-unstyled.text-gray.mt-lg-30.lv2  
-                                    li.mb-10 
-                                        a(href="#") Hakkımızda 
-                                    li.mb-10 
-                                        a(href="#") İletişim 
-                                    li.mb-10 
-                                        a(href="#") Mağazalar 
-                                    li.mb-10 
-                                        a(href="#") Kurumsal Satış
-                                    li.mb-10 
-                                        a(href="#") İnsan Kaynakları
-                            li.col(rel="tab-2")  
-                                a.fs-16.d-flex.justify-content-between.align-items-center(href="javascript:void(0);")
-                                    span Destek
-                                ul.list-unstyled.text-gray.mt-lg-30.lv2
-                                    li.mb-10 
-                                        a(href="#") Sıkça Sorulan Sorular 
-                                    li.mb-10 
-                                        a(href="#") İşlem Rehberi 
-                                    li.mb-10 
-                                        a(href="#") Ödeme
-                                    li.mb-10 
-                                        a(href="#") Teslimat 
-                                    li.mb-10 
-                                        a(href="#") İptal / İade Koşulları
-    .d-flex.flex-column.flex-lg-row.align-items--lg-center.justify-content-lg-between.my-50.my-lg-60.text-gray.fs-12 
-        div 
-            span ©2022, Konyalı Saat Tüm hakları saklıdır.
-        .mt-40.mb-60.my-lg-0 
-            ul.list-unstyled.d-flex.flex-column.flex-lg-row.footer-policies.dotted-items-desktop
-                li
-                    a(href="javascript:void(0);") Gizlilik Politikası
-                li
-                    a(href="javascript:void(0);") Çerez Politikası
-                li
-                    a(href="javascript:void(0);") Kişisel Verilerin Korunumu Kanunu
-        div 
-            span.me-20
-                +icon("minus99")
-            span
-                +icon("proj-e").proje-icon
+                                +icon("pinterest").fs-28.bg-white.rounded-circle.p-5
+                .d-flex.flex-column.flex-lg-row.align-items-lg-center.justify-content-lg-between.text-gray2.fs-12 
+                    ul.list-unstyled.d-flex.flex-column.flex-lg-row.footer-policies.dotted-items-desktop
+                        li
+                            a(href="javascript:void(0);") Gizlilik Politikası
+                        li
+                            a(href="javascript:void(0);") Çerez Politikası
+                        li
+                            a(href="javascript:void(0);") Kişisel Verilerin Korunumu Kanunu
+                    div.position-lg-absolute.bottom-0.start-0
+                        span ©2022, Konyalı Saat Tüm hakları saklıdır.
+                    div 
+                        span.me-20
+                            +icon("minus99")
+                        span
+                            +icon("proj-e").proje-icon

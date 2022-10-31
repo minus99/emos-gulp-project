@@ -36,6 +36,7 @@ $spacers: (
   60: $space9,
   90: $space90,
   100: $space100,
+  120: $space120,
 );
 
 // Body :262
@@ -85,6 +86,7 @@ $caret-spacing: 10px;
 $aspect-ratios: (
   '1x1': 100%,
   'prd': calc(360 / 450 * 100%),
+  '375x509': calc(509 / 375 * 100%),
   '335x648': calc(648 / 335 * 100%),
   'main-slider': calc(700 / 1340 * 100%),
   'logo': calc(31 / 200 * 100%),
