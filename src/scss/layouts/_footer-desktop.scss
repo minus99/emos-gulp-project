@@ -5,10 +5,17 @@
         }
     }
 }
-.footer-benefit {
-    border-bottom: 1px solid $gray;
-    li {
-        max-width: 400px;
+.footer {
+    &-benefit {
+        border-bottom: 1px solid $border-color;
+        li {
+            max-width: 400px;
+        }
+    }
+    &-slogan {
+        bottom: 140px;
+        left: 80px;
+        right: 120px;      
     }
 }
 
@@ -17,4 +24,18 @@
 }
 .form-bulletin {
     max-width: 420px ;
+}
+.rights-reserved {
+    color: $white;
+    left: 80px;
+    bottom: 50px;
+}
+//Footer fixed
+.global-sign {
+    max-width: 80px;
+    height: auto;
+}
+.visa-master {
+    max-width: 90px;
+    height: auto;
 }

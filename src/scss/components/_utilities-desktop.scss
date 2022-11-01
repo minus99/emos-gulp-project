@@ -106,6 +106,7 @@
 //Dotted
 .dotted-items-desktop {
     >* {
+        white-space: nowrap;
         &:last-child::after {
             display: none;
         }

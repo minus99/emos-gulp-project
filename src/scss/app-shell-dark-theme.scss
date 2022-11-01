@@ -37,6 +37,7 @@
 @media (min-width: $breakpoint-lg) {
   //Base
   @import 'base/main-desktop';
+  @import 'base/global-desktop';
 
   // Layout
   @import 'layouts/footer-desktop';

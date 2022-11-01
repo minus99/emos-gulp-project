@@ -41,26 +41,27 @@
                             // Styler kaldırılacak !!!
                         .ms-10.fs-13
                             p Yasal koşulları ve politikaları okudum.
-.container.px-0
-    .row.g-0
-        .col-12.col-lg-4
-            +img('ratio ratio-375x509', false, dirUploads + 'footer/footer-img.jpg') 
+.container.position-relative
+    .row
+        .col-12.col-lg-4.position-relative.p-0
+            +img('ratio ratio-375x509 footer-image', false, dirUploads + 'footer/footer-img.jpg')
+            h4.footer-slogan.position-absolute.text-white.fw-600 Güvenle alışveriş yapın. Dilediğiniz zaman ücretsiz iade ve değişim yapabilirsiniz.
         .col-12.col-lg-8
-            .px-lg-120
-                .footer-buttons.d-flex.flex-column.flex-lg-row.my-80.my-lg-120.gap-15
-                    a.btn.btn-lg.btn-white.btn-icon-left(href="javascript:void(0)")
+            .d-lg-flex.flex-lg-column.justify-content-lg-between.px-lg-60.pt-60.pt-lg-100.pb-lg-50.h-100
+                .footer-buttons.d-lg-flex.align-items-center.gap-15.px-60.px-lg-0
+                    a.btn.btn-lg.btn-white.btn-icon-left.w-100.w-lg-auto(href="javascript:void(0)")
                         +icon("headset")
                         span.ms-10 Müşteri Hizmetleri
-                    a.btn.btn-lg.btn-white.btn-icon-left(href="javascript:void(0)")
+                    a.btn.btn-lg.btn-white.btn-icon-left.w-100.w-lg-auto.mt-10.mt-lg-0(href="javascript:void(0)")
                         +icon("box")
                         span.ms-10 Sipariş Takibi
-                    a.btn.btn-lg.btn-white.btn-icon-left(href="javascript:void(0)")
+                    a.btn.btn-lg.btn-white.btn-icon-left.w-100.w-lg-auto.mt-10.mt-lg-0(href="javascript:void(0)")
                         +icon("store")
                         span.ms-10 Mağaza Bul
-                ul.list-unstyled.row.row-cols-1.row-cols-lg-4.accordion.accordion-mobile.footer-menu
-                    li.col.mb-10(rel="tab-2") 
+                ul.list-unstyled.row.row-cols-1.row-cols-lg-4.accordion.accordion-mobile.footer-menu.g-0.mt-60.mt-lg-100
+                    li.col(rel="tab-2") 
                         a.fs-16.fw-600.d-flex.justify-content-between.align-items-center(href="javascript:void(0);") 
-                            span Kurumsal
+                            span Spor Branşları
                         ul.list-unstyled.text-gray2.mt-lg-30.lv2  
                             li.mb-10 
                                 a(href="#") Hakkımızda 
@@ -74,7 +75,7 @@
                                 a(href="#") İnsan Kaynakları
                     li.col(rel="tab-2")  
                         a.fs-16.fw-600.d-flex.justify-content-between.align-items-center(href="javascript:void(0);")
-                            span Destek
+                            span Kurumsal
                         ul.list-unstyled.text-gray2.mt-lg-30.lv2
                             li.mb-10 
                                 a(href="#") Sıkça Sorulan Sorular 
@@ -86,9 +87,9 @@
                                 a(href="#") Teslimat 
                             li.mb-10 
                                 a(href="#") İptal / İade Koşulları
-                    li.col.mb-10(rel="tab-2") 
+                    li.col(rel="tab-2") 
                         a.fs-16.fw-600.d-flex.justify-content-between.align-items-center(href="javascript:void(0);") 
-                            span Kurumsal
+                            span Destek
                         ul.list-unstyled.text-gray2.mt-lg-30.lv2  
                             li.mb-10 
                                 a(href="#") Hakkımızda 
@@ -100,9 +101,9 @@
                                 a(href="#") Kurumsal Satış
                             li.mb-10 
                                 a(href="#") İnsan Kaynakları
-                    li.col.mb-10(rel="tab-2") 
-                        a.fs-16.fw-600d-flex.justify-content-between.align-items-center(href="javascript:void(0);") 
-                            span Kurumsal
+                    li.col(rel="tab-2") 
+                        a.fs-16.fw-600.d-flex.justify-content-between.align-items-center(href="javascript:void(0);") 
+                            span Müşteri Hizmetleri
                         ul.list-unstyled.text-gray2.mt-lg-30.lv2  
                             li.mb-10 
                                 a(href="#") Hakkımızda 
@@ -114,33 +115,46 @@
                                 a(href="#") Kurumsal Satış
                             li.mb-10 
                                 a(href="#") İnsan Kaynakları
-                .footer-social-media.d-flex.flex-column.flex-lg-row.align-items-lg-center.mt-60.my-lg-60
-                    span.fs-16 Sosyal Medya 
-                    ul.list-unstyled.d-flex.mt-20.mt-lg-0.ms-lg-20
-                        li.me-30 
-                            a(href="https://www.facebook.com/", target="blank")
-                                +icon("facebook").fs-28.bg-white.rounded-circle.p-5
-                        li.me-30
-                            a(href="https://twitter.com/", target="blank") 
-                                +icon("twitter").fs-28.bg-white.rounded-circle.p-5 
-                        li.me-30
-                            a(href="https://www.instagram.com/", target="blank") 
-                                +icon("instagram").fs-28.bg-white.rounded-circle.p-5
-                        li
-                            a(href="https://www.youtube.com/", target="blank") 
-                                +icon("pinterest").fs-28.bg-white.rounded-circle.p-5
-                .d-flex.flex-column.flex-lg-row.align-items-lg-center.justify-content-lg-between.text-gray2.fs-12 
-                    ul.list-unstyled.d-flex.flex-column.flex-lg-row.footer-policies.dotted-items-desktop
+                .d-lg-flex.justify-content-lg-between.my-60.my-lg-60
+                    .footer-social-media.d-lg-flex.align-items-lg-center
+                        span.fs-16 Sosyal Medya 
+                        ul.list-unstyled.d-flex.mt-20.mt-lg-0.ms-lg-20
+                            li.me-30 
+                                a(href="https://www.facebook.com/", target="blank")
+                                    +icon("facebook").fs-28.bg-white.rounded-circle.p-5
+                            li.me-30
+                                a(href="https://twitter.com/", target="blank") 
+                                    +icon("twitter").fs-28.bg-white.rounded-circle.p-5 
+                            li.me-30
+                                a(href="https://www.instagram.com/", target="blank") 
+                                    +icon("instagram").fs-28.bg-white.rounded-circle.p-5
+                            li
+                                a(href="https://www.youtube.com/", target="blank") 
+                                    +icon("pinterest").fs-28.bg-white.rounded-circle.p-5
+                    .d-flex.justify-content-between.d-lg-block.mt-100.mt-lg-0    
+                        .footer-download.d-flex.flex-column.flex-lg-row.gap-5
+                            +img('ratio ratio-100x30 ratio-bg-remove', false, dirImages + 'app-store.png')
+                            +img('ratio ratio-100x30 ratio-bg-remove', false, dirImages + 'google-play.png')
+                        .d-lg-none
+                            +img('ratio ratio-90x25 global-sign ratio-bg-remove', false, dirImages + 'global-sign.png')
+                            +img('ratio ratio-119x28 visa-master mt-10 ratio-bg-remove', false, dirImages + 'visa-master.png')
+
+                .d-lg-flex.align-items-lg-center.justify-content-lg-between.text-gray2.fs-13
+                    ul.list-unstyled.d-lg-flex.footer-policies.dotted-items-desktop
                         li
                             a(href="javascript:void(0);") Gizlilik Politikası
-                        li
+                        li.mt-10.mt-lg-0
                             a(href="javascript:void(0);") Çerez Politikası
-                        li
+                        li.mt-10.mt-lg-0
                             a(href="javascript:void(0);") Kişisel Verilerin Korunumu Kanunu
-                    div.position-lg-absolute.bottom-0.start-0
-                        span ©2022, Konyalı Saat Tüm hakları saklıdır.
-                    div 
-                        span.me-20
-                            +icon("minus99")
-                        span
-                            +icon("proj-e").proje-icon
+                    .d-flex.justify-content-between.mt-30.mt-lg-0.align-items-center
+                        .rights-reserved.position-lg-absolute
+                            span.fs-12 ©2022, Konyalı Saat Tüm hakları saklıdır.
+                        div 
+                            span.me-20
+                                +icon("minus99")
+                            span
+                                +icon("proj-e").proje-icon
+                    .d-none.d-lg-inline-flex.align-items-center
+                        +img('ratio ratio-90x25 global-sign ratio-bg-remove', false, dirImages + 'global-sign.png')
+                        +img('ratio ratio-119x28 visa-master ratio-bg-remove ms-30', false, dirImages + 'visa-master.png')

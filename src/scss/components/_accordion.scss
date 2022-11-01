@@ -9,13 +9,13 @@
             height: 12px;
             background-repeat: no-repeat;
             background-position: center;
-            background-image: url($dir-images + "plus.svg");
+            background-image: url($dir-images + "arrow-down.svg");
         }
     }
     >li.selected{
         &>a:not([data-target]) {
             &:after {
-                background-image: url($dir-images + "minus.svg");
+                background-image: url($dir-images + "arrow-up.svg");
             }
         }
         .lv2 {
@@ -26,12 +26,5 @@
             color: $primary;
         }
     }
-    &.faq-list,
-    &.footer-menu {
-        .lv2 {
-            li:first-child{
-                margin-top: 10px;
-            }
-        }
-    }
+
 }

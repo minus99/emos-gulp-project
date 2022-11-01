@@ -1,10 +1,11 @@
 .accordion.accordion-mobile {
     .lv2 {
-        display: block;
+        margin: 30px 0 15px;
     }
-    &>li>a {
-        &:after {
-            display: none;
+    &.footer-menu {
+        & > li {
+            padding: 18px 0;
+            border-top: 1px solid $border-color;
         }
     }
 } 

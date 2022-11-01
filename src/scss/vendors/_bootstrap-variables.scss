@@ -73,7 +73,7 @@ $border-widths: (
   2: 2px,
 );
 
-$border-color: #ccc;
+$border-color: $custom-border-color;
 
 $border-radius: 4px;
 $border-radius-sm: 2px;
@@ -87,6 +87,9 @@ $aspect-ratios: (
   '1x1': 100%,
   'prd': calc(360 / 450 * 100%),
   '375x509': calc(509 / 375 * 100%),
+  '100x30': calc(30 / 101 * 100%),
+  '90x25': calc(25 / 90 * 100%),
+  '119x28': calc(28 / 119 * 100%),
   '335x648': calc(648 / 335 * 100%),
   'main-slider': calc(700 / 1340 * 100%),
   'logo': calc(31 / 200 * 100%),
@@ -198,13 +201,13 @@ $input-padding-x-lg: 1.25rem; // 20px
 $input-font-size-lg: $input-font-size;
 
 $input-border-width: 0;
-$input-border-color: $gray;
+$input-border-color: $border-color;
 
 $input-border-radius: $border-radius;
 $input-border-radius-sm: $border-radius;
 $input-border-radius-lg: $border-radius;
 
-$input-focus-border-color: $gray;
+$input-focus-border-color: $border-color;
 $input-focus-box-shadow: none;
 
 $form-floating-padding-x: $input-padding-x;
