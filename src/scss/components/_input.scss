@@ -85,29 +85,30 @@
 //     //     background-repeat: no-repeat;
 //     // }
 // }
-// .sStylerWrp_checkbox {
-//     position: relative;
-//     .icon-checkbox, .icon-checkbox-active{
-//         position: absolute;
-//         display: inline-block;
-//         width: 16px;
-//         height: 16px;
-//     }
-//     .icon-checkbox {
-//         border: 1px solid $gray;
-//     }
-//     .checked {
-//         .icon-checkbox-active {
-//             background-color: $primary;
-//             background-image: url($dir-images + "ok.svg");
-//             background-repeat: no-repeat;
-//             background-position: center;
-//         }
-//     }
-//     input {
-//         opacity: 0;
-//     }
-// }
+.sStylerWrp_checkbox {
+    position: relative;
+    .icon-checkbox, .icon-checkbox-active{
+        position: absolute;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border-radius: 2px;
+    }
+    .icon-checkbox {
+        border: 2px solid $gray;
+    }
+    .checked {
+        .icon-checkbox-active {
+            background-color: $primary;
+            background-image: url($dir-images + "ok.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    input {
+        opacity: 0;
+    }
+}
 // .input-search {
 //     display: flex;
 //     align-items: center;
@@ -324,16 +325,14 @@
 
 
 .icon-input-box {
-    &::after {
-        content:"";
+    color: $body-text-color;
+    svg{
         position: absolute;
-        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiDQogICAgIGhlaWdodD0iMTIiDQogICAgIHZpZXdCb3g9IjAgMCAxNiAxMiINCiAgICAgZmlsbD0ibm9uZSINCiAgICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNOC42MzYwNCAxMC40ODYyTDE0LjU4NTggNC41MzY0M0wxNiA1Ljk1MDY0TDEwLjA1MDMgMTEuOTAwNEw4LjYzNjA0IDEwLjQ4NjJaIg0KICAgICAgICAgIGZpbGw9IiMxQTE4MTgiIC8+DQogICAgPHBhdGggZD0iTTguNjM2MDQgMS40MTUxMUwxMC4wNTAzIDAuMDAwODk2OTc0TDE2IDUuOTUwNjRMMTQuNTg1OCA3LjM2NDg2TDguNjM2MDQgMS40MTUxMVoiDQogICAgICAgICAgZmlsbD0iIzFBMTgxOCIgLz4NCiAgICA8cGF0aCBkPSJNMTQgNi45MDA0TDQuMTUyNDZlLTA1IDYuOTAwNEw0LjEzNDk3ZS0wNSA0LjkwMDRMMTQgNC45MDA0TDE0IDYuOTAwNFoiDQogICAgICAgICAgZmlsbD0iIzFBMTgxOCIgLz4NCjwvc3ZnPg==");
-        background-size: 16px 12px;
-        background-repeat: no-repeat;
         top: calc(50% - 6px);
         right: 0;
         width: 16px;
         height: 12px;
+
     }
     .input-icon {
         position: relative;

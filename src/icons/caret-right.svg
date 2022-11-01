@@ -4,7 +4,7 @@
      fill="none"
      xmlns="http://www.w3.org/2000/svg">
     <path d="M0.585827 8.53553L5.53557 3.58579L6.94979 5L2.00004 9.94975L0.585827 8.53553Z"
-          fill="#1A1818" />
+          fill="currentColor" />
     <path d="M0.585827 1.46447L2.00004 0.0502526L6.94979 5L5.53557 6.41421L0.585827 1.46447Z"
-          fill="#1A1818" />
+          fill="currentColor" />
 </svg>

@@ -112,6 +112,11 @@ i.bg-icon {
   &-arrow-r {
     background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyOCAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgNy41SDI2TTI2IDcuNUMyMy42NjY3IDguMzMzMzMgMTkgOC4xIDE5IDAuNU0yNiA3LjVDMjMuNjY2NyA2LjgzMzMzIDE5IDcuMyAxOSAxNC41IiBzdHJva2U9IiMyNzIxMTciLz4KPC9zdmc+Cg==');
   }
+  &-caret-down {
+    background-image: url("data:image/svg+xml,%0A%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000000' d='M11 15h10v1H11z'/%3E%3C/svg%3E%0A");
+  }
+  
+
 }
 
 // Animations

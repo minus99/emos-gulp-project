@@ -39,14 +39,14 @@
   // Components
   @import 'components/swiper-mobile';
   @import 'components/modal-mobile';
+  @import 'components/accordion-mobile';
 
   // Layouts
   @import 'layouts/header-mobile';
   //@import 'layouts/product-list-mobile';
 
   //Modules
-  /* @import 'modules/inspiration-mobile';
-  @import 'modules/circle-slider-mobile';*/
+  @import 'modules/square-mobile';
 }
 
 // MIDDLE (> $breakpoint-lg & < $breakpoint-lg)

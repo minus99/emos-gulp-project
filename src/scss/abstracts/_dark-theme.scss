@@ -2,3 +2,22 @@
 $body-bg-color: #1a1818;
 $body-text-color: #f6f3f2;
 $custom-border-color: #817A79;
+
+
+.accordion{
+    &>li>a {
+      
+        &:after {
+            background-image: url("data:image/svg+xml,%3Csvg width='11' height='7' viewBox='0 0 11 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.3297 0.535534L7.27945 5.48528L5.86523 6.89949L0.915487 1.94975L2.3297 0.535534Z' fill='white'/%3E%3Cpath d='M9.40077 0.535534L10.815 1.94975L5.86523 6.89949L4.45102 5.48528L9.40077 0.535534Z' fill='white'/%3E%3C/svg%3E%0A");
+        }
+    }
+    >li.selected{
+        &>a:not([data-target]) {
+            &:after {
+                background-image: url("data:image/svg+xml,%3Csvg width='11' height='7' viewBox='0 0 11 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.3297 6.36486L7.27945 1.41511L5.86523 0.000895858L0.915487 4.95064L2.3297 6.36486Z' fill='white'/%3E%3Cpath d='M9.40077 6.36486L10.815 4.95064L5.86523 0.000895858L4.45102 1.41511L9.40077 6.36486Z' fill='white'/%3E%3C/svg%3E%0A");
+    
+            }
+        }
+    }
+
+}
