@@ -15,7 +15,6 @@
     pointer-events: none;
     transition: all .12s cubic-bezier(0.950, 0.050, 0.795, 0.035);
     &-close {
-        border-bottom: 1px solid rgba(119, 113, 103, .2);
         line-height: 1;
         a {
             z-index: 3;

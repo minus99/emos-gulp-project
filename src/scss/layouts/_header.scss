@@ -35,12 +35,26 @@
     }
   }
   //lvl2
-  .lvl-2 {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-  }
+    .lvl-2 {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    .menu-prd {
+        &-type,
+        &-brands {
+            li {
+                &:nth-child(n+2)
+                {
+                    margin-top: 12px;
+                }
+            }
+        }
+    }
+
+  
   //lvl3
   .lvl-3 {
     display: none;
