@@ -27,8 +27,8 @@ html(lang=lang, dir=dir)
             link(rel="dns-prefetch", href="https://connect.facebook.net")
 
             // preload
-            link(rel="preload", href=dirFonts + "Switzer/Switzer-Regular.woff2", as="font", type="font/woff2" crossorigin)
-            link(rel="preload", href=dirFonts + "Switzer/Switzer-Bold.woff2", as="font", type="font/woff2" crossorigin)
+            link(rel="preload", href=dirFonts + "VelaSans/VelaSans-Regular.woff2", as="font", type="font/woff2" crossorigin)
+            link(rel="preload", href=dirFonts + "VelaSans/VelaSans-Bold.woff2", as="font", type="font/woff2" crossorigin)
 
             //app shell
                 style
@@ -187,11 +187,14 @@ html(lang=lang, dir=dir)
             
             block cookie
                 // COOKIE INFORMATION
-                    .ems-cookie-bnr.fixed-bottom.bg-white.py-20.border-top.shadow-lg.collapse
-                        .container-lg
-                            .h4 Çerez Kullanımı
-                            p.fs-5.mt-5 Size en iyi deneyimi sunmak için web sitemizde çerez kullanıyoruz.
-                            button.ems-cookie-accept-btn.btn.btn-sm.btn-primary(type="button") Kabul Et
+                .ems-cookie-bnr.fixed-bottom.py-20.py-lg-30.border-top.shadow-lg.collapse.show
+                    .container-lg
+                        .d-flex.justify-content-between
+                            h4.fs-16.fw-600 Çerez Kullanımı
+                            a(class="" href="" aria-label="Close"  data-type="remove")
+                                +icon('close').fs-16
+                        p.fs-13.mt-20.lh-lg Alışveriş deneyiminizi iyileştirmek için yasal düzenlemelere uygun çerezler (cookies) kullanıyoruz. Detaylı bilgiye Gizlilik ve Çerez Politikası sayfamızdan erişebilirsiniz.
+                        button.ems-cookie-accept-btn.btn.btn-sm.btn-outline-white(type="button") Kabul Et
                 // COOKIE INFORMATION
 
             block loading-page

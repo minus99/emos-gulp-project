@@ -58,6 +58,12 @@
   //lvl3
   .lvl-3 {
     display: none;
+    li {
+        &:nth-child(n+2)
+        {
+            margin-top: 12px;
+        }
+    }
   }
 }
 

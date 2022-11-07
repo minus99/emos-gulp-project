@@ -46,8 +46,8 @@
                                         span Doğa Dostu Ürünler
                             .menu-img.position-absolute
                                 +picture('ratio ratio-121x263 ratio-lg-281x800 ratio-bg-remove ', dirUploads + 'menu/cat-image-mobile.png', dirUploads + 'menu/cat-image.png', dirUploads + 'menu/cat-image-mobile.png')(class="w-100 img-fluid", alt="slide 1")
-                            .menu-prd-featured.d-lg-flex.justify-content-lg-around.px-20.px-lg-0
-                                ul.list-unstyled
+                            .menu-prd-featured.px-20.px-lg-40.gap-20
+                                ul.list-unstyled.featured-item-1
                                     li.lvl-2-item
                                         a.lvl-2-item-link.position-relative.py-20.py-lg-0.fs-lg-20.d-flex.text-dark(href="javascript:void(0);") 
                                             span Ayakkabı
@@ -66,7 +66,7 @@
                                                 a(href="") Outdoor
                                             li
                                                 a(href="") Skate & Kay Kay
-                                            li
+                                            li 
                                                 a(href="") Tenis
                                             li
                                                 a(href="") Sandalet
@@ -77,7 +77,7 @@
                                             li
                                                 a(href="") Indoor
                                             
-                                ul.list-unstyled
+                                ul.list-unstyled.featured-item-2
                                     li.lvl-2-item
                                         a.lvl-2-item-link.position-relative.py-20.py-lg-0.fs-lg-20.d-flex.text-dark(href="javascript:void(0);") 
                                             span Giyim
@@ -106,7 +106,7 @@
                                                 a(href="") Yürüyüş
                                             li
                                                 a(href="") Indoor
-                                ul.list-unstyled
+                                ul.list-unstyled.featured-item-3
                                     li.lvl-2-item
                                         a.lvl-2-item-link.position-relative.py-20.py-lg-0.fs-lg-20.d-flex.text-dark(href="javascript:void(0);") 
                                             span Aksesuar
@@ -123,19 +123,8 @@
                                                 a(href="") Çizme
                                             li
                                                 a(href="") Outdoor
-                                            li
-                                                a(href="") Skate & Kay Kay
-                                            li
-                                                a(href="") Tenis
-                                            li
-                                                a(href="") Sandalet
-                                            li
-                                                a(href="") Terlik
-                                            li
-                                                a(href="") Yürüyüş
-                                            li
-                                                a(href="") Indoor
-                                ul.list-unstyled
+                             
+                                ul.list-unstyled.featured-item-4
                                     li.lvl-2-item
                                         a.lvl-2-item-link.position-relative.py-20.py-lg-0.fs-lg-20.d-flex.text-dark(href="javascript:void(0);") 
                                             span Ekipman
@@ -152,18 +141,43 @@
                                                 a(href="") Çizme
                                             li
                                                 a(href="") Outdoor
+                          
+                                ul.list-unstyled.featured-item-5
+                                    li.lvl-2-item
+                                        a.lvl-2-item-link.position-relative.py-20.py-lg-0.fs-lg-20.d-flex.text-dark(href="javascript:void(0);") 
+                                            span Aksesuar
+                                        ul.lvl-3.list-unstyled.text-gray2.fw-400.fw-lg-600.mt-lg-10
                                             li
-                                                a(href="") Skate & Kay Kay
+                                                a(href="") Günlük
                                             li
-                                                a(href="") Tenis
+                                                a(href="") Originals
                                             li
-                                                a(href="") Sandalet
+                                                a(href="") Koşu
                                             li
-                                                a(href="") Terlik
+                                                a(href="") Bot
                                             li
-                                                a(href="") Yürüyüş
+                                                a(href="") Çizme
                                             li
-                                                a(href="") Indoor
+                                                a(href="") Outdoor
+                                   
+                                ul.list-unstyled.featured-item-6
+                                    li.lvl-2-item
+                                        a.lvl-2-item-link.position-relative.py-20.py-lg-0.fs-lg-20.d-flex.text-dark(href="javascript:void(0);") 
+                                            span Aksesuar
+                                        ul.lvl-3.list-unstyled.text-gray2.fw-400.fw-lg-600.mt-lg-10
+                                            li
+                                                a(href="") Günlük
+                                            li
+                                                a(href="") Originals
+                                            li
+                                                a(href="") Koşu
+                                            li
+                                                a(href="") Bot
+                                            li
+                                                a(href="") Çizme
+                                            li
+                                                a(href="") Outdoor
+                                   
                             ul.menu-prd-brands.list-unstyled.mt-40.pt-40.pt-lg-0.px-20
                                 li
                                     a(href="#") 
@@ -202,7 +216,15 @@
                     a.lvl-1-item-link(href="#") Spor Branşları
                 li.lvl-1-item.fs-18.fs-lg-16 
                     a.lvl-1-item-link(href="#") Markalar
-
+            ul.list-unstyled.d-lg-none.mt-60.px-20
+                li.mt-15
+                    a(href="") Şipariş Takibi
+                li.mt-15
+                    a(href="") Mağazalar
+                li.mt-15
+                    a(href="") Kurumsal
+                li.mt-15
+                    a(href="") Destek
     .header-logo
         a(href="/")
             +img('ratio ratio-logo ratio-bg-remove', false, dirImages + 'logo.svg')

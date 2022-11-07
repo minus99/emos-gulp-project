@@ -349,7 +349,10 @@
 //Dropdown
 .custom-dropdown {
     &-menu {
-        padding: 10px !important;
+        min-width: 128px !important;
+        top: 43px;
+        border: 0 !important;
+        padding: 16px 24px !important;
     }
     &-toggle {
         position: relative;
