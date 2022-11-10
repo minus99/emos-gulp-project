@@ -59,36 +59,32 @@
 //THEME
 
 /* Home Slider */
-$mainDiameter: 230px;
-$mainRadius: calc($mainDiameter / 2);
 
 .main-slider {
-  .swiper {
-    &-pagination {
-      width: $mainDiameter;
-      height: $mainDiameter;
-      left: calc(50% - $mainRadius);
-      bottom: -$mainRadius !important;
+    .swiper-button-prev, 
+    .swiper-button-next {
+        top: auto;
+        bottom: 68px;
+        right: 68px;
     }
-    &-tracker{
-      height: $mainDiameter;
-      bottom: -$mainRadius;
-      width: 30px;
-      left: calc(50% - 15px);
+
+    .swiper-button-prev,
+    .swiper-container-rtl .swiper-button-next {
+        transform: scale(-1);
+        left: auto;
+        right: $swiper-nav-width + 74px !important;
     }
-  }
+    .swiper-button-next,
+    .swiper-container-rtl .swiper-button-prev {
+        right: 68px;
+    }
+    .banner-item-counter {
+        right: 33px;
+        bottom: 76px
+    }
 }
 
-.main-slider .swiper-pagination-bullet:before {
-  width: 8.5px;
-  height: 8.5px;
-}
-.main-slider .swiper-pagination-bullet-active:before{
-  width: 16px;
-  height: 16px;
-  margin-top: -6px;
-  margin-left: -5px;
-}
+
 
 .desktop-no-swipe {
   .swiper-inner>.swiper-wrapper {
@@ -101,5 +97,4 @@ $mainRadius: calc($mainDiameter / 2);
   > .swiper-button-prev,
   > .swiper-button-next {
     display: none !important;
-  }
-}
+  }}

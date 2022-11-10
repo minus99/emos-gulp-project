@@ -1,5 +1,5 @@
 .banner-overlay {
-    width: 70%;
+    max-width: 480px;
     &.end {
         text-align: right;
         left: auto;
@@ -9,4 +9,17 @@
         left: 50%;
         transform: translateX(-50%);
     }
+}
+
+.special-title {
+    width: 80%;
+    margin: 140px 0 !important;
+    &-wrapper {
+        width: 50%;
+    }
+}
+.home-info {
+    max-width: 220px;
+    margin: 0 auto !important;
+
 }

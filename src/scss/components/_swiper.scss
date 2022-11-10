@@ -1,12 +1,12 @@
 %bg-icon,
 i.bg-icon {
     &-arrow-r {
-        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyOCAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgNy41SDI2TTI2IDcuNUMyMy42NjY3IDguMzMzMzMgMTkgOC4xIDE5IDAuNU0yNiA3LjVDMjMuNjY2NyA2LjgzMzMzIDE5IDcuMyAxOSAxNC41IiBzdHJva2U9IiMyNzIxMTciLz4KPC9zdmc+Cg==");
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNyINCiAgICAgaGVpZ2h0PSIxMCINCiAgICAgdmlld0JveD0iMCAwIDcgMTAiDQogICAgIGZpbGw9Im5vbmUiDQogICAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQogICAgPHBhdGggZD0iTTAuNTg1ODI3IDguNTM1NTNMNS41MzU1NyAzLjU4NTc5TDYuOTQ5NzkgNUwyLjAwMDA0IDkuOTQ5NzVMMC41ODU4MjcgOC41MzU1M1oiDQogICAgICAgICAgZmlsbD0iIzFBMTgxOCIgLz4NCiAgICA8cGF0aCBkPSJNMC41ODU4MjcgMS40NjQ0N0wyLjAwMDA0IDAuMDUwMjUyNkw2Ljk0OTc5IDVMNS41MzU1NyA2LjQxNDIxTDAuNTg1ODI3IDEuNDY0NDdaIg0KICAgICAgICAgIGZpbGw9IiMxQTE4MTgiIC8+DQo8L3N2Zz4=");
     }
 }
 
-$swiper-nav-width: 80px;
-$swiper-nav-height: 40px;
+$swiper-nav-width: 72px;
+$swiper-nav-height: 36px;
 /**
  * Swiper 4.5.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -134,7 +134,7 @@ $swiper-nav-height: 40px;
   height: $swiper-nav-height;
   margin-top: -($swiper-nav-height * .5);
   cursor: pointer;
-  background-size: 36px;
+  background-size: 7px;
   background-position: center;
   background-repeat: no-repeat;
   background-color: $white;
@@ -238,13 +238,14 @@ $swiper-nav-height: 40px;
   outline: none;
   transition: all .32s cubic-bezier(0, 0, 0.2, 1);
 }
+/*
 .main-slider .swiper-pagination-bullet-active:before{
   background: $white;
   width: 11px;
   height: 11px;
   margin-top: -3px;
   margin-left: -2px;
-}
+}*/
 .swiper-pagination-bullet {
   position: absolute;
   left: calc(50% - 8.5px);
@@ -631,39 +632,5 @@ button.swiper-pagination-bullet {
     .swiper-scrollbar-drag {
         background: rgba(255, 255, 255, 1);
     }
-}
-/* Home Slider */
-$mainDiameter: 155px;
-$mainRadius: calc($mainDiameter / 2);
-
-.main-slider {
-  .swiper {
-    &-container {
-      overflow: hidden;
-    }
-    &-pagination {
-      width: $mainDiameter;
-      height: $mainDiameter;
-      border-top: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 50%;
-      -moz-border-radius: 50%; 
-      -webkit-border-radius: 50%; 
-      left: calc(50% - $mainRadius);
-      bottom: -$mainRadius !important;
-    }
-    &-tracker{
-      position: absolute;
-      height: $mainDiameter;
-      width: 20px;
-      z-index: 10;
-      bottom: -$mainRadius;
-      left: calc(50% - 10px);
-      padding: 10px 0;
-      transition: all .3s;
-      svg{
-        width: 100%;
-      }
-    }
-  }
 }
 

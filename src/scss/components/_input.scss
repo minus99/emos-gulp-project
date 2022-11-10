@@ -1,6 +1,6 @@
-// input, textarea, select {
-//     border-bottom: solid 1px #C4C4C4 !important;
-// }
+input, textarea, select {
+    outline: none;
+}
 // input[type=file] {
 //     opacity: 0;
 //     position: absolute;
@@ -109,18 +109,7 @@
         opacity: 0;
     }
 }
-// .input-search {
-//     display: flex;
-//     align-items: center;
-//     border-bottom: 1px solid #8B857B ;
-//     ::placeholder{
-//         opacity: 0.5;
-//     }
-//     input {
-//         border: none;
-//         font-size: 20px;
-//     }
-// }
+
 
 .ems-field {
      position: relative;
@@ -317,10 +306,13 @@
     }
 }
 .search-input {
-    min-width: 380px;
+    min-width: 100%;
     background-color: $gray4;
     border-radius: 50px;
     border: 0;
+    &-wrapper {
+        width: 100%;
+    }
 }
 
 

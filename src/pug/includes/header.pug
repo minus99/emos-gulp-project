@@ -255,81 +255,94 @@
 
 // Search
 .ems-search-overlay.ems-overlay(data-target="body" data-ready="ems-search-ready" data-animate="ems-search-animate" data-type="remove")
-.ems-search.ems-modal.ems-modal-lg.p-lg-50.p-20.ems-scrollbar.ems-scrollbar-vertical
-    .ems-field.input-search
-        a(aria-label='Search' href='javascript:void(0);' data-target='body' data-ready='ems-search-ready' data-animate='ems-search-animate' data-type='remove')
-            +icon('arrow-2').stroke-icon.fs-16.d-lg-none
-        input.ms-20.ms-lg-15.border-0.form-control(type="text", name="search" placeholder="Konyalı Saat’te ara")
-        +icon('search').fs-20 
-    .ems-body.mt-40
-        .last-search
-            h3.fs-20.fw-lg-400 Son Aramalarınız
-            .last-search-list.ems-scrollbar-vertical.ems-scrollbar-hide
-                ul.d-flex.list-unstyled.fs-14.mt-20
-                    li.me-15
-                        a(href="#")
-                            span Rado
-                            +icon("close-2").fs-20
-                    li.me-15
-                        a(href="#")
-                            span Swatch
-                            +icon("close-2").fs-20
-                    li.me-15
-                        a(href="#")
-                            span Serdar Kuzuloğlu
-                            +icon("close-2").fs-20
-                    li.me-15
-                        a(href="#")
-                            span Erkek Saatleri
-                            +icon("close-2").fs-20
-        .top-search.mt-40
-            h3.fs-20.fw-lg-400 Popüler Aramalar
-            .top-search-list.ems-scrollbar-vertical.ems-scrollbar-hide
-                ul.d-flex.list-unstyled.fs-14.mt-20.dotted-items.dotted-black
-                    li
-                        a(href="#").text-decoration-underline
-                            span Rado
-                    li
-                        a(href="#").text-decoration-underline
-                            span Swatch
-                    li
-                        a(href="#").text-decoration-underline
-                            span Serdar Kuzuloğlu
-                    li
-                        a(href="#").text-decoration-underline
-                            span Erkek Saatleri            
+.ems-search.ems-modal.ems-modal-lg.p-20.ems-scrollbar.ems-scrollbar-vertical
+    .ems-search-wrapper
+        a(class="search-close d-none d-lg-block" href="" aria-label="Close"  data-target="body" data-ready="ems-search-ready" data-animate="ems-search-animate" data-type="remove")
+            +icon('close').fs-16
+        .search-logo.pb-lg-60.d-none.d-lg-block
+            +img('ratio ratio-logo ratio-bg-remove', true, dirImages + 'logo.svg')
+        .d-flex.align-items-center
+            a(class="me-15 d-lg-none" aria-label='Search' href='javascript:void(0);' data-target='body' data-ready='ems-search-ready' data-animate='ems-search-animate' data-type='remove')
+                    +icon('arrow-left').fs-16.d-lg-none
+            .ems-field.search-input-wrapper
+                input(placeholder="Ürün arama").search-input.p-10.fs-13
+                a(class='ems-search-trigger px-10 px-lg-15' aria-label='Search' href='javascript:void(0);' data-target='body' data-ready='ems-search-ready' data-animate='ems-search-animate' data-type='add')
+                    +icon("close-2").fs-30.text-coral
+                    +icon('search').fs-20
+
+        .ems-body.mt-40
+            .last-search
+                .d-lg-flex.justify-content-between
+                    h3.fs-20.fs-lg-16.fw-400 Son Aramalar
+                    a(href="#").d-none.d-lg-block.fs-14.text-decoration-underline Temizle
+                .last-search-list.ems-scrollbar-horizontal.ems-scrollbar-hide
+                    ul.d-flex.list-unstyled.fs-14.mt-30
+                        li.me-15
+                            a(href="#")
+                                span Krampon
+                                +icon("close-2").fs-20.d-lg-none
+                        li.me-15
+                            a(href="#")
+                                span Puma
+                                +icon("close-2").fs-20.d-lg-none
+                        li.me-15
+                            a(href="#")
+                                span Adidas
+                                +icon("close-2").fs-20.d-lg-none
+                        li.me-15
+                            a(href="#")
+                                span Forma
+                                +icon("close-2").fs-20.d-lg-none
+            .top-search.mt-40
+                h3.fs-20.fs-lg-16.fw-400 Popüler Aramalar
+                .top-search-list.ems-scrollbar-horizontal.ems-scrollbar-hide
+                    ul.d-flex.list-unstyled.fs-14.mt-30.dotted-items.dotted-black
+                        li.me-lg-15
+                            a(href="#")
+                                span Sneaker
+                        li.me-lg-15
+                            a(href="#")
+                                span Nike
+                        li.me-lg-15
+                            a(href="#")
+                                span Tshirt
+                        li.me-lg-15
+                            a(href="#")
+                                span Erkek Ayakkabı          
     .ems-search-results
-        .my-30
-            h3.fs-20.fw-400 “Chronograph” için sonuçlar
-            p.fs-14.text-gray.mt-10 24 sonuç listeleniyor
-        .search-product
-            a(href="#!").d-flex.align-items-center.mb-20
-                h2.section.title.fw-400.fs-20 Ürünler (24)
-                .section-link.ms-lg-20
+        .my-40.d-lg-none
+            h3.fs-20.fs-lg-16.fw-400 “Sneaker” için sonuçlar
+            p.fs-14.text-gray2.mt-10 24 sonuç listeleniyor
+        .search-product.mt-lg-40
+            .d-flex.justify-content-between.align-items-center.mb-20
+                h3.text-gray2.fw-400.fs-16 En İyi Eşleşmeler (12)
+                a(href="#!").text-decoration-underline
                     span.fs-14 Tümünü Gör
-                    +icon('arrow').stroke-icon.ms-10
-            +swiper('widgetAuto', false, true, false)(class="swiper-container-widget desktop-no-swipe widget-lg-7 widget-1_5 h-auto")
-                -for(var j=0; j<7; j++)
-                    li.swiper-slide.me-5.me-lg-0
-                        +product-search()
-        .search-blog.mt-40.pt-40
-            a(href="#!").d-lg-flex.align-items-lg-center
-                h2.section.title.fw-400.fs-20 İlham (8)
-                .section-link.ms-lg-20
-                    span.fs-14 Tümünü Gör
-                    +icon('arrow').stroke-icon.ms-10
-            .mt-20.mt-lg-30.position-relative.g-2
-                +swiper('widgetAuto', false, true, false)(class="swiper-container-widget desktop-no-swipe widget-lg-7 widget-1_5 h-auto")
-                    - for (var y = 0; y < 7; y++)
-                        li.swiper-slide.blog-post.pb-20.pb-lg-60.me-5
-                            .blog-post-body.position-relative
-                                +picture("ratio ratio-1x1", true, dirUploads + "blog/blog-mobile.jpg", dirUploads + "blog/blog-mobile.jpg", dirUploads + "blog/blog-mobile.jpg").img-fluid
-                                .blog-post-desc.mt-10
-                                    a.blog-category.text-blue.fs-12.stretched-link-over(href="javascript:void(0);") Bakım 
-                                    h3.blog-post-title.fw-400.lh-1-25.position-relative Saatinizdeki Buğu ve Nemden Kurtulmanın Yolları
-                                    .blog-post-subtitle.text-gray.mt-10
-                                        p.lh-1-25.m-0 Geniş ürün yelpazesiyle, en eşsiz gözlük ve aksesuarlar şimdi Konyalı Saat’te.
-                                    .d-flex.mt-10.mt-lg-20.fs-12.text-gray.dotted-items 
-                                        span 11 Kasım 2021
-                                        span 6 dk
-                                    a.stretched-link(href="/blog-detail.html")
+            +swiper('WidgetProgressbar', false, false, true, false)(class="search-products swiper-container-widget desktop-no-swipe w-lg-100 widget-1_5 h-auto")
+                -for(var j=0; j<6; j++)
+                    li.swiper-slide.me-5.me-lg-0.w-lg-100
+                        +product()
+    .ems-search-no-results.text-center.mt-40
+        .no-result-icon
+            +icon('search').fs-20
+        h3.fs-16.fw-500.mt-30  “ike” için arama sonuçları
+        p.mt-15.fs-14 Aradığınız kriterlere uygun ürün bulunamadı. Yeniden arayabilir ya da ana menüyü kullanarak istediğiniz ürünü ya da kategoriyi bulabilirsiniz.
+        a.btn.btn-lg.btn-outline-dark(href="javascript:void(0)")
+            span Anasayfaya Dön
+        .search-suggest.text-center
+            h3.fs-16.fw-500.mt-30  “ike” yerine şunlara bak
+            .search-suggest-list.ems-scrollbar-horizontal.ems-scrollbar-hide
+                    ul.d-flex.justify-content-center.list-unstyled.fs-14.mt-30
+                        li.me-15
+                            a(href="#")
+                                span Sneaker
+                        li.me-15
+                            a(href="#")
+                                span Nike
+                        li.me-15
+                            a(href="#")
+                                span Tshirt
+                        li.me-15
+                            a(href="#")
+                                span Erkek Ayakkabı    
+            

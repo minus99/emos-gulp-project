@@ -7,4 +7,31 @@ block prepend head
     - var pageClass = ""
 
 block content
-    .container
+    .home-slider.overflow-hidden
+        .container.px-0.px-lg-10
+            .row 
+                section.main-slider-section.col-12(onclick="moveMinuteHand()")
+                    +swiper('mainSlider', false, true, false, true)(class="main-slider")
+                        -for(var i=0; i<5; i++)
+                            li.swiper-slide
+                                .ratio.ratio-main-slider-mobile.ratio-md-main-slider.ratio-lg-main-slider
+                                    picture
+                                        source.lazy-picture(media='(max-width:0)' srcset='frontend/images/1x1.svg')
+                                        source(media='(max-width: 767px)' srcset='uploads/slider/slider-mobile.jpg, uploads/slider/slider-mobile.jpg 2x')
+                                        source(media='(min-width: 768px)' srcset='uploads/slider/slider.jpg')
+                                        img.w-100(src='uploads/slider/slider-mobile.jpg' alt='slide 1')
+                                .banner-overlay
+                                    h3.fs-20.fs-lg-30 Y2K’dan İlham Aldı
+                                    p.fs-14.fs-lg-16.mt-10 Koleksiyonu keşfet
+                                .banner-item-counter.position-absolute.text-white.fs-13.d-none.d-lg-block
+                                    span 1 / 3
+                                
+                                
+    .container.px-0.px-lg-30.mt-60
+        .row.g-0.g-lg-5
+            .col-12.col-lg-6
+                +square-banner()
+            .col-12.col-lg-6
+                +square-banner()
+    .container.px-lg-30
+        +special-title()

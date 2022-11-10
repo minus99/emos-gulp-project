@@ -81,54 +81,84 @@
 
 //Search
 .ems-search {
-  &-ready & {
-    @extend %ems-modal-lg-ready;
-    &-trigger {
-      display: none !important;
-    }
-    &-close {
-      display: block !important;
-    }
-  }
-
-  &-animate & {
-    @extend %ems-modal-lg-animate;
-    top: $site-header-height-lg;
-    left: 0;
-
-    &-overlay {
-      @extend %ems-modal-lg-animate-overlay;
-    }
-  }
-  &-animate {
-    .site-header {
-      background: $white;
-      .header-wrapper {
-        border-bottom: 1px solid rgba(119, 113, 103, 0.2);
-      }
-    }
-    .header-right ul,
-    .ems-menu .lvl-1 {
-      display: none !important;
-    }
-  }
-
-  &-results {
-    //display: none;
-
-    &-ready {
-      .ems-search-words {
-        display: none;
-      }
-    }
-
     &-ready & {
-      display: block;
+        @extend %ems-modal-lg-ready;
+        &-close {
+        display: block !important;
+        }
     }
-  }
-  &-overlay {
-    background: rgba($color: $white, $alpha: 0);
-  }
+
+    &-animate & {
+        @extend %ems-modal-lg-animate;
+        top: 0;
+        left: 0;
+
+        &-overlay {
+        @extend %ems-modal-lg-animate-overlay;
+        }
+    }
+
+    &-results {
+        width: 80%;
+        margin: 0 auto;
+
+        &-ready {
+        .ems-search-words {
+            display: none;
+        }
+        }
+
+        &-ready & {
+        display: block;
+        }
+    }
+    &-overlay {
+        background: rgba($color: $white, $alpha: 0);
+    }
+    &-wrapper {
+        width: 600px;
+        margin: 0 auto;
+    }
+    .search {
+        &-logo {
+            width: 230px;
+            margin: 0 auto;
+        }
+        &-close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+        }
+        &-input {
+          width: 100%;
+
+        }
+        &-products {
+            ul {
+                display: grid;
+                gap: 4px;
+                grid-template-columns: 1fr 1fr 1fr;
+                .swiper-slide {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+    .top-search-list,
+    .last-search-list {
+        ul {
+            li > a {
+                background-color: $gray4;
+                padding: 8px 16px;
+                border-radius: 50px;
+            }
+        }
+        .dotted-items {
+            *:after {
+                display: none;
+            }
+        }
+    }
 }
 
 $header-trigger-active-transition: all 0.2s ease;

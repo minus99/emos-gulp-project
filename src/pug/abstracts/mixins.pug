@@ -42,19 +42,17 @@ mixin video(wrapperClass, src)
         video(src=src, autoplay, playsinline, loop, muted)&attributes(attributes)
 
 //- Swiper
-mixin swiper(type = 'main', pagination = false, navigation = false, scrollbar = false, tracker = false)
-    div(data-swiper=type, class="swiper-container" + (pagination ? ' slider-pagination' : '') + (navigation ? ' slider-navigation' : ''))&attributes(attributes)
-        .swiper-inner
-            ul.swiper-wrapper
-                block
-        .swiper-pagination
-        - if(tracker)
-            .swiper-tracker 
-                +icon("minute-hand")
-        .swiper-button-next
-        .swiper-button-prev
+mixin swiper(type = 'main', pagination = false, navigation = false, scrollbar = false, progressbar = false)
+    div(data-swiper=type, class="swiper-container" + (pagination ? ' slider-pagination' : '') + (navigation ? ' slider-navigation' : '') + (progressbar ? ' slider-pagination-progressbar' : ''))&attributes(attributes)
         - if(scrollbar)
             .swiper-scrollbar
+        .swiper-inner
+            ul.swiper-wrapper.list-unstyled
+                block
+        .swiper-pagination
+        //.swiper-pagination-progressbar
+        .swiper-button-next
+        .swiper-button-prev
 
 //- breadcrumb - https://developers.google.com/search/docs/data-types/breadcrumb?hl=tr#microdata
     breadcrumb(['Kadın', 'product-list.html'], ['Giyim', 'product-list.html'], ['Yeşil Kadın Triko', 'product-detail.html'])(class="knk")
@@ -132,8 +130,6 @@ mixin product-mini()
     .card.card-prd.bg-white.tracker-container
         .card-media
             +img('ratio ratio-1x1', true, dirUploads + '/product/rado.png')(class="card-img img-fluid")
-        .tracker-content 
-            span Satın Al
         a.stretched-link(href="product-detail.html")
 
 mixin product-list-item()
@@ -157,8 +153,6 @@ mixin product-list-item()
                     .card-price-last.fs-14.fs-lg-16 10.300 #{currencyText}
         .product-slider-brand.position-absolute
             +img('ratio ratio-brand-mini ratio-bg-remove', true, dirUploads + 'brands/swiss-mini.png')
-        .tracker-content  
-            span Satın Al
         a.stretched-link(href="product-detail.html")
 mixin product-search()
     .card.card-prd.bg-white.tracker-container
@@ -215,6 +209,14 @@ mixin section-title(title, showAllLink = false)
             a.link-primary.fw-bold(href=showAllLink) Tümünü Gör
                 +icon('arrow-r')
 
+//- Speacial Title That Has 2 Color             
+mixin special-title(title, showAllLink = false)
+        .d-lg-flex.align-items-center.justify-content-between
+            .special-title-wrapper.w-50
+                p.special-title.fs-24.fs-lg-36.fw-600 <span>Güvenle alışveriş yapın. </span><br>Dilediğiniz za<span class="text-gray">man ücretsiz iade ve değişim yapabilirsiniz.</span>
+            .w-50
+                p.home-info.fs-16.fw-600 199 TL ve üzeri alişverişlerde <br>ücretsiz kargo
+                
 //- Product Widget
 mixin prd-widget(title, showAllLink = false)
     .products-widget&attributes(attributes)

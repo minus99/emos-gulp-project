@@ -69,6 +69,7 @@
 
 //Search
 .ems-search {
+  background: $light !important;
   overflow-x: hidden !important;
   .search-blog {
     border-top: 1px solid rgba(119, 113, 103, 0.2);
@@ -83,4 +84,38 @@
       }
     }
   }
+  .search {
+    &-input {
+      &-wrapper {
+        position: relative;
+        .ems-search-trigger {
+            position: absolute;
+            right: 10px;
+            top: calc(50% - 15px)
+        }
+      }
+    }
+  }
+    .search-suggest-list {
+        ul {
+            li > a {
+                background-color: $gray4;
+                padding: 8px 16px;
+                border-radius: 50px;
+            }
+        }
+    }
+    &-no-results {
+        .no-result-icon {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto;
+            background: $gray4;
+            padding: 15px;
+            border-radius: 100%;
+            .icon-search {
+                font-size: 35px;
+            }
+        }
+    }
 }
