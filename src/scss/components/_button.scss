@@ -57,12 +57,13 @@
   /*&-primary {
     background-color: $dark;
     color: $white !important;
-  }
-
-  &-secondary {
-    background-color: $white;
-    color: $dark !important;
   }*/
+
+  &-dark-light {
+    background-color: $btn-dark-light-bg-color !important;
+    border-color: $btn-dark-light-border-color !important;
+    color: $btn-dark-light-color !important;
+  }
 
   &.disabled {
     background-color: $gray3 !important;

@@ -1,0 +1,14 @@
+.single-banner-section {
+    &.type-video {
+        .btn {
+            bottom: 24px;
+            &-play {
+                left: 24px
+            }
+            &-sound {
+                right: 24px;
+            }
+        }
+
+    }
+}

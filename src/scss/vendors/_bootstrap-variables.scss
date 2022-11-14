@@ -65,6 +65,7 @@ $grid-gutter-width: $space-s-e; // "@mixin make-col-ready" default: "value / 2"
 
 // Container padding :338
 $container-padding-x: $space-s-e * 0.5; // equality for column paddings ("@mixin make-col-ready" paddings)
+$container-padding-y: $space-s-e * 0.5;
 
 // Components :343
 $border-widths: (
@@ -95,10 +96,15 @@ $aspect-ratios: (
   '335x648': calc(648 / 335 * 100%),
   'main-slider': calc(740 / 1656 * 100%),
   'main-slider-mobile': calc(640 / 375 * 100%),
+  'main-slider-2': calc(740 / 1580 * 100%),
+  'main-slider-mobile-2': calc(480 / 375 * 100%),
+  'rectangle-banner': calc(680 / 520 * 100%),
+  'rectangle-banner-mobile': calc(425 / 375 * 100%),
+  'single-banner': calc(236 / 375 * 100%),
   'logo': calc(31 / 200 * 100%),
   'hero-banner': calc(740 / 1656 * 100%),
-  '740x768': calc(740 / 786 * 100%),
-  '480x375': calc(480 / 375 * 100%),
+  'square-banner': calc(740 / 786 * 100%),
+  'square-banner-mobile': calc(480 / 375 * 100%),
   '680x520': calc(680 / 520 * 100%),
 );
 
@@ -170,10 +176,10 @@ $btn-padding-y: 0.75rem; // 12px
 $btn-padding-x: 1.875rem; // 30px
 $btn-font-size: 0.8125rem; // 13px
 
-//Sonra kullanilabilir
-// $btn-padding-y-sm: 0.75rem; // 12px
-// $btn-padding-x-sm: 1.5rem; // 24px
-// $btn-font-size-sm: $btn-font-size;
+
+$btn-padding-y-sm: 0.688rem; // 11px
+$btn-padding-x-sm: 1.3rem; // 20px
+$btn-font-size-sm: $btn-font-size;
 
 $btn-padding-y-lg: 1.1875rem; // 19px
 $btn-padding-x-lg: 2.375rem; //38px
@@ -183,6 +189,7 @@ $btn-font-weight: 600;
 
 $btn-border-radius: 50px;
 $btn-border-radius-lg: 50px;
+$btn-border-radius-sm: 50px;
 $btn-border: 0;
 
 $btn-focus-box-shadow: none !important;

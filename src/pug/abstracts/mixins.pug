@@ -50,9 +50,13 @@ mixin swiper(type = 'main', pagination = false, navigation = false, scrollbar = 
             ul.swiper-wrapper.list-unstyled
                 block
         .swiper-pagination
-        //.swiper-pagination-progressbar
+        //- if(progressbar)
+            .swiper-progress-wrapper.position-relative
+                span.swiper-progress.position-absolute
         .swiper-button-next
         .swiper-button-prev
+        .swiper-fraction.position-absolute.text-white.fs-13.d-none.d-lg-block
+            span 1 / 3    
 
 //- breadcrumb - https://developers.google.com/search/docs/data-types/breadcrumb?hl=tr#microdata
     breadcrumb(['Kadın', 'product-list.html'], ['Giyim', 'product-list.html'], ['Yeşil Kadın Triko', 'product-detail.html'])(class="knk")
@@ -121,11 +125,33 @@ mixin product()
 
 mixin square-banner()
     .square-banner.position-relative
-        +picture('ratio ratio-480x375 ratio-lg-740x768', dirUploads + 'banner/banner2x.png', dirUploads + 'banner/banner2x.png', dirUploads + 'banner/banner.png')(class="card-img", alt="slide 1")
+        +picture('ratio ratio-square-banner-mobile ratio-lg-square-banner', dirUploads + 'banner/banner2x.png', dirUploads + 'banner/banner2x.png', dirUploads + 'banner/banner.png')(class="card-img", alt="slide 1")
         .banner-overlay
             h3.fs-20.fs-lg-30 Y2K’dan İlham Aldı
             p.fs-14.fs-lg-16.mt-10 Koleksiyonu keşfet
+mixin rectangle-banner()
+    .rectangle-banner.position-relative
+        +picture('ratio ratio-rectangle-banner-mobile ratio-lg-rectangle-banner', dirUploads + 'home-category/kadin-mobile.jpg', dirUploads + 'home-category/kadin.jpg', dirUploads + 'home-category/kadin-mobile.jpg')(class="card-img", alt="slide 1")
+        .rectangle-banner-overlay
+            a.btn.btn-white(href="javascript:void(0)")
+                span Kadın Alışveriş
 
+//- Section Title
+mixin section-title(title, showAllLink = false)
+    .d-flex.align-items-center.justify-content-between
+        .h2.fs-lg-1= title
+        if showAllLink
+            a.link-primary.fw-bold(href=showAllLink) Tümünü Gör
+                +icon('arrow-r')
+
+//- Speacial Title That Has 2 Color             
+mixin special-title(title, showAllLink = false)
+        .d-lg-flex.align-items-center.justify-content-between
+            .special-title-wrapper.w-lg-50
+                p.special-title.fs-24.fs-lg-36.fw-600 Güvenle alışveriş yapın. <br>Dilediğiniz za<span>man ücretsiz iade ve değişim yapabilirsiniz.</span>
+            .w-lg-50
+                p.home-info.fs-16.fw-600 199 TL ve üzeri alişverişlerde <br>ücretsiz kargo
+     
 mixin product-mini()
     .card.card-prd.bg-white.tracker-container
         .card-media
@@ -154,25 +180,6 @@ mixin product-list-item()
         .product-slider-brand.position-absolute
             +img('ratio ratio-brand-mini ratio-bg-remove', true, dirUploads + 'brands/swiss-mini.png')
         a.stretched-link(href="product-detail.html")
-mixin product-search()
-    .card.card-prd.bg-white.tracker-container
-        .save-wrapper.position-absolute
-            a.btn-save.stretched-link-over.selected(href="javascript:void(0);" aria-label="Save")
-                +icon('save').stroke-icon
-        .card-media
-            +img('ratio ratio-1x1', true, dirUploads + '/product/rado.png')(class="card-img img-fluid")
-        .card-body.p-20.d-flex.flex-column.justify-content-end
-            p.card-title.mt-10 
-                span.fw-600 Rado 
-                span SXB433P Kol Saati
-            .card-price.mt-10.d-flex
-                div
-                    .card-price-first.fs-12.text-gray.text-decoration-line-through 10.990 #{currencyText}
-                    .card-price-last.fs-14.fs-lg-16 10.300 #{currencyText}
-        .tracker-content  
-            span Satın Al
-        a.stretched-link(href="product-detail.html")
-
 //- Product Hrz
 mixin product-hrz()
     .card.ems-prd-hrz.border-top.py-10
@@ -200,23 +207,7 @@ mixin product-hrz2()
                 .mt-10
                     button.fs-5.lh-lg.btn-reset.text-decoration-underline.stretched-link-over(type="button", onclick="shopping.removeFromCart(this);") Kaldır
             a.stretched-link(href="product-detail.html")
-
-//- Section Title
-mixin section-title(title, showAllLink = false)
-    .d-flex.align-items-center.justify-content-between
-        .h2.fs-lg-1= title
-        if showAllLink
-            a.link-primary.fw-bold(href=showAllLink) Tümünü Gör
-                +icon('arrow-r')
-
-//- Speacial Title That Has 2 Color             
-mixin special-title(title, showAllLink = false)
-        .d-lg-flex.align-items-center.justify-content-between
-            .special-title-wrapper.w-50
-                p.special-title.fs-24.fs-lg-36.fw-600 <span>Güvenle alışveriş yapın. </span><br>Dilediğiniz za<span class="text-gray">man ücretsiz iade ve değişim yapabilirsiniz.</span>
-            .w-50
-                p.home-info.fs-16.fw-600 199 TL ve üzeri alişverişlerde <br>ücretsiz kargo
-                
+         
 //- Product Widget
 mixin prd-widget(title, showAllLink = false)
     .products-widget&attributes(attributes)

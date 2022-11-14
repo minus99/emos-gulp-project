@@ -77,12 +77,18 @@ block content
                 span.ms-10 Canlı Destek 1
 
         section.mt-10
-            a.btn.btn-white.btn-icon-left(href="javascript:void(0)")
-                +icon("caret-left")
+            a.btn.btn-white.btn-icon(href="javascript:void(0)")
+                +icon("caret-left").fs-16
 
         section.mt-10
-            a.btn.btn-white.btn-icon-left(href="javascript:void(0)")
-                +icon("caret-right")
+            a.btn.btn-white(href="javascript:void(0)")
+                +icon("caret-right").fs-16
+        section.mt-10
+            a.btn.btn-white.btn-sm(href="javascript:void(0)")
+                +icon("play-small")
+        section.mt-10
+            a.btn.btn-white.btn-sm(href="javascript:void(0)")
+                +icon("sound")
             
             // buttons end
 
@@ -381,105 +387,66 @@ block content
                 h2.guideline__h2.border-bottom.mb-10.pb-10.border-green UI Colors
                 .row.row-cols-2.row-cols-lg-4
                     .mt-10.d-flex.align-items-center
-                        span.w-25.h-100.me-15.d-inline-block
+                        span.me-15.d-inline-block(style="width: 50px; height: 50px; background: #ff6600")
                         span $primary #ff6600
 
                     .mt-10.d-flex.align-items-center
-                        span.w-25.h-100.me-15.d-inline-block.h-100.coralspan
+                        span.me-15.d-inline-block(style="width: 50px; height: 50px; background: #df4826")
                         span $coral #df4826
                     .mt-10.d-flex.align-items-center
-                        span.w-25.h-100.me-15.d-inline-block.h-100.accentspan
+                        span.me-15.d-inline-block(style="width: 50px; height: 50px; background: #375dbe")
                         span $accent #375dbe
 
                     .mt-10.d-flex.align-items-center.guideline__color
-                        span.w-25.h-100.me-15.d-inline-block.h-100.blackspan
+                        span.me-15.d-inline-block(style="width: 50px; height: 50px; background: #000")
                         span $black #000
 
                     .mt-10.d-flex.align-items-center.guideline__color
-                        span.w-25.h-100.me-15.d-inline-block.h-100.whitespan
+                        span.me-15.d-inline-block(style="width: 50px; height: 50px; background: #ffffff")
                         span $white "same as Snow" #ffffff
 
                     .mt-10.d-flex.align-items-center.guideline__color
-                        span.w-25.h-100.me-15.d-inline-block.h-100.lightspan
+                        span.me-15.d-inline-block(style="width: 50px; height: 50px; background: #f6f3f2")
                         span $light "same as background" #f6f3f2
 
                     .mt-10.d-flex.align-items-center.guideline__color
-                        span.w-25.h-100.me-15.d-inline-block.h-100.grayspan
+                        span.me-15.d-inline-block(style="width: 50px; height: 50px; background: #cac6c6")
                         span $gray #cac6c6
                     
                     .mt-10.d-flex.align-items-center.guideline__color
-                        span.w-25.h-100.me-15.d-inline-block.h-100.gray2span
+                        span.me-15.d-inline-block(style="width: 50px; height: 50px; background: #635c5b")
                         span $gray2 #635c5b
                     
                     .mt-10.d-flex.align-items-center.guideline__color
-                        span.w-25.h-100.me-15.d-inline-block.h-100.gray3span
+                        span.me-15.d-inline-block(style="width: 50px; height: 50px; background: #958e8d")
                         span $gray3 #958e8d
                     
                     .mt-10.d-flex.align-items-center.guideline__color
-                        span.w-25.h-100.me-15.d-inline-block.h-100.gray4span
+                        span.me-15.d-inline-block(style="width: 50px; height: 50px; background: #e4e1e0")
                         span $gray4 #e4e1e0
 
                     .mt-10.d-flex.align-items-center.guideline__color
-                        span.w-25.h-100.me-15.d-inline-block.h-100.greenspan
+                        span.me-15.d-inline-block(style="width: 50px; height: 50px; background: #58933c")
                         span $green #58933c
                     
                     .mt-10.d-flex.align-items-center.guideline__color
-                        span.w-25.h-100.me-15.d-inline-block.h-100.goldspan
+                        span.me-15.d-inline-block(style="width: 50px; height: 50px; background: #ad7828")
                         span $gold #ad7828
 
                     .mt-10.d-flex.align-items-center.guideline__color
-                        span.w-25.h-100.me-15.d-inline-block.h-100.infospan
+                        span.me-15.d-inline-block(style="width: 50px; height: 50px; background: #ecf8e5")
                         span $info #ecf8e5
 
                     .mt-10.d-flex.align-items-center.guideline__color
-                        span.w-25.h-100.me-15.d-inline-block.h-100.warningspan
+                        span.me-15.d-inline-block(style="width: 50px; height: 50px; background: #ffe1e1")
                         span $warning #ffe1e1
             //Colors end
-            section.guideline.mb-50
-                h2.guideline__h2.border-bottom.mb-10.pb-10.border-green  PRODUCT CARDS
-                .d-flex
-                    .product-card 
-                        .ems-card-favorito 
-                            +icon("archive-fill")
-                        .ems-card-picture
-                            +picture('ratio ratio-prd', dirUploads + 'product-detail/prd-detail-2x.png', dirUploads + 'product-detail/prd-detail-x.png', dirUploads + 'product-detail/prd-detail-x.png')(class="w-100 img-fluid", alt="slide 1")
-                        .ems-card-logo
-                            span Adidas
-                        .ems-card-badge
-                            +icon("elite")
-                        .ems-card-footer
-                            h2.card-title Terrex Agravic Tr
-                            span.cheap-price 1200,00 TL 
-                            span.red-price 999,00 TL
-                    .product-card 
-                        .ems-card-favorito 
-                            +icon("archive-fill")
-                        .ems-card-picture
-                            +picture('ratio ratio-prd', dirUploads + 'product-detail/prd-detail-2x.png', dirUploads + 'product-detail/prd-detail-x.png', dirUploads + 'product-detail/prd-detail-x.png')(class="w-100 img-fluid", alt="slide 1")
-                        .ems-card-logo
-                            span Adidas
-                        .ems-card-badge
-                            +icon("elite")
-                        .ems-card-footer
-                            h2.card-title Terrex Agravic Tr
-                            span.price 999,00 TL
-
-            section.row
-                .col-6
-                    span ratio-prd 
-                    code.ms-15 calc(360 / 450 * 100%)
-                    +picture('ratio-bg-remove ratio ratio-prd', true, dirUploads + 'product-detail/prd-detail-2x.png', dirUploads + 'product-detail/prd-detail-x.png', dirUploads + 'product-detail/prd-detail-x.png')(class="w-100 img-fluid", alt="slide 1")
-                                    
-            section.row
-                .siparis.d-flex.align-items-center
-                    +icon("dot").fill-primary
-                    span Sipariş Hazırlanıyor
-
+           
             section.guideline.mb-50
                 h2.guideline__h2.border-bottom.mb-10.pb-10.border-green FONTS & COLORS
                 p Vela Sans GX
-                ul.font-list
-                    li
+                ul.list-unstyled.row.row-cols-4
+                    li.col
                         h3  Desc
                         p   Small Input
                         p   Small
@@ -491,7 +458,7 @@ block content
                         p   H2
                         p   H3
                         p   H4
-                    li
+                    li.col
                         h3 Font
                         p   Vela Sans GX Regular
                         p   Vela Sans GX Regular
@@ -503,7 +470,7 @@ block content
                         p   Vela Sans GX Semibold
                         p   Vela Sans GX Bold
                         p   Vela Sans GX Bold
-                    li
+                    li.col
                         h3  Size
                         p   11 
                         p   13
@@ -515,7 +482,7 @@ block content
                         p   40
                         p   30
                         p   24
-                    li
+                    li.col
                         h3  Line Height
                         p   140%
                         p   140%
