@@ -42,7 +42,7 @@ mixin video(wrapperClass, src)
         video(src=src, autoplay, playsinline, loop, muted)&attributes(attributes)
 
 //- Swiper
-mixin swiper(type = 'main', pagination = false, navigation = false, scrollbar = false, progressbar = false)
+mixin swiper(type = 'main', pagination = false, navigation = false, scrollbar = false, progressbar = false, fraction = false)
     div(data-swiper=type, class="swiper-container" + (pagination ? ' slider-pagination' : '') + (navigation ? ' slider-navigation' : '') + (progressbar ? ' slider-pagination-progressbar' : ''))&attributes(attributes)
         - if(scrollbar)
             .swiper-scrollbar
@@ -55,8 +55,9 @@ mixin swiper(type = 'main', pagination = false, navigation = false, scrollbar = 
                 span.swiper-progress.position-absolute
         .swiper-button-next
         .swiper-button-prev
-        .swiper-fraction.position-absolute.text-white.fs-13.d-none.d-lg-block
-            span 1 / 3    
+        - if(fraction)
+            .swiper-fraction.position-absolute.text-white.fs-13.d-none.d-lg-block.z-index-2
+                span 1 / 3    
 
 //- breadcrumb - https://developers.google.com/search/docs/data-types/breadcrumb?hl=tr#microdata
     breadcrumb(['Kadın', 'product-list.html'], ['Giyim', 'product-list.html'], ['Yeşil Kadın Triko', 'product-detail.html'])(class="knk")

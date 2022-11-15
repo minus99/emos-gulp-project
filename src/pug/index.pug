@@ -9,7 +9,7 @@ block prepend head
 block content
     .main-slider-section.overflow-hidden
         .container.px-0.px-lg-10
-               +swiper('mainSlider', false, true, false, true)(class="main-slider")
+               +swiper('mainSlider', false, true, false, true, true)(class="main-slider")
                 -for(var i=0; i<5; i++)
                     li.swiper-slide
                         .ratio.ratio-main-slider-mobile.ratio-md-main-slider.ratio-lg-main-slider
@@ -24,6 +24,9 @@ block content
                                 p.fs-14.fs-lg-16.mt-10 Koleksiyonu keşfet
                             .swiper-progress-bar.position-absolute.start-0.bottom-0.w-100
                                 span.swiper-progress.d-block
+                    li.swiper-slide
+                        .ratio.ratio-main-slider-mobile.ratio-md-main-slider.ratio-lg-main-slider
+                            video(data-video="https://player.vimeo.com/progressive_redirect/playback/769802231/rendition/720p/file.mp4?loc=external&signature=9a408598285bb20e9bdbf3057c9e2242fea655179e4d8237640fd020bed51b0a" data-videomobile="https://player.vimeo.com/progressive_redirect/playback/769802231/rendition/720p/file.mp4?loc=external&signature=9a408598285bb20e9bdbf3057c9e2242fea655179e4d8237640fd020bed51b0a" data-poster="banner/video-banner.jpg" data-postermobile="banner/video-banner.jpg" poster="banner/video-banner.jpg" preload="none" autobuffer="autobuffer" playsinline="true" muted="true" src="https://player.vimeo.com/progressive_redirect/playback/769802231/rendition/720p/file.mp4?loc=external&signature=9a408598285bb20e9bdbf3057c9e2242fea655179e4d8237640fd020bed51b0a" )
                                           
     .square-section.container.px-0.px-lg-30.mt-60
         .row.g-5
@@ -42,26 +45,30 @@ block content
                 +rectangle-banner()
             .col-12.col-lg-4
                 +rectangle-banner()
-    .single-banner-section.container.px-0.px-lg-30.mt-60
-        .row
-            .col-12.col-lg-8.mx-lg-auto.text-center
+    .single-banner.container.px-0.px-lg-30.mt-60
+        .w-100.w-lg-75.mx-lg-auto.text-center
+            .single-banner-media
                 +picture('ratio ratio-single-banner', dirUploads + 'banner/single-banner.jpg', dirUploads + 'banner/single-banner.jpg', dirUploads + 'banner/single-banner-mobile.jpg')(class="card-img", alt="slide 1")
-                .mt-20.mt-lg-40
-                    h3.fs-32.fs-lg-50.fw-600.mx-10 Tüm Gün Oyun Keyfi
-                    a.btn.btn-dark-light.btn-lg.mt-20.mt-lg-30(href="javascript:void(0)") Ürünleri Keşfet
-    .single-banner-section.container.px-0.px-lg-30.mt-60.type-video
-        .row
-            .col-12.col-lg-8.mx-lg-auto.text-center
-                +picture('ratio ratio-single-banner', dirUploads + 'banner/video-banner.jpg', dirUploads + 'banner/video-banner.jpg', dirUploads + 'banner/video-banner.jpg')(class="card-img", alt="slide 1")
-                iframe(width='560' height='315' data-src='https://www.youtube.com/embed/_9CNi2N5QaA' title='Tulpar Notebook' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
-                a.btn.btn-white.btn-sm.position-absolute.btn-iframe-trigger.btn-play(href="javascript:void(0)" aria-label="play")
+            .mt-20.mt-lg-40
+                h3.fs-32.fs-lg-50.fw-600.mx-10 Tüm Gün Oyun Keyfi
+                a.btn.btn-dark-light.btn-lg.mt-20.mt-lg-30(href="javascript:void(0)") Ürünleri Keşfet
+    .single-banner.container.px-0.px-lg-30.mt-60.type-video
+        .w-100.w-lg-75.mx-lg-auto.text-center
+            .single-banner-media
+                .prm-media.ratio.ratio-single-banner
+                    video(id="video" poster=dirUploads +"banner/video-banner.jpg" preload="none" autobuffer="autobuffer" playsinline="true" muted="true")    
+                        source(src="https://player.vimeo.com/progressive_redirect/playback/769802231/rendition/720p/file.mp4?loc=external&signature=9a408598285bb20e9bdbf3057c9e2242fea655179e4d8237640fd020bed51b0a" type="video/mp4")
+                a.btn.btn-white.btn-sm.position-absolute.btn-iframe-trigger.btn-play.px-10.py-0(id="btn-iframe-trigger" href="javascript:void(0)" aria-label="play")
                     +icon("play-small")
-                a.btn.btn-white.btn-sm.position-absolute.btn-sound(href="javascript:void(0)" aria-label="play")
+                .position-absolute(id="meta")
+                a.btn.btn-white.btn-sm.position-absolute.btn-sound.px-10.py-0(href="javascript:void(0)" aria-label="play")
                     +icon("sound")
-                .mt-20.mt-lg-40
-                    h3.fs-32.fs-lg-50.fw-600.mx-10 Ultra Hafif <br>Ultra Hızlı ve <br>Ultra Sağlam
-                    a.btn.btn-dark-light.btn-lg.mt-20.mt-lg-30(href="javascript:void(0)") Ürünleri Keşfet
-    .main-watch
+            
+            .mt-20.mt-lg-40
+                h3.fs-32.fs-lg-50.fw-600.mx-10 Ultra Hafif <br>Ultra Hızlı ve <br>Ultra Sağlam
+                a.btn.btn-dark-light.btn-lg.mt-20.mt-lg-30(href="javascript:void(0)") Ürünleri Keşfet
+   
+    //.main-watch
         ul.container-fluid.list-unstyled.py-20.g-md-20
             li.position-relative
                 .prm-media.ratio.ratio-single-banner

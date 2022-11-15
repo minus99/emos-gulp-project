@@ -1,5 +1,6 @@
-.single-banner-section {
+.single-banner {
     &.type-video {
+        position: relative;
         .btn {
             bottom: 24px;
             &-play {
@@ -9,6 +10,11 @@
                 right: 24px;
             }
         }
-
     }
+    &-media {
+        position: relative;
+    }
+    /*.slide-video {
+        display: none;
+    }*/
 }

@@ -1,27 +1,23 @@
 
+var playButton = document.getElementById("btn-iframe-trigger");
+meta = document.getElementById('meta');
+// Event listener for the play/pause button
+playButton.addEventListener("click", function() {
+  if (video.paused == true) {
+    // Play the video
+    video.play();
 
-(function(){
-    
-    /*
-        iframe trigger
-    */    
+    // Update the button text to 'Pause'
+    playButton.innerHTML = "<div class='my-10'>Pause</div>";
+  } else {
+    // Pause the video
+    video.pause();
 
-    var el = document.querySelectorAll('.btn-iframe-trigger');
-    if (el.length > 0)
-        utils.forEach(el, function (index, item) {
-            item.onclick = function () {
-                var prts = utils.getParents(this, 'li'),
-                    iframe = prts.querySelectorAll('iframe[data-src]');
-                
-                if( iframe.length > 0 ){
-                    prts.classList.add('iframe-active')
-                    iframe[ 0 ].setAttribute('src', iframe[ 0 ].getAttribute('data-src') || '');
-                }    
-                    
-            };
-        });
-    
+    // Update the button text to 'Play'
+    playButton.innerHTML = "<svg class='icon-play-small'><use xlink:href='frontend/images/icons.svg#play-small'></use></svg>";
+  }
 
-    
-    
-}());
+  var duration = video.duration;
+  meta.innerHTML = duration;
+	
+});
