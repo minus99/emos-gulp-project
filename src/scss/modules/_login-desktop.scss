@@ -1,0 +1,33 @@
+
+.password-title {
+    &::before {
+        content:"";
+        position: absolute;
+        display: inherit ;
+        margin-right: 0;
+        top: 7px;
+        left: -20px;
+    }
+}
+
+.login {
+    .login-left-menu {
+        width: 100%;
+        max-width: 520px;
+        margin-top: 40px;
+        margin-left: 55px;
+        padding: 60px 60px;
+        background: #fff;
+    }
+}
+
+
+.login-social {
+    flex-direction: inherit;
+}
+.m-hide {
+    display: inherit;
+}
+.privaciy {
+    margin-left: 40px !important;
+}

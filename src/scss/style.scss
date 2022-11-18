@@ -27,6 +27,7 @@
 @import 'modules/cookies';
 @import 'modules/rectangle-banner';
 @import 'modules/single-banner';
+@import 'modules/login';
 /*@import 'modules/story';
 @import 'modules/double-circle';
 @import 'modules/product-widget';
@@ -50,6 +51,7 @@
 
   //Modules
   @import 'modules/square-mobile';
+  
 }
 
 // MIDDLE (> $breakpoint-lg & < $breakpoint-lg)
@@ -65,14 +67,18 @@
   @import 'components/accordion-desktop';
   @import 'components/step-progress-desktop';
 
+
   // Layouts
   @import 'layouts/header-desktop';
+
   /* @import 'layouts/product-detail-desktop';
   @import 'layouts/product-list-desktop';*/
 
   //Modules
   @import 'modules/home-slider-desktop';
   @import 'modules/cookies-desktop';
+ 
+  @import 'modules/login-desktop';
   /*@import 'modules/story-desktop';
   @import 'modules/double-circle-desktop';
   @import 'modules/login-desktop';
