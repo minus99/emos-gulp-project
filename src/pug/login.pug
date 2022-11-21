@@ -1,0 +1,135 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Koray Spor Login"
+    - var pageDescription = "Koray Spor Login"
+    - var pageName = "Login"
+    - var pageClass = ""
+
+block content
+    .login
+        .notfound.h-100.position-relative
+            +picture('ratio ratio-335x648 ratio-lg-main-slider m-hide', true, dirImages + 'login/login.png', dirImages + 'login/login.png', dirImages + 'login/login.png')(class="", alt="slide 1")
+            .login-page  
+                .notfound-desc.d-flex.flex-column.align-items-start
+                    .row.g-0
+                        .login-left-menu
+                            .ems-tab
+                                .ems-tab-header.nav.nav-tabs.mb-30.d-flex.fw-400.fs-18.text-center
+                                    a.nav-link.w-50.selected(href='javascript:void(0);' rel='tab-1' aria-label="Login") Giriş Yap
+                                    a.nav-link.w-50(href='javascript:void(0);' rel='tab-2' aria-label="Üye Ol") Üye Ol
+                                .ems-tab-content
+                                    .selected(rel='tab-1')
+                                        .alert.alert-primary Kullanıcı adı, e-mail ya da şifreniz hatalı, lütfen kontrol edin.
+                                        p.fs-16.mt-10 Satın aldıklarınızı, koleksiyonlarınızı vb. görmek için hesabınıza giriş yapın.
+                                        .login-form-container
+                                            form.ems-form#login(method='post' action='/tr/LogOn')
+                                                .row.g-0
+                                                    .ems-field.form-floating.mb-20.ems-field-msg-error
+                                                        input#UserNameOrTelephone.input-login.form-control(type='text' name='UserNameOrTelephone' placeholder='Cep Tel' value='')
+                                                        label(for='UserNameOrTelephone') Cep Telefonu
+                                                        .ems-field-feedback *Hay aksi! Cep telefonu geçerli değil
+                                                    .ems-field.form-floating
+                                                        input#UserNameOrEmail.input-login.form-control(type='password' name='Password' placeholder='Şifre' value='')
+                                                        label(for='Password') Şifre*
+                                                        a.show-pass-button.position-absolute.me-10.end-0(href='javascript:void(0);' onclick='showHidePassword(this);')
+                                                            +icon("eye-close").fs-16
+                                                        .ems-field-feedback Warning or an info
+                                                    .ems-field.pt-20.pb-25
+                                                        .d-flex.align-items-center.justify-content-between
+                                                            .form-check
+                                                                input.form-check-input#RememberMe(type='checkbox' name='RememberMe' value='true')
+                                                                label.form-check-label(for='RememberMe').fs-14 Beni hatırla
+                                                            a(href='/sifremi-unuttum').fs-14.text-decoration-underline Şifremi Unuttum
+                                                    .ems-field
+                                                        .d-flex.align-items-center.justify-content-between
+                                                            a.btn.btn-dark.btn-lg.w-100(type='submit' aria-label="Submit" href="#") Giriş Yap
+                                                    input(name='__RequestVerificationToken' type='hidden')
+                                                    input#returnUrl(name='returnUrl' type='hidden' value='/tr/Widget/Get/LoginRaw')
+                                                    span.text-center.my-20.border-lr veya 
+                                                    .ems-field.pt-20.pb-25
+                                                        .d-flex.align-items-center.justify-content-center.login-social
+                                                            .d-flex
+                                                                a(href='javascript:void(0);' onclick='login.loginWithFacebook();')
+                                                                    +icon('google').fs-64
+                                                                span.m-5
+                                                                a(href='javascript:void(0);' onclick='login.loginWithGoogle();')
+                                                                    +icon('lfacebook').fs-64
+                                                            span.login-privacy.text-gray.fs-13.m-15.m-lg-0.privaciy Giriş Yap butonuna basarak okuduğunuzu
+                                                                    a(class='ems-privacy-trigger' aria-label='Privacy' href='javascript:void(0);' data-target='body' data-ready='ems-privacy-ready' data-animate='ems-privacy-animate' data-type='add')  Üyelik Sözleşmesi’ni
+                                                                    |  kabul ettiğinizi onaylıyorsunuz.
+                                        .guest-form-container
+                                        //  TODO : Login Widget 
+                                    div(rel='tab-2')
+                                        .signup-form-container
+                                            form.ems-form#signup(action='/tr/CreateMember' method='post')
+                                                .ems-field.form-floating.mb-20
+                                                    input#UserName.input-login.form-control(type='text' name='UserName' placeholder='Ad' value='')
+                                                    label(for='UserName') Ad*
+                                                .ems-field.form-floating.mb-20
+                                                    input#UserSurname.input-login.form-control(type='text' name='UserSurname' placeholder='Soyad' value='')
+                                                    label(for='UserSurname') Soyad*
+                                                .ems-field.form-floating.mb-20
+                                                    input#UserEmail.input-login.form-control(type='text' name='UserEmail' placeholder='E-posta' value='')
+                                                    label(for='UserEmail') E-posta Adresi*
+                                                .ems-field.form-floating.mb-20
+                                                    input#UserNameOrTelephone.input-login.form-control(type='text' name='UserNameOrTelephone' placeholder='Cep Tel' value='')
+                                                    label(for='UserNameOrTelephone') Cep Telefonu
+                                                .ems-field.form-floating.mb-40  
+                                                    input#UserNameOrEmail.input-login.form-control(type='password' name='Password' placeholder='Şifre' value='')
+                                                    label(for='Password') Şifre*
+                                                .ems-field
+                                                    .d-flex.align-items-center.mb-5
+                                                        +icon("checked").f-14
+                                                        p En az 8 karakter içermelidir
+                                                    .d-flex.align-items-center.mb-5
+                                                        +icon("checked").f-14
+                                                        p Küçük harf (a-z) ve büyük harf (A-Z) içermelidir
+                                                    .d-flex.align-items-center.mb-40
+                                                        +icon("not-checked").f-14
+                                                        p En az bir rakam (0-9) veya sembol içermelidir
+                                                .ems-field
+                                                    .ems-field-group
+                                                        .ems-field.ems-field-checkbox
+                                                            .d-flex.align-items-center.justify-content-between
+                                                                .form-check
+                                                                    span.sStylerMainWrp.sStylerWrp_checkbox
+                                                                    span.cStyler.checked
+                                                                        i.icon-checkbox
+                                                                        i.icon-checkbox-active
+                                                                    input.form-check-input#IsEmailPermitted.ems-styler-activeted.act-iStyler.sCheckbox(onclick='smsCheck(this)' type='checkbox' name='IsEmailPermitted' value='true' checked)
+                                                                    label(for='IsEmailPermitted').text-gray.l-h-20  İletişim izinleri kapsamında Korayspor Mağazacılık A.Ş. tarafından önemli bilgilerden haberdar olmak için elektronik ileti almayı kabul ediyorum.
+                                                                input#IsSmsPermitted.ems-styler-activeted.act-iStyler(type='hidden' name='IsSmsPermitted' value='true' checked)
+                                                a.btn.btn-black.w-100.disabled.my-30.btn-lg(href=""  aria-label="Onay") Üye Ol
+                                                p.login-privacy.text-gray Kişisel verileriniz, Aydınlatma Metni kapsamında işlenmektedir. “Onay Kodu İste” butonuna basarak 
+                                                    a(class='ems-privacy-trigger' aria-label='Privacy' href='javascript:void(0);' data-target='body' data-ready='ems-privacy-ready' data-animate='ems-privacy-animate' data-type='add')  Üyelik Sözleşmesi
+                                                    | ’ni, 
+                                                    a(href="!#" aria-label="Rıza Metni") Rıza Metni
+                                                    | ’ni, 
+                                                    a(href="!#" aria-label="İletişim İzinleri") İletişim İzinleri
+                                                    | ’ni okuduğunuzu ve kabul ettiğinizi onaylıyorsunuz. 
+                                        
+                                            input.ems-styler-activeted.act-iStyler(name='__RequestVerificationToken' type='hidden')
+                                            input#returnUrl.ems-styler-activeted.act-iStyler(name='returnUrl' type='hidden' value='/tr/Widget/Get/CreateUserRaw')
+                                            input#CountryCode.ems-styler-activeted.act-iStyler(name='CountryCode' type='hidden' value='+90')
+                    .d-none.d-lg-block.col-lg-6.h-100.position-relative
+                    // Privacy
+                    .ems-privacy-overlay.ems-overlay(data-target="body" data-ready="ems-privacy-ready" data-animate="ems-privacy-animate" data-type="remove")
+                    .ems-privacy.ems-modal-lg.ems-modal.py-15.ps-20.pe-25
+                        .ems-modal-header.mb-15
+                            h2.fw-400.fs-20.fs-lg-24.ems-privacy-title Koray Spor Saat Arıkan Mağazacılık A.Ş. Kişisel Verilerin Korunması Aydınlatma Metni
+                            a.position-absolute.ems-privacy-close(class='ems-privacy-trigger' aria-label='Privacy' href='javascript:void(0);' data-target='body' data-ready='ems-privacy-ready' data-animate='ems-privacy-animate' data-type='remove')
+                                +icon('close').fs-18
+                        .ems-modal-body.ems-scrollbar.ems-scrollbar-vertical.text-gray.fs-14.pe-25
+                            p Bu aydınlatma metni ile, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve ilgili mevzuat uyarınca, Koray Spor Saat Arıkan Mağazacılık Anonim Şirketi olarak, kişisel verilerinizin işlenmesi ve korunması ile ilgili aldığımız tedbirler, süreçler ve sahip olduğunuz haklar konusunda, sizlerin bilgilendirilmesi hedeflenmektedir.
+
+                            p Bu kapsamda, şirketimiz tarafından sunulan ürün ve hizmetlerden ilgili kişilerin faydalandırılması, iş ilişkisi içinde olduğumuz müşteri, tedarikçi ve diğer kişi ve kurumların teknik, ticari ve hukuki iş güvenliğinin temini, şirketimizce sunulan ürün ve hizmetlerin, kişilerin beğeni, alışkanlık ve ihtiyaçlarına göre özelleştirilerek ilgililere önerilmesi ve tanıtılması ve KVKK’nun 5. Ve 6.maddelerinde belirtilen diğer kişisel veri işleme şartları ve amaçları çerçevesinde işlenmesi amacıyla, tüm teknik ve idari tedbirleri almak suretiyle kişisel verileriniz; Türkiye Cumhuriyeti Anayasası, ülkemizin taraf olduğu uluslararası sözleşmeler ve KVKK başta olmak üzere, kişisel verilerin korunması ile ilgili tüm mevzuatın öngördüğü sınırlar çerçevesinde, KVKK’nun 4.maddesinde yer alan ilkelere uygun olarak işlenmektedir.
+
+                            p Şirketimize ait web sitesini kullanan/erişen ziyaretçiler/kullanıcıların, bu kullanım/erişim sırasında paylaşacakları ve şirketimiz tarafından işlenebilecek bilgiler, aşağıdakilerle sınırlı olmamak kaydıyla, özellikle şunlardır : 1.İletişim Formu aracılığıyla paylaşılacak bilgiler (Adı – Soyadı, E-mail adresi, Özgeçmişi), 2. Mesaj içeriğinde paylaşacakları talep/şikayet bilgileri ve mesajın konusu, 3. Hizmet alınan internet sitelerinin (Google Analytics, Google Search Console, Facebook Pixel) çerez kullanımı vasıtasıyla topladığı ve şirketimizle paylaştığı veriler.
+
+                            p Şirketimiz,doğrudan web sitemiz aracılığıyla çerez kullanarak bir veri işleme süreci gerçekleştirmemekle birlikte, hizmet aldığımız internet siteleri aracılığıyla çerez kullanımı yapılarak bir veri toplama işlemi gerçekleştirebilmektedir.
+
+                            p 1.Google Analytics
+                            p Kullanıcı/Ziyaretçilerin sayıları, demografik özellikleri (ülke, şehir, cinsiyet, ilgi alanları, yaş aralığı v.b.) kullandıkları cihaz, sistem bilgisi, IP adresi, Kullanıcı/Ziyaretçilerin web sitemizde hangi sayfaları kullandıkları bilgisini sağlamaktadır. Google Analytics Hizmet ve Koşullar sayfası : https://www.google.com/analytics/terms/tr.html
+
+

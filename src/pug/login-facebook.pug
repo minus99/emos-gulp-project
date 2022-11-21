@@ -1,0 +1,70 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Koray Spor Login"
+    - var pageDescription = "Koray Spor Login"
+    - var pageName = "Login Facebook"
+    - var pageClass = ""
+
+block content
+    .login
+        .notfound.h-100.position-relative
+            +picture('ratio ratio-335x648 ratio-lg-main-slider m-hide', true, dirImages + 'login/login.png', dirImages + 'login/login.png', dirImages + 'login/login.png')(class="", alt="slide 1")
+            .login-page
+                .notfound-desc.d-flex.flex-column.align-items-start
+                    .row.g-0
+                        .login-left-menu
+                            .d-flex.align-items-center
+                                +icon("arrow-left").fs-16
+                                +icon("minifacebook")
+                                h2.fs-20.fs-lg-24.fw-600 Giriş Yap
+                            p.alert.alert-primary.mt-20 tugba@gmail.com adresine bağlı bir Korayspor hesabı bulundu
+                            p.fs-16.mt-10 Facebook ile devam edebilmek için Korayspor hesabınıza giriş yapmalısınız.
+                            .ems-tab
+                                .ems-tab-content
+                                    .selected(rel='tab-1')
+                                        .login-form-container
+                                            form.ems-form#login(method='post' action='/tr/LogOn')
+                                                .row.g-0
+                                                    .ems-field.form-floating.mb-20.ems-field-msg-error
+                                                        input#UserEmail.input-login.form-control(type='text' name='UserEmail' placeholder='E-posta' value='')
+                                                        label(for='UserEmail') E-posta Adresi*
+                                                        .ems-field-feedback *Hay aksi! Cep telefonu geçerli değil
+                                                    .ems-field.pt-20.pb-25
+                                                        .d-flex.align-items-center.justify-content-end
+                                                            a(href='/sifremi-unuttum').fs-14.text-decoration-underline Şifremi Unuttum
+                                                    .ems-field
+                                                        .d-flex.align-items-center.justify-content-between
+                                                            a.btn.btn-dark.btn-lg.w-100(type='submit' aria-label="Submit" href="#") Giriş Yap
+                                                    input(name='__RequestVerificationToken' type='hidden')
+                                                    input#returnUrl(name='returnUrl' type='hidden' value='/tr/Widget/Get/LoginRaw')
+                                              
+                                                    .ems-field.pt-20.pb-25
+                                                        .d-flex.align-items-center.justify-content-center.login-social
+                                                            span.login-privacy.text-gray.fs-13.m-15.m-lg-0 Giriş Yap butonuna basarak  
+                                                                a(class='ems-privacy-trigger' aria-label='Privacy' href='javascript:void(0);' data-target='body' data-ready='ems-privacy-ready' data-animate='ems-privacy-animate' data-type='add')  Üyelik Sözleşmesi
+                                                                | ’ni okuduğunuzu ve kabul ettiğinizi onaylıyorsunuz.
+                                       
+                               
+                                    
+                    .d-none.d-lg-block.col-lg-6.h-100.position-relative
+                    // Privacy
+                    .ems-privacy-overlay.ems-overlay(data-target="body" data-ready="ems-privacy-ready" data-animate="ems-privacy-animate" data-type="remove")
+                    .ems-privacy.ems-modal-lg.ems-modal.py-15.ps-20.pe-25
+                        .ems-modal-header.mb-15
+                            h2.fw-400.fs-20.fs-lg-24.ems-privacy-title Koray Spor Saat Arıkan Mağazacılık A.Ş. Kişisel Verilerin Korunması Aydınlatma Metni
+                            a.position-absolute.ems-privacy-close(class='ems-privacy-trigger' aria-label='Privacy' href='javascript:void(0);' data-target='body' data-ready='ems-privacy-ready' data-animate='ems-privacy-animate' data-type='remove')
+                                +icon('close').fs-18
+                        .ems-modal-body.ems-scrollbar.ems-scrollbar-vertical.text-gray.fs-14.pe-25
+                            p Bu aydınlatma metni ile, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve ilgili mevzuat uyarınca, Koray Spor Saat Arıkan Mağazacılık Anonim Şirketi olarak, kişisel verilerinizin işlenmesi ve korunması ile ilgili aldığımız tedbirler, süreçler ve sahip olduğunuz haklar konusunda, sizlerin bilgilendirilmesi hedeflenmektedir.
+
+                            p Bu kapsamda, şirketimiz tarafından sunulan ürün ve hizmetlerden ilgili kişilerin faydalandırılması, iş ilişkisi içinde olduğumuz müşteri, tedarikçi ve diğer kişi ve kurumların teknik, ticari ve hukuki iş güvenliğinin temini, şirketimizce sunulan ürün ve hizmetlerin, kişilerin beğeni, alışkanlık ve ihtiyaçlarına göre özelleştirilerek ilgililere önerilmesi ve tanıtılması ve KVKK’nun 5. Ve 6.maddelerinde belirtilen diğer kişisel veri işleme şartları ve amaçları çerçevesinde işlenmesi amacıyla, tüm teknik ve idari tedbirleri almak suretiyle kişisel verileriniz; Türkiye Cumhuriyeti Anayasası, ülkemizin taraf olduğu uluslararası sözleşmeler ve KVKK başta olmak üzere, kişisel verilerin korunması ile ilgili tüm mevzuatın öngördüğü sınırlar çerçevesinde, KVKK’nun 4.maddesinde yer alan ilkelere uygun olarak işlenmektedir.
+
+                            p Şirketimize ait web sitesini kullanan/erişen ziyaretçiler/kullanıcıların, bu kullanım/erişim sırasında paylaşacakları ve şirketimiz tarafından işlenebilecek bilgiler, aşağıdakilerle sınırlı olmamak kaydıyla, özellikle şunlardır : 1.İletişim Formu aracılığıyla paylaşılacak bilgiler (Adı – Soyadı, E-mail adresi, Özgeçmişi), 2. Mesaj içeriğinde paylaşacakları talep/şikayet bilgileri ve mesajın konusu, 3. Hizmet alınan internet sitelerinin (Google Analytics, Google Search Console, Facebook Pixel) çerez kullanımı vasıtasıyla topladığı ve şirketimizle paylaştığı veriler.
+
+                            p Şirketimiz,doğrudan web sitemiz aracılığıyla çerez kullanarak bir veri işleme süreci gerçekleştirmemekle birlikte, hizmet aldığımız internet siteleri aracılığıyla çerez kullanımı yapılarak bir veri toplama işlemi gerçekleştirebilmektedir.
+
+                            p 1.Google Analytics
+                            p Kullanıcı/Ziyaretçilerin sayıları, demografik özellikleri (ülke, şehir, cinsiyet, ilgi alanları, yaş aralığı v.b.) kullandıkları cihaz, sistem bilgisi, IP adresi, Kullanıcı/Ziyaretçilerin web sitemizde hangi sayfaları kullandıkları bilgisini sağlamaktadır. Google Analytics Hizmet ve Koşullar sayfası : https://www.google.com/analytics/terms/tr.html
+
+

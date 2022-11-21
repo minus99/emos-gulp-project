@@ -153,6 +153,59 @@ input, textarea, select {
 
 
 
+.circle-wrap {
+    margin: 40px auto;
+    width: 80px;
+    height: 80px;
+    background: rgba(119, 113, 103, .3);
+    border-radius: 50%;
+    border: 1px solid #cdcbd0;
+  }
+  
+  .circle-wrap .circle .mask,
+  .circle-wrap .circle .fill {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .circle-wrap .circle .mask {
+    clip: rect(0px, 80px, 80px, 40px);
+  }
+ 
+  .circle-wrap .inside-circle {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: $light;
+    line-height: 68px;
+    text-align: center;
+    margin-top: 6px;
+    margin-left: 6px;
+    color: $black;
+    position: absolute;
+    z-index: 100;
+    font-weight: 400;
+    font-size: .875rem;
+    font-weight: bold;
+  }
+  
+  /* color animation */
+  
+  /* 3rd progress bar */
+  .mask .fill {
+    clip: rect(0px, 40px, 80px, 0px);
+    background-color: $green;
+  }
+  
+  .mask.full,
+  .circle .fill {
+    animation: fill ease-in-out 3s;
+    transform: rotate(135deg);
+  }
+
+
 // .circle-wrap {
 //     margin: 40px auto;
 //     width: 80px;
