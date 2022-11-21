@@ -15,10 +15,10 @@
 
 //THEME
 .swiper-container-widget {
-  &.swiper-container-horizontal > .swiper-scrollbar {
-      width: 100% !important;
-      .swiper-scrollbar-drag {
-        width: 50px;
-      }
-  }
+    .swiper {
+        &-button-prev,
+        &-button-next {
+            display: none;
+        }
+    }
 }

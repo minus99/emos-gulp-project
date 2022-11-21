@@ -618,7 +618,7 @@ button.swiper-pagination-bullet {
     &.swiper-container-horizontal > .swiper-scrollbar {
         position: relative;
         background: rgba(139, 133, 123, .5);
-        width: 365px !important;
+        //width: 365px !important;
         height: 1px;
         margin: 30px auto;
         left: 0;
@@ -634,3 +634,25 @@ button.swiper-pagination-bullet {
     }
 }
 
+// Product Widget Customize
+.swiper-container-widget {
+    .swiper {
+        &-button-prev,
+        &-button-next {
+            width: 25px;
+            background-color: transparent;
+            top: 0;
+            box-shadow: none;
+        }
+        &-button-prev {
+            right: 30px;
+            left: auto;
+        }
+    }
+    .swiper-scrollbar {
+        background-color: $gray !important;
+        &-drag {
+            background-color: $dark !important;
+        }
+    }
+}

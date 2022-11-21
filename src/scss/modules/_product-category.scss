@@ -1,0 +1,15 @@
+.cat-menu {
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow-x: auto;
+
+    li {
+        &:nth-child(n+2) {
+            margin-left: 20px;
+        }
+        a {
+            font-weight: 600;
+            white-space: nowrap;
+        }
+    }
+}

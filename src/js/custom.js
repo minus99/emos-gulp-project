@@ -1,4 +1,5 @@
 
+//Home Video Play-Pause
 var playButton = document.getElementById("btn-iframe-trigger");
 meta = document.getElementById('meta');
 // Event listener for the play/pause button
