@@ -256,7 +256,7 @@ i.bg-icon {
     }
     &-text {
       position: relative;
-      max-height: 234px;
+      max-height: 150px;
       overflow: hidden;
       transition: all 0.2s ease;
       &::after {
@@ -352,4 +352,25 @@ $banner-arrow-size: 8px;
     span {
         color: $gray;
     }
+}
+
+//Breadcrumb
+
+.breadcrumb {
+   .breadcrumb-item {
+      color: $gray3;
+      min-width: 50px;
+      &.active {
+         color: $dark;
+      }
+   }
+   &.dark {
+      .breadcrumb-item {
+        color: $gray;
+        min-width: 50px;
+        &.active {
+          color: $white;
+        }
+      }
+   }
 }

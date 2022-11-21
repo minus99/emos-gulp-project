@@ -18,8 +18,9 @@
 
 // Layouts
 @import 'layouts/header';
+@import 'layouts/product-category';
 //@import 'layouts/product-detail';
-//@import 'layouts/product-list';
+@import 'layouts/product-list';
 
 //Modules
 @import 'modules/home-slider';
@@ -27,7 +28,6 @@
 @import 'modules/cookies';
 @import 'modules/rectangle-banner';
 @import 'modules/single-banner';
-@import 'modules/product-category';
 @import 'modules/product-widget';
 @import 'modules/login';
 /*@import 'modules/story';
@@ -73,8 +73,8 @@
   // Layouts
   @import 'layouts/header-desktop';
 
-  /* @import 'layouts/product-detail-desktop';
-  @import 'layouts/product-list-desktop';*/
+  /* @import 'layouts/product-detail-desktop';*/
+  @import 'layouts/product-list-desktop';
 
   //Modules
   @import 'modules/home-slider-desktop';

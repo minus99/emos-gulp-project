@@ -100,7 +100,12 @@ $aspect-ratios: (
   'main-slider-mobile-2': calc(480 / 375 * 100%),
   'rectangle-banner': calc(680 / 520 * 100%),
   'rectangle-banner-mobile': calc(425 / 375 * 100%),
+  'category-slider': calc(600 / 450 * 100%),
   'single-banner': calc(236 / 375 * 100%),
+  'prd-list-banner': calc(419 / 620 * 100%),
+  'prd-list-cover': calc(432 / 372 * 100%),
+  'prd-list-cover-type-1': calc(480 / 1656 * 100%),
+  'prd-list-cover-type-2': calc(640 / 1656 * 100%),
   'logo': calc(31 / 200 * 100%),
   'hero-banner': calc(740 / 1656 * 100%),
   'square-banner': calc(740 / 786 * 100%),
@@ -287,7 +292,7 @@ $breadcrumb-item-padding-x: 10px;
 $breadcrumb-margin-bottom: 0;
 $breadcrumb-divider: quote('/');
 $breadcrumb-divider-color: $gray;
-$breadcrumb-active-color: $gray;
+$breadcrumb-active-color: $white;
 
 // Utilities API :bootstrap/scss/utilities - https://getbootstrap.com/docs/5.1/utilities/api/#override-utilities
 $utilities: (

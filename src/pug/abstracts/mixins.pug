@@ -63,7 +63,7 @@ mixin swiper(type = 'main', pagination = false, navigation = false, scrollbar = 
     breadcrumb(['Kadın', 'product-list.html'], ['Giyim', 'product-list.html'], ['Yeşil Kadın Triko', 'product-detail.html'])(class="knk")
 mixin breadcrumb(...items)
     nav.ems-breadcrumb(aria-label="breadcrumb")&attributes(attributes)
-        ol.breadcrumb.flex-nowrap.text-nowrap.ems-scrollbar.ems-scrollbar-hide
+        ol.breadcrumb.flex-nowrap.text-nowrap.ems-scrollbar.ems-scrollbar-hide.dark
             li.breadcrumb-item
                 a(href="index.html") Ana Sayfa
             each item, i in items
@@ -109,7 +109,7 @@ mixin product()
                 +icon("archive-fill").fs-14
         .card-media.position-relative
             +picture('ratio ratio-prd', dirUploads + 'product-detail/shoes-2.png', dirUploads + 'product-detail/shoes-2.png', dirUploads + 'product-detail/shoes-2.png')(class="w-100 img-fluid", alt="slide 1")
-            .card-brand.position-absolute.fs-10.fs-lg-11
+            .card-brand.position-absolute.fs-10.fs-lg-11.text-dark
                 span Adidas
             .card-badge.position-absolute.d-none.d-lg-flex
                 +icon("elite")

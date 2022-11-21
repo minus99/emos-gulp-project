@@ -43,7 +43,7 @@ a:hover {
 // :bootstrap/scss/helpers/ratio
 .ratio {
   &::before {
-    background: $white;
+    background: $body-bg-color;
     //background: $bg-loading;
   }
   video {
