@@ -65,7 +65,8 @@ mixin breadcrumb(...items)
     nav.ems-breadcrumb(aria-label="breadcrumb")&attributes(attributes)
         ol.breadcrumb.flex-nowrap.text-nowrap.ems-scrollbar.ems-scrollbar-hide.dark
             li.breadcrumb-item
-                a(href="index.html") Ana Sayfa
+                a(href="index.html") 
+                    +icon('point')
             each item, i in items
                 - last = (i == items.length - 1)
                     if last 

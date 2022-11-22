@@ -27,12 +27,11 @@
 .breadcrumb {
     .breadcrumb-item {
        color: #817A79;
-       min-width: 50px;
     }
     &.dark {
        .breadcrumb-item {
          color: $white;
-         min-width: 50px;
        }
     }
+
  } 
