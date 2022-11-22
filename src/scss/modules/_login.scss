@@ -102,3 +102,45 @@
 .privaciy {
     margin-left: 0px;
 }
+/* ORDER PAGE */
+.bg-white {
+    background: transparent !important; 
+}
+.order-truck {
+    .input-login {
+        background: $gray4;
+    }
+}
+.order-track-form-container {
+    .input-login {
+        background: $gray4;
+    }
+}
+
+
+/* SSS PAGE */
+
+.corporate-sidebar  {
+    li {
+        flex-shrink: 0;
+    }
+    .active {
+        color: #DF4826;
+        &::before {
+            content: "";
+            border-bottom: 1px solid rgb(223, 72, 38);
+            margin-top: -5px;
+            width: 100%;
+            position: absolute;
+            bottom: -10px;
+        }
+    }
+
+    
+}
+.sss-title {
+    background: #fff;
+    padding: 17px 24px;
+    border-left: 2px solid #DF4826;
+    border-radius: 4px;
+}

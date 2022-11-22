@@ -1,70 +1,55 @@
 extends layouts/default.pug
 
 block prepend head
-    - var pageTitle = "Konyalı Saat SSS"
-    - var pageDescription = "Konyalı Saat SSS"
+    - var pageTitle = "Koray Spor Order"
+    - var pageDescription = "Koray Spor Order"
     - var pageName = "order-track"
     - var pageClass = "order track"
 
 block content
     .container.px-lg-30.mb-20.mb-lg-60
-        +breadcrumb([pageName])   
-        .row.mt-20.mt-lg-30.position-relative.mt-30.mt-lg-50
-            .col-12.col-lg-6.mb-40
-                .order-track-form-container
-                    form.ems-form(action='/' method='POST' id="order-track-form")
-                        div 
-                            h2.fw-normal.fs-20 Siparişimi Kaydolmadan Verdim
-                            .text-gray.mt-20.mb-40
-                                p Alışverişinizi misafir olarak gerçekleştirdiyseniz, alışverişiniz sırasında kullandığınız e-posta adresinizi ve sipariş numaranızı aşağıdaki alana girerek kontrol edebilirsiniz.
-                        .ems-field.mb-30
-                            input.input-login#UserNameOrEmail(type='text' name='UserNameOrEmail')
-                            label.form-label(for='UserNameOrEmail') E-Posta Adresi*
-                            .ems-field-feedback.fs-12.position-absolute
-                        .ems-field.mb-10
-                            input.bg-transparent.w-100(id="OrderNo", type="text", name="OrderNo")
-                            label.form-label(for="OrderNo") Sipariş Numarası*
-                            .ems-field-feedback.fs-12.d-none.position-absolute
-                        .text-blue.fs-12.mb-40 *8 rakamdan oluşan sipariş numarasını girin örn. 03108801
-                        button.btn.btn-dark.w-100(type="button") Sipariş Detaylarını Gör
-            .d-none.d-lg-block.col-2
-            .col-12.col-lg-6
-                .login-form-container
-                    form.ems-form#login(method='post' action='/tr/LogOn')
-                        div 
-                            h2.fw-normal.fs-20 Siparişimi Kayıtlı Kullanıcı Olarak Verdim
-                            .text-gray.mt-20.mb-30
-                                p Alışverişinizi misafir olarak gerçekleştirdiyseniz, alışverişiniz sırasında kullandığınız e-posta adresinizi ve sipariş numaranızı aşağıdaki alana girerek kontrol edebilirsiniz.
-                        .row.g-0
-                            .ems-field.mb-40
-                                input.input-login#UserNameOrEmail(type='text' name='UserNameOrEmail')
-                                label.form-label(for='UserNameOrEmail') E-posta
-                                .ems-field-feedback.fs-12.position-absolute
-                            .ems-field
-                                input.input-login#Password(type='password' name='Password' )
-                                label.form-label(for='Password') Şifre
-                                a.show-pass-button.position-absolute.top-0.end-0.me-10(href='javascript:void(0);' onclick='showHidePassword(this);')
-                                    +icon("eye")
-                                .ems-field-feedback.fs-12.position-absolute
-                            .ems-field.pt-20.pb-25
-                                .d-flex.align-items-center.justify-content-between
-                                    .form-check
-                                        input.form-check-input#RememberMe(type='checkbox' name='RememberMe' value='true')
-                                        label.form-check-label(for='RememberMe').fs-14 Beni hatırla
-                                    a(href='/sifremi-unuttum').fs-14.text-decoration-underline Şifremi Unuttum
-                            .ems-field
-                                .d-flex.align-items-center.justify-content-between
-                                    a.btn.btn-black.w-100(type='submit' aria-label="Submit" href="#") Giriş Yap
-                            input(name='__RequestVerificationToken' type='hidden')
-                            input#returnUrl(name='returnUrl' type='hidden' value='/tr/Widget/Get/LoginRaw')
-                            span.text-center.my-20 veya 
-                            .d-flex.align-items-center.justify-content-between
-                                a.py-10.bg-white.w-50.text-center(href='javascript:void(0);' onclick='login.loginWithFacebook();')
-                                    +icon('google') 
-                                span.m-10
-                                a.py-10.bg-white.w-50.text-center(href='javascript:void(0);' onclick='login.loginWithGoogle();')
-                                    +icon('facebook-basic')
-                    p.login-privacy.text-gray.mt-15.fs-14 Sosyal medya hesabımla giriş yaparak hesaplarımın 
-                        a(class='ems-privacy-trigger' aria-label='Privacy' href='javascript:void(0);' data-target='body' data-ready='ems-privacy-ready' data-animate='ems-privacy-animate' data-type='add') Gizlilik Politikası
-                        | 'na uygun şekilde bağlanmasını kabul ediyorum.
-            
+        +breadcrumb([pageName])
+        .notfound.h-100.position-relative
+            +picture('m-hide', true, dirImages + 'order-truck/order.png', dirImages + 'order-truck/order.png', dirImages + 'order-truck/order.png')(class="", alt="slide 1")
+            .row.mt-20.mt-lg-30.position-relative.mt-30.mt-lg-50.top-50
+                .col-12.col-lg-6.mb-40
+                    .order-track-form-container.bg-white
+                        form.ems-form(action='/' method='POST' id="order-track-form")
+                            div 
+                                h2.fw-normal.fs-20.fw-600 Siparişimi Kaydolmadan Verdim
+                                .mt-20.mb-40
+                                    p.l-h-20 Alışverişinizi misafir olarak gerçekleştirdiyseniz, alışverişiniz sırasında kullandığınız e-posta adresinizi ve sipariş numaranızı aşağıdaki alana girerek kontrol edebilirsiniz.
+                                    .alert.alert-primary Sipariş mevcut değil ya da girilen bilgiler yanlış. Lütfen bilgileri gözden geçirip tekrar deneyin.
+                            .ems-field.form-floating.mb-20
+                                input#UserEmail.input-login.form-control(type='text' name='UserEmail' placeholder='E-posta' value='')
+                                label(for='UserEmail') E-posta Adresi*
+                            .ems-field.form-floating.mb-20
+                                input#Order.input-login.form-control(type='text' name='Order' placeholder='Order' value='')
+                                label(for='Order') Sipariş Numarası*
+                            .fs-12.mb-40 *8 rakamdan oluşan sipariş numarasını girin örn. 03108801
+                            button.btn.btn-dark.w-100.btn-lg(type="button") Sipariş Detaylarını Gör
+                .col-12.col-lg-6
+                    .order-truck.bg-white
+                        form.ems-form#login(method='post' action='/tr/LogOn')
+                            div 
+                                h2.fw-normal.fs-20.fw-600 Siparişimi Kayıtlı Kullanıcı Olarak Verdim
+                                .mt-20.mb-120
+                                    p.l-h-20 Alışverişinizi misafir olarak gerçekleştirdiyseniz, alışverişiniz sırasında kullandığınız e-posta adresinizi ve sipariş numaranızı aşağıdaki alana girerek kontrol edebilirsiniz.
+                            .row.g-0
+                                .ems-field.form-floating.mb-20
+                                    input#UserEmail.input-login.form-control(type='text' name='UserEmail' placeholder='E-posta' value='')
+                                    label(for='UserEmail') E-posta Adresi*
+                                .ems-field.form-floating.mb-10  
+                                    input#UserNameOrEmail.input-login.form-control(type='password' name='Password' placeholder='Şifre' value='')
+                                    label(for='Password') Şifre*
+                                .ems-field.pt-20.pb-25
+                                    .d-flex.align-items-center.justify-content-between
+                                        .form-check
+                                            input.form-check-input#RememberMe(type='checkbox' name='RememberMe' value='true')
+                                            label.form-check-label(for='RememberMe').fs-14 Beni hatırla
+                                        a(href='/sifremi-unuttum').fs-14.text-decoration-underline Şifremi Unuttum
+                                .ems-field
+                                    .d-flex.align-items-center.justify-content-between
+                                        a.btn.btn-black.w-100.btn-lg(type='submit' aria-label="Submit" href="#") Giriş Yap
+                            
+                

@@ -1,0 +1,51 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Koray Spor SSS"
+    - var pageDescription = "Koray Spor SSS"
+    - var pageName = "fag"
+    - var pageClass = ""
+
+block content
+    .container.px-lg-40.mb-20.mb-lg-60
+        +breadcrumb([pageName])
+        .row        
+            include includes/corporate-menu   
+            .col-12.col-lg-9.m-auto.p-lg-90
+                h3.d-none.d-lg-block.fs-24.fw-600.sss-title Sıkça Sorulan Sorular
+                p.fs-16.fw-600.m-lg-40 Korayspor.com'da ödemelerinizi Kredi Kartı, Sanal Kart, Kapıda Ödeme, Banka Havalesi ve PayPal ile yapabilirsiniz.
+                ul.list-unstyled.accordion.mt-5.mt-lg-10.faq-list.m-lg-40
+                    li.col.mb-10.border-bottom.py-20(rel="tab-2") 
+                        a.fs-16.d-flex.justify-content-between.align-items-center(href="javascript:void(0);") 
+                            span.accordion-title Kredi Kartı ile Ödeme
+                        .list-unstyled.mt-lg-30.lv2.mt-20
+                            p.l-h-20 KoraySpor.com'dan hayatınızı kolaylaştıran bir hizmet; Kapıda Ödeme ! Size sunduğumuz diğer ödeme seçeneklerinin yanı sıra; vereceğiniz tüm siparişlerde kapıda nakit ödemeyi tercih edebilir; Türkiye’nin neresinde olursanız olun, evinizin rahatlığında alışverişinizi tamamlayabilirsiniz. Satışı yapılan ürünün, Yurtiçi Kargo tarafından ulaştırılması ve teslimat anında, ürün bedelinin, Aldığınız ürünleriniz için kapıda nakit tahsilat yapılmasıdır. Kapıda ödeme seçenekli alışverişleriniz de adres bilgilerinizi ve telefon bilgilerinizi eksiksiz girmeniz gerekmektedir. Telefon ile müşteri temsilcilerimiz tarafından gün içerisinde teyid alınmaktadır. Telefon bilgileri eksik yanlış veya farklı girilmesi dahilinde siparişiniz iptal edilerek gönderilmeyecektir. Kapıda ödeme siparişlerinizde her hangi ek bir ücret alınmamaktadır. Not : Kapıda ödeme siparişleri ile verilen işlemlerde, gelen kargo yetkilisine ödeme işlemi yapılmadan ürün teslimatı gerçekleştirilememekte ve paket açılamamaktadır.    
+                    li.col.border-bottom.py-20(rel="tab-2")  
+                        a.fs-16.d-flex.justify-content-between.align-items-center(href="javascript:void(0);")
+                            span.accordion-title Vade Farksız 4 Taksit İşlem Yapılan Banka & Kartlar
+                        .list-unstyled.mt-lg-30.lv2.mt-20
+                            p Alışveriş tutarınıza kargo firması tarafından talep edilen 6,95 TL kapıda ödeme ücreti eklenecektir.
+                            ul 
+                                li Kapıda ödeme 300 TL ve altı tutarda oluşturulan siparişlerde geçerlidir.
+                                li Kapıda kredi kartıyla ödeme seçeneğinde sadece kredi kartı kabul edilmektedir.
+                                li Kapıda nakit ödeme kabul edilmemektedir.
+                                li İade işlemlerinde fatura ibrazı ve slip zorunludur, faturasız ve slipsiz iade kabul edilmemektedir.
+                                li Kapıda kredi kartıyla ödeme seçeneğiyle alınan ürünlerin iadesi mağazalarımızdan veya iade adresimize gönderilerek yapılabilir.
+                    li.col.border-bottom.py-20(rel="tab-3")  
+                        a.fs-16.d-flex.justify-content-between.align-items-center(href="javascript:void(0);")
+                            span.accordion-title Banka Havalesi ile Ödeme
+                        .list-unstyled.mt-lg-30.lv2.mt-20
+                    li.col.border-bottom.py-20(rel="tab-3")  
+                        a.fs-16.d-flex.justify-content-between.align-items-center(href="javascript:void(0);")
+                            span.accordion-title Banka Hesap Bilgileri
+                        .list-unstyled.mt-lg-30.lv2.mt-20
+                    li.col.border-bottom.py-20(rel="tab-3")  
+                        a.fs-16.d-flex.justify-content-between.align-items-center(href="javascript:void(0);")
+                            span.accordion-title Kapıda Ödeme
+                        .list-unstyled.mt-lg-30.lv2.mt-20
+                    li.col.border-bottom.py-20(rel="tab-3")  
+                        a.fs-16.d-flex.justify-content-between.align-items-center(href="javascript:void(0);")
+                            span.accordion-title Telefon ile Sipariş
+                        .list-unstyled.mt-lg-30.lv2.mt-20
+                         
+                           

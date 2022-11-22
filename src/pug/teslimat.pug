@@ -1,0 +1,23 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Koray Spor SSS"
+    - var pageDescription = "Koray Spor SSS"
+    - var pageName = "fag"
+    - var pageClass = ""
+
+block content
+    .container.px-lg-40.mb-20.mb-lg-60
+        +breadcrumb([pageName])
+        .row        
+            include includes/corporate-menu   
+            .col-12.col-lg-9.m-auto.p-lg-90
+                h3.d-none.d-lg-block.fs-24.fw-600.sss-title Teslimat
+                p.fs-16.m-lg-40.mt-20.l-h-20 1. Ürününüz kargoya verildikten sonra Yurtiçi Kargo takip numarası işlenip tarafınıza e-posta yolu ile bilgilendirme yapılacaktır.
+                p.fs-16.m-lg-40.mt-20.l-h-20 2. Anlaşmalı olduğumuz kargo şirketleri olan Yurtiçi Kargo ile gönderimler yapılmaktadır.
+                p.fs-16.m-lg-40.mt-20.l-h-20 3. Gönderimlerimizden ücret alınmamakta ve de gönderimler ücretsiz bir şekilde yapılacaktır.
+                p.fs-16.m-lg-40.mt-20.l-h-20 4. Ürünlerimiz paketleme öncesi kontrol edildikten sonra kargoya verilmektedir. Sipariş yoğunluğuna ve ürün durumuna göre 2 ile 5 iş gününde kargoya teslim edilmektedir. Kargoya teslimattan sonra cep telefonunuza Yurtiçi Kargo varış şubesi ve süreci sms olarak gönderilmektedir.
+                p.fs-16.m-lg-40.mt-20.l-h-20 5. Kargoya teslim edilen ürünlerin tarafınıza ulaşması sürecinde, bulunmuş olduğunuz il veya ilçenin mesafesine göre teslimat süresi değişmektedir.
+                p.fs-16.m-lg-40.mt-20.l-h-20 6. Korayspor.com’dan sipariş verdiğiniz ürünlerin takip numarası e-mailinize gönderilecektir. Size gelen gönderi kodunu Yurtiçi Kargo web sitelerini kullanarak kargom nerede kısmından sorgulayabilirsiniz.
+
+
