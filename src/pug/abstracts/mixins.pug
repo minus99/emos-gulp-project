@@ -63,9 +63,10 @@ mixin swiper(type = 'main', pagination = false, navigation = false, scrollbar = 
     breadcrumb(['Kadın', 'product-list.html'], ['Giyim', 'product-list.html'], ['Yeşil Kadın Triko', 'product-detail.html'])(class="knk")
 mixin breadcrumb(...items)
     nav.ems-breadcrumb(aria-label="breadcrumb")&attributes(attributes)
-        ol.breadcrumb.flex-nowrap.text-nowrap.ems-scrollbar.ems-scrollbar-hide
+        ol.breadcrumb.flex-nowrap.text-nowrap.ems-scrollbar.ems-scrollbar-hide.dark
             li.breadcrumb-item
-                a(href="index.html") Ana Sayfa
+                a(href="index.html") 
+                    +icon('point')
             each item, i in items
                 - last = (i == items.length - 1)
                     if last 
@@ -108,17 +109,17 @@ mixin product()
             a.btn-save.stretched-link-over.selected(href="javascript:void(0);" aria-label="Save")
                 +icon("archive-fill").fs-14
         .card-media.position-relative
-            +picture('ratio ratio-prd', dirUploads + 'product-detail/shoes.png', dirUploads + 'product-detail/shoes.png', dirUploads + 'product-detail/shoes2x.png')(class="w-100 img-fluid", alt="slide 1")
-            .card-brand.position-absolute.fs-10.fs-lg-11
+            +picture('ratio ratio-prd', dirUploads + 'product-detail/shoes-2.png', dirUploads + 'product-detail/shoes-2.png', dirUploads + 'product-detail/shoes-2.png')(class="w-100 img-fluid", alt="slide 1")
+            .card-brand.position-absolute.fs-10.fs-lg-11.text-dark
                 span Adidas
             .card-badge.position-absolute.d-none.d-lg-flex
                 +icon("elite")
                 +icon("elite")
         .card-body.p-5.p-lg-10.d-flex.flex-column.justify-content-end
             p.card-title.mt-10.fs-12.fs-lg-13 Terrex Agravic Tr
-            span.text-gray2.fs-12.fs-lg-13 Erkek Çim Zemin Kramponu 
+            span.card-subtitle.text-gray2.fs-12.fs-lg-13 Erkek Çim Zemin Kramponu 
             .card-price.mt-10.d-flex.flex-column.fs-12.fs-lg-13.fw-600
-                span -%50
+                span.discount-rate -%50
                 .d-flex
                     span.card-price-first.text-gray2.text-decoration-line-through 1200,00 #{currencyText}
                     span.card-price-last.text-primary.ms-10 999,00 #{currencyText}

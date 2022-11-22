@@ -1,0 +1,8 @@
+.prd-widget {
+    &-type-1 {
+        .card-subtitle, 
+        .discount-rate {
+            display: none;
+        }
+    }
+}

@@ -98,3 +98,12 @@
   > .swiper-button-next {
     display: none !important;
   }}
+
+  .swiper-container-widget {
+    .swiper {
+        &-scrollbar {
+            width: calc(100% - 130px);
+            margin: 30px 0 !important;
+        }
+    }
+}

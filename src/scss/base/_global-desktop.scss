@@ -23,3 +23,15 @@
     margin: 0 auto !important;
 
 }
+
+.breadcrumb {
+    .breadcrumb-item {
+       color: #817A79;
+    }
+    &.dark {
+       .breadcrumb-item {
+         color: $white;
+       }
+    }
+
+ } 

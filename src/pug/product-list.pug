@@ -1,0 +1,252 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Korayspor Product List"
+    - var pageDescription = "Product List sayfası, Korayspor"
+    - var pageName = "product-list"
+    - var pageClass = "site-header-bg"
+
+block content 
+    .prd-list-top.bg-white.pb-20.pb-lg-50 
+        .container.px-0.px-lg-15
+            .position-relative 
+                +breadcrumb(['Product List'])
+                +picture("ratio ratio-prd-list-cover ratio-lg-prd-list-cover-type-1", true, dirUploads + "/product-list-cover/cover-type-1-mobile.jpg", dirUploads + "product-list-cover/cover-type-1-mobile.jpg", dirUploads + "product-list-cover/cover-type-1.jpg").w-100
+                //+picture("ratio ratio-prd-list-cover ratio-lg-prd-list-cover-type-2", true, dirUploads + "/product-list-cover/cover-type-2-mobile.jpg", dirUploads + "product-list-cover/cover-type-2-mobile.jpg", dirUploads + "product-list-cover/cover-type-2.jpg").w-100
+ 
+    .prd-list-filter.pt-30.pb-lg-30.bg-light
+        .container.px-lg-40.px-0
+            .d-flex.flex-column.flex-lg-row.align-items-lg-center.justify-content-lg-between
+                .d-flex.px-20
+                    .filter-desc
+                        h2.fw-400.fs-16 Erkek Saat
+                        span.text-gray.fs-14 300 ürün listeleniyor 
+                    ul.filter-cat.list-unstyled.ms-30.d-none.d-lg-inline-flex
+                        li.fs-14.p-10.ms-10.bg-white.position-relative Klasik Saat
+                            a.stretched-link(href="!#")
+                        li.fs-14.p-10.ms-10.bg-white.position-relative Spor Saat
+                            a.stretched-link(href="#!")
+                        li.fs-14.p-10.ms-10.bg-white.position-relative Dijital Saat
+                            a.stretched-link(href="#!")
+                        li.fs-14.p-10.ms-10.bg-white.position-relative Akıllı Saat
+                            a.stretched-link(href="#!")
+                        li.fs-14.p-10.ms-10.bg-white.position-relative Mekanik
+                            a.stretched-link(href="#!")
+                        li.fs-14.p-10.ms-10.bg-white.position-relative Otomatik
+                            a.stretched-link(href="#!")
+                .d-flex.flex-column.flex-lg-row
+                    .ems-view-range-wrapper.d-flex.align-items-center.my-20.my-lg-0.px-20.px-lg-0.order-lg-last.ms-lg-20
+                        a.ems-view-range-trigger.h-100.d-flex.align-items-center(href="javascript:void(0)" aria-label="View" data-target="body" data-ready="ems-view-range-ready" data-animate="ems-view-range-animate" data-type="add")
+                            span.fs-14.me-10 Görünüm
+                            +icon("range").d-none.d-lg-inline-block
+                        .ems-view-range.d-lg-none.w-100.align-items-center
+                            input.form-range.py-20(type="range" min="1" max="5" step="1" value="3" id="product-filter-range")
+                            a.ems-view-range-close.d-none.ms-30(href="javascript:void(0)" aria-label="close" data-target="body" data-ready="ems-view-range-ready" data-animate="ems-view-range-animate" data-type="remove")
+                                +icon("close").fs-16
+                    .filter-set.d-flex.fs-14.text-center
+                        .filter-set-item.w-50.py-30.py-lg-0.position-relative.d-flex.align-items-center.justify-content-center.justify-content-lg-start
+                            span.fs-14.me-10 Karşılaştır
+                            a.ems-prd-compare-trigger.h-100.stretched-link(href="javascript:void(0)" aria-label="Compare" data-target="body" data-ready="ems-prd-compare-ready" data-animate="ems-prd-compare-animate" data-type="add" ) 
+                                +icon("compare")
+                            a.ems-prd-compare-close.d-none(href="javascript:void(0)" aria-label="close" data-target="body" data-ready="ems-prd-compare-ready" data-animate="ems-prd-compare-animate" data-type="remove")
+                                +icon("close").fs-16
+                        a.filter-set-item.item-edit.w-50.py-30.py-lg-0.ms-lg-20.h-100.d-flex.align-items-center.justify-content-center(href="javascript:void(0)" aria-label="Edit" data-target="body" data-ready="ems-prd-filter-ready" data-animate="ems-prd-filter-animate" data-type="add" ) 
+                            span.fs-14.me-10 Düzenle
+                            +icon("set")
+    .ems-prd-list.py-30
+        .container
+            ul.ems-prd-list-wrapper.ems-prd-with-blog.d-grid.list-unstyled
+                - for (var y = 0; y < 7; y++)
+                    li
+                        +product()
+                li.prd-blog-post.position-relative(data-background=dirUploads + 'product-list-banner/prd-list-banner.jpg')
+                    .img-overlay.tex-white
+                        .w-25.position-absolute.bottom-0.start-0.ms-40.mb-40
+                            h3.fw-400.fs-24.mb-20 Saatinizi nelere dikkat ederek seçmelisiniz?
+                            a.prd-blog-post-link.position-relative(href="blog-detail.html") Blog’ta inceleyin
+                - for (var y = 0; y < 6; y++)
+                    li
+                        +product()
+    .text-center             
+        a.btn.btn-lg.btn-outline-dark.text-center(href="javascript:void(0);") Daha Fazla Gör
+
+   
+    .ems-seo.w-lg-50.text-black
+        .ems-seo-text
+            div
+                h3.fs-20.fs-lg-30.mb-15 Günlük Erkek Spor Ayakkabıları <br> Modelleri Fiyatları
+                p İşlevsel özelliklere sahip olan saatler aynı zamanda erkeklerin ve kadınların stillerini de tamamlayabilecekleri en önemli aksesuarlar arasında yer almaktadır. Tarzınızı yansıtabileceğiniz saat modelleri arasında her kişinin yaşına ve zevkine uygun olabilecek saat modelleri bulunuyor.
+                p Farklı saat markalarının ve modellerinin yer aldığı online alışveriş mağazamızda fiyat aralıkları, kasa tipi, cam şekli, alarm, kordon ve çalışma tipi gibi özelliklere göre aramalar yaparak aradığınız saatlere daha hızlı bir şekilde ulaşabilirsiniz. İşlevsel özelliklere sahip olan saatler aynı zamanda erkeklerin ve kadınların stillerini de tamamlayabilecekleri en önemli aksesuarlar arasında yer almaktadır. Tarzınızı yansıtabileceğiniz saat modelleri arasında her kişinin yaşına ve zevkine uygun olabilecek saat modelleri bulunuyor.
+                p Farklı saat markalarının ve modellerinin yer aldığı online alışveriş mağazamızda fiyat aralıkları, kasa tipi, cam şekli, alarm, kordon ve çalışma tipi gibi özelliklere göre aramalar yaparak aradığınız saatlere daha hızlı bir şekilde ulaşabilirsiniz.
+        a.btn.px-0.btn-more.read-me-more.moreTextCls(href="javascript:void(0);")
+            span.more Devamını Göster
+            span.less Daralt
+    //Filter Modal
+    .ems-prd-filter-overlay.ems-overlay(data-target="body" data-ready="ems-prd-filter-ready" data-animate="ems-prd-filter-animate" data-type="remove")
+    .ems-modal.ems-modal-lg.ems-prd-filter.ems-modal-end.ems-modal-lg-end
+        .modal-header.p-20.mx-10.d-flex.justify-content-between.p-0.border-0.mb-30
+            span.fs-lg-18 Filtreler
+            .d-flex
+                a.d-flex.me-20(href="#!" aria-label="delete")
+                    span.text-primary.fs-14 Hepsini Sil
+                a.d-flex(href="javascript:void(0)" aria-label="close" data-target="body" data-ready="ems-prd-filter-ready" data-animate="ems-prd-filter-animate" data-type="remove")
+                    +icon("close").fs-16
+        .modal-body.pt-0.px-20.mx-10.mb-20.ems-scrollbar.ems-scrollbar-vertical
+            ul.list-unstyled.accordion
+                li.border-bottom.pb-20.selected(rel="tab-2") 
+                    a.fs-16.d-flex.justify-content-between.align-items-center(href="javascript:void(0);") 
+                        span.fs-lg-18 Sırala
+                    ul.lv2.list-unstyled.py-30
+                        li 
+                            a.check-btn.check-btn-radio.position-relative.selected(href="javascript:void(0);" aria-label="check") 
+                                span.ms-20 Önerilen
+                        li 
+                            a.check-btn.check-btn-radio.position-relative(href="javascript:void(0);" aria-label="check") 
+                                span.ms-20 Artan Fiyat
+                        li 
+                            a.check-btn.check-btn-radio.position-relative(href="javascript:void(0);" aria-label="check") 
+                                span.ms-20 Azalan Fiyat
+                        li 
+                            a.check-btn.check-btn-radio.position-relative(href="javascript:void(0);" aria-label="check") 
+                                span.ms-20 Popüler
+                        li 
+                            a.check-btn.check-btn-radio.position-relative(href="javascript:void(0);" aria-label="check") 
+                                span.ms-20 En Yeniler
+            ul.list-unstyled.accordion.prd-filter-brands
+                li.border-bottom.py-20(rel="tab-3") 
+                    a.fs-16.d-flex.justify-content-between.align-items-center(href="javascript:void(0);") 
+                        span.fs-lg-18 Markalar
+                    .lv2.pt-30
+                        .ems-field.input-search.border-bottom
+                            input(type="text", name="search" placeholder="Konyalı Saat’te ara").ms-15.fs-16
+                            +icon('search').fs-20
+                        ul.list-unstyled.my-30.mt-lg-40.mb-lg-10.ems-scrollbar.ems-scrollbar-vertical
+                            -for(var i=0; i<2; i++)
+                                li.position-relative
+                                    a.check-btn.selected(href="javascript:void(0);" aria-label="check") 
+                                        span.ms-20 Longines (38)
+                                li.position-relative
+                                    a.check-btn.check(href="javascript:void(0);" aria-label="check") 
+                                        span.ms-20 Tissot (116)
+                                li.position-relative
+                                    a.check-btn.selected(href="javascript:void(0);" aria-label="check") 
+                                        span.ms-20 Frederique Constant (23)
+                                li.position-relative
+                                    a.check-btn(href="javascript:void(0);" aria-label="check") 
+                                        span.ms-20 Rado (32)
+                                li.position-relative
+                                    a.check-btn(href="javascript:void(0);" aria-label="check") 
+                                        span.ms-20 Wainer (74)
+                                li.position-relative
+                                    a.check-btn(href="javascript:void(0);" aria-label="check") 
+                                        span.ms-20 Hamilton (63)
+            ul.list-unstyled.accordion
+                li.border-bottom.py-20.selected(rel="tab-3") 
+                    a.fs-16.d-flex.justify-content-between.align-items-center(href="javascript:void(0);") 
+                        span.fs-lg-18 Fiyat Aralığı
+                    .lv2.list-unstyled.pt-30
+                        .values.d-flex.justify-content-between.align-items-center
+                            input(type="text", name="rangeValue1" placeholder="Min: 500 TL" id="rangeValuesMin").rangeValue.text-gray
+                            +icon("minus").fs-12.mx-15.mx-lg-30
+                            input(type="text", name="rangeValue1" placeholder="Max: 7.000 TL" id="rangeValuesMax").rangeValue.text-gray
+                            //span.rangeValues
+                        .range-slider.d-flex.mt-20.mt-lg-30.position-relative
+                            output#range1-tooltip.position-absolute
+                            input(type="range" min="500" max="7000"  value="500" id="range1" oninput="slideOne()").form-range
+                            output#range2-tooltip.position-absolute
+                            input(type="range" min="500" max="7000"  value="7000" id="range2" oninput="slideTwo()").form-range
+            ul.list-unstyled.accordion
+                li.border-bottom.py-20(rel="tab-2") 
+                    a.fs-16.d-flex.justify-content-between.align-items-center(href="javascript:void(0);") 
+                        span.fs-lg-18 Fırsatlar
+                    .lv2.list-unstyled.py-30
+                        span detay
+            ul.list-unstyled.accordion
+                li.border-bottom.py-20(rel="tab-2") 
+                    a.fs-16.d-flex.justify-content-between.align-items-center(href="javascript:void(0);") 
+                        span.fs-lg-18 Kasa Şekli
+                    .lv2.list-unstyled.py-30
+                        span detay
+            ul.list-unstyled.accordion.water-prof
+                li.border-bottom.py-20.selected(rel="tab-2") 
+                    a.fs-16.d-flex.justify-content-between.align-items-center(href="javascript:void(0);") 
+                        span.fs-lg-18 Su Geçirmezlik
+                    ul.lv2.list-unstyled.flex-wrap.py-30.gap-10.fs-14
+                        li.bg-light.py-10.text-center.position-relative.selected
+                            a.stretched-link(href="javascript:void(0);" aria-label="check") 
+                                span 3 atm
+                        li.bg-light.py-10.text-center.position-relative
+                            a.stretched-link(href="javascript:void(0);" aria-label="check") 
+                                span 5 atm
+                        li.bg-light.py-10.text-center.position-relative
+                            a.stretched-link(href="javascript:void(0);" aria-label="check") 
+                                span 7 atm
+                        li.bg-light.py-10.text-center.position-relative
+                            a.stretched-link(href="javascript:void(0);" aria-label="check") 
+                                span 10 atm
+            ul.list-unstyled.accordion
+                li.border-bottom.py-20(rel="tab-2") 
+                    a.fs-16.d-flex.justify-content-between.align-items-center(href="javascript:void(0);") 
+                        span.fs-lg-18 Cam Tipi
+                    .lv2.list-unstyled.py-30
+                        span detay
+            ul.list-unstyled.accordion
+                li.border-bottom.py-20(rel="tab-2") 
+                    a.fs-16.d-flex.justify-content-between.align-items-center(href="javascript:void(0);") 
+                        span.fs-lg-18 Kasa Çapı
+                    .lv2.list-unstyled.py-30
+                        span detay
+            ul.list-unstyled.accordion.case-color
+                li.border-bottom.py-20.selected(rel="tab-2") 
+                    a.fs-16.d-flex.justify-content-between.align-items-center(href="javascript:void(0);") 
+                        span.fs-lg-18 Kasa Rengi
+                    ul.lv2.list-unstyled.flex-wrap.py-30.gap-10
+                        li.bg-light.p-10.position-relative
+                            a.check-btn.stretched-link.d-flex.justify-content-between.selected(href="javascript:void(0);" aria-label="check") 
+                                span.ms-30 Rose
+                                span.prd-filter-color(style="--filter-color:#FF8EF4")
+                        li.bg-light.p-10.position-relative
+                            a.check-btn.stretched-link.d-flex.justify-content-between(href="javascript:void(0);" aria-label="check") 
+                                span.ms-30 Altın
+                                span.prd-filter-color(style="--filter-color:#FFCE6E")
+                        li.bg-light.p-10.position-relative
+                            a.check-btn.stretched-link.d-flex.justify-content-between(href="javascript:void(0);" aria-label="check") 
+                                span.ms-30 Siyah
+                                span.prd-filter-color(style="--filter-color:#272117")
+                        li.bg-light.p-10.position-relative
+                            a.check-btn.stretched-link.d-flex.justify-content-between(href="javascript:void(0);" aria-label="check") 
+                                span.ms-30 Yeşil
+                                span.prd-filter-color(style="--filter-color:#59B963")
+            ul.list-unstyled.accordion
+                li.border-bottom.py-20(rel="tab-2") 
+                    a.fs-16.d-flex.justify-content-between.align-items-center(href="javascript:void(0);") 
+                        span.fs-lg-18 Kayış Rengi
+                    .lv2.list-unstyled.py-30
+                        span detay
+            ul.list-unstyled.accordion.prd-filter-tech
+                li.py-20(rel="tab-3") 
+                    a.fs-16.d-flex.justify-content-between.align-items-center(href="javascript:void(0);") 
+                        span.fs-lg-18 Teknoloji
+                        ul.lv2.list-unstyled.pt-30
+                            li.position-relative
+                                a.check-btn.selected(href="javascript:void(0);" aria-label="check") 
+                                    span.ms-20 Otomatik Bones (4)
+                            li.position-relative
+                                a.check-btn.check(href="javascript:void(0);" aria-label="check") 
+                                    span.ms-20 Güneş Enerjili (2)
+                            li.position-relative
+                                a.check-btn(href="javascript:void(0);" aria-label="check") 
+                                    span.ms-20 Takvimli Mekanizma (5)
+                            li.position-relative
+                                a.check-btn(href="javascript:void(0);" aria-label="check") 
+                                    span.ms-20 Otomatik (36)
+                            li.position-relative
+                                a.check-btn(href="javascript:void(0);" aria-label="check") 
+                                    span.ms-20 Quartz Pili (306)
+                            li.position-relative
+                                a.check-btn(href="javascript:void(0);" aria-label="check") 
+                                    span.ms-20 Multifonksiyon (71)
+        .modal-footer.p-10.bg-dark.text-white
+            .d-flex.align-items-center.justify-content-end.w-100
+                a.cart-footer-link.btn.btn-primary.d-flex.align-items-center.justify-content-end(href="#!" aria-label="search result") Sonuçları göster
+    //Filter Modal
