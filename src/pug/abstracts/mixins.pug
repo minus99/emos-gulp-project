@@ -63,7 +63,7 @@ mixin swiper(type = 'main', pagination = false, navigation = false, scrollbar = 
     breadcrumb(['Kadın', 'product-list.html'], ['Giyim', 'product-list.html'], ['Yeşil Kadın Triko', 'product-detail.html'])(class="knk")
 mixin breadcrumb(...items)
     nav.ems-breadcrumb(aria-label="breadcrumb")&attributes(attributes)
-        ol.breadcrumb.flex-nowrap.text-nowrap.ems-scrollbar.ems-scrollbar-hide.dark
+        ol.breadcrumb.flex-nowrap.text-nowrap.ems-scrollbar.ems-scrollbar-hide
             li.breadcrumb-item
                 a(href="index.html") 
                     +icon('point')
