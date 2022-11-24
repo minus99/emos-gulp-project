@@ -2,6 +2,7 @@
 .btn {
   width: fit-content;
   width: -moz-fit-content;
+  white-space: nowrap;
   border: none;
   // Reset
   @at-root {
@@ -54,10 +55,10 @@
   }
 
   // Theme Colors
-  /*&-primary {
-    background-color: $dark;
-    color: $white !important;
-  }*/
+  &-gray4 {
+    background-color: $gray4 !important;
+    color: $dark !important;
+  }
 
   &-dark-light {
     background-color: $btn-dark-light-bg-color !important;

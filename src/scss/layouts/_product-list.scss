@@ -1,9 +1,50 @@
-.prd-list-top {
-    .ems-breadcrumb {
-        position: absolute;
-        top: 30px;
-        left: 45px;
-        z-index: 2;
-        color: $gray3;
+.prd-list {
+    &-top {
+        min-height: 60px;
+        .ems-breadcrumb {
+            position: absolute;
+            top: 30px;
+            left: 45px;
+            z-index: 2;
+        }
+    }
+    &-progress {
+        width: 280px;
+        height: 4px;
+        margin: 12px auto;
+        border-radius: 0;
+    }
+    &-other {
+        li {
+            a {
+                &:hover {
+                    background: $gray;
+                }
+            }
+        }
+    }
+}
+.prd-blog-post {
+    .blog-title {
+        line-height: 1.15;
+        span {
+            opacity: 60%;
+        }
+    }
+}
+
+.ems-prd-list {
+    &-wrapper {
+        gap: 40px;
+    }
+}
+.filter-trigger {
+    &::before {
+        content: "";
+        background: $primary;
+        width: 4px;
+        height: 4px;
+        border-radius: 100%;
+        margin-right: 10px;
     }
 }

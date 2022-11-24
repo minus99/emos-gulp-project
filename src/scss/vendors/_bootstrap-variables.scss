@@ -291,8 +291,11 @@ $breadcrumb-padding-x: 0;
 $breadcrumb-item-padding-x: 10px;
 $breadcrumb-margin-bottom: 0;
 $breadcrumb-divider: quote('/');
-$breadcrumb-divider-color: $gray;
-$breadcrumb-active-color: $white;
+//$breadcrumb-divider-color: $gray;
+//$breadcrumb-active-color: $white;
+
+$progress-bg: $gray;
+$progress-bar-bg: $coral;
 
 // Utilities API :bootstrap/scss/utilities - https://getbootstrap.com/docs/5.1/utilities/api/#override-utilities
 $utilities: (

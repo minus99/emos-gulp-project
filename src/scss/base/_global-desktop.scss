@@ -24,14 +24,7 @@
 
 }
 
-.breadcrumb {
-    .breadcrumb-item {
-       color: #817A79;
-    }
-    &.dark {
-       .breadcrumb-item {
-         color: $white;
-       }
-    }
 
- } 
+ .ems-seo-text {
+    max-height: 210px;
+ }

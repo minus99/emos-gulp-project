@@ -12,7 +12,8 @@
 .ems-prd-list {
     &-wrapper {
         grid-template-columns: repeat(4, 1fr);
-        gap: 30px; 
+        gap: 4px;
+        row-gap: 50px;
         &.ems-prd-with-blog {
             li.prd-blog-post {
                 grid-area: 3 / 2 / span 1 / span 2;
