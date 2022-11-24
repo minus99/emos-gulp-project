@@ -343,6 +343,11 @@ $banner-arrow-size: 8px;
         color: $gray;
     }
 }
+.hr-title {
+    span {
+      color: $gray;
+  }
+}
 
 //Breadcrumb
 
@@ -364,4 +369,22 @@ $banner-arrow-size: 8px;
         }
       }
    }
+}
+
+.bg-gray4 {
+  background-color: $gray4 !important;
+}
+
+.ems-select {
+  &::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    background: url(../../frontend/images//arrow-down.svg);
+    background-repeat: no-repeat;
+  }
 }

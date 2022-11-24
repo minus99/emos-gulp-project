@@ -1,0 +1,48 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Koray Spor "
+    - var pageDescription = "Koray Spor "
+    - var pageName = "human-resources"
+    - var pageClass = ""
+
+block content
+    .container
+        +breadcrumb([pageName])
+        .row     
+            include includes/corporate-menu
+            .col-12.col-lg-4.mt-lg-40.p-lg-20
+                +hr-title()
+            .col-12.col-lg-8.d-flex.flex-column.mt-lg-40
+                +picture('m-hide', true, dirImages + 'corp/hr.png', dirImages + 'corp/hr.png', dirImages + 'corp/hr.png')(class="", alt="slide 1")
+                .hr-form-container.mt-40
+                    form.ems-form(action='/' method='POST' id="hr-form")
+                        .ems-field.form-floating.mb-20
+                            input#UserName.input-login.form-control.bg-gray4(type='text' name='UserName' placeholder='Ad' value='')
+                            label(for='UserName') Ad*
+                        .ems-field.form-floating.mb-20
+                            input#UserSurname.input-login.form-control.bg-gray4(type='text' name='UserSurname' placeholder='Soyad' value='')
+                            label(for='UserSurname') Soyad*
+                        .ems-field.form-floating.mb-20
+                            textarea.w-100.form-control.input-login.bg-gray4(placeholder="Mesajınız",  name="Message", cols="50", rows="4")
+                            label(for='Mesajınız') Mesajınız
+                        .ems-field.mb-30
+                            .d-flex.justify-content-between.align-items-center.border-bottom.py-10.bg-gray4.px-20
+                                span.text-gray Dosya Seçiniz 
+                                +icon("upload").fs-18
+                            input.w-100(type="file", id="FileInput", name="FileInput")
+                        .ems-field.d-flex.mt-10.mb-20 
+                            .me-10.pt-5
+                                // Styler kaldırılacak !!!
+                                .sStylerMainWrp.sStylerWrp_checkbox
+                                    .cStyler.checked
+                                        i.icon-checkbox
+                                        i.icon-checkbox-active
+                                    input(type="checkbox")
+                                // Styler kaldırılacak !!! 
+                            p.text-gray
+                                a.text-decoration-underline(href="javascript:void(0);") Kişisel Verilerin Korunması 
+                                | ve 
+                                a.text-decoration-underline(href="javascript:void(0);") İşlenmesi Aydınlatma Metni
+                                | ’ni okudum, kabul ediyorum.
+                        button.btn.btn-dark.w-100.btn-lg(type="button") Gönder

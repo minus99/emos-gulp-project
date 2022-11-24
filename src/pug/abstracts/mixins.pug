@@ -146,7 +146,13 @@ mixin section-title(title, showAllLink = false)
             a.link-primary.fw-bold(href=showAllLink) Tümünü Gör
                 +icon('arrow-r')
 
-//- Speacial Title That Has 2 Color             
+//- Speacial Title That Has 2 Colo
+mixin contact-title(title, showAllLink = false)
+        p.hr-title.fs-24.fs-lg-36.fw-600 Dilediğin zaman bizimle <br> iletişime geçebilir <span>sin. Size <br> yardımcı olmak için buradayız.</span>    
+mixin corparate-title(title, showAllLink = false)
+        p.hr-title.fs-24.fs-lg-36.fw-600 Takım ruhu bizim<br> do<span>ğamızda var</span>         
+mixin hr-title(title, showAllLink = false)
+        p.hr-title.fs-24.fs-lg-36.fw-600 Çalışırken de endorfin şart <br> diyorsan, Koray Sp<span>or'da <br> kariyer fırsatlarına göz <br> atabilirsin.</span>
 mixin special-title(title, showAllLink = false)
         .d-lg-flex.align-items-center.justify-content-between
             .special-title-wrapper.w-lg-50

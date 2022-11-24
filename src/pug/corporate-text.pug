@@ -1,0 +1,23 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Koray Spor "
+    - var pageDescription = "Koray Spor "
+    - var pageName = "human-resources"
+    - var pageClass = ""
+
+block content
+    .container
+        +breadcrumb([pageName])
+        .row     
+            include includes/corporate-menu
+            .col-12.col-lg-4.mt-lg-40.p-lg-20
+                +corparate-title()
+            .col-12.col-lg-8.d-flex.flex-column.mt-lg-40
+                +picture('m-hide', true, dirImages + 'corp/takim.png', dirImages + 'corp/takim.png', dirImages + 'corp/takim.png')(class="", alt="slide 1")
+                .mt-40
+                    h3.fs-16.fw-600 Markanıza Özel Üretim
+                    p.fs-13.mt-5 Markanıza özel üretim Size özel hazırlanacak ürünler için bizimle iletişime geçebilirsiniz. 
+                    p.fs-13.mb-0 0 224 444 28 41  - Dahili 2001
+                    p.fs-13 Altıparmak Cad. No: 6 Osmangazi/BURSA
+                    p.mt-10.fs-13 info@korayspor.com.tr
