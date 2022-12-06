@@ -15,6 +15,7 @@
 @import 'components/accordion';
 @import 'components/toastify';
 @import 'components/step-progress';
+@import 'components/corporate';
 
 // Layouts
 @import 'layouts/header';
@@ -48,6 +49,7 @@
   @import 'components/modal-mobile';
   @import 'components/accordion-mobile';
 
+
   // Layouts
   @import 'layouts/header-mobile';
   @import 'layouts/product-list-mobile';
@@ -69,10 +71,12 @@
   @import 'components/modal-desktop';
   @import 'components/accordion-desktop';
   @import 'components/step-progress-desktop';
+  @import 'components/corporate-desktop';
 
 
   // Layouts
   @import 'layouts/header-desktop';
+
 
   /* @import 'layouts/product-detail-desktop';*/
   @import 'layouts/product-list-desktop';

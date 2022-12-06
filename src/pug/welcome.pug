@@ -1,0 +1,19 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Koray Spor Welcome"
+    - var pageDescription = "Koray Spor Welcome"
+    - var pageName = "Welcome"
+    - var pageClass = ""
+
+block content
+    .welcome
+        .h-100.position-relative
+            +picture('m-hide', true, dirImages + 'login/login.png', dirImages + 'login/login.png', dirImages + 'login/login.png')(class="", alt="slide 1")
+            .welcome-overlay.position-absolute.w-100.h-100.top-0.d-flex.flex-column.align-items-center.justify-content-center.fs-32.lh-1.text-center
+                .card.bg-lg-white.d-flex.flex-column.align-items-center.p-lg-100
+                    +icon("checked-big").fs-70
+                    h2.fs-lg-26.fs-24.fw-600.mt-20 Aramıza Hoş Geldiniz.
+                    span.fs-16.mt-10.l-h-20 Üyelik işleminiz başarıyla tamamlandı. 
+                    a.btn.btn-black.mt-20.btn-lg.w-100(href="#!") Alışverişe Başla
+                
