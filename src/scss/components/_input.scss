@@ -257,66 +257,82 @@ input, textarea, select {
 //     transform: rotate(135deg);
 //   }
 
-//   //checkbox
-//   .check-btn {
-//     &::before {
-//         content: "";
-//         position: absolute;
-//         width: 16px;
-//         height: 16px;
-//         border: 1px solid $gray;
-//         cursor: pointer;
-//         top: calc(50% - 8px);
-//         left: 0;
-//     }
-//     &-reverse {
-//         &::before {
-//             left: auto;
-//             right: 0;
-//         }
-//         span {
-//             margin-left: 30px;
-//         }
-//     }
+  //checkbox
+  .check-btn {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border: 2px solid $gray3;
+        border-radius: 2px;
+        cursor: pointer;
+        left: 0;
+        top: 0;
+    }
+    &-reverse {
+        &::before {
+            left: auto;
+            right: 0;
+        }
+        span {
+            margin-left: 30px;
+        }
+    }
 
-//     &-radio {
-//         &::before {
-//             border-radius: 50%;
-//         }
-//     }
+    &-radio {
+        &::before {
+            border-radius: 50%;
+        }
+    }
 
-//     &.selected {
-//         &::before {
-//             border: none;
-//             background-color: $primary;
-//             background-image: escape-svg($form-check-input-checked-bg-image);
-//         }
-//     }
-// }
+    &.selected {
+        &::before {
+            border: 2px solid $accent;
+            background-color: $white;
+            background-image: escape-svg($form-check-input-checked-bg-image);
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            border: 2px solid $accent;
+            border-radius: 1px;
+            background-color: $accent;
+            left: 4px;
+            top: 4px;
+            width: 8px;
+            height: 8px;
+        }
+    }
+}
 
-// //Cost Range Slider 
-//     input[type="text"].rangeValue {
-//         background: $light;
-//         width: 100%;
-//         border: none;
-//         padding: 10px 15px;
-//         &::placeholder {
-//             color: $gray !important;
-//         }
-//         &::-webkit-input-placeholder {
-//             color: $gray !important;;
-//         }
-//         &:-moz-placeholder { /* Firefox 18- */
-//             color: $gray !important;;  
-//         }
-//         &::-moz-placeholder {  /* Firefox 19+ */
-//             color: $gray;  
-//         }
+//Cost Range Slider 
+    input[type="text"].rangeValue {
+        background: #817A79;
+        width: 100%;
+        border: none;
+        padding: 10px 15px;
+        &::placeholder {
+            color: #817A79 !important;
+        }
+        &::-webkit-input-placeholder {
+            color: #817A79 !important;;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+            color: #817A79 !important;;  
+        }
+        &::-moz-placeholder {  /* Firefox 19+ */
+            color: #817A79;  
+        }
         
-//         &:-ms-input-placeholder {  
-//             color: $gray;  
-//         }
-//   }
+        &:-ms-input-placeholder {  
+            color: #817A79;  
+        }
+  }
 
 // .range-slider {
 //     height: 90px;
@@ -346,12 +362,63 @@ input, textarea, select {
 //     display: block;
 //     width: fit-content;
 //     width: -moz-fit-content;
-//     color: $primary;
+//     color: $accent;
 //     left: 50%;
 //     transform: translate(-50%, 0);
 //   }
 
+input[type=range] {
+    border: none !important;
+    &*, &:focus, &:hover {
+        outline: none;
+       
+    }
+    &.range-max {
+        &::-webkit-slider-thumb, &:focus::-webkit-slider-thumb {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCA0OCAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMC41IiB5PSIwLjUiIHdpZHRoPSI0NyIgaGVpZ2h0PSIzNSIgcng9IjE3LjUiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0yMS41ODYzIDIxLjUzNTVMMjYuNTM2MSAxNi41ODU4TDI3Ljk1MDMgMThMMjMuMDAwNSAyMi45NDk3TDIxLjU4NjMgMjEuNTM1NVoiIGZpbGw9IiMxQTE4MTgiLz4KPHBhdGggZD0iTTIxLjU4NjMgMTQuNDY0NUwyMy4wMDA1IDEzLjA1MDNMMjcuOTUwMyAxOEwyNi41MzYxIDE5LjQxNDJMMjEuNTg2MyAxNC40NjQ1WiIgZmlsbD0iIzFBMTgxOCIvPgo8cmVjdCB4PSIwLjUiIHk9IjAuNSIgd2lkdGg9IjQ3IiBoZWlnaHQ9IjM1IiByeD0iMTcuNSIgc3Ryb2tlPSIjQ0FDNkM2Ii8+Cjwvc3ZnPgo=");
+        }
+    }
+    &::-webkit-slider-thumb, &:focus::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 48px;
+        height: 36px;
+        margin-top: -18px;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCA0OCAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iLTAuNSIgeT0iMC41IiB3aWR0aD0iNDciIGhlaWdodD0iMzUiIHJ4PSIxNy41IiB0cmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgMSA0NyAwKSIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTI2LjQxMzcgMjEuNTM1NUwyMS40NjM5IDE2LjU4NThMMjAuMDQ5NyAxOEwyNC45OTk1IDIyLjk0OTdMMjYuNDEzNyAyMS41MzU1WiIgZmlsbD0iIzFBMTgxOCIvPgo8cGF0aCBkPSJNMjYuNDEzNyAxNC40NjQ1TDI0Ljk5OTUgMTMuMDUwM0wyMC4wNDk3IDE4TDIxLjQ2MzkgMTkuNDE0MkwyNi40MTM3IDE0LjQ2NDVaIiBmaWxsPSIjMUExODE4Ii8+CjxyZWN0IHg9Ii0wLjUiIHk9IjAuNSIgd2lkdGg9IjQ3IiBoZWlnaHQ9IjM1IiByeD0iMTcuNSIgdHJhbnNmb3JtPSJtYXRyaXgoLTEgMCAwIDEgNDcgMCkiIHN0cm9rZT0iI0NBQzZDNiIvPgo8L3N2Zz4K");
+    }
 
+    &::-webkit-slider-runnable-track {
+        background-color: $gray;
+        height: 4px;
+    }
+    &::before {
+        content: "";
+        height: 4px;
+        background-color: $gray3;
+        width: 26px;
+        position: absolute;
+        top: 10px;
+        z-index: -1;
+    }
+    &.range-max::before {
+        right: 0;
+    }
+    &.range-min::before {
+        left: 0;
+    }
+    
+}
+
+.range-output {
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8125rem;
+    font-weight: 600;
+}
 
 .ems-field{
     .show-pass-button {
@@ -395,7 +462,7 @@ input, textarea, select {
 .custom-dropdown {
     &-menu {
         min-width: 128px !important;
-        top: 43px;
+        top: 42px;
         border: 0 !important;
         padding: 16px 24px !important;
     }

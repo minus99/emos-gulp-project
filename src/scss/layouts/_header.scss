@@ -96,15 +96,7 @@
       }
     }
   }
-    .search-suggest-list {
-        ul {
-            li > a {
-                background-color: $gray4;
-                padding: 8px 16px;
-                border-radius: 50px;
-            }
-        }
-    }
+
     &-no-results {
         .no-result-icon {
             width: 65px;
@@ -118,4 +110,13 @@
             }
         }
     }
+}
+.search-suggest-list {
+  ul {
+      li > a {
+          background-color: $gray4;
+          padding: 8px 16px;
+          border-radius: 50px;
+      }
+  }
 }

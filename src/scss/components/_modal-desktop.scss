@@ -63,7 +63,7 @@
     width: 100%;
     height: 100%;
     border-radius: 0;
-    max-width: 540px;
+    max-width: 580px;
     opacity: 0;
     pointer-events: none;
     transform: translateX(75%);
@@ -150,10 +150,7 @@
 
 //Filter Modal
 .ems-prd-filter {
-    width: 540px !important;
-    // display: block !important;
-    // transform: translateX(0) !important;
-    // opacity: 1 !important;
+    width: 580px !important;
     &-ready & {
         @extend  %ems-modal-lg-ready;
     }

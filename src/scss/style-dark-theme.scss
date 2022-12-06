@@ -30,6 +30,7 @@
 @import 'modules/single-banner';
 @import 'modules/product-widget';
 @import 'modules/login';
+@import 'modules/sneakers';
 /*@import 'modules/story';
 @import 'modules/double-circle';
 @import 'modules/product-widget';
@@ -49,7 +50,7 @@
 
   // Layouts
   @import 'layouts/header-mobile';
-  //@import 'layouts/product-list-mobile';
+  @import 'layouts/product-list-mobile';
 
   //Modules
   @import 'modules/square-mobile';

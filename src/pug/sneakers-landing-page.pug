@@ -1,0 +1,58 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Sneakers Home"
+    - var pageDescription = "Sneakers Home"
+    - var pageName = ""
+    - var pageClass = "header-type-3"
+
+block content
+    .container.px-lg-50
+        .row.g-5.gy-30
+            -for(var i=0; i<3; i++)
+                .col-12.col-lg-4
+                    .position-relative.card-prd
+                        +picture('ratio ratio-343x334 ratio-lg-540x524', dirUploads + 'product-detail/shoes-2.png', dirUploads + 'product-detail/shoes-2.png', dirUploads + 'product-detail/shoes-2.png')(class="w-100 img-fluid", alt="slide 1")
+                        .mt-10.d-flex.align-items-end.justify-content-between
+                            div
+                                h3.fs-16 Nike
+                                span.fs-16.mt-15 Nike Jordan Delta 2
+                            span.fs-13.text-gray2 Erkek Basketbol Ayakkabısı
+    .container.px-lg-50.mt-40
+        .row.g-5.gy-30
+            -for(var i=0; i<3; i++)
+                .col-12.col-lg-4
+                    .position-relative.card-prd
+                        +picture('ratio ratio-343x334 ratio-lg-540x524', dirUploads + 'sneakers-landing-page/sneaker-rectangle-mobile.jpg', dirUploads + 'sneakers-landing-page/sneaker-rectangle.jpg', dirUploads + 'sneakers-landing-page/sneaker-rectangle-mobile.jpg')(class="w-100 img-fluid", alt="slide 1")
+                        .mt-20.d-flex.justify-content-center
+                            span.fs-16.fw-600 Efsane stil yenilendi
+    .sneaker-single.container.px-lg-50.mt-40
+        .position-relative
+            +picture('ratio ratio-375x540 ratio-lg-1580x540', dirUploads + 'sneakers-landing-page/sneakers.jpg', dirUploads + 'sneakers-landing-page/sneakers-desktop.jpg', dirUploads + 'sneakers-landing-page/sneakers.jpg')(class="w-100 img-fluid", alt="slide 1")
+            .sneakers-single-text.position-absolute
+                p.sneakers-title.fs-32.fs-lg-40.fw-600 Kendin Olmaktan 
+                    span Korkma
+    .container.px-lg-50.mt-40
+        .row.g-5.gy-30
+            -for(var i=0; i<3; i++)
+                .col-12.col-lg-4
+                    .position-relative.card-prd
+                        +picture('ratio ratio-343x334 ratio-lg-540x524', dirUploads + 'product-detail/shoes-2.png', dirUploads + 'product-detail/shoes-2.png', dirUploads + 'product-detail/shoes-2.png')(class="w-100 img-fluid", alt="slide 1")
+                        .mt-10.d-flex.align-items-end.justify-content-between
+                            div
+                                h3.fs-16 Nike
+                                span.fs-16.mt-15 Nike Jordan Delta 2
+                            span.fs-13.text-gray2 Erkek Basketbol Ayakkabısı
+    .container.px-lg-50.mt-40
+        .row.g-5.gy-30
+            -for(var i=0; i<3; i++)
+                .col-12.col-lg-4
+                    .position-relative.card-prd
+                        +picture('ratio ratio-343x334 ratio-lg-540x524', dirUploads + 'sneakers-landing-page/sneaker-rectangle-mobile.jpg', dirUploads + 'sneakers-landing-page/sneaker-rectangle.jpg', dirUploads + 'sneakers-landing-page/sneaker-rectangle-mobile.jpg')(class="w-100 img-fluid", alt="slide 1")
+                        .mt-20.d-flex.justify-content-center
+                            span.fs-16.fw-600 Efsane stil yenilendi
+    .container.px-lg-50.mt-40.mt-lg-100
+        .text-center
+            span.fw-600.fs-13 28  /  841
+            .prd-list-progress.progress
+                .progress-bar.bg-coral(role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 20%")

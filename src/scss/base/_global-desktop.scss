@@ -28,3 +28,19 @@
  .ems-seo-text {
     max-height: 210px;
  }
+ .object-scale {
+    .prm-media {
+        object-fit: cover;
+        overflow: hidden;
+        img {
+            transition: all .32s ease-in-out;
+        }
+    }
+    &:hover {
+        .prm-media {
+            img {
+                transform: scale(1.2);
+            }
+        }
+    }
+ }

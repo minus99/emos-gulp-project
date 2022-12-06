@@ -115,6 +115,10 @@
             @extend %ems-modal-animate-overlay;
         }
     }
+    .custom-dropdown-menu {
+        top: 30px;
+        min-width: 112px !important;
+    }
 }
 
 //Search

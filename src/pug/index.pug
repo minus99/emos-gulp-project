@@ -34,42 +34,39 @@ block content
     
     .square-section.container.px-0.px-lg-30.mt-60
         .row.g-5
-            .col-12.col-lg-6
-                +square-banner()
-            .col-12.col-lg-6
-                +square-banner()
+            -for(var i=0; i<2; i++)
+                .col-12.col-lg-6
+                    +square-banner()
+
     .container.px-lg-30
         +special-title()
         
     .rectangle-section.container.px-0.px-lg-30.mt-60
         .row.g-5.g-lg-10
-            .col-12.col-lg-4
-                +rectangle-banner()
-            .col-12.col-lg-4
-                +rectangle-banner()
-            .col-12.col-lg-4
-                +rectangle-banner()
-    .single-banner.container.px-0.px-lg-30.mt-60
+            -for(var i=0; i<3; i++)
+                .col-12.col-lg-4
+                    +rectangle-banner()
+    .single-banner.container.px-0.mt-60.py-60
         .w-100.w-lg-75.mx-lg-auto.text-center
             .single-banner-media
                 +picture('ratio ratio-single-banner', dirUploads + 'banner/single-banner.jpg', dirUploads + 'banner/single-banner.jpg', dirUploads + 'banner/single-banner-mobile.jpg')(class="card-img", alt="slide 1")
-            .mt-20.mt-lg-40
+            .single-banner-text.mt-20.mt-lg-40
                 h3.fs-32.fs-lg-50.fw-600.mx-10 Tüm Gün Oyun Keyfi
                 a.btn.btn-dark-light.btn-lg.mt-20.mt-lg-30(href="javascript:void(0)") Ürünleri Keşfet
-    .single-banner.container.px-0.px-lg-30.mt-60.type-video
+    .single-banner.container.px-0.mt-60.type-video.type-bg-dark.py-60
         .w-100.w-lg-75.mx-lg-auto.text-center
             .single-banner-media
                 .prm-media.ratio.ratio-single-banner
-                    video(id="video" poster=dirUploads +"banner/video-banner.jpg" preload="none" autobuffer="autobuffer" playsinline="true" muted="true")    
+                    video(id="single-video" poster=dirUploads +"banner/video-banner.jpg" preload="none" autobuffer="autobuffer" playsinline="true" muted="true")    
                         source(src="https://player.vimeo.com/progressive_redirect/playback/769802231/rendition/720p/file.mp4?loc=external&signature=9a408598285bb20e9bdbf3057c9e2242fea655179e4d8237640fd020bed51b0a" type="video/mp4")
                 a.btn.btn-white.btn-sm.position-absolute.btn-iframe-trigger.btn-play.px-10.py-0(id="btn-iframe-trigger" href="javascript:void(0)" aria-label="play")
                     +icon("play-small")
-                .position-absolute(id="meta")
-                a.btn.btn-white.btn-sm.position-absolute.btn-sound.px-10.py-0(href="javascript:void(0)" aria-label="play")
-                    +icon("sound")
-            
-            .mt-20.mt-lg-40
+                //.position-absolute(id="meta")
+                a.btn.btn-white.btn-sm.position-absolute.btn-sound.px-10.py-0(href="javascript:void(0)" id="btn-sound-trigger" aria-label="play")
+                    +icon("sound-muted")
+            .single-banner-text.mt-20.mt-lg-40
                 h3.fs-32.fs-lg-50.fw-600.mx-10 Ultra Hafif <br>Ultra Hızlı ve <br>Ultra Sağlam
+                h4.fs-16.text-gray.mt-20.fw-400 Bugüne kadarki en inovatif patika koşu ve yürüyüş teknolojisi.
                 a.btn.btn-dark-light.btn-lg.mt-20.mt-lg-30(href="javascript:void(0)") Ürünleri Keşfet
    
     //.main-watch
@@ -89,8 +86,8 @@ block content
     .main-slider-wrapper.type-2.container.px-0.px-lg-10.mt-50
         +swiper('mainSlider', false, true, false, true)(class="main-slider")
             -for(var i=0; i<5; i++)
-                li.swiper-slide
-                    .ratio.ratio-main-slider-mobile-2.ratio-md-main-slider-2.ratio-lg-main-slider
+                li.swiper-slide.object-scale
+                    .prm-media.ratio.ratio-main-slider-mobile-2.ratio-md-main-slider-2.ratio-lg-main-slider
                         picture
                             source.lazy-picture(media='(max-width:0)' srcset='frontend/images/1x1.svg')
                             source(media='(max-width: 767px)' srcset='uploads/slider/main-slider-mobile-2.jpg, uploads/slider/main-slider-mobile-2.jpg 2x')

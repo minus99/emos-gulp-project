@@ -14,7 +14,18 @@
     &-media {
         position: relative;
     }
-    /*.slide-video {
-        display: none;
-    }*/
+    &.type-bg-dark {
+        background-image: url(#{$dir-images + 'dark-bg.png'});
+        background-repeat: no-repeat;
+        background-size: cover;
+        .btn-dark-light {
+            background-color: $white !important;
+            border-color: $white !important;
+            color: $dark !important;
+        }
+        .single-banner-text {
+            color:$white;
+        }
+    }
+
 }

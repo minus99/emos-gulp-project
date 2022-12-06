@@ -112,7 +112,7 @@ mixin product()
             +picture('ratio ratio-prd', dirUploads + 'product-detail/shoes-2.png', dirUploads + 'product-detail/shoes-2.png', dirUploads + 'product-detail/shoes-2.png')(class="w-100 img-fluid", alt="slide 1")
             .card-brand.position-absolute.fs-10.fs-lg-11.text-dark
                 span Adidas
-            .card-badge.position-absolute.d-none.d-lg-flex
+            .card-badge.position-absolute.d-flex
                 +icon("elite")
                 +icon("elite")
         .card-body.p-5.p-lg-10.d-flex.flex-column.justify-content-end
@@ -126,13 +126,13 @@ mixin product()
         a.stretched-link(href="product-detail.html")
 
 mixin square-banner()
-    .square-banner.position-relative
+    .square-banner.position-relative.object-scale
         +picture('ratio ratio-square-banner-mobile ratio-lg-square-banner', dirUploads + 'banner/banner2x.png', dirUploads + 'banner/banner2x.png', dirUploads + 'banner/banner.png')(class="card-img", alt="slide 1")
         .banner-overlay
             h3.fs-20.fs-lg-30 Y2K’dan İlham Aldı
             p.fs-14.fs-lg-16.mt-10 Koleksiyonu keşfet
 mixin rectangle-banner()
-    .rectangle-banner.position-relative
+    .rectangle-banner.position-relative.object-scale
         +picture('ratio ratio-rectangle-banner-mobile ratio-lg-rectangle-banner', dirUploads + 'home-category/kadin-mobile.jpg', dirUploads + 'home-category/kadin.jpg', dirUploads + 'home-category/kadin-mobile.jpg')(class="card-img", alt="slide 1")
         .rectangle-banner-overlay
             a.btn.btn-white(href="javascript:void(0)")
