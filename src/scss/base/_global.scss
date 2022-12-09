@@ -402,3 +402,22 @@ $banner-arrow-size: 8px;
     background-repeat: no-repeat;
   }
 }
+
+.card {
+  &-rating {
+    &-bar,
+    &-current {
+        --star-qty: 5;
+        --star-width: 13px;
+        --star-ratio: .85;
+        background-image: url(#{$dir-images + 'rating.svg'});
+        background-size: var(--star-width);
+        background-position: left bottom;
+        width: calc(var(--star-qty) * var(--star-width));
+        height: calc(var(--star-ratio) * var(--star-width));
+    }
+    &-current {
+        background-position: left top;
+    }
+}
+}

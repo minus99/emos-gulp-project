@@ -1,0 +1,32 @@
+.prd {
+    &-grid {
+        display: grid;
+        grid-template-areas: 'prd-gallery prd-gallery prd-gallery prd-gallery prd-gallery prd-detail-top'
+                            'prd-gallery prd-gallery prd-gallery prd-gallery prd-gallery prd-detail-bottom';
+    }
+    &-detail-top {
+        grid-area: prd-detail-top;
+        margin: 0 16px;
+    }
+    &-detail-bottom {
+        grid-area: prd-detail-bottom;
+    }
+    &-detail-info {
+        span {
+            &:first-child {
+                display: inline;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    &-gallery {
+        grid-area: prd-gallery;
+    }
+    &-features {
+        &-media {
+            .prm-media {
+                width: 50%;
+            }
+        }
+    }
+}

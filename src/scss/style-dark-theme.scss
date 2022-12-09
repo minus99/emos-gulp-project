@@ -19,7 +19,7 @@
 // Layouts
 @import 'layouts/header';
 @import 'layouts/product-category';
-//@import 'layouts/product-detail';
+@import 'layouts/product-detail';
 @import 'layouts/product-list';
 
 //Modules
@@ -74,7 +74,7 @@
   // Layouts
   @import 'layouts/header-desktop';
 
-  /* @import 'layouts/product-detail-desktop';*/
+  @import 'layouts/product-detail-desktop';
   @import 'layouts/product-list-desktop';
 
   //Modules

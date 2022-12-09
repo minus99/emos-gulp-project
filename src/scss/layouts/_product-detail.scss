@@ -1,0 +1,34 @@
+.prd {
+    &-detail-top {
+        margin: 0 16px;
+    }
+    &-detail-info {
+        gap:10px;
+        span {
+            font-size: 12px;
+            &:first-child {
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    &-gallery {
+
+    }
+    &-features-icons {
+        .prm-media {
+            width: 80px;
+            height: 80px;
+        }
+    }
+    &-features {
+        &-media {
+            background: $gray4;
+            .prm-media {
+                width: 75%;
+                margin: 0 auto;
+            }
+        }
+    }
+}

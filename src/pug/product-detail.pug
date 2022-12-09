@@ -4,6 +4,65 @@ block prepend head
     - var pageTitle = "Korayspor Product Detail"
     - var pageDescription = "Product Detail sayfası, Korayspor"
     - var pageName = "product-detail"
-    - var pageClass = "breadcrumb-white"
+    - var pageClass = ""
 
-block content 
+block content
+    .container.px-lg-50
+        +breadcrumb(['Erkek', '/list'], ['Ayakkabı', '/list'], ['Günlük'])
+    .container.px-0.px-lg-50
+        .prd-grid
+            .prd-detail-top
+                .card-rating.mt-5.d-flex.align-items-center.mt-lg-10.mb-10
+                  .card-rating-bar
+                    .card-rating-current(style="--star-qty: 3.5;")
+                  .fs-12.ms-10 34 Değerlendirme, 9 Yorum
+               
+                p.fs-12.fw-600.d-none.d-lg-block Ürün kodu: 015M101117B
+                h1.fs-24.fs-lg-30.fw-600 Air Zoom Vomero 16
+                h2.fs-12.fw-400.mt-10.text-gray2 Erkek Koşu Ayakkabısı
+                p.fs-16.fw-700.mt-10 2.179,90 TL
+                .prd-detail-info.mt-20
+                    span.me-30 21,79 TL Puan
+                    span.me-30 Anlaşmalı kartlara 4 taksit
+                    span.me-30 Ücretsiz kargo
+
+            .prd-gallery
+                +swiper('WidgetProgressbar', false, false, true).ems-prdd-gallery.mt-20.mobi-swiper
+                    - for (var pdp = 1; pdp < 7; pdp++)
+                        li.swiper-slide
+                            +img('ratio ratio-prd', true, dirUploads + "product-detail/product/" + pdp + ".png")
+            .prd-detail-bottom
+                p detail bottom
+    .container.px-lg-50
+        .py-50.w-lg-50.border-top
+            span.fs-24.fw-700 Özellikler
+            ul.prd-features-icons.list-unstyled.mt-30.d-flex
+                li 
+                    +img('ratio ratio-1x1 ratio-bg-remove', true, dirUploads + "features/primeknit.svg")
+                li 
+                    +img('ratio ratio-1x1 ratio-bg-remove', true, dirUploads + "features/kaztuyu.svg")
+                li 
+                    +img('ratio ratio-1x1 ratio-bg-remove', true, dirUploads + "features/goretex.svg")
+
+    .container.px-lg-50
+        .py-50.w-lg-50.border-top
+            h4.fs-32.fs-lg-54.fw-600 Air Zoom <br> Vomero 16
+            p.fs-18.fs-lg-20.my-20 Koşuya özel tasarlanan ayakkabılarda gereksinim duyacağınız tüm özellikleri bir araya getiren Nike Air Zoom Vomero 16; kaliteli yastıklama teknolojileri ve Nike Zoomx köpük topuk desteği ile maksimum performans sunuyor.
+            p Erkek koşu grubuna özel; 40- 46 numara aralığında üretimi yapılan Air Zoom Vomero 16 kolay aşınmayan dayanıklı tasarımı ile daha uzun süre kullanmanıza neden olacaktır. Konforlu yapısının yanı sıra sezonun trend renk seçenekleri ile oldukça şık ve sportif bir tasarıma sahiptir.
+            p Dil ve topuk bölgesine özel olarak yerleştirilmiş temas noktaları sayesinde, uzun süreli kullanımlarda ayağı yormaz. Vomero 5 modelinden ilham alarak tasarlanan Air Zoom Vomero 16; kolay kullanımı ve ekstra rahatlık sunan yapısı ile günlük kullanıma da uygundur.
+        .prd-features.w-lg-50.mt-50
+            .prd-features-media
+                +img('ratio ratio-prd', true, dirUploads + "product-detail/product/1.png")
+            .row.row-cols-1.row-cols-lg-2.g-60.mt-50
+                .col
+                    h5.fw-700.fs-24 Air Zoom Desteği
+                    p.mt-15 Topuk çevresinde hızlı tepki veren ve yumuşak bir his veren Air Zoom birimleri, önceki modellere kıyasla Air Zoom Vomero 16 da daha konforlu bir formda hazırlanmıştır. Air Zoom Vomero 16, optimize edilmiş Zoom yastıklama ile kullanıcıların vazgeçilmezi oluyor.
+                .col
+                    h5.fw-700.fs-24 Hava Sirkülasyon Sistemi
+                    p.mt-15 Topuk çevresinde hızlı tepki veren ve yumuşak bir his veren Air Zoom birimleri, önceki modellere kıyasla Air Zoom Vomero 16 da daha konforlu bir formda hazırlanmıştır. Air Zoom Vomero 16, optimize edilmiş Zoom yastıklama ile kullanıcıların vazgeçilmezi oluyor.
+                .col
+                    h5.fw-700.fs-24 Teknik Özellikler
+                    p.mt-15 Topuk çevresinde hızlı tepki veren ve yumuşak bir his veren Air Zoom birimleri, önceki modellere kıyasla Air Zoom Vomero 16 da daha konforlu bir formda hazırlanmıştır. Air Zoom Vomero 16, optimize edilmiş Zoom yastıklama ile kullanıcıların vazgeçilmezi oluyor.
+                .col
+                    h5.fw-700.fs-24 Ürün Özellikleri
+                    p.mt-15 Menşei: Çin<br>Spor Dalı: Koşu
