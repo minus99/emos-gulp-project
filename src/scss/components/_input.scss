@@ -457,7 +457,14 @@ input[type=range] {
         padding: 1.063rem 0 !important;
     }
 }
-
+.not-floating {
+    label {
+        transform: none !important;
+    }
+    input {
+        padding: 11px !important;
+    }
+}
 //Dropdown
 .custom-dropdown {
     &-menu {
