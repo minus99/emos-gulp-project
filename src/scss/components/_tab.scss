@@ -2,12 +2,10 @@
     &-bordered {
         .ems-tab-header {
             a {
-                color: $gray;
-                border-bottom: solid 1px rgba(119,113,103,.3);
-                margin-right: 0;
+                border-bottom: 1px solid $gray;
                 &.selected {
                     color: $black;
-                    border-color: $primary;
+                   
                 }
             }
         }
@@ -15,7 +13,7 @@
     &-header {
         a {
             color: $black;
-            margin-right: 15px;
+            margin-right: 10px;
             &.selected {
                 color: $primary;
             }

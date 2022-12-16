@@ -32,6 +32,8 @@
 @import 'modules/login';
 @import 'modules/sneakers';
 @import 'modules/square';
+@import 'modules/wizard';
+
 
 // MOBILE (< $breakpoint-lg)
 @media (max-width: $breakpoint-lg - 1) {
@@ -75,13 +77,5 @@
   @import 'modules/cookies-desktop';
  
   @import 'modules/login-desktop';
-  /*@import 'modules/story-desktop';
-  @import 'modules/double-circle-desktop';
-  @import 'modules/login-desktop';
-
-  @import 'modules/gift-guide-desktop';
-  @import 'modules/inspiration-desktop';
-  @import 'modules/accesories-desktop';
-  @import 'modules/compare-desktop';
-  @import 'modules/circle-slider-desktop';*/
+  @import 'modules/wizard-desktop';
 }

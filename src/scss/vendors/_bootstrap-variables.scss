@@ -261,14 +261,14 @@ $form-check-input-bg: tranparent;
 // Navs :846
 $nav-link-padding-y: 0.625rem; // 10px
 $nav-link-padding-x: 0.625rem; // 10px
-
+$nav-link-border-color: $gray;
 $nav-tabs-border-color: $border-color;
 $nav-tabs-border-width: 1px;
 $nav-tabs-border-radius: 0;
-$nav-tabs-link-hover-border-color: transparent transparent $primary transparent;
-$nav-tabs-link-active-color: $black;
+$nav-tabs-link-hover-border-color: transparent transparent $coral transparent;
+$nav-tabs-link-active-color: $coral;
 $nav-tabs-link-active-bg: transparent;
-$nav-tabs-link-active-border-color: transparent transparent $primary transparent;
+$nav-tabs-link-active-border-color: transparent transparent $coral transparent;
 
 // Cards :994
 $card-spacer-y: 0;
