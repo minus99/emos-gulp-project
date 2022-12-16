@@ -363,6 +363,9 @@ $banner-arrow-size: 8px;
     .icon-point {
         font-size: 6px !important;
     }
+    &-container {
+      background: #EEEBEA;
+    }
 
     &-white {
         .breadcrumb {
@@ -380,13 +383,10 @@ $banner-arrow-size: 8px;
         }
     }
     &-absolute {
-      position: relative;
-      .ems-breadcrumb {
         position: absolute;
         top: 30px;
         left: 45px;
         z-index: 2;
-    }
     }
 
 }

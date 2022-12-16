@@ -7,9 +7,9 @@ block prepend head
     - var pageClass = "breadcrumb-white view-6 view-2"
 
 block content 
-    .wizard-landing.breadcrumb-absolute
-        .container.px-0.px-lg-15
-            +breadcrumb(['Erkek', '/list'], ['Ayakkabı', '/list'], ['Günlük'])
+    .container.px-0.px-lg-15
+        .position-relative
+            +breadcrumb(['Erkek', '/list'], ['Ayakkabı', '/list'], ['Wizard']).breadcrumb-absolute
             +swiper('mainSlider', false, true, false, true, true)(class="main-slider")
                 -for(var i=0; i<5; i++)
                     li.swiper-slide

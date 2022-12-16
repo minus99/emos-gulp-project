@@ -3,12 +3,12 @@ extends layouts/default.pug
 block prepend head
     - var pageTitle = "Koray Spor "
     - var pageDescription = "Koray Spor "
-    - var pageName = "human-resources"
+    - var pageName = ""
     - var pageClass = ""
 
 block content
-    .corporate-breadcrumb-container.container.px-lg-50
-        +breadcrumb(['Anasayfa', '/list'], ['Kurumsal', '/list'], ['Hakkımızda'])
+    .breadcrumb-container.container.px-lg-50
+        +breadcrumb(['Anasayfa', '/list'], ['Kurumsal', '/list'], ['İletişim'])
     .corporate-sidebar-container.container.px-lg-50
         include includes/corporate-menu
     .container.mt-lg-40

@@ -1,12 +1,13 @@
 extends layouts/default.pug
 
 block prepend head
-    - var pageTitle = "Korayspor Product List"
-    - var pageDescription = "Product List sayfası, Korayspor"
+    - var pageTitle = "Korayspor Wizard"
+    - var pageDescription = "Product Wizard, Korayspor"
     - var pageName = "product-list"
-    - var pageClass = "view-6 view-2"
+    - var pageClass = ""
 
 block content 
-    .wizard-landing 
-        .container.px-lg-50
-            +breadcrumb(['Erkek', '/list'], ['Ayakkabı', '/list'], ['Günlük'])
+    .breadcrumb-container.container.px-lg-50
+        +breadcrumb(['Anasayfa', '/list'], ['Wizard'])
+    .corporate-sidebar-container.container.px-lg-50
+        include includes/corporate-menu

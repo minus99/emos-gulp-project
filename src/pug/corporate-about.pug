@@ -7,7 +7,7 @@ block prepend head
     - var pageClass = "about"
 
 block content
-    .corporate-breadcrumb-container.container.px-lg-50
+    .breadcrumb-container.container.px-lg-50
         +breadcrumb(['Anasayfa', '/list'], ['Kurumsal', '/list'], ['Hakkımızda'])
     +picture('ratio ratio-lg-corporate-cover ratio-corporate-cover-mobile', true, dirUploads + 'corporate/about-cover.jpg', dirUploads + 'corporate/about-cover-mobile.jpg', dirUploads + 'corporate/about-cover.jpg')(class="w-100", alt="slide 1")
     .corporate-sidebar-container.container.px-lg-50

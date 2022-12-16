@@ -7,11 +7,11 @@ block prepend head
     - var pageClass = "breadcrumb-white view-6 view-2"
 
 block content 
-    .prd-list-top.bg-white.breadcrumb-absolute
+    .prd-list-top.bg-white
         .container.px-0.px-lg-15
             .overflow-hidden.position-relative
                 //breadcrumb-white altındaki breadcrumb tamamen beyaz olacak
-                +breadcrumb(['Erkek', '/list'], ['Ayakkabı', '/list'], ['Günlük'])
+                +breadcrumb(['Erkek', '/list'], ['Ayakkabı', '/list'], ['Günlük']).breadcrumb-absolute
                 //iki tip resim yüksekliğine göre ayarlama yapıldı.  ratio-lg-prd-list-cover-type-1 / ratio-lg-prd-list-cover-type-2
                 //+picture("ratio ratio-prd-list-cover ratio-lg-prd-list-cover-type-1", true, dirUploads + "/product-list-cover/cover-type-1-mobile.jpg", dirUploads + "product-list-cover/cover-type-1-mobile.jpg", dirUploads + "product-list-cover/cover-type-1.jpg").w-100
                 //+picture("ratio ratio-prd-list-cover ratio-lg-prd-list-cover-type-2", true, dirUploads + "/product-list-cover/cover-type-2-mobile.jpg", dirUploads + "product-list-cover/cover-type-2-mobile.jpg", dirUploads + "product-list-cover/cover-type-2.jpg").w-100
