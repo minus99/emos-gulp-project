@@ -10,4 +10,26 @@ block content
     .breadcrumb-container.container.px-lg-50
         +breadcrumb(['Anasayfa', '/list'], ['Wizard'])
     .corporate-sidebar-container.container.px-lg-50
-        include includes/corporate-menu
+        include includes/wizard-menu
+    .container 
+        ul.list-unstyled.d-lg-flex.gap-20
+            li
+                a.btn.btn-white(href="")
+                    +icon("dry-ground")
+                    span  Kuru Çim Zemin
+            li
+                a.btn.btn-white(href="")
+                    +icon("artificial-ground")
+                    span  Suni Zemin
+            li
+                a.btn.btn-white(href="")
+                    +icon("soft-ground")
+                    span  Yumuşak Zemin
+            li
+                a.btn.btn-white(href="")
+                    +icon("astroturf-pitch")
+                    span  Halı Saha
+            li
+                a.btn.btn-white(href="")
+                    +icon("indoor-court")
+                    span  Kapalı Saha/Sokak

@@ -32,7 +32,7 @@ block content
             h2.section.title.fw-600.fs-32.d-lg-none Sneaker’da <br> Öne Çıkanlar
             include includes/product-slider                                      
     
-    .square-section.container.px-0.px-lg-30.mt-60
+    .square-section.container.px-0.px-lg-30.mt-60.overflow-hidden
         .row.row-cols-lg-2.row-cols-1.g-5
             .col
                 +square-banner()
@@ -44,7 +44,7 @@ block content
             +special-title()
         
     .rectangle-section.container.px-0.px-lg-30.mt-60.overflow-hidden
-        .row.g-5.g-lg-10
+        .row.row-cols-lg-3.row-cols-1.g-10
             -for(var i=0; i<3; i++)
                 .col-12.col-lg-4
                     +rectangle-banner()
