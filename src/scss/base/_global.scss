@@ -343,15 +343,12 @@ $banner-arrow-size: 8px;
         color: $gray;
     }
 }
-.hr-title {
-    span {
-      color: $gray;
-  }
-}
+
 
 //Breadcrumb
 .breadcrumb {
     height: 60px;
+    align-items: center;
     &-item {
         color: $gray3;
         &+.breadcrumb-item {
@@ -381,6 +378,15 @@ $banner-arrow-size: 8px;
                 }
             }
         }
+    }
+    &-absolute {
+      position: relative;
+      .ems-breadcrumb {
+        position: absolute;
+        top: 30px;
+        left: 45px;
+        z-index: 2;
+    }
     }
 
 }

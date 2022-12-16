@@ -1,0 +1,66 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Koray Spor"
+    - var pageDescription = "Koray Spor"
+    - var pageName = "about-us"
+    - var pageClass = ""
+
+block content
+    .corporate-breadcrumb-container.container.px-lg-50
+        +breadcrumb(['Anasayfa', '/list'], ['Kurumsal', '/list'], ['Hakkımızda'])
+    .corporate-sidebar-container.container.px-lg-50
+        include includes/corporate-menu
+    .container.px-lg-100
+        .row.my-60.gy-30
+            .col-12.col-lg-4
+                p.special-title.fs-24.fs-lg-32.fw-600.w-75 Koray Spor online'da seçenek bol, alışveriş kolay. Fırsatın ol
+                    span ursa mağazalarımıza da uğramayı unutma!
+            .col-12.col-lg-8
+                .d-flex.flex-column
+                    .store-select.d-flex.flex-column.flex-lg-row.my-30.gap-20.align-items-lg-center
+                        .w-100
+                            select.form-select
+                                option(value="" disabled selected hidden) İl Seçin
+                                option İstanbul
+                        .w-100 
+                            select.form-select
+                                option(value="" disabled selected hidden) İlçe Seçin
+                                option Kadıköy
+                                option Esenler
+                        a.btn.btn-white.btn-icon-left.w-100.w-lg-auto(href="javascript:void(0)")
+                            +icon("store")
+                            span.ms-10 Mağaza Bul
+                    .store-map.order-lg-first
+                        <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58941.146603825284!2d28.836542572479686!3d41.03561207027664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa5a032dbe3ed%3A0x345def11400696ad!2sKonyal%C4%B1%20Saat%20Sanayi%20Pazarlama%20ve%20Ticaret%20Anonim%20%C5%9Eirketi!5e0!3m2!1str!2str!4v1643189795177!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen=""></iframe>
+                .mt-100
+                        .d-lg-flex.justify-content-between
+                            p.fs-12.fs-lg-16 
+                                +icon("info").fs-28
+                                span İstanbul konumuna yakın mağazaları listeliyorsunuz
+                            span.fs-14.fs-lg-16.fw-600 Aramanızda 19 mağaza bulundu.
+                        ul.list-unstyled.row
+                            - for (var x = 0; x < 10; x++)
+                                li.col-12.col-lg-6
+                                    .row.justify-content-between.mt-30.mt-lg-20 
+                                        .col-4.col-lg-3.pe-0
+                                            .ratio.ratio-1x1
+                                                img(src="https://via.placeholder.com/132" alt="adres")
+                                        .col-8.col-lg-9
+                                            .fw-600 Altıparmak Merkez 
+                                            p.mb-0.mt-10.mt-lg-15 Altıparmak Cad. No: 6 Osmangazi/BURSA
+                                            .dotted-items.fs-12.fs-lg-13.mt-10
+                                                span 224 444 28 41
+                                                span.text-gray2 Dahili 2001
+                                            .d-lg-flex.mt-15.fs-12.fs-lg-13
+                                                .d-flex.text-gray2
+                                                    a.text-decoration-underline(href="javascript:void(0);") Yol Tarifi
+                                                    a.text-decoration-underline.ms-15(href="javascript:void(0);") Haritada Göster
+                                                .ms-5.ms-lg-15.mt-15.mt-lg-0
+                                                    +icon("arrow-left-right").fs-24
+                                                    span 6.2km / 20dk
+                                            .fs-12.fs-lg-13.mt-20
+                                                span Çalışma Saatleri
+                                                span.fw-600.ms-10 10:00 - 22:00
+                                    
+                                

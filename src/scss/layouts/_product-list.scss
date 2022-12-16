@@ -1,12 +1,6 @@
 .prd-list {
     &-top {
         min-height: 60px;
-        .ems-breadcrumb {
-            position: absolute;
-            top: 30px;
-            left: 45px;
-            z-index: 2;
-        }
     }
     &-progress {
         width: 280px;

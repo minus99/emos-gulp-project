@@ -121,6 +121,7 @@
 // Dotted
 .dotted-items {
     >* {
+        white-space: nowrap;  
         &:last-child::after {
             display: none;
         }
@@ -136,6 +137,23 @@
     }
 }
 
+// Dotted
+.line-items {
+    >* {
+        &:last-child::after {
+            display: none;
+        }
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 1px;
+            height: 10px;
+            background: currentColor;
+            border-radius: 50%;
+            margin: 0 15px;
+        }
+    }
+}
 .hidden {
     display: none;
 }
@@ -155,6 +173,9 @@ $z-indexes: 1, 2, 3;
     }
     &-gray3 {
         color: $gray3;
+    }
+    &-gray4 {
+        color: #817A79;
     }
     &-blue {
         color: $blue;

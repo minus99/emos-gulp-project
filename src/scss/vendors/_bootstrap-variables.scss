@@ -116,6 +116,12 @@ $aspect-ratios: (
   '343x334': calc(334 / 343 * 100%),
   '1580x540': calc(540 / 1580 * 100%),
   '375x540': calc(420 / 375 * 100%),
+  'corporate-cover': calc(640 / 1680 * 100%),
+  'corporate-cover-mobile': calc(446 / 375 * 100%),
+  'corporate-large': calc(699 / 1336 * 100%),
+  'corporate-small': calc(430 / 612 * 100%),
+  'corporate-vertical': calc(700 / 598 * 100%),
+  'wizard-large': calc(711 / 1131 * 100%),
 
 );
 
@@ -207,7 +213,7 @@ $btn-focus-box-shadow: none !important;
 $btn-disabled-opacity: 0.6;
 
 // Forms :616
-$input-bg: $body-bg-color;
+$input-bg: rgba(99, 92, 91, 0.1);
 
 $input-padding-y: 1.063rem; // 16px
 $input-padding-x: 1.25rem; // 20px

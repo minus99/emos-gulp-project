@@ -7,14 +7,18 @@ block prepend head
     - var pageClass = ""
 
 block content
-    .container
-        +breadcrumb([pageName])
+    .corporate-breadcrumb-container.container.px-lg-50
+        +breadcrumb(['Anasayfa', '/list'], ['Kurumsal', '/list'], ['Hakkımızda'])
+    .corporate-sidebar-container.container.px-lg-50
+        include includes/corporate-menu
+    .container.mt-lg-40
         .row     
-            include includes/corporate-menu
-            .col-12.col-lg-4.mt-lg-40.p-lg-20
-                +corparate-title()
-            .col-12.col-lg-8.d-flex.flex-column.mt-lg-40
-                +picture('m-hide', true, dirImages + 'corp/takim.png', dirImages + 'corp/takim.png', dirImages + 'corp/takim.png')(class="", alt="slide 1")
+            .col-12.col-lg-4
+                .p-lg-20
+                    p.special-title.fs-24.fs-lg-36.fw-600 Takım ruhu bizim<br> do
+                        span ğamızda var       
+            .col-12.col-lg-8
+                +picture('', true, dirImages + 'corp/takim.png', dirImages + 'corp/takim.png', dirImages + 'corp/takim.png')(class="", alt="slide 1")
                 .mt-40
                     h3.fs-16.fw-600 Markanıza Özel Üretim
                     p.fs-13.mt-5 Markanıza özel üretim Size özel hazırlanacak ürünler için bizimle iletişime geçebilirsiniz. 

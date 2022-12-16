@@ -11,11 +11,14 @@
     }
 }
 
-.special-title {
-    width: 80%;
-    margin: 140px 0 !important;
-    &-wrapper {
-        width: 50%;
+
+.special-title-section {
+    .special-title {
+        width: 80%;
+        margin: 140px 0 !important;
+        &-wrapper {
+            width: 50%;
+        }
     }
 }
 .home-info {

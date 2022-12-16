@@ -7,13 +7,17 @@ block prepend head
     - var pageClass = ""
 
 block content
-    .container
-        +breadcrumb([pageName])
-        .row     
-            include includes/corporate-menu
-            .col-12.col-lg-4.mt-lg-40.p-lg-20
-                +hr-title()
-            .col-12.col-lg-8.d-flex.flex-column.mt-lg-40
+    .corporate-breadcrumb-container.container.px-lg-50
+        +breadcrumb(['Anasayfa', '/list'], ['Kurumsal', '/list'], ['Hakkımızda'])
+    .corporate-sidebar-container.container.px-lg-50
+        include includes/corporate-menu
+    .container.mt-lg-40
+        .row  
+            .col-12.col-lg-4
+                .p-lg-20
+                    p.special-title.fs-24.fs-lg-36.fw-600 Çalışırken de endorfin şart diyorsan, Koray Sp
+                        span or'da kariyer fırsatlarına göz atabilirsin.
+            .col-12.col-lg-8
                 +picture('m-hide', true, dirImages + 'corp/hr.png', dirImages + 'corp/hr.png', dirImages + 'corp/hr.png')(class="", alt="slide 1")
                 .hr-form-container.mt-40
                     form.ems-form(action='/' method='POST' id="hr-form")

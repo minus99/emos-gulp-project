@@ -75,14 +75,15 @@ block content
         .container.px-lg-40
             h2.section.title.fw-600.fs-32.d-lg-none Sneaker’da <br> Öne Çıkanlar
             include includes/product-category-slider      
-    .container.px-lg-30
-        +special-title()
-                                   
+    .special-title-section
+        .container.px-lg-30
+            +special-title()
+                  
     .square-section.container.px-0.px-lg-30.mt-60
-        .row.g-5
-            .col-12.col-lg-6
+        .row.row-cols-lg-2.row-cols-1
+            .col
                 +square-banner()
-            .col-12.col-lg-6
+            .col 
                 +square-banner()
     .category-contact.text-center.mt-60
         p.fs-24.fw-700 İrtibat Bilgileri

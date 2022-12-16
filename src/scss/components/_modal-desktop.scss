@@ -165,7 +165,16 @@
         @extend %ems-modal-lg-animate-body;
     }
 }
-
+//Filter Modal
+.ems-square {
+    &-ready & {
+        @extend  %ems-modal-lg-ready;
+    }
+    &-animate & {
+        @extend %ems-modal-lg-animate-x;
+        @extend %ems-modal-lg-animate;
+    }
+}
 
 // .ems-xx-ready .ems-modal-lg
 %ems-modal-lg-ready {

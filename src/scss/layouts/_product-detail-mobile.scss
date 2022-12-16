@@ -8,4 +8,15 @@
             }
         }
     }
+    &-detail-info {
+        &.line-items {
+            span {
+                &:first-child {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -66,6 +66,18 @@
         @extend %ems-modal-animate-body;
     }
 }
+
+.ems-square {
+    &-ready & {
+        @extend  %ems-modal-ready;
+    }
+    &-animate & {
+        @extend %ems-modal-animate-x;
+        @extend %ems-modal-animate;
+
+    }
+    
+}
 // EMS Modal Compact
 .ems-modal-compact {
     flex-direction: column;

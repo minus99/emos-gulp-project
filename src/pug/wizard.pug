@@ -1,0 +1,92 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Korayspor Product List"
+    - var pageDescription = "Product List sayfası, Korayspor"
+    - var pageName = "product-list"
+    - var pageClass = "breadcrumb-white view-6 view-2"
+
+block content 
+    .wizard-landing.breadcrumb-absolute
+        .container.px-0.px-lg-15
+            +breadcrumb(['Erkek', '/list'], ['Ayakkabı', '/list'], ['Günlük'])
+            +swiper('mainSlider', false, true, false, true, true)(class="main-slider")
+                -for(var i=0; i<5; i++)
+                    li.swiper-slide
+                        .ratio.ratio-main-slider-mobile.ratio-md-main-slider.ratio-lg-main-slider
+                            picture
+                                source.lazy-picture(media='(max-width:0)' srcset='frontend/images/1x1.svg')
+                                source(media='(max-width: 767px)' srcset='uploads/slider/slider-mobile.jpg, uploads/slider/football-banner-mobile.jpg 2x')
+                                source(media='(min-width: 768px)' srcset='uploads/slider/football-banner.jpg')
+                                img.w-100(src='uploads/slider/football-banner-mobile.jpg' alt='slide 1')
+                        .banner-overlay
+                            .banner-title
+                                h3.fs-20.fs-lg-30 Size Uygun Ayakkabıyı Bulun
+                                p.fs-14.fs-lg-16.mt-10 Koleksiyonu keşfet
+                            .swiper-progress-bar.position-absolute.start-0.bottom-0.w-100
+                                span.swiper-progress.d-block
+                    li.swiper-slide
+                        .ratio.ratio-main-slider-mobile.ratio-md-main-slider.ratio-lg-main-slider
+                            video(data-video="https://player.vimeo.com/progressive_redirect/playback/769802231/rendition/720p/file.mp4?loc=external&signature=9a408598285bb20e9bdbf3057c9e2242fea655179e4d8237640fd020bed51b0a" data-videomobile="https://player.vimeo.com/progressive_redirect/playback/769802231/rendition/720p/file.mp4?loc=external&signature=9a408598285bb20e9bdbf3057c9e2242fea655179e4d8237640fd020bed51b0a" data-poster="banner/video-banner.jpg" data-postermobile="banner/video-banner.jpg" poster="banner/video-banner.jpg" preload="none" autobuffer="autobuffer" playsinline="true" muted="true" src="https://player.vimeo.com/progressive_redirect/playback/769802231/rendition/720p/file.mp4?loc=external&signature=9a408598285bb20e9bdbf3057c9e2242fea655179e4d8237640fd020bed51b0a" )
+
+    .container.px-0.px-lg-30.mt-40
+        .square-section
+            .row.row-cols-lg-2.row-cols-1.g-5
+                .col
+                    .square-banner.type-2.position-relative.object-scale.item-1
+                        +picture('ratio ratio-square-banner-mobile ratio-lg-square-banner', lazy="true", dirUploads + 'wizard/wizard-square-1-mobile.jpg', dirUploads + 'wizard/wizard-square-1-mobile.jpg', dirUploads + 'wizard/wizard-square-1.jpg')(class="card-img", alt="slide 1")
+                        .banner-overlay
+                            p.special-title.fs-32.fs-lg-54.fw-600 En İyi Yürüyüşü Nas
+                                span ıl Seçersiniz?
+                            a.btn.btn-white.mt-15(class='ems-square-trigger' aria-label='Privacy' href='javascript:void(0);' data-target='.item-1' data-ready='ems-square-ready' data-animate='ems-square-animate' data-type='add') Keşfet
+                        .ems-square.ems-modal.p-20.ps-lg-40.pe-lg-60
+                            a(class="modal-close" aria-label='Privacy' href='javascript:void(0);' data-target='.item-1' data-ready='ems-square-ready' data-animate='ems-square-animate' data-type='remove')   
+                                +icon("close").fs-16
+                            p Şimdi, ayak kemeri tipinize ve pronasyon derecenize uyan bir ayakkabı seçtiğinizde, doğru numara olduğuna emin olmaya ihtiyacınız var. Her yönden rahat hissettirmeli fakat parmaklarınızın oynayabilmesi için esneklik payı çok dar olmamalıdır. Yokuş aşağı yürürken bastığınızda, ayakkabı parmaklarınızı uca çarpma hissi olmadan rahat hissettirmelidir.
+                            p Sonrasında birkaç merdiven bulun topuklarınız arasındaki geçişleri test edin. Etkisini büyütmek için bir seferde iki adım atmayı deneyebilirsiniz.
+                            p Ayak kemeri tipinizle ve pronasyon derecenizle eşleşen, kalite ve uyum testlerinden geçen bir ayakkabı seçtiyseniz eğer, sizin için en iyi yürüyüş ayakkabısını bulmuşsunuz demektir.
+                .col 
+                    .square-banner.type-2.position-relative.object-scale.item-2
+                        +picture('ratio ratio-square-banner-mobile ratio-lg-square-banner', lazy="true", dirUploads + 'wizard/wizard-square-2-mobile.jpg', dirUploads + 'wizard/wizard-square-2-mobile.jpg', dirUploads + 'wizard/wizard-square-2.jpg')(class="card-img", alt="slide 1")
+                        .banner-overlay
+                            p.special-title.fs-32.fs-lg-54.fw-600 En İyi Yürüyüşü Nas
+                                span ıl Seçersiniz?
+                            a.btn.btn-white.mt-15(class='ems-square-trigger' aria-label='Privacy' href='javascript:void(0);' data-target='.item-2' data-ready='ems-square-ready' data-animate='ems-square-animate' data-type='add') Keşfet
+                        .ems-square.ems-modal.p-20.ps-lg-40.pe-lg-60
+                            a(class="modal-close" aria-label='Privacy' href='javascript:void(0);' data-target='.item-2' data-ready='ems-square-ready' data-animate='ems-square-animate' data-type='remove')   
+                                +icon("close").fs-16
+                            p Şimdi, ayak kemeri tipinize ve pronasyon derecenize uyan bir ayakkabı seçtiğinizde, doğru numara olduğuna emin olmaya ihtiyacınız var. Her yönden rahat hissettirmeli fakat parmaklarınızın oynayabilmesi için esneklik payı çok dar olmamalıdır. Yokuş aşağı yürürken bastığınızda, ayakkabı parmaklarınızı uca çarpma hissi olmadan rahat hissettirmelidir.
+                            p Sonrasında birkaç merdiven bulun topuklarınız arasındaki geçişleri test edin. Etkisini büyütmek için bir seferde iki adım atmayı deneyebilirsiniz.
+                            p Ayak kemeri tipinizle ve pronasyon derecenizle eşleşen, kalite ve uyum testlerinden geçen bir ayakkabı seçtiyseniz eğer, sizin için en iyi yürüyüş ayakkabısını bulmuşsunuz demektir.
+                .col 
+                    .square-banner.type-2.position-relative.object-scale
+                        +picture('ratio ratio-square-banner-mobile ratio-lg-square-banner', lazy="true", dirUploads + 'wizard/wizard-square-2-mobile.jpg', dirUploads + 'wizard/wizard-square-2-mobile.jpg', dirUploads + 'wizard/wizard-square-2.jpg')(class="card-img", alt="slide 1")
+                        .banner-overlay
+                            p.special-title.fs-32.fs-lg-54.fw-600 En iyi yürüyüş ayakkab
+                                span ısını seçerken en önemli özellik nedir?
+                            a.btn.btn-white.mt-15(href="") Keşfet
+                .col 
+                    .square-banner.type-2.position-relative.object-scale
+                        +picture('ratio ratio-square-banner-mobile ratio-lg-square-banner', lazy="true", dirUploads + 'wizard/wizard-square-2-mobile.jpg', dirUploads + 'wizard/wizard-square-2-mobile.jpg', dirUploads + 'wizard/wizard-square-2.jpg')(class="card-img", alt="slide 1")
+                        .banner-overlay
+                            p.special-title.fs-32.fs-lg-54.fw-600 Ayakkabının mükemmel bir şekilde uyacağından emin ola
+                                span bilmek için yapılacak testler nelerdir?
+                            a.btn.btn-white.mt-15(href="") Keşfet
+    .my-40.my-lg-60.w-lg-50.mx-lg-auto
+        +picture('ratio ratio-wizard-large', true, dirUploads + 'wizard/wizard-large-mobile.jpg', dirUploads + 'wizard/wizard-large-mobile.jpg', dirUploads + 'wizard/wizard-large.jpg')(class="w-100", alt="slide 1")
+    .foot-type
+        .container.w-lg-50
+            .text-center.my-40 
+                span.fs-32.fs-lg-54.fw-600 Ayak Taban Tipleri
+            ul.list-unstyled.accordion
+                    li.mb-10.border-bottom.py-20(rel="tab-2").selected
+                        a.fs-16.d-flex.justify-content-between.align-items-center(href="javascript:void(0);") 
+                            span.accordion-title Kredi Kartı ile Ödeme
+                        .list-unstyled.mt-lg-30.lv2.mt-20
+                            p KoraySpor.com'dan hayatınızı kolaylaştıran bir hizmet; Kapıda Ödeme ! Size sunduğumuz diğer ödeme seçeneklerinin yanı sıra; vereceğiniz tüm siparişlerde kapıda nakit ödemeyi tercih edebilir; Türkiye’nin neresinde olursanız olun, evinizin rahatlığında alışverişinizi tamamlayabilirsiniz. Satışı yapılan ürünün, Yurtiçi Kargo tarafından ulaştırılması ve teslimat anında, ürün bedelinin, Aldığınız ürünleriniz için kapıda nakit tahsilat yapılmasıdır. Kapıda ödeme seçenekli alışverişleriniz de adres bilgilerinizi ve telefon bilgilerinizi eksiksiz girmeniz gerekmektedir. Telefon ile müşteri temsilcilerimiz tarafından gün içerisinde teyid alınmaktadır. Telefon bilgileri eksik yanlış veya farklı girilmesi dahilinde siparişiniz iptal edilerek gönderilmeyecektir. Kapıda ödeme siparişlerinizde her hangi ek bir ücret alınmamaktadır. Not : Kapıda ödeme siparişleri ile verilen işlemlerde, gelen kargo yetkilisine ödeme işlemi yapılmadan ürün teslimatı gerçekleştirilememekte ve paket açılamamaktadır.    
+                    li.border-bottom.py-20(rel="tab-2")  
+                        a.fs-16.d-flex.justify-content-between.align-items-center(href="javascript:void(0);")
+                            span.accordion-title İçe Bükülme Seviyenizi Nasıl Belirlersiniz?
+                        .mt-lg-30.lv2.mt-20
+                            p Alışveriş tutarınıza kargo firması tarafından talep edilen 6,95 TL kapıda ödeme ücreti eklenecektir.
+                            p Mükemmel uyumu belirlemede en önemli faktör, hangi tip ayak kemerine sahip olduğunuzu bilmek ve onu doğru ayakkabıyla eşleştirmektir. Üç çeşit ayak kemeri vardır: yüksek ayak kemeri, normal ayak kemeri, düz taban. Yürüyüş için ayakkabı satın almaya başlamadan önce hangi tip ayak kemerine sahip olduğuzu bilmeniz çok önemlidir, çünkü sizinkinden farklı bir ayak tipini destekleyen bir ayakkabı seçersiniz, acı içinde kalabilirsiniz. Neyse ki bunu belirlemek çok kolay.

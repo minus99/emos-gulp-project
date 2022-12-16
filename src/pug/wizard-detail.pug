@@ -1,0 +1,12 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Korayspor Product List"
+    - var pageDescription = "Product List sayfası, Korayspor"
+    - var pageName = "product-list"
+    - var pageClass = "view-6 view-2"
+
+block content 
+    .wizard-landing 
+        .container.px-lg-50
+            +breadcrumb(['Erkek', '/list'], ['Ayakkabı', '/list'], ['Günlük'])

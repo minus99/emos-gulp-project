@@ -83,6 +83,65 @@
             }
         }
     }
+    &-rating {
+        .rating-list {
+            position: relative;
+            &-item {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    top: 6px;
+                    height: 8px;
+                    background: #cac6c6;
+                }
+                .rate {
+                    z-index: 2;
+                    &.selected {
+                        span {
+                            background-color: $primary;
+                        }
+                    }
+                }
+                span {
+                    display: block;
+                    border: 1px solid;
+                    background: $white;
+                    width: 21px;
+                    height: 21px;
+                    border-radius: 100%;
+                }
+            }
+
+
+        }
+        .card {
+            &-rating {
+              &-bar,
+              &-current {
+                  --star-width: 22px;
+              }
+            }
+        }
+    }
+    &-comments {
+        li {
+            &:nth-child(n+2)
+            {
+                margin-top: 20px;
+                border-top: 1px solid $gray;
+                padding-top: 20px;
+            }
+        }
+        .card {
+            &-rating {
+              &-bar,
+              &-current {
+                  --star-width: 18px;
+              }
+            }
+        }
+    }
 }
 
 .sold-together {
