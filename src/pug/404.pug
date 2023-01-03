@@ -1,0 +1,18 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Koray Spor 404"
+    - var pageDescription = "Koray Spor 404"
+    - var pageName = "pageNotfound"
+    - var pageClass = "pageNotfound"
+
+block content
+    .container.px-0
+        .notfound.h-100.position-relative
+            +picture('ratio ratio-1x1 ratio-lg-main-slider', true, dirImages + '404/404.png', dirImages + '404/mobile404.jpg', dirImages + '404/404.png')(class="w-100", alt="slide 1")
+            .img-wrap.fs-32.lh-1
+                .notfound-desc.notfound-desc-white.d-flex.flex-column
+                    h2.lh-1.fs-24 Bakımdayız..
+                    p.fs-14.fs-lg-16.mt-15.lh-1-25 Web sitemizi planlanmış bakıma aldık. En kısa sürede size hizmet vermeye devam edeceğiz!  <br><br>Sabrınız için teşekkür ederiz.
+                    
+                    

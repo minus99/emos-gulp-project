@@ -123,56 +123,55 @@ html(lang=lang, dir=dir)
             .ems-cart-overlay.ems-overlay(data-target="body" data-ready="ems-cart-ready" data-animate="ems-cart-animate" data-type="remove")
             .mini-cart-content-inner.ems-cart.ems-modal.ems-modal-end.ems-modal-lg.ems-modal-lg-end
                 // Class'ı mini-cart-content olmalı ve içeriği widget'tan gelmeli.
-                .modal-header.p-20.border-0.mx-10
-                    span.fs-18 Sepetim   
+                .modal-header.p-20.border-bottom
+                    span.fs-18 Sepetim (2 ürün)
                     a.cart-close.modal-close(onclick="targetElement.clicked(this);" href="javascript:void(0);" data-target="body" data-ready="ems-cart-ready" data-animate="ems-cart-animate" data-type="remove")
                         +icon("close")
                 .mini-cart-body.modal-body.ems-scrollbar.ems-scrollbar-vertical.p-20.mx-10.mb-20
                     .ems-message.ems-message-warning.my-60.pt-60
                         .d-flex.flex-column.align-items-center 
-                            .rounded-circle.p-30.bg-light
-                                +icon('cart') 
-                            .mb-40.my-20 Henüz sepetinizde ürün bulunmuyor.
-                            a.btn.btn-primary(href="#") Alışverişe Başla
+                            .rounded-circle.p-30
+                                +icon('basketemty').fs-64
+                            .mb-40.my-20 Sepetinizde henüz ürün bulunmuyor.
+                            a.btn.btn-dark(href="#") Alışverişe Başla
                     ul.list-unstyled.ems-cart-grid.ems-grid-wrapper
                         - for (var x = 0; x < 10; x++)
                             li.prd.prd-hrz.ems-grid-row.mb-40.pb-40.border-bottom
                                 .row.position-relative.prd-inner.m-0.align-items-center.p-0
                                     .col-3.ps-0
-                                        +img('ratio ratio-1x1', true, dirUploads + 'product/rado.png').mini-cart-prd-img.rounded-circle.border
+                                        +img('ratio ratio-1x1', true, dirUploads + 'image-scaled.jpg').mini-cart-prd-img
                                     .prd-body.col-6.px-0
                                         .col1
-                                            .d-block.prd-title 
+                                            .d-block.prd-title
                                                 b Adidas 
                                                 span SXB433P ayakkabı
+                                            .d-block.py-5
+                                                span.prd-price-last 10.300 ₺
+                                                span.text-gray (-%50)    
                                             span.d-block.mb-10.fs-14
                                                 span.text-gray Adet 
                                                 span 1 Ürün
                                                 
                                         .col2.d-flex.justify-content-between.align-items-center
                                             .d-flex.prd-price-holder.align-items-center
-                                                .prd-price-discount.bg-primary.text-white.py-10.px-5.me-10.fs-12 -690₺
+                                                .prd-price-discount.bg-primary.text-white.py-10.px-5.me-10.fs-12 %50
+                                                .prd-price-first.text-gray.me-10.text-decoration-line-through 10.990 ₺
                                                 .flex-grow-1.prd-price
-                                                    .prd-price-first.text-gray.fs-12 10.990 ₺
                                                     .prd-price-last 10.300 ₺
-                                                
                                     .col-3.d-flex.flex-column.justify-content-between.align-items-end(data-document-id="9a183491-cd38-4483-9179-381f86eda976")
                                         a.position-relative.prd-remove-to-cart(onclick="shopping.removeFromCart(this);" href="javascript:void(0);")
-                                            +icon("remove")
-                                        .d-flex.justify-content-between.number-input.position-relative.mt-30 
-                                            button.btn.btn-link.bg-none.p-0.flex-center.fs-20.text-dark(type="button") -
-                                            input(type="number", value="1")
-                                            button.btn.btn-link.bg-none.p-0.flex-center.fs-20.text-dark(type="button") +
-                                        a.ems-prd-link.btn-full(href="/smart-7801-w-beyaz-firin")    
-                .modal-footer.p-20.bg-dark.text-white
-                    .floating-col.d-flex.align-items-center.justify-content-between.w-100
+                                            +icon("trash")
+                .modal-footer.p-20.border-0
+                    .floating-col.d-flex.align-items-center.justify-content-around.w-100
                         .floating-total
-                            .floating-total-title.fs-12 Toplam
-                            .floating-total-price.ems-result.fs-18 3.334,00 ₺
-                        a.cart-footer-link.btn.btn-primary.d-flex.align-items-center.justify-content-end(href="/sepet") Alışverişi Tamamla 
+                            .floating-total-title.fs-12.py-5 Toplam
+                            .floating-total-price.ems-result.fs-18.fw-600 3.334,00 ₺
+                        a.cart-footer-link.btn.btn-black.d-flex.align-items-center.justify-content-between.btn-lg(href="/sepet") Sepetime Git
                                         
+           
+            
 
-                // FOOTER
+            // FOOTER
             // block ajx-popup
                 // BS MODAL PREVIEW
                 .ems-modal-container

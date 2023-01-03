@@ -5,6 +5,9 @@
             width: 60%;
             height: 2px;
             background: $coral;
+            &-none {
+                background: none;
+            }
         }
     }
 }

@@ -1,0 +1,78 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Koray Spor"
+    - var pageDescription = "Koray Spor"
+    - var pageName = "blog-detail"
+    - var pageClass = ""
+
+block content
+    .container.px-lg-40
+        .d-flex.justify-content-center.my-50
+            +img('ratio-logo ratio-bg-remove', false, dirImages + 'logoblog.svg')
+        .blog-detail-cover.ratio.ratio-main-slider-mobile.ratio-md-main-slider.ratio-lg-main-slider 
+            picture
+                source.lazy-picture(media='(max-width:0)' srcset='frontend/images/1x1.svg')
+                source(media='(max-width: 767px)' srcset='uploads/banner/msporcu.jpg, uploads/banner/msporcu.jpg 2x')
+                source(media='(min-width: 768px)' srcset='uploads/banner/sporcu.jpg')
+                img.w-100(src='uploads/banner/sporcu.jpg' alt='slide 1')
+        .mt-lg-50
+            .d-grid.blog-detail-body
+                .blog-detail-info
+                .blog-detail-content.mt-20.mt-lg-0
+                    div.d-flex.justify-content-between.align-items-baseline
+                        h1.fw-700.fs-24.fs-lg-24 Kalp Krizini Önleyen Sağlıklı Besinler
+                        div.d-flex.align-items-center.mt-15 
+                            .py-10.px-10.bg-gray4.me-10.fs-13.fw-600 Beslenme
+                            span.fs-lg-13.fw-600.fs-12 1 Nisan 2021 - 7 dk okuma
+                    div.mt-20.mt-lg-30 
+                        p Su direnci derecelendirmesi, bir kol saatinin su altındayken maruz kalabileceği basıncı belirten önemli bir göstergedir. Günümüzde insanlar için yeni yerler keşfetmek ve seyahat etmek çok önemlidir, bu nedenle hayatlarının belli bir noktasında su altına girme ihtimali yüksek olasılıktadır.
+                        p Saatlerin farklı ve yeni özellikleri sebebiyle su direnci derecesi kolayca göz ardı edilebilir ve yanlış anlaşılabilir. Saatte ’50M su geçirmezlik’ diyen basit bir yazı, aslında saati giyerken çok fazla bilgi ve önlem taşıyor.
+                        p Maalesef, bazı durumlarda bu ifadelerin ne anlama geldiği saat kullanıcıları tarafından anlaşılamıyor. Bu makalede sizlere su rezistansı ile ilgili tüm bilgileri açıklamaya çalışacağız.
+                        p Farklı standartlara geçmeden önce saat sahipleri tarafından ortaya atılan ortak bir soruna göz atalım. ‘Metreler’ işareti aslında ne ifade ediyor? Metre başına hangi faaliyetler etkilenir? Bunları aşama aşama anlatalım;
+                        p Suya Dayanıklılık: Herhangi bir basınç uygulanmadan sadece saatte su sıçramasına karşı koruma sağlar. Bu özellik elinizi yıkarken sıçrayan sulara karşı koruma sağlayan basit bir kapsama sahiptir.
+                        p 50m Su Geçirmezlik: Saati, gerçekleştirdiğiniz basit su aktivitelerinde korur ve yalnızca sığ sularda etkilidir. Şnorkel ve sualtı dalışında etkili değildir.
+                        p 100 m Su Geçirmezlik: Yüzme, havuz dalışı ve basit sığ dalışları gibi aktivitelerde kullanılabilir. Jet ski ve tüplü dalış için uygun değildir.
+                        p 200 m Su Geçirmezlik: Yüzme, şnorkel ve jet ski su sporlarında kullanılabilir ancak tüplü dalış için uygun değildir.
+                        p Dalgıç saatleri: Yukarıda bahsedilenlerin yanında tüplü dalış da dahil olmak üzere tüm faaliyetlerde, kullanılabilir.
+                        +picture("ratio ratio-1x1 ratio-lg-400x700 my-30 mt-lg-40", false, "frontend/images/blog/blog-mobile.jpg", "frontend/images/blog/blog-mobile.jpg", "https://via.placeholder.com/700x395/blue").w-100
+                        h4 Bar ve ATM
+                        p Bar ve ATM standartları saatlerin üzerinde gördüğünüz yaygın kelimelerdir. Genellikle, farklı basınç türlerine karşı dirençle ilgili saatin dayanıklılığını göstermek için kullanılırlar.
+                        p Bar kavramı, su altındaki bir nesneye uygulanan basınca ilişkindir. Dönüştürüldüğünde, 1 bar’ın 10 metreye veya 32 fit’e eşit olduğu belirtilebilir. ATM, atmosfer için kısa bir terimdir ve suyun üzerindeki hava basıncını ifade eder. İlk olarak, deniz seviyesindeki normal basınç 1 ATM’dir. 10 ATM, basitçe saatin su basıncına yenik düşmeden deniz seviyesindeki basıncın on kat fazlasına dayanabileceği anlamına gelir.
+                        p Bir saat 50 metredeyse o mesafeye teorik olarak inebilirsiniz. Bununla birlikte, bunu yapmak, saati çok fazla baskı altına alacaktı. Saatiniz bu şekilde derecelendirilmişse suyun aynı zamanda ek bir basınç oluşturabileceği, dolayısıyla benzer bir derinlik basıncında farklılık gösterebileceğinden, su altına girebileceği derinlikte bir parça boşluk bıraktığınızdan emin olun.
+                        p Barlar, ATM ve mesafe arasındaki dönüşümler için:
+                        p 1 bar = 1 ATM = 10 metre = 32 ayak, bu nedenle 10 ATM = 10 bar = su altında 100 metre veya 10 ATM = 10 bar = su altındaki 320 ayak olarak dönüştürün.
+                        p Takip etmek:
+                        p 20 ATM = 200 metre = 640 ayak = 20 bar
+                        p 30 ATM = 300 metre = 960 ayak = 30 bar
+                        p 50 ATM = 500 metre = 1600 ayak = 50 bar
+                        p 100 ATM = 1000 metre = 3200 ayak = 100 bar
+                        h4 ISO Seviyeleri
+                        p ISO 2281:1990 ve ISO 6425:1996 Bu ikisi saatler için kendi sualtı işlevleriyle ilgili özel standartlardır.
+                        p Birincisi, günlük olarak takılan kol saatleri için kullanılan bir standarttır. İkincisi, su direnci derecesinde derinlik ve basıncın önemli bir rol oynayan dalış saatleri tarafından kullanılan bir standarttır.
+                        p Saatler ISO 2281 için testi geçtiğinde, daha sonra resmi olarak “su geçirmez” saatler olarak işaretlenebilir ve derecelendirme boyunca belirtilir. Dalgıç saatleri için basınç altında güçlerini belirlemek için ISO 6425 testlerini geçmeleri gerekir.
+                        p Saatlerde yaygın olarak kullanılan bir terim olan “WR”, su direnci oranını ifade eder. Belirtilen basınca dayanması için bir saatin dayanıklılığını gösterir.
+            
+                .blog-detail-side    
+                    - for (var x = 0; x < 2; x++)
+                        div.mt-50.mt-lg-60 
+                            .fs-24.fs-lg-24.fw-700   Güncel Yazılar
+                            ul.list-unstyled.mt-30 
+                                - for (var y = 0; y < 4; y++)
+                                    li.row.mb-20.position-relative.bg-white
+                                        .col-4.px-0
+                                            +picture("ratio ratio-1x1", false, "frontend/images/blog/blog-mobile.jpg", "frontend/images/blog/blog-mobile.jpg", "frontend/images/blog/blog-mobile.jpg").w-100
+                                        .col-8.p-0.d-flex.flex-column.border-bottom
+                                           .blog-post-desc.py-25.px-25
+                                                h3.blog-post-title.fw-600.fs-lg-24.fs-20.lh-1-25.arrow-box.position-relative Kalp Krizini Önleyen Sağlıklı Besinler
+                                                .blog-post-subtitle.fs-14.fs-lg-16.mt-10
+                                                    p.lh-1-25.m-0 Geniş ürün yelpazesiyle, en eşsiz gözlük ve aksesuarlar şimdi KoraySpor Saat’te.
+                                                .d-flex.align-items-center.mt-15 
+                                                    .py-10.px-10.bg-gray4.me-10.fs-13.fw-600 Beslenme
+                                                    span.fs-lg-13.fw-600.fs-12 1 Nisan 2021 - 7 dk okuma
+        hr.mt-60.mb-50.my-lg-60
+    .widget-type-2.my-50.overflow-hidden
+        .container.px-lg-40
+            .d-lg-flex.align-items-lg-center.mb-30
+                h2.section.title.fw-600.fs-24.fs-lg-24 Güncel Yazılar
+            include includes/blog-slider

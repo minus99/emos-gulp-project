@@ -11,7 +11,7 @@ block content
         .notfound.h-100.position-relative
             +picture('ratio ratio-335x648 ratio-lg-main-slider m-hide', true, dirImages + 'login/login.png', dirImages + 'login/login.png', dirImages + 'login/login.png')(class="", alt="slide 1")
             .login-page  
-                .notfound-desc.d-flex.flex-column.align-items-start
+                .notfound-desc.d-flex.flex-column.align-items-start.notfound-desc-login
                     .row.g-0
                         .login-left-menu
                             .ems-tab.ems-tab-bordered
@@ -112,7 +112,8 @@ block content
                                             input.ems-styler-activeted.act-iStyler(name='__RequestVerificationToken' type='hidden')
                                             input#returnUrl.ems-styler-activeted.act-iStyler(name='returnUrl' type='hidden' value='/tr/Widget/Get/CreateUserRaw')
                                             input#CountryCode.ems-styler-activeted.act-iStyler(name='CountryCode' type='hidden' value='+90')
-                    .d-none.d-lg-block.col-lg-6.h-100.position-relative
+                        .d-none.d-lg-block.col-lg-6.h-100.position-relative
+                            p Aramıza hoş geldin! Görüşlerin bizim için önemli. Dilediğin zaman bizimle iletişime geçebilirsin.
                     // Privacy
                     .ems-privacy-overlay.ems-overlay(data-target="body" data-ready="ems-privacy-ready" data-animate="ems-privacy-animate" data-type="remove")
                     .ems-privacy.ems-modal-lg.ems-modal.py-15.ps-20.pe-25
