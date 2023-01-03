@@ -4,7 +4,7 @@ block prepend head
     - var pageTitle = "Koray Spor Home"
     - var pageDescription = "Koray Spor Home"
     - var pageName = "dark-theme"
-    - var pageClass = "dark-theme"
+    - var pageClass = "dark-them"
 
 block content
     .cat-header.d-lg-flex.py-50.px-30
@@ -66,16 +66,35 @@ block content
             .mt-20.mt-lg-40
                 h3.fs-32.fs-lg-50.fw-600.mx-10 Ultra Hafif <br>Ultra Hızlı ve <br>Ultra Sağlam
                 a.btn.btn-dark-light.btn-lg.mt-20.mt-lg-30(href="javascript:void(0)") Ürünleri Keşfet 
+    .category-title.mt-60
+        .container.d-lg-flex.justify-content-center.align-items-center.text-center
+            +img('', false, dirUploads + 'category/superlig.svg')(width="100" height="100")
+            p.ms-20.fs-30.fw-600.mt-20 Sportoto Süper Lig Takımları
+
     .category-widget.my-50.overflow-hidden
         .container.px-lg-40
             h2.section.title.fw-600.fs-32.d-lg-none Sneaker’da <br> Öne Çıkanlar
             include includes/product-category-slider      
-    .container.px-lg-30
-        +special-title()
-                                   
+    .special-title-section
+        .container.px-lg-30
+            +special-title()
+                  
     .square-section.container.px-0.px-lg-30.mt-60
-        .row.g-5
-            .col-12.col-lg-6
+        .row.row-cols-lg-2.row-cols-1
+            .col
                 +square-banner()
-            .col-12.col-lg-6
+            .col 
                 +square-banner()
+    .category-contact.text-center.mt-60
+        p.fs-24.fw-700 İrtibat Bilgileri
+        a.btn.btn-lg.btn-white.btn-icon-left.my-50.mx-auto(href="javascript:void(0)")
+            +icon("headset")
+            span.ms-10 Müşteri Hizmetleri
+        ul.list-unstyled.d-flex.dotted-items.justify-content-center.flex-wrap
+            li senol.akca@korayspor.com
+            li ekrem.kurtulus@korayspor.com
+        ul.list-unstyled.d-flex.dotted-items.justify-content-center.flex-wrap.mt-20
+            li Şenol Akca 
+            li Ekrem Kurtuluş
+            li Ali Taşlıoğlu
+            li Çetin Aras

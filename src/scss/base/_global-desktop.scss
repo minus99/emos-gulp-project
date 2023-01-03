@@ -11,11 +11,14 @@
     }
 }
 
-.special-title {
-    width: 80%;
-    margin: 140px 0 !important;
-    &-wrapper {
-        width: 50%;
+
+.special-title-section {
+    .special-title {
+        width: 80%;
+        margin: 140px 0 !important;
+        &-wrapper {
+            width: 50%;
+        }
     }
 }
 .home-info {
@@ -27,4 +30,20 @@
 
  .ems-seo-text {
     max-height: 210px;
+ }
+ .object-scale {
+    .prm-media {
+        object-fit: cover;
+        overflow: hidden;
+        img {
+            transition: all .32s ease-in-out;
+        }
+    }
+    &:hover {
+        .prm-media {
+            img {
+                transform: scale(1.2);
+            }
+        }
+    }
  }

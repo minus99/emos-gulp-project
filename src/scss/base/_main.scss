@@ -64,7 +64,14 @@ body {
       max-width: 100vw;
 
       &::-webkit-scrollbar {
-        height: $scrollbar-height;
+        height: 2px;
+      }
+      &::-webkit-scrollbar-track {
+        background: $gray;
+      }
+  
+      &::-webkit-scrollbar-thumb {
+        background: $dark;
       }
     }
 

@@ -1,0 +1,14 @@
+.sneakers {
+    &-single {
+        &-text {
+            bottom: 32px;
+            left: 32px;
+        }
+    }
+    &-title {
+        color: $white;
+        span {
+            color:rgba(255, 255, 255, 0.6);
+        }
+    }
+}

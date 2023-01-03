@@ -7,10 +7,12 @@ block prepend head
     - var pageClass = ""
 
 block content
+    .breadcrumb-container.container.px-lg-50
+        +breadcrumb(['Anasayfa', '/list'], ['Kurumsal', '/list'], ['Teslimat'])
+    .corporate-sidebar-container.container.px-lg-50
+        include includes/corporate-menu
     .container.px-lg-40.mb-20.mb-lg-60
-        +breadcrumb([pageName])
-        .row        
-            include includes/corporate-menu   
+        .row         
             .col-12.col-lg-9.m-auto.p-lg-90
                 h3.d-none.d-lg-block.fs-24.fw-600.sss-title Teslimat
                 p.fs-16.m-lg-40.mt-20.l-h-20 1. Ürününüz kargoya verildikten sonra Yurtiçi Kargo takip numarası işlenip tarafınıza e-posta yolu ile bilgilendirme yapılacaktır.

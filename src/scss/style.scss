@@ -20,7 +20,7 @@
 // Layouts
 @import 'layouts/header';
 @import 'layouts/product-category';
-//@import 'layouts/product-detail';
+@import 'layouts/product-detail';
 @import 'layouts/product-list';
 
 //Modules
@@ -31,15 +31,10 @@
 @import 'modules/single-banner';
 @import 'modules/product-widget';
 @import 'modules/login';
-/*@import 'modules/story';
-@import 'modules/double-circle';
-@import 'modules/product-widget';
-@import 'modules/login';
-@import 'modules/gift-guide';
-@import 'modules/inspiration';
-@import 'modules/stores';
-@import 'modules/compare';
-@import 'modules/circle-slider';*/
+@import 'modules/sneakers';
+@import 'modules/square';
+@import 'modules/wizard';
+
 
 // MOBILE (< $breakpoint-lg)
 @media (max-width: $breakpoint-lg - 1) {
@@ -51,7 +46,8 @@
 
   // Layouts
   @import 'layouts/header-mobile';
-  //@import 'layouts/product-list-mobile';
+  @import 'layouts/product-detail-mobile';
+  @import 'layouts/product-list-mobile';
 
   //Modules
   @import 'modules/square-mobile';
@@ -77,21 +73,14 @@
   @import 'layouts/header-desktop';
 
 
-  /* @import 'layouts/product-detail-desktop';*/
+  @import 'layouts/product-detail-desktop';
   @import 'layouts/product-list-desktop';
 
   //Modules
   @import 'modules/home-slider-desktop';
   @import 'modules/cookies-desktop';
- 
   @import 'modules/login-desktop';
-  /*@import 'modules/story-desktop';
-  @import 'modules/double-circle-desktop';
-  @import 'modules/login-desktop';
+  @import 'modules/rectangle-banner-desktop';
+  @import 'modules/wizard-desktop';
 
-  @import 'modules/gift-guide-desktop';
-  @import 'modules/inspiration-desktop';
-  @import 'modules/accesories-desktop';
-  @import 'modules/compare-desktop';
-  @import 'modules/circle-slider-desktop';*/
 }

@@ -1,0 +1,22 @@
+.prd {
+    &-gallery {
+        &-swiper {
+            .swiper-slide {
+                .prm-media {
+                    margin: 58px 0;
+                }
+            }
+        }
+    }
+    &-detail-info {
+        &.line-items {
+            span {
+                &:first-child {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

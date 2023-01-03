@@ -1,0 +1,15 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Korayspor Wizard"
+    - var pageDescription = "Product Wizard, Korayspor"
+    - var pageName = "product-list"
+    - var pageClass = ""
+
+block content 
+    .breadcrumb-container.container.px-lg-50
+        +breadcrumb(['Anasayfa', '/list'], ['Wizard Result'])
+    .corporate-sidebar-container.container.px-lg-50
+        include includes/wizard-menu
+    .container 
+        

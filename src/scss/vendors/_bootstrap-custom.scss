@@ -51,10 +51,11 @@
 .nav {
   flex-wrap: nowrap !important;
   &-tabs {
+    border: 0;
     .nav-link {
         user-select: none;
-        color: $gray;
-        margin: 0 !important;
+        //color: $gray;
+        //margin: 0 !important;
   
         &:hover,
         &.selected {

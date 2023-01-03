@@ -27,6 +27,7 @@
     &-left {
       display: flex !important;
       align-items: center;
+      justify-content: center;
       svg {
         font-size: 16px;
       }
@@ -64,6 +65,10 @@
     background-color: $btn-dark-light-bg-color !important;
     border-color: $btn-dark-light-border-color !important;
     color: $btn-dark-light-color !important;
+  }
+  &-coral {
+    background-color: $coral !important;
+    color: $white !important;
   }
 
   &.disabled {

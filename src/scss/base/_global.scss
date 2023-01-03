@@ -343,15 +343,12 @@ $banner-arrow-size: 8px;
         color: $gray;
     }
 }
-.hr-title {
-    span {
-      color: $gray;
-  }
-}
+
 
 //Breadcrumb
 .breadcrumb {
     height: 60px;
+    align-items: center;
     &-item {
         color: $gray3;
         &+.breadcrumb-item {
@@ -365,6 +362,9 @@ $banner-arrow-size: 8px;
     }
     .icon-point {
         font-size: 6px !important;
+    }
+    &-container {
+      background: #EEEBEA;
     }
 
     &-white {
@@ -381,6 +381,12 @@ $banner-arrow-size: 8px;
                 }
             }
         }
+    }
+    &-absolute {
+        position: absolute;
+        top: 30px;
+        left: 45px;
+        z-index: 2;
     }
 
 }
@@ -402,3 +408,24 @@ $banner-arrow-size: 8px;
     background-repeat: no-repeat;
   }
 }
+
+
+.card {
+  &-rating {
+    &-bar,
+    &-current {
+        --star-qty: 5;
+        --star-width: 13px;
+        --star-ratio: .85;
+        background-image: url(#{$dir-images + 'rating.svg'});
+        background-size: var(--star-width);
+        background-position: left bottom;
+        width: calc(var(--star-qty) * var(--star-width));
+        height: calc(var(--star-ratio) * var(--star-width));
+    }
+    &-current {
+        background-position: left top;
+    }
+  }
+}
+

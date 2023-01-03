@@ -109,10 +109,10 @@ mixin product()
             a.btn-save.stretched-link-over.selected(href="javascript:void(0);" aria-label="Save")
                 +icon("archive-fill").fs-14
         .card-media.position-relative
-            +picture('ratio ratio-prd', dirUploads + 'product-detail/shoes-2.png', dirUploads + 'product-detail/shoes-2.png', dirUploads + 'product-detail/shoes-2.png')(class="w-100 img-fluid", alt="slide 1")
+            +picture('ratio ratio-prd', lazy="true", dirUploads + 'product-detail/shoes-2.png', dirUploads + 'product-detail/shoes-2.png', dirUploads + 'product-detail/shoes-2.png')(class="w-100 img-fluid", alt="slide 1")
             .card-brand.position-absolute.fs-10.fs-lg-11.text-dark
                 span Adidas
-            .card-badge.position-absolute.d-none.d-lg-flex
+            .card-badge.position-absolute.d-flex
                 +icon("elite")
                 +icon("elite")
         .card-body.p-5.p-lg-10.d-flex.flex-column.justify-content-end
@@ -126,14 +126,14 @@ mixin product()
         a.stretched-link(href="product-detail.html")
 
 mixin square-banner()
-    .square-banner.position-relative
-        +picture('ratio ratio-square-banner-mobile ratio-lg-square-banner', dirUploads + 'banner/banner2x.png', dirUploads + 'banner/banner2x.png', dirUploads + 'banner/banner.png')(class="card-img", alt="slide 1")
+    .square-banner.position-relative.object-scale
+        +picture('ratio ratio-square-banner-mobile ratio-lg-square-banner', lazy="true", dirUploads + 'banner/banner2x.png', dirUploads + 'banner/banner2x.png', dirUploads + 'banner/banner.png')(class="card-img", alt="slide 1")
         .banner-overlay
             h3.fs-20.fs-lg-30 Y2K’dan İlham Aldı
             p.fs-14.fs-lg-16.mt-10 Koleksiyonu keşfet
 mixin rectangle-banner()
-    .rectangle-banner.position-relative
-        +picture('ratio ratio-rectangle-banner-mobile ratio-lg-rectangle-banner', dirUploads + 'home-category/kadin-mobile.jpg', dirUploads + 'home-category/kadin.jpg', dirUploads + 'home-category/kadin-mobile.jpg')(class="card-img", alt="slide 1")
+    .rectangle-banner.position-relative.object-scale
+        +picture('ratio ratio-rectangle-banner-mobile ratio-lg-rectangle-banner', lazy="true", dirUploads + 'home-category/kadin-mobile.jpg', dirUploads + 'home-category/kadin-mobile.jpg', dirUploads + 'home-category/kadin.jpg')(class="card-img", alt="slide 1")
         .rectangle-banner-overlay
             a.btn.btn-white(href="javascript:void(0)")
                 span Kadın Alışveriş
@@ -146,16 +146,9 @@ mixin section-title(title, showAllLink = false)
             a.link-primary.fw-bold(href=showAllLink) Tümünü Gör
                 +icon('arrow-r')
 
-//- Speacial Title That Has 2 Colo
-mixin contact-title(title, showAllLink = false)
-        p.hr-title.fs-24.fs-lg-36.fw-600 Dilediğin zaman bizimle <br> iletişime geçebilir <span>sin. Size <br> yardımcı olmak için buradayız.</span>    
-mixin corparate-title(title, showAllLink = false)
-        p.hr-title.fs-24.fs-lg-36.fw-600 Takım ruhu bizim<br> do<span>ğamızda var</span>         
-mixin hr-title(title, showAllLink = false)
-        p.hr-title.fs-24.fs-lg-36.fw-600 Çalışırken de endorfin şart <br> diyorsan, Koray Sp<span>or'da <br> kariyer fırsatlarına göz <br> atabilirsin.</span>
 mixin special-title(title, showAllLink = false)
         .d-lg-flex.align-items-center.justify-content-between
-            .special-title-wrapper.w-lg-50
+            .special-title-wrapper.w-lg-50.py-80
                 p.special-title.fs-24.fs-lg-36.fw-600 Güvenle alışveriş yapın. <br>Dilediğiniz za<span>man ücretsiz iade ve değişim yapabilirsiniz.</span>
             .w-lg-50
                 p.home-info.fs-16.fw-600 199 TL ve üzeri alişverişlerde <br>ücretsiz kargo

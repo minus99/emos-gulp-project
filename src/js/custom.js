@@ -1,24 +1,38 @@
 
-//Home Video Play-Pause
+//Home single Video
 var playButton = document.getElementById("btn-iframe-trigger");
-meta = document.getElementById('meta');
+var soundButton = document.getElementById("btn-sound-trigger");
+var singleVideo = document.getElementById("single-video");
+
 // Event listener for the play/pause button
 playButton.addEventListener("click", function() {
-  if (video.paused == true) {
-    // Play the video
-    video.play();
+    if (singleVideo.paused == true) {
 
-    // Update the button text to 'Pause'
-    playButton.innerHTML = "<div class='my-10'>Pause</div>";
-  } else {
-    // Pause the video
-    video.pause();
+        singleVideo.play();
+        playButton.innerHTML = "<svg class='icon-play-small'><use xlink:href='frontend/images/icons.svg#pause'></use></svg>";
 
-    // Update the button text to 'Play'
-    playButton.innerHTML = "<svg class='icon-play-small'><use xlink:href='frontend/images/icons.svg#play-small'></use></svg>";
-  }
+    } else {
 
-  var duration = video.duration;
-  meta.innerHTML = duration;
+        singleVideo.pause();
+        playButton.innerHTML = "<svg class='icon-play-small'><use xlink:href='frontend/images/icons.svg#play-small'></use></svg>";
+
+    }
 	
 });
+
+// Event listener for the mute button
+soundButton.addEventListener("click", function() {
+    if (singleVideo.muted == false) {  
+        soundButton.innerHTML = "<svg class='icon-sound-muted'><use xlink:href='frontend/images/icons.svg#sound-muted'></use></svg>";
+        singleVideo.muted = true;
+
+    } else {
+        soundButton.innerHTML = "<svg class='icon-sound'><use xlink:href='frontend/images/icons.svg#sound'></use></svg>";
+        singleVideo.muted = false;
+    
+    }
+    
+});
+
+
+ 

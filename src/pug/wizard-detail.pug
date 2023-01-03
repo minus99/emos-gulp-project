@@ -1,0 +1,90 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Korayspor Wizard"
+    - var pageDescription = "Product Wizard, Korayspor"
+    - var pageName = "product-list"
+    - var pageClass = ""
+
+block content 
+    .breadcrumb-container.container.px-lg-50
+        +breadcrumb(['Anasayfa', '/list'], ['Futbol', '/futbol'], ['Krampon Sihirbazı'])
+    
+        //include includes/wizard-menu
+    .container
+        .ems-tab.wizard-tab
+            .ems-tab-header.nav.nav-tabs.fw-500.position-relative.row.row-cols-6.text-center
+                a.nav-link.col.activated(href='javascript:void(0);' rel='tab-1' aria-label="Yaş Grubu") Yaş Grubu
+                a.nav-link.col.activated(href='javascript:void(0);' rel='tab-2' aria-label="Zemin") Zemin
+                a.nav-link.col.selected(href='javascript:void(0);' rel='tab-3' aria-label="Mevkii") Mevkii
+                a.nav-link.col.activated(href='javascript:void(0);' rel='tab-4' aria-label="Seviye") Seviye
+                a.nav-link.col.activated(href='javascript:void(0);' rel='tab-5' aria-label="Seviye") Seviye
+                a.nav-link.col(href='javascript:void(0);' rel='tab-6' aria-label="Kaydol") Sonuç
+            .wizard-back.mt-30
+                a(href="")
+                    +icon("arrow-left").fs-16.me-20
+                    span.fs-13 Baştan Git
+            .ems-tab-content
+                div(rel='tab-1')
+                    .text-center.mt-40.mt-lg-20
+                        h1.fs-32.fs-40 Yaş Grubu 
+                    ul.wizard-item-list.list-unstyled.d-flex.flex-column.flex-lg-row.align-items-center.justify-content-lg-center.gap-20.mt-50.mt-lg-70
+                        li.wizard-item
+                            a.btn.btn-white(href="")
+                                +icon("dry-ground").me-10
+                                span Yetişkin
+                        li.wizard-item.selected
+                            a.btn.btn-white(href="")
+                                +icon("artificial-ground").me-10
+                                span Çocuk
+                    
+                .selected(rel='tab-2')
+                    .text-center.mt-40.mt-lg-20
+                        h1.fs-32.fs-40 Zemin 
+                    ul.wizard-item-list.list-unstyled.d-flex.flex-column.flex-lg-row.align-items-center.justify-content-lg-center.gap-20.mt-50.mt-lg-70
+                        li.wizard-item
+                            a.btn.btn-white(href="")
+                                +icon("dry-ground").me-10
+                                span  Kuru Çim Zemin
+                        li.wizard-item.selected
+                            a.btn.btn-white(href="")
+                                +icon("artificial-ground").me-10
+                                span  Suni Zemin
+                        li.wizard-item
+                            a.btn.btn-white(href="")
+                                +icon("soft-ground").me-10
+                                span  Yumuşak Zemin
+                        li.wizard-item
+                            a.btn.btn-white(href="")
+                                +icon("astroturf-pitch").me-10
+                                span  Halı Saha
+                        li.wizard-item
+                            a.btn.btn-white(href="")
+                                +icon("indoor-court").me-10
+                                span  Kapalı Saha/Sokak
+                div(rel='tab-3')
+                    .text-center.mt-40.mt-lg-20
+                        h1.fs-32.fs-40 Mevki
+                    ul.wizard-item-list.list-unstyled.d-flex.flex-column.flex-lg-row.align-items-center.justify-content-lg-center.gap-20.mt-50.mt-lg-70
+                        li.wizard-item
+                            a.btn.btn-white(href="")
+                                +icon("dry-ground").me-10
+                                span Yetişkin
+                        li.wizard-item.selected
+                            a.btn.btn-white(href="")
+                                +icon("artificial-ground").me-10
+                                span Çocuk
+                div(rel='tab-6')
+                    .text-center.mt-40.mt-lg-20
+                        h1.fs-32.fs-40 Sonuç
+                    .ems-prd-list.mt-40.mt-lg-70
+                        .container.px-lg-50
+                            ul.ems-prd-list-wrapper.ems-prd-with-blog.row.row-cols-1.row-cols-lg-4.g-5.list-unstyled
+                                - for (var y = 0; y < 8; y++)
+                                    li
+                                        +product()
+        .text-center.mt-30.mt-lg-60
+            a.btn.btn-white.btn-icon(href="").me-5
+                +icon("arrow-left").fs-16
+            a.btn.btn-white.btn-icon(href="")
+                +icon("arrow-right").fs-16

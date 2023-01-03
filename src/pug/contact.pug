@@ -7,16 +7,19 @@ block prepend head
     - var pageClass = ""
 
 block content
-    .container
-        +breadcrumb([pageName])
+    .breadcrumb-container.container.px-lg-50
+        +breadcrumb(['Anasayfa', '/list'], ['Kurumsal', '/list'], ['İletişim'])
+    .corporate-sidebar-container.container.px-lg-50
+        include includes/corporate-menu
+    .container.mt-lg-40
         .row     
-            include includes/corporate-menu
-            .col-12.col-lg-4.mt-lg-40
-                +contact-title()
+            .col-12.col-lg-4
+                p.hr-title.fs-24.fs-lg-36.fw-600 Dilediğin zaman bizimle <br> iletişime geçebilir 
+                    span sin. Size <br> yardımcı olmak için buradayız.
             .col-12.col-lg-8.d-flex.flex-column.mt-lg-40
                 h1.fs-24.fw-600.mb-20 İletişim
                 <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d48121.14447758708!2d28.97616075043899!3d41.07835759904514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d41.0787458!2d29.015299499999998!4m5!1s0x14cab7cb668a1291%3A0x828cfd3e27491e0a!2sKorayspor%2C%20Kanyon%20i%C5%9F%20Merkezi%20Esentepe%20Mahallesi%20B%C3%BCy%C3%BCkdere%20Cd%20No%3A185%20The%20North%20Face%20Ma%C4%9Fazas%C4%B1%2C%2034330%20%C4%B0stanbul!3m2!1d41.078362899999995!2d29.0111802!5e0!3m2!1str!2str!4v1669325802630!5m2!1str!2str" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            .col-12.col-lg-4.mt-lg-40
+            .col-12.col-lg-4
                 p.fs-20.mb-30 Koray spor  Spor Malz. San. ve Tic. Ltd. Şti.
                 p.fs-16.fw-600 Altıparmak Merkez
                 p.fs-16 Altıparmak Cad. No: 6 Osmangazi/BURSA
@@ -24,11 +27,11 @@ block content
                 p.fs-13 info@korayspor.com
             .col-12.col-lg-8.d-flex.flex-column.p-lg-40
                 p.fs-16.fw-600.l-h-20 Hepsiburada, Trendyol, GittiGidiyor, Çiçek Sepeti, N11, Amazon ve Korayspor.com'dan yaptığınız alışverişler hakkındaki tüm sorularınızı aşağıdaki iletişim formundan bize iletebilirsiniz. En kısa sürede tarafınıza dönüş yapılacaktır.
-                .d-flex.py-40
+                .d-flex.py-40.gap-20.flex-column.flex-lg-row.align-items-center
                     a.btn.btn-lg.btn-white.btn-icon-left(href="javascript:void(0)")
                         +icon("whatsapp").fs-18
                         span  Canlı Destek 1
-                    a.btn.btn-lg.btn-white.btn-icon-left.mx-20(href="javascript:void(0)")
+                    a.btn.btn-lg.btn-white.btn-icon-left.mx-lg-20(href="javascript:void(0)")
                         +icon("whatsapp").fs-18
                         span  Canlı Destek 2
                     a.btn.btn-lg.btn-white.btn-icon-left(href="javascript:void(0)")

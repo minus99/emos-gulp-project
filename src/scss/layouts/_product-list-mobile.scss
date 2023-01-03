@@ -1,0 +1,45 @@
+
+.prd-list-cover-filter {
+    .btn {
+        width: 120px;
+        height: 66px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 38px;
+        font-size: 8px;
+    }
+}
+.ems-prd-list {
+    &-wrapper {
+        row-gap: 40px;
+        .prd-blog-post {
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+.view {
+    &-2 {
+        .ems-prd-list-wrapper {
+            > li {
+                flex: 0 0 auto;
+                width: 50%;
+                &.prd-blog-post  {
+                    display: none !important;
+                }
+            }
+        }
+        .card-prd {
+            .card-badge {
+                .icon-elite {
+                    &:nth-child(n+2) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

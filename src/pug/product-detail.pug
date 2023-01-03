@@ -1,0 +1,287 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Korayspor Product Detail"
+    - var pageDescription = "Product Detail sayfası, Korayspor"
+    - var pageName = "product-detail"
+    - var pageClass = ""
+
+block content
+    .container.px-lg-50
+        +breadcrumb(['Erkek', '/list'], ['Ayakkabı', '/list'], ['Günlük'])
+    .container.px-0.px-lg-50
+        .prd-grid
+            .prd-detail-top
+                .card-rating.mt-5.d-flex.align-items-center.mt-lg-10.mb-10
+                  .card-rating-bar
+                    .card-rating-current(style="--star-qty: 3.5;")
+                  .fs-12.ms-10 34 Değerlendirme, 9 Yorum
+               
+                p.fs-12.fw-600.d-none.d-lg-none Ürün kodu: 015M101117B
+                h1.fs-24.fs-lg-30.fw-600 Air Zoom Vomero 16
+                h2.fs-12.fw-400.mt-10.text-gray2 Erkek Koşu Ayakkabısı
+                p.fs-16.fw-700.mt-10 2.179,90 TL
+                .prd-detail-info.mt-20.line-items
+                    span 21,79 TL Puan
+                    span Anlaşmalı kartlara 4 taksit
+                    span Ücretsiz kargo
+
+            .prd-gallery.position-relative.mt-20.mt-lg-0
+                .prd-detail-brand
+                    +img('', true, dirUploads + "product-detail-brands/nike.png")
+                .swiper-container.prd-gallery-swiper.mobi-swiper.desktop-no-swipe.item-6.swiper-container-initialized.swiper-container-horizontal(data-swiper="WidgetProgressbar")
+                    .swiper-inner
+                        ul.swiper-wrapper.list-unstyled
+                            li.swiper-slide
+                                .ratio.ratio-prd.prm-media
+                                    video(data-video="https://player.vimeo.com/progressive_redirect/playback/769802231/rendition/720p/file.mp4?loc=external&signature=9a408598285bb20e9bdbf3057c9e2242fea655179e4d8237640fd020bed51b0a" data-videomobile="https://player.vimeo.com/progressive_redirect/playback/769802231/rendition/720p/file.mp4?loc=external&signature=9a408598285bb20e9bdbf3057c9e2242fea655179e4d8237640fd020bed51b0a" data-poster="banner/video-banner.jpg" data-postermobile="banner/video-banner.jpg" poster="banner/video-banner.jpg" preload="none" autobuffer="autobuffer" playsinline="true" muted="true" src="https://player.vimeo.com/progressive_redirect/playback/769802231/rendition/720p/file.mp4?loc=external&signature=9a408598285bb20e9bdbf3057c9e2242fea655179e4d8237640fd020bed51b0a" )
+                            - for (var pdp = 1; pdp < 6; pdp++)
+                                li.swiper-slide
+                                    +img('ratio ratio-prd', true, dirUploads + "product-detail/product/" + pdp + ".png")
+                        .swiper-scrollbar
+            .prd-detail-bottom
+                .mt-30
+                    span.fw-600.fs-13 Renk seçimi
+                    ul.prd-options.list-unstyled.row.row-cols-4.g-5.mt-20
+                        li.col
+                            +img('ratio ratio-prd', true, dirUploads + "product-detail/product/1.png")
+                        li.col.selected
+                            +img('ratio ratio-prd', true, dirUploads + "product-detail/product/1.png")
+                        li.col
+                            +img('ratio ratio-prd', true, dirUploads + "product-detail/product/3.png")
+                        li.col
+                            +img('ratio ratio-prd ', true, dirUploads + "product-detail/product/1.png")
+                .mt-30
+                    .d-flex.justify-content-between
+                        span.fw-600.fs-13 Numara seçimi
+                        span.fs-13 
+                            a(href="") Beden tablosu
+                    ul.lv2.list-unstyled.py-30.case-size
+                        li.filter-item.position-relative
+                            a.stretched-link(href="javascript:void(0);" aria-label="size") 
+                                span.prd-filter-size 40
+                        li.filter-item.position-relative
+                            a.stretched-link(href="javascript:void(0);" aria-label="size") 
+                                span.prd-filter-size 40.5
+                        li.filter-item.position-relative
+                            a.stretched-link(href="javascript:void(0);" aria-label="size") 
+                                span.prd-filter-size 41
+                        li.filter-item.position-relative
+                            a.stretched-link.selected(href="javascript:void(0);" aria-label="size") 
+                                span.prd-filter-size 42.25
+                        li.filter-item.position-relative
+                            a.stretched-link(href="javascript:void(0);" aria-label="size") 
+                                span.prd-filter-size 43
+                        li.filter-item.position-relative
+                            a.stretched-link(href="javascript:void(0);" aria-label="size") 
+                                span.prd-filter-size 42
+                        li.filter-item.position-relative
+                            a.stretched-link(href="javascript:void(0);" aria-label="size") 
+                                span.prd-filter-size 44
+                        li.filter-item.position-relative
+                            a.stretched-link(href="javascript:void(0);" aria-label="size") 
+                                span.prd-filter-size 45
+                        li.filter-item.position-relative
+                            a.stretched-link(href="javascript:void(0);" aria-label="size") 
+                                span.prd-filter-size 46
+                        li.filter-item.position-relative
+                            a.stretched-link.out-of-stock(href="javascript:void(0);" aria-label="size") 
+                                span.prd-filter-size 45.5   
+                .prd-fresco.mt-40
+                    .bg-white.p-15.mt-25
+                        span.fs-13.fw-600 Ayakkabı ID / Nakış işleme
+                        .d-flex.py-15.gap-10
+                            .ems-field.w-50
+                                input#left-feet.form-control(type='text' name='left-feet' placeholder='Sol Ayak' value='')
+                                span.char-count.fs-13 1/6
+                            .ems-field.w-50
+                                input#right-feet.form-control(type='text' name='left-feet' placeholder='Sağ Ayak' value='')
+                                span.char-count.fs-13 1/6
+                        .d-flex    
+                            span.fs-13.lh-lg.mt-10.d-block.me-20 Ayakkabı ID hizmeti kapıda nakit ödeme siparişlerinde geçerli değildir.
+                            a.btn.btn-coral.mt-20(href="") Ekle + 90TL
+                        
+                .mt-30.d-flex.gap-5
+                    button(aria-label="SEPETE EKLE" class="btn py-20 btn-dark-light btn-icon-right px-lg-50 text-center btn-add-to-cart add-to-cart-btn" type="button")
+                        span Sepete Ekle
+                        +icon("caret-right").fs-12
+                    a.btn.py-20.btn-white.btn-icon-right.ms-10(href="javascript:void(0)")
+                        span Listeme Ekle
+                        +icon("archive-fill").fs-16
+                .mt-40
+                    span.fs-18.fw-500 Bu Ürünlerle Beraber Satılanlar
+                    .bg-white.px-15.mt-25
+                        .sold-together.d-flex.py-25
+                            +img('ratio ratio-prd', true, dirUploads + "product-detail/product/1.png").h-auto
+                            .sold-right.px-15.px-lg-20
+                                a(href="")
+                                    span.fs-14.fs-lg-16.fw-600 Ayakkabı Temizleme Süngeri
+                                span.mt-10.d-block 25.00 TL
+                                a.btn.btn-outline-black.mt-20(href="") Sepete Ekle
+                        .sold-together.d-flex.py-25
+                            +img('ratio ratio-prd', true, dirUploads + "product-detail/product/1.png").h-auto
+                            .sold-right.px-15.px-lg-20
+                                span.fs-14.fs-lg-16.fw-600 Ayakkabı Temizleme Süngeri
+                                span.mt-10.d-block 25.00 TL
+                                a.btn.btn-outline-black.mt-20(href="") Sepete Ekle
+    .container.px-lg-50
+        .py-50.w-lg-65.border-top.mt-60
+            span.fs-24.fw-700 Özellikler
+            ul.prd-features-icons.list-unstyled.mt-30.d-flex
+                li 
+                    +img('ratio ratio-1x1 ratio-bg-remove', true, dirUploads + "features/primeknit.svg")
+                li 
+                    +img('ratio ratio-1x1 ratio-bg-remove', true, dirUploads + "features/kaztuyu.svg")
+                li 
+                    +img('ratio ratio-1x1 ratio-bg-remove', true, dirUploads + "features/goretex.svg")
+
+        .py-50.w-lg-65.border-top
+            h4.fs-32.fs-lg-54.fw-600 Air Zoom <br> Vomero 16
+            p.fs-18.fs-lg-20.my-20 Koşuya özel tasarlanan ayakkabılarda gereksinim duyacağınız tüm özellikleri bir araya getiren Nike Air Zoom Vomero 16; kaliteli yastıklama teknolojileri ve Nike Zoomx köpük topuk desteği ile maksimum performans sunuyor.
+            p Erkek koşu grubuna özel; 40- 46 numara aralığında üretimi yapılan Air Zoom Vomero 16 kolay aşınmayan dayanıklı tasarımı ile daha uzun süre kullanmanıza neden olacaktır. Konforlu yapısının yanı sıra sezonun trend renk seçenekleri ile oldukça şık ve sportif bir tasarıma sahiptir.
+            p Dil ve topuk bölgesine özel olarak yerleştirilmiş temas noktaları sayesinde, uzun süreli kullanımlarda ayağı yormaz. Vomero 5 modelinden ilham alarak tasarlanan Air Zoom Vomero 16; kolay kullanımı ve ekstra rahatlık sunan yapısı ile günlük kullanıma da uygundur.
+        .prd-features.w-lg-65.mt-50
+            .prd-features-media
+                +img('ratio ratio-prd', true, dirUploads + "product-detail/product/1.png")
+            .row.row-cols-1.row-cols-lg-2.g-30.g-lg-60.mt-50
+                .col
+                    h5.fw-700.fs-24 Air Zoom Desteği
+                    p.mt-15 Topuk çevresinde hızlı tepki veren ve yumuşak bir his veren Air Zoom birimleri, önceki modellere kıyasla Air Zoom Vomero 16 da daha konforlu bir formda hazırlanmıştır. Air Zoom Vomero 16, optimize edilmiş Zoom yastıklama ile kullanıcıların vazgeçilmezi oluyor.
+                .col
+                    h5.fw-700.fs-24 Hava Sirkülasyon Sistemi
+                    p.mt-15 Topuk çevresinde hızlı tepki veren ve yumuşak bir his veren Air Zoom birimleri, önceki modellere kıyasla Air Zoom Vomero 16 da daha konforlu bir formda hazırlanmıştır. Air Zoom Vomero 16, optimize edilmiş Zoom yastıklama ile kullanıcıların vazgeçilmezi oluyor.
+                .col
+                    h5.fw-700.fs-24 Teknik Özellikler
+                    p.mt-15 Topuk çevresinde hızlı tepki veren ve yumuşak bir his veren Air Zoom birimleri, önceki modellere kıyasla Air Zoom Vomero 16 da daha konforlu bir formda hazırlanmıştır. Air Zoom Vomero 16, optimize edilmiş Zoom yastıklama ile kullanıcıların vazgeçilmezi oluyor.
+                .col
+                    h5.fw-700.fs-24 Ürün Özellikleri
+                    p.mt-15 Menşei: Çin<br>Spor Dalı: Koşu
+    .prd-widget-type-1.my-50.overflow-hidden
+        .container.px-lg-40
+            h2.section.title.fw-600.fs-32.d-lg-none Benzer Ürünler
+            include includes/product-slider
+    
+    .prd-rating.container.px-lg-40
+        .border-top.py-60.text-center
+            .prd-rating-title.bg-white.p-50.w-lg-25.mx-auto
+                .card-rating.d-flex.align-items-center.justify-content-center
+                  .card-rating-bar
+                    .card-rating-current(style="--star-qty: 3.5;")
+                p.mt-20 
+                    span.fs-13 Kullanıcılar bu ürünü 
+                    span.fs-16.fw-600 %0 
+                    span.fs-13 öneriyor
+            p.fs-13.my-40 Seçilen kriterlerde yorum bulunamadı!
+            .row.w-lg-75.mx-auto.text-start.gx-0.gy-30.gx-lg-60
+                .col-12.col-lg-5
+                    span.fs-20.fw-600 Değerlendir
+                    ul.list-unstyled.mt-20.w-100
+                        li.mt-20.rating-list 
+                            span.fs-13.fw-600 NUMARA
+                            .rating-list.my-10
+                                .rating-list-item.d-flex.justify-content-between
+                                    a(href="").rate
+                                        span 
+                                    a(href="").rate.selected
+                                        span
+                                    a(href="").rate
+                                        span
+                                    a(href="").rate
+                                        span
+                                    a(href="").rate
+                                        span
+                            .d-flex.justify-content-between.w-100.fs-13
+                                span Küçük
+                                span Büyük
+                            
+                        li.mt-20
+                            span.fs-13.fw-600 KONFOR
+                            .rating-list.my-10
+                                .rating-list-item.d-flex.justify-content-between
+                                    a(href="").rate
+                                        span 
+                                    a(href="").rate
+                                        span
+                                    a(href="").rate.selected
+                                        span
+                                    a(href="").rate
+                                        span
+                                    a(href="").rate
+                                        span
+                            .d-flex.justify-content-between.w-100.fs-13
+                                span Az Rahat
+                                span Çok Rahat
+                        li.mt-20 
+                            span.fs-13.fw-600 KALIP
+                            .rating-list.my-10
+                                .rating-list-item.d-flex.justify-content-between
+                                    a(href="").rate
+                                        span 
+                                    a(href="").rate.selected
+                                        span
+                                    a(href="").rate
+                                        span
+                                    a(href="").rate
+                                        span
+                                    a(href="").rate
+                                        span
+                            .d-flex.justify-content-between.w-100.fs-13
+                                span Dar
+                                span Geniş
+                        li.mt-20 
+                            span.fs-13.fw-600 KALİTE
+                            .rating-list.my-10
+                                .rating-list-item.d-flex.justify-content-between
+                                    a(href="").rate
+                                        span 
+                                    a(href="").rate.selected
+                                        span
+                                    a(href="").rate
+                                        span
+                                    a(href="").rate
+                                        span
+                                    a(href="").rate
+                                        span
+                            .d-flex.justify-content-between.w-100.fs-13
+                                span Dayanıksız
+                                span Dayanıklı
+                .col-12.col-lg-7
+                    ul.list-unstyled.prd-comments
+                        li
+                            .card-rating.d-flex.align-items-center.justify-content-center.ms-20
+                            .card-rating-bar
+                                .card-rating-current(style="--star-qty: 5;")
+                            p.fw-600.mt-15 Harikulade
+                            p.mt-15 Ürünü çok tereddütle sipariş verdim. 10 gündür kullanıyorum. Ayakkabı çok rahat. Kalitesi mükemmel. Ayaklarım saıcacık. Botu kesinlikle gözünüz kapalı alabilirsiniz. Kalitesi gerçekten yüksek, dayanıklı, rahat bir bot. Verdiğiniz paraya değer. Daha fazla para ödemeyin başka markalara. Ayak numaram büyük olduğu İçin ayakkabı bulmakta zorlanıyordum. Bundan sonra ayakkabı mağazam Koray Spor. Koray Spora çok teşekkürler.
+                            p.fw-600 Vedat B.
+                            .mt-20.border-top.py-20.w-lg-50.w-75
+                                span Bu cevap yardımcı oldu mu?
+                                .d-flex.mt-15.gap-10
+                                    a.btn.btn-white.btn-icon-left(href="")
+                                        +icon("check").fs-16
+                                        span Evet
+                                    a.btn.btn-white.btn-icon-left(href="")
+                                        +icon("close").fs-12
+                                        span Hayır
+                        li
+                            .card-rating.d-flex.align-items-center.justify-content-center.ms-20
+                            .card-rating-bar
+                                .card-rating-current(style="--star-qty: 5;")
+                            p.fw-600.mt-15 Harikulade
+                            p.mt-15 Ürünü çok tereddütle sipariş verdim. 10 gündür kullanıyorum. Ayakkabı çok rahat. Kalitesi mükemmel. Ayaklarım saıcacık. Botu kesinlikle gözünüz kapalı alabilirsiniz. Kalitesi gerçekten yüksek, dayanıklı, rahat bir bot. Verdiğiniz paraya değer. Daha fazla para ödemeyin başka markalara. Ayak numaram büyük olduğu İçin ayakkabı bulmakta zorlanıyordum. Bundan sonra ayakkabı mağazam Koray Spor. Koray Spora çok teşekkürler.
+                            p.fw-600 Vedat B.
+                    .mt-40
+                        span.fs-20.fw-600 Yorum Yap
+                        form(action="").mt-20
+                            .ems-field.form-floating
+                                    input.form-control(type='text' name='title' placeholder='Başlık' value='')
+                                    label(for="title") Başlık
+                            .ems-field.mt-15
+                                textarea(name="", rows="10" placeholder='Yorumunuz')
+                            .mt-30.d-flex.align-items-center
+                                span Ürünü Puanlayın 
+                                .card-rating.d-flex.align-items-center.justify-content-center.ms-20
+                                    .card-rating-bar
+                                        .card-rating-current(style="--star-qty: 3.5;")
+                            a.btn.btn-dark.w-100.w-lg-25.mt-30(href="") Gönder
+                        

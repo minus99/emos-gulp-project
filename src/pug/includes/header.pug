@@ -216,15 +216,24 @@
                     a.lvl-1-item-link(href="#") Spor Branşları
                 li.lvl-1-item.fs-18.fs-lg-16 
                     a.lvl-1-item-link(href="#") Markalar
-            ul.list-unstyled.d-lg-none.mt-60.px-20
-                li.mt-15
-                    a(href="") Şipariş Takibi
-                li.mt-15
-                    a(href="") Mağazalar
-                li.mt-15
-                    a(href="") Kurumsal
-                li.mt-15
-                    a(href="") Destek
+            .d-flex.justify-content-between.align-items-end.mt-60.mb-100.px-20.d-lg-none
+                ul.list-unstyled
+                    li.mt-15
+                        a(href="") Şipariş Takibi
+                    li.mt-15
+                        a(href="") Mağazalar
+                    li.mt-15
+                        a(href="") Kurumsal
+                    li.mt-15
+                        a(href="") Destek
+                .custom-dropdown.dropdown
+                    .custom-dropdown-toggle
+                        span Tr - TRY
+                    ul.custom-dropdown-menu.dropdown-menu.end-0
+                        li  
+                            span Tr - TRY
+                        li  
+                            span En - EUR
     .header-logo
         a(href="/")
             +img('ratio ratio-logo ratio-bg-remove', false, dirImages + 'logo.svg')
