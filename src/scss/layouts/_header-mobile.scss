@@ -134,9 +134,6 @@
             width: max-content;
         }
     }
- 
-
-
     &-results {
         //display: none;
 
@@ -168,3 +165,22 @@
         }
     }
 }
+
+.ems-cart {
+  
+    &-ready & {
+      @extend %ems-modal-ready;
+    }
+  
+    &-animate {
+      @extend %ems-modal-animate-body;
+    }
+  
+    &-animate & {
+      @extend %ems-modal-animate-x;
+      @extend %ems-modal-animate;
+      &-overlay {
+        @extend %ems-modal-animate-overlay;
+      }
+    }
+  }
