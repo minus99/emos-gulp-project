@@ -123,10 +123,10 @@ mixin product()
                     span.card-price-first.text-gray2.text-decoration-line-through 1200,00 #{currencyText}
                     span.card-price-last.text-primary.ms-10 999,00 #{currencyText}
         a.stretched-link(href="product-detail.html")
-mixin marks()
+mixin brands()
     .card.card-prd
         .card-media.position-relative
-            +picture('', lazy="true", dirUploads + 'marks/adidas.png', dirUploads + 'marks/adidas.png', dirUploads + 'marks/adidas.png')(class=" w-90", alt="slide 1")
+            +picture('', lazy="true", dirUploads + 'brands/adidas.png', dirUploads + 'brands/adidas.png', dirUploads + 'brands/adidas.png')(class=" w-90", alt="slide 1")
 mixin square-banner()
     .square-banner.position-relative.object-scale
         +picture('ratio ratio-square-banner-mobile ratio-lg-square-banner', lazy="true", dirUploads + 'banner/banner2x.png', dirUploads + 'banner/banner2x.png', dirUploads + 'banner/banner.png')(class="card-img", alt="slide 1")

@@ -1,0 +1,20 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Korayspor Brand List"
+    - var pageDescription = "Brand sayfası, Korayspor"
+    - var pageName = "brand-list"
+    - var pageClass = " "
+
+block content 
+    .breadcrumb-container.container.px-lg-50
+        +breadcrumb(['Anasayfa', '/list'], ['Kurumsal', '/list'], ['Markalar'])
+    .container.px-lg-100
+        include includes/brands-menu
+        include includes/letter-menu
+    .ems-brand-list.py-30
+        .container.px-lg-50
+            ul.row.row-cols-6.g-5.list-unstyled
+                - for (var y = 0; y < 12; y++)
+                    li.d-flex.align-items-center.justify-content-center
+                        +brands()
