@@ -25,11 +25,21 @@ progress[value] {
     appearance: none;
     width: 280px;
     height: 4px;
-    color: red;
+    color: red; 
     &::-webkit-progress-bar {
         background-color: #CAC6C6;
         border-radius: 2px;
         box-shadow: #DF4826 rgb(223, 72, 38) inset; 
     }
 }
+.order-truck {
+    padding: 10px;
+}
 
+.order-menu  {
+    width: 100%;
+}
+
+.order-track-form-container {
+    background-color: transparent !important;
+}

@@ -11,11 +11,11 @@ block content
         .notfound.h-100.position-relative
             +picture('ratio ratio-335x648 ratio-lg-main-slider m-hide', true, dirImages + 'login/login.png', dirImages + 'login/login.png', dirImages + 'login/login.png')(class="", alt="slide 1")
             .login-page  
-                .notfound-desc.d-flex.flex-column.align-items-start.notfound-desc-login
+                .d-flex.flex-column.align-items-start.notfound-desc-login
                     .row.g-0
                         .login-left-menu
                             .ems-tab.ems-tab-bordered
-                                .ems-tab-header.nav.nav-tabs.mb-30.d-flex.fw-400.fs-18.text-center
+                                .ems-tab-header.nav.nav-tabs.mb-15.d-flex.fw-400.fs-18.text-center
                                     a.nav-link.w-50.selected(href='javascript:void(0);' rel='tab-1' aria-label="Login") Giriş Yap
                                     a.nav-link.w-50(href='javascript:void(0);' rel='tab-2' aria-label="Üye Ol") Üye Ol
                                 .ems-tab-content
@@ -25,7 +25,7 @@ block content
                                         .login-form-container
                                             form.ems-form#login(method='post' action='/tr/LogOn')
                                                 .row.g-0
-                                                    .ems-field.form-floating.mb-20.ems-field-msg-error
+                                                    .ems-field.form-floating.mb-15.ems-field-msg-error
                                                         input#UserNameOrTelephone.input-login.form-control(type='text' name='UserNameOrTelephone' placeholder='Cep Tel' value='')
                                                         label(for='UserNameOrTelephone') Cep Telefonu
                                                         .ems-field-feedback *Hay aksi! Cep telefonu geçerli değil
@@ -63,29 +63,29 @@ block content
                                     div(rel='tab-2')
                                         .signup-form-container
                                             form.ems-form#signup(action='/tr/CreateMember' method='post')
-                                                .ems-field.form-floating.mb-20
+                                                .ems-field.form-floating.mb-10
                                                     input#UserName.input-login.form-control(type='text' name='UserName' placeholder='Ad' value='')
                                                     label(for='UserName') Ad*
-                                                .ems-field.form-floating.mb-20
+                                                .ems-field.form-floating.mb-10
                                                     input#UserSurname.input-login.form-control(type='text' name='UserSurname' placeholder='Soyad' value='')
                                                     label(for='UserSurname') Soyad*
-                                                .ems-field.form-floating.mb-20
+                                                .ems-field.form-floating.mb-10
                                                     input#UserEmail.input-login.form-control(type='text' name='UserEmail' placeholder='E-posta' value='')
                                                     label(for='UserEmail') E-posta Adresi*
-                                                .ems-field.form-floating.mb-20
+                                                .ems-field.form-floating.mb-10
                                                     input#UserNameOrTelephone.input-login.form-control(type='text' name='UserNameOrTelephone' placeholder='Cep Tel' value='')
                                                     label(for='UserNameOrTelephone') Cep Telefonu
-                                                .ems-field.form-floating.mb-40  
+                                                .ems-field.form-floating.mb-10  
                                                     input#UserNameOrEmail.input-login.form-control(type='password' name='Password' placeholder='Şifre' value='')
                                                     label(for='Password') Şifre*
                                                 .ems-field
-                                                    .d-flex.align-items-center.mb-5
+                                                    .d-flex.align-items-center
                                                         +icon("checked").f-14
                                                         p En az 8 karakter içermelidir
-                                                    .d-flex.align-items-center.mb-5
+                                                    .d-flex.align-items-center
                                                         +icon("checked").f-14
                                                         p Küçük harf (a-z) ve büyük harf (A-Z) içermelidir
-                                                    .d-flex.align-items-center.mb-40
+                                                    .d-flex.align-items-center.mb-5
                                                         +icon("not-checked").f-14
                                                         p En az bir rakam (0-9) veya sembol içermelidir
                                                 .ems-field
@@ -100,7 +100,7 @@ block content
                                                                     input.form-check-input#IsEmailPermitted.ems-styler-activeted.act-iStyler.sCheckbox(onclick='smsCheck(this)' type='checkbox' name='IsEmailPermitted' value='true' checked)
                                                                     label(for='IsEmailPermitted').text-gray.l-h-20  İletişim izinleri kapsamında Korayspor Mağazacılık A.Ş. tarafından önemli bilgilerden haberdar olmak için elektronik ileti almayı kabul ediyorum.
                                                                 input#IsSmsPermitted.ems-styler-activeted.act-iStyler(type='hidden' name='IsSmsPermitted' value='true' checked)
-                                                a.btn.btn-black.w-100.disabled.my-30.btn-lg(href=""  aria-label="Onay") Üye Ol
+                                                a.btn.btn-black.w-100.disabled.my-10.btn-lg(href=""  aria-label="Onay") Üye Ol
                                                 p.login-privacy.text-gray Kişisel verileriniz, Aydınlatma Metni kapsamında işlenmektedir. “Onay Kodu İste” butonuna basarak 
                                                     a(class='ems-privacy-trigger' aria-label='Privacy' href='javascript:void(0);' data-target='body' data-ready='ems-privacy-ready' data-animate='ems-privacy-animate' data-type='add')  Üyelik Sözleşmesi
                                                     | ’ni, 
@@ -112,8 +112,15 @@ block content
                                             input.ems-styler-activeted.act-iStyler(name='__RequestVerificationToken' type='hidden')
                                             input#returnUrl.ems-styler-activeted.act-iStyler(name='returnUrl' type='hidden' value='/tr/Widget/Get/CreateUserRaw')
                                             input#CountryCode.ems-styler-activeted.act-iStyler(name='CountryCode' type='hidden' value='+90')
-                        .d-none.d-lg-block.col-lg-6.h-100.position-relative
-                            p Aramıza hoş geldin! Görüşlerin bizim için önemli. Dilediğin zaman bizimle iletişime geçebilirsin.
+                        .d-none.d-lg-block.col-lg-6.position-absolute.swiper-login
+                            .swiper-container.swiper-container-widget.d-flex(data-swiper="WidgetProgressbar")
+                                .swiper-inner
+                                    ul.swiper-wrapper.list-unstyled
+                                        li.swiper-slide
+                                            p Aramıza hoş geldin! Görüşlerin bizim için önemli. Dilediğin zaman bizimle iletişime geçebilirsin.
+                                        li.swiper-slide
+                                            p Güvenle alışveriş yapın. Dilediğiniz zaman ücretsiz iade ve değişim yapabilirsiniz.
+                                
                     // Privacy
                     .ems-privacy-overlay.ems-overlay(data-target="body" data-ready="ems-privacy-ready" data-animate="ems-privacy-animate" data-type="remove")
                     .ems-privacy.ems-modal-lg.ems-modal.py-15.ps-20.pe-25

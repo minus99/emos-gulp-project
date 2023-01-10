@@ -10,8 +10,8 @@ block content
     .container.px-lg-30.mb-20.mb-lg-60
         +breadcrumb([pageName])
         .h-100.position-relative
-            +picture('', true, dirImages + 'order-truck/order.png', dirImages + 'order-truck/order.png', dirImages + 'order-truck/order.png')(class="", alt="slide 1")
-            .row.mt-20.mt-lg-30.position-relative.mt-30.mt-lg-50.top-50
+            +picture('', true, dirImages + 'order-truck/order.png', dirImages + 'order-truck/order.png', dirImages + 'order-truck/order.png')(class="m-hide", alt="slide 1")
+            .row.position-absolute.order-menu
                 .col-12.col-lg-6.mb-40
                     .order-track-form-container.bg-white
                         form.ems-form(action='/' method='POST' id="order-track-form")
