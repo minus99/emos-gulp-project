@@ -7,26 +7,25 @@ block prepend head
     - var pageClass = ""
 
 block content
-    .main-slider-section.overflow-hidden
-        .container.px-0.px-lg-10
-               +swiper('mainSlider', false, true, false, true, true)(class="main-slider")
-                -for(var i=0; i<5; i++)
-                    li.swiper-slide
-                        .ratio.ratio-main-slider-mobile.ratio-md-main-slider.ratio-lg-main-slider
-                            picture
-                                source.lazy-picture(media='(max-width:0)' srcset='frontend/images/1x1.svg')
-                                source(media='(max-width: 767px)' srcset='uploads/slider/slider-mobile.jpg, uploads/slider/slider-mobile.jpg 2x')
-                                source(media='(min-width: 768px)' srcset='uploads/slider/slider.jpg')
-                                img.w-100(src='uploads/slider/slider-mobile.jpg' alt='slide 1')
-                        .banner-overlay
-                            .banner-title
-                                h3.fs-20.fs-lg-30 Y2K’dan İlham Aldı
-                                p.fs-14.fs-lg-16.mt-10 Koleksiyonu keşfet
-                            .swiper-progress-bar.position-absolute.start-0.bottom-0.w-100
-                                span.swiper-progress.d-block
-                    li.swiper-slide
-                        .ratio.ratio-main-slider-mobile.ratio-md-main-slider.ratio-lg-main-slider
-                            video(data-video="https://player.vimeo.com/progressive_redirect/playback/769802231/rendition/720p/file.mp4?loc=external&signature=9a408598285bb20e9bdbf3057c9e2242fea655179e4d8237640fd020bed51b0a" data-videomobile="https://player.vimeo.com/progressive_redirect/playback/769802231/rendition/720p/file.mp4?loc=external&signature=9a408598285bb20e9bdbf3057c9e2242fea655179e4d8237640fd020bed51b0a" data-poster="banner/video-banner.jpg" data-postermobile="banner/video-banner.jpg" poster="banner/video-banner.jpg" preload="none" autobuffer="autobuffer" playsinline="true" muted="true" src="https://player.vimeo.com/progressive_redirect/playback/769802231/rendition/720p/file.mp4?loc=external&signature=9a408598285bb20e9bdbf3057c9e2242fea655179e4d8237640fd020bed51b0a" )
+    .main-slider-section.overflow-hidden.container.px-0.px-lg-10
+        +swiper('mainSlider', false, true, false, true, true)(class="main-slider")
+            -for(var i=0; i<5; i++)
+                li.swiper-slide
+                    .ratio.ratio-main-slider-mobile.ratio-md-main-slider.ratio-lg-main-slider
+                        picture
+                            source.lazy-picture(media='(max-width:0)' srcset='frontend/images/1x1.svg')
+                            source(media='(max-width: 767px)' srcset='uploads/slider/slider-mobile.jpg, uploads/slider/slider-mobile.jpg 2x')
+                            source(media='(min-width: 768px)' srcset='uploads/slider/slider.jpg')
+                            img.w-100(src='uploads/slider/slider-mobile.jpg' alt='slide 1')
+                    .banner-overlay
+                        .banner-title
+                            h3.fs-20.fs-lg-30 Y2K’dan İlham Aldı
+                            p.fs-14.fs-lg-16.mt-10 Koleksiyonu keşfet
+                        .swiper-progress-bar.position-absolute.start-0.bottom-0.w-100
+                            span.swiper-progress.d-block
+                li.swiper-slide
+                    .ratio.ratio-main-slider-mobile.ratio-md-main-slider.ratio-lg-main-slider
+                        video(data-video="https://player.vimeo.com/progressive_redirect/playback/769802231/rendition/720p/file.mp4?loc=external&signature=9a408598285bb20e9bdbf3057c9e2242fea655179e4d8237640fd020bed51b0a" data-videomobile="https://player.vimeo.com/progressive_redirect/playback/769802231/rendition/720p/file.mp4?loc=external&signature=9a408598285bb20e9bdbf3057c9e2242fea655179e4d8237640fd020bed51b0a" data-poster="banner/video-banner.jpg" data-postermobile="banner/video-banner.jpg" poster="banner/video-banner.jpg" preload="none" autobuffer="autobuffer" playsinline="true" muted="true" src="https://player.vimeo.com/progressive_redirect/playback/769802231/rendition/720p/file.mp4?loc=external&signature=9a408598285bb20e9bdbf3057c9e2242fea655179e4d8237640fd020bed51b0a" )
     .prd-widget-type-1.my-50.overflow-hidden
         .container.px-lg-40
             h2.section.title.fw-600.fs-32.d-lg-none Sneaker’da <br> Öne Çıkanlar

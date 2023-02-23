@@ -1,5 +1,14 @@
-.corporate-sidebar-container{
-    background: #EEEBEA;
+.corporate-sidebar {
+    li {
+        flex-shrink: 0;
+    }
+    .selected {
+        color: #DF4826;
+        border-bottom: 1px solid rgb(223, 72, 38);
+    }
+    &-container{
+        background: #EEEBEA;
+    }
 }
 .page-about {
     .corporate-sidebar-container {

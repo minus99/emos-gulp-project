@@ -70,25 +70,6 @@
         box-shadow: #DF4826 rgb(223, 72, 38) inset; 
     }
 }
-.blog-detail-body {
-    grid-template-areas:
-        "info cover"
-        "content cover"
-        "content side"
-        "content side";
-    .blog-detail-info {
-        grid-area: info;
-    }
-    .blog-detail-content  {
-        grid-area: content;
-        margin-right: 100px;
-    }
-}
-
-.blog-detail-side {
-    grid-row: 3;
-    grid-area: cover;
-}
 
 .swiper-login {
     top: 50%;

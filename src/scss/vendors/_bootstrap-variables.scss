@@ -34,6 +34,7 @@ $spacers: (
   40: $space7,
   50: $space8,
   60: $space9,
+  70: $space70,
   90: $space90,
   100: $space100,
   120: $space120,
@@ -136,9 +137,9 @@ $font-size-base: 1rem; // 16px
 $font-size-sm: 0.75rem; // 12px
 $font-size-lg: 1rem; // 16px
 
-$line-height-base: 1;
-$line-height-sm: 1;
-$line-height-lg: 1.85;
+$line-height-base: 1.4 !default;
+$line-height-sm: 1.25 !default;
+$line-height-lg: 1.85 !default;
 
 $h1-font-size: 3.375rem; // 54px
 $h2-font-size: 2.5rem; // 40px

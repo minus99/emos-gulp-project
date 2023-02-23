@@ -1,0 +1,15 @@
+.notfound,
+.welcome {
+    picture {
+        height: 100vh;
+    }
+}
+.blog {
+    &-title,
+    &-subtitle {
+        @include line-clamp(2);
+    }
+    &-cat {
+        white-space: nowrap;
+    }
+}
