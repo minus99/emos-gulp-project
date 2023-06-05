@@ -1,7 +1,7 @@
 {
-  "short_name": "emos-v2-localhost",
+  "short_name": "emos-gulp-project",
   "display": "standalone",
-  "name": "emos-v2-localhost",
+  "name": "emos-gulp-project",
   "icons": [{
     "src": "/frontend/images/favicon/apple-touch-icon-144x144.png",
     "sizes": "128x128",
@@ -13,5 +13,5 @@
   "theme_color": "#d93131",
   "gcm_sender_id": "821478403717",
   "gcm_user_visible_only": "true",
-  "permissions": ["https://*.patirti.com/"]
+  "permissions": ["https://*.proj-e.com/"]
 }

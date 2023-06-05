@@ -102,7 +102,7 @@ html(lang=lang, dir=dir)
 
                 // HEAD
     // BODY
-    body(class="page-" + pageName + " " + pageClass)
+    body(class=pageClass)
         .site-container
             block header
                 // HEADER
@@ -116,7 +116,7 @@ html(lang=lang, dir=dir)
                     h1(style="margin: 100px 0; text-align: center;") page content here
             // CONTENT
             block footer
-                if pageName != "pageNotfound" && pageName != "pageInternal"
+                if pageName != "pageNotfound" && pageName != "pageServerError"
                     footer.site-footer
                         include ../includes/footer
             // MINI CART
@@ -188,13 +188,13 @@ html(lang=lang, dir=dir)
             
             block cookie
                 // COOKIE INFORMATION
-                    .ems-cookie-bnr.fixed-bottom.py-20.py-lg-30.border-top.shadow-lg.collapse.show
-                        .container-lg
-                            .d-flex.justify-content-between
-                                h4.fs-16.fw-600 Çerez Kullanımı
-                                a(class="" href="" aria-label="Close"  data-type="remove")
-                                    +icon('close').fs-16
-                            p.fs-13.mt-20.lh-lg Alışveriş deneyiminizi iyileştirmek için yasal düzenlemelere uygun çerezler (cookies) kullanıyoruz. Detaylı bilgiye Gizlilik ve Çerez Politikası sayfamızdan erişebilirsiniz.
+                .ems-cookie-bnr.fixed-bottom.py-20.py-lg-30.border-top.shadow-lg.collapse.show
+                    .container-lg
+                        .d-flex.justify-content-between
+                            h4.fs-16.fw-600 Çerez Kullanımı
+                            a(class="" href="" aria-label="Close"  data-type="remove")
+                                +icon('close').fs-16
+                        p.fs-13.mt-20.lh-lg Alışveriş deneyiminizi iyileştirmek için yasal düzenlemelere uygun çerezler (cookies) kullanıyoruz. Detaylı bilgiye Gizlilik ve Çerez Politikası sayfamızdan erişebilirsiniz.
                             
                 // COOKIE INFORMATION
 

@@ -81,8 +81,6 @@ function css(done) {
 function js(done) {
   return (
     src([
-      //'node_modules/gsap/dist/gsap.js',
-      'node_modules/gsap/dist/ScrollTrigger.js',
       'src/js/custom.js',
       'src/js/620.js',
     ])

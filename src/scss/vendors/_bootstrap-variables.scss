@@ -1,5 +1,4 @@
-// Configuration
-@import '../../../node_modules/bootstrap/scss/functions';
+$enable-dark-mode: false;
 
 // Color system :6
 $colors: ();
@@ -45,7 +44,7 @@ $body-bg: $body-bg-color;
 $body-color: $body-text-color;
 
 // Links :271
-$link-color: inherit;
+$link-color: #000;
 $link-decoration: none;
 $link-hover-color: $link-color;
 $link-hover-decoration: underline;
@@ -87,44 +86,10 @@ $caret-spacing: 10px;
 // aspect ratios calc(height / width * 100%)
 $aspect-ratios: (
   '1x1': 100%,
-  'prd': calc(360 / 450 * 100%),
   '375x509': calc(509 / 375 * 100%),
   '121x263': calc(263 / 121 * 100%),
   '281x800': calc(800 / 281 * 100%),
   '100x30': calc(30 / 101 * 100%),
-  '90x25': calc(25 / 90 * 100%),
-  '119x28': calc(28 / 119 * 100%),
-  '335x648': calc(648 / 335 * 100%),
-  'main-slider': calc(740 / 1656 * 100%),
-  'main-slider-mobile': calc(640 / 375 * 100%),
-  'main-slider-2': calc(740 / 1580 * 100%),
-  'main-slider-mobile-2': calc(480 / 375 * 100%),
-  'rectangle-banner': calc(680 / 520 * 100%),
-  'rectangle-banner-mobile': calc(425 / 375 * 100%),
-  'category-slider': calc(600 / 450 * 100%),
-  'single-banner': calc(236 / 375 * 100%),
-  'single-banner-bg': calc(1206 / 1930 * 100%),
-  'prd-list-blog-mobile': calc(419 / 375 * 100%),
-  'prd-list-cover': calc(432 / 372 * 100%),
-  'prd-list-cover-type-1': calc(480 / 1656 * 100%),
-  'prd-list-cover-type-2': calc(640 / 1656 * 100%),
-  'prd-list-blog': calc(419 / 620 * 100%),
-  'logo': calc(31 / 200 * 100%),
-  'hero-banner': calc(740 / 1656 * 100%),
-  'square-banner': calc(740 / 786 * 100%),
-  'square-banner-mobile': calc(480 / 375 * 100%),
-  '540x524': calc(540 / 524 * 100%),
-  '343x334': calc(334 / 343 * 100%),
-  '1580x540': calc(540 / 1580 * 100%),
-  '375x540': calc(420 / 375 * 100%),
-  '700x400': calc(400 / 700 * 100%),
-  'corporate-cover': calc(640 / 1680 * 100%),
-  'corporate-cover-mobile': calc(446 / 375 * 100%),
-  'corporate-large': calc(699 / 1336 * 100%),
-  'corporate-small': calc(430 / 612 * 100%),
-  'corporate-vertical': calc(700 / 598 * 100%),
-  'wizard-large': calc(711 / 1131 * 100%),
-
 );
 
 // Typography :391
@@ -348,7 +313,6 @@ $utilities: (
           'white': $white,
           'body': $body-color,
           'muted': $text-muted,
-          'reset': inherit,
         )
       ),
   ),
@@ -367,6 +331,3 @@ $utilities: (
       ),
   ),
 );
-
-@import '../../../node_modules/bootstrap/scss/variables';
-@import '../../../node_modules/bootstrap/scss/mixins';

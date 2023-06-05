@@ -1,4 +1,4 @@
-var CACHE_NAME = 'emos-v2-localhost';
+var CACHE_NAME = 'emos-gulp-project';
 var urlsToCache = [
   '/',
   '/frontend/css/style.css',

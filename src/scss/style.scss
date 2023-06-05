@@ -1,21 +1,15 @@
 // Abstracts
-@import 'abstracts/light-theme';
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 
 // Bootstrap
 @import 'vendors/bootstrap-custom';
 
-// Base
-//@import 'base/global';
-
 // Components
 @import 'components/swiper';
 @import 'components/tab';
 @import 'components/accordion';
 @import 'components/toastify';
-@import 'components/step-progress';
-@import 'components/corporate';
 
 // Layouts
 @import 'layouts/header';
@@ -24,16 +18,8 @@
 @import 'layouts/product-list';
 
 //Modules
-@import 'modules/home-slider';
-@import 'modules/product-card';
 @import 'modules/cookies';
-@import 'modules/rectangle-banner';
-@import 'modules/single-banner';
-@import 'modules/product-widget';
 @import 'modules/login';
-@import 'modules/sneakers';
-@import 'modules/square';
-@import 'modules/wizard';
 
 
 // MOBILE (< $breakpoint-lg)
@@ -48,10 +34,6 @@
   @import 'layouts/header-mobile';
   @import 'layouts/product-detail-mobile';
   @import 'layouts/product-list-mobile';
-
-  //Modules
-  @import 'modules/square-mobile';
-  
 }
 
 // MIDDLE (> $breakpoint-lg & < $breakpoint-lg)
@@ -65,9 +47,6 @@
   @import 'components/swiper-desktop';
   @import 'components/modal-desktop';
   @import 'components/accordion-desktop';
-  @import 'components/step-progress-desktop';
-  @import 'components/corporate-desktop';
-
 
   // Layouts
   @import 'layouts/header-desktop';
@@ -77,10 +56,6 @@
   @import 'layouts/product-list-desktop';
 
   //Modules
-  @import 'modules/home-slider-desktop';
   @import 'modules/cookies-desktop';
   @import 'modules/login-desktop';
-  @import 'modules/rectangle-banner-desktop';
-  @import 'modules/wizard-desktop';
-
 }

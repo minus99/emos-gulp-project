@@ -1,99 +1,10 @@
 extends layouts/default.pug
 
 block prepend head
-    - var pageTitle = "Koray Spor Home"
-    - var pageDescription = "Koray Spor Home"
-    - var pageName = "dark-theme"
-    - var pageClass = ""
+    - var pageTitle = "Page Meta Title"
+    - var pageDescription = "Page Meta Desc"
+    - var pageName = "Home"
+    - var pageClass = "page-body-class"
 
 block content
-    .main-slider-section.overflow-hidden.container.px-0.px-lg-10
-        +swiper('mainSlider', false, true, false, true, true)(class="main-slider")
-            -for(var i=0; i<5; i++)
-                li.swiper-slide
-                    .ratio.ratio-main-slider-mobile.ratio-md-main-slider.ratio-lg-main-slider
-                        picture
-                            source.lazy-picture(media='(max-width:0)' srcset='frontend/images/1x1.svg')
-                            source(media='(max-width: 767px)' srcset='uploads/slider/slider-mobile.jpg, uploads/slider/slider-mobile.jpg 2x')
-                            source(media='(min-width: 768px)' srcset='uploads/slider/slider.jpg')
-                            img.w-100(src='uploads/slider/slider-mobile.jpg' alt='slide 1')
-                    .banner-overlay
-                        .banner-title
-                            h3.fs-20.fs-lg-30 Y2K’dan İlham Aldı
-                            p.fs-14.fs-lg-16.mt-10 Koleksiyonu keşfet
-                        .swiper-progress-bar.position-absolute.start-0.bottom-0.w-100
-                            span.swiper-progress.d-block
-                li.swiper-slide
-                    .ratio.ratio-main-slider-mobile.ratio-md-main-slider.ratio-lg-main-slider
-                        video(data-video="https://player.vimeo.com/progressive_redirect/playback/769802231/rendition/720p/file.mp4?loc=external&signature=9a408598285bb20e9bdbf3057c9e2242fea655179e4d8237640fd020bed51b0a" data-videomobile="https://player.vimeo.com/progressive_redirect/playback/769802231/rendition/720p/file.mp4?loc=external&signature=9a408598285bb20e9bdbf3057c9e2242fea655179e4d8237640fd020bed51b0a" data-poster="banner/video-banner.jpg" data-postermobile="banner/video-banner.jpg" poster="banner/video-banner.jpg" preload="none" autobuffer="autobuffer" playsinline="true" muted="true" src="https://player.vimeo.com/progressive_redirect/playback/769802231/rendition/720p/file.mp4?loc=external&signature=9a408598285bb20e9bdbf3057c9e2242fea655179e4d8237640fd020bed51b0a" )
-    .prd-widget-type-1.my-50.overflow-hidden
-        .container.px-lg-40
-            h2.section.title.fw-600.fs-32.d-lg-none Sneaker’da <br> Öne Çıkanlar
-            include includes/product-slider                                      
-    
-    .square-section.container.px-0.px-lg-30.mt-60.overflow-hidden
-        .row.row-cols-lg-2.row-cols-1.g-5
-            .col
-                +square-banner()
-            .col 
-                +square-banner()
-
-    .special-title-section
-        .container.px-lg-30
-            +special-title()
-        
-    .rectangle-section.container.px-0.px-lg-30.mt-60.overflow-hidden
-        .row.row-cols-lg-3.row-cols-1.g-10
-            -for(var i=0; i<3; i++)
-                .col-12.col-lg-4
-                    +rectangle-banner()
-    .single-banner.container.px-0.mt-60.py-60
-        .w-100.w-lg-75.mx-lg-auto.text-center
-            .single-banner-media
-                +picture('ratio ratio-single-banner', dirUploads + 'banner/single-banner.jpg', dirUploads + 'banner/single-banner.jpg', dirUploads + 'banner/single-banner-mobile.jpg')(class="card-img", alt="slide 1")
-            .single-banner-text.mt-20.mt-lg-40
-                h3.fs-32.fs-lg-50.fw-600.mx-10 Tüm Gün Oyun Keyfi
-                a.btn.btn-dark-light.btn-lg.mt-20.mt-lg-30(href="javascript:void(0)") Ürünleri Keşfet
-    .single-banner.container.px-0.mt-60.type-video.type-bg-dark.py-60
-        .w-100.w-lg-75.mx-lg-auto.text-center
-            .single-banner-media
-                .prm-media.ratio.ratio-single-banner
-                    video(id="single-video" poster=dirUploads +"banner/video-banner.jpg" preload="none" autobuffer="autobuffer" playsinline="true" muted="true")    
-                        source(src="https://player.vimeo.com/progressive_redirect/playback/769802231/rendition/720p/file.mp4?loc=external&signature=9a408598285bb20e9bdbf3057c9e2242fea655179e4d8237640fd020bed51b0a" type="video/mp4")
-                a.btn.btn-white.btn-sm.position-absolute.btn-iframe-trigger.btn-play.px-10.py-0(id="btn-iframe-trigger" href="javascript:void(0)" aria-label="play")
-                    +icon("play-small")
-                //.position-absolute(id="meta")
-                a.btn.btn-white.btn-sm.position-absolute.btn-sound.px-10.py-0(href="javascript:void(0)" id="btn-sound-trigger" aria-label="play")
-                    +icon("sound-muted")
-            .single-banner-text.mt-20.mt-lg-40
-                h3.fs-32.fs-lg-50.fw-600.mx-10 Ultra Hafif <br>Ultra Hızlı ve <br>Ultra Sağlam
-                h4.fs-16.text-gray.mt-20.fw-400 Bugüne kadarki en inovatif patika koşu ve yürüyüş teknolojisi.
-                a.btn.btn-dark-light.btn-lg.mt-20.mt-lg-30(href="javascript:void(0)") Ürünleri Keşfet
-   
-    //.main-watch
-        ul.container-fluid.list-unstyled.py-20.g-md-20
-            li.position-relative
-                .prm-media.ratio.ratio-single-banner
-                    picture
-                        source.lazy-picture(media='(max-width:0)' srcset='https://img2-tulparnotebookde.mncdn.com/monster/frontend/images/1x1.svg')
-                        source(media='(max-width: 1024px)' srcset='https://img2-tulparnotebookde.mncdn.com/mnresize/360/450/monster/uploads/TulparNotebook.png 1x, https://img2-tulparnotebookde.mncdn.com/mnresize/360/450/monster/uploads/TulparNotebook.png 2x')
-                        source(media='(min-width: 1025px)' srcset='https://img2-tulparnotebookde.mncdn.com/mnresize/1632/690/monster/uploads/TulparNotebook.png')
-                        img.w-100.h-100.ob-fit-cover.activeted(data-image-src='https://img2-tulparnotebookde.mncdn.com/mnresize/360/450/monster/uploads/TulparNotebook.png' alt='Tulpar Notebook' src='https://img2-tulparnotebookde.mncdn.com/mnresize/360/450/monster/uploads/TulparNotebook.png')
-                    iframe(width='560' height='315' data-src='https://www.youtube.com/embed/_9CNi2N5QaA' title='Tulpar Notebook' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
-                .h-100.w-100.position-absolute.top-0.left-0.d-flex.align-items-end.p-50
-                    a.btn-left-icons.green.d-flex.align-items-center.btn-iframe-trigger.stretched-link.mt-30.pe-10.w-100.w-md-fit-content.w-lg-fit-content.fs-16.fw-500(href='javascript:void(0);')
-                        span play
-
-    .main-slider-wrapper.type-2.container.px-0.px-lg-10.mt-50
-        +swiper('mainSlider', false, true, false, true)(class="main-slider")
-            -for(var i=0; i<5; i++)
-                li.swiper-slide.object-scale
-                    .prm-media.ratio.ratio-main-slider-mobile-2.ratio-md-main-slider-2.ratio-lg-main-slider
-                        picture
-                            source.lazy-picture(media='(max-width:0)' srcset='frontend/images/1x1.svg')
-                            source(media='(max-width: 767px)' srcset='uploads/slider/main-slider-mobile-2.jpg, uploads/slider/main-slider-mobile-2.jpg 2x')
-                            source(media='(min-width: 768px)' srcset='uploads/slider/main-slider-2.jpg')
-                            img.w-100(src='uploads/slider/main-slider-mobile-2.jpg' alt='slide 1')
-                    .banner-overlay
-                        h3.fs-20.fs-lg-30 Y2K’dan İlham Aldı
-                        p.fs-14.fs-lg-16.mt-10 Koleksiyonu keşfet                       
+   div Page Content
